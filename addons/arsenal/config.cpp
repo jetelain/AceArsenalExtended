@@ -27,7 +27,7 @@ class ace_arsenal_display {
 	
 	class controls {
 
-        class leftTabContent: RscListBox {
+        class leftTabContent: RscListBox { // code from ACE3 Arsenal to intercept calls to onSelChangedLeft
             idc = IDC_leftTabContent;
             colorBackground[]={0,0,0,0};
             colorSelectBackground[]={1,1,1,0.5};
@@ -42,7 +42,7 @@ class ace_arsenal_display {
             x = QUOTE(safezoneX + 13 * GRID_W);
             y = QUOTE(safezoneY + 14 * GRID_H);
             w = QUOTE(80 * GRID_W);
-            h = QUOTE(safezoneH - 24.5 * GRID_H); // was 24.5
+            h = QUOTE(safezoneH - 24.5 * GRID_H);
             sizeEx = QUOTE(7 * GRID_H);
         };
 

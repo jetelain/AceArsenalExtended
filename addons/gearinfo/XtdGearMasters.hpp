@@ -53,9 +53,13 @@ class XtdGearMasters
 		{
 			label = "Full";
 		};
+		class Quarter
+		{
+			label = "1/4";
+		};
 		class Half
 		{
-			label = "Half";
+			label = "1/2";
 		};
 	};
 

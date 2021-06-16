@@ -71,8 +71,8 @@ if ( _master != GVAR(currentMaster) ) then {
 				private _valueName = _x;
 				private _valueIndex = _foreachIndex;
 				private _valueConfig = _configConfig >> _valueName;
-				private _valueLabel  = getText (_valueConfig >> "label");
-				private _valueImage  = getText (_valueConfig >> "image");
+				private _valueLabel  = [_valueConfig, "label", _valueName] call BIS_fnc_returnConfigEntry;
+				private _valueImage  = [_valueConfig, "image", ""] call BIS_fnc_returnConfigEntry;
 
 				// up to 499 configs, up to 49 values per config
 				private _valueIdcBase = 9970000 + (_configIndex * 200) + (_valueIndex * 4);

@@ -24,6 +24,7 @@ while{_i < _size} do
 	if ( _master != "" ) then {
 		if ( !(_master in _done) || _data == _value ) then {
 			_done set [_master, true];
+			_ctrlPanel lbSetTextRight [_i, getText(configFile >> "XtdGearMasters" >> _config >> _master >> "label")];
 			_i = _i + 1;
 		} else {
 			_ctrlPanel lbDelete _i;
