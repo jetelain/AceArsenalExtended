@@ -1,0 +1,15 @@
+name = "ACE Arsenal Extended"
+prefix = "aceax"
+author = "GrueArbre"
+template = "cba"
+mainprefix = "z"
+folder_optionals = true
+sig_version = 3
+files = [
+    "mod.cpp"
+]
+exclude = [
+    "*.psd",
+    "*.png",
+    "*.tga"
+]

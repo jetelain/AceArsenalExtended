@@ -1,0 +1,141 @@
+#include "script_component.hpp"
+
+class CfgPatches {
+    class ADDON {
+        name = QUOTE(COMPONENT);
+        units[] = {};
+        weapons[] = {};
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {"cba_keybinding","aceax_main", "ace_arsenal", "aceax_gearinfo"};
+        author = "AUTHOR";
+        VERSION_CONFIG;
+    };
+};
+
+#include "CfgEventHandlers.hpp"
+
+#include "defines.hpp"
+
+class RscListBox;
+class RscControlsGroup;
+class RscText;
+class RscCheckBox;
+class RscPicture;
+class RscButton;
+
+class ace_arsenal_display {
+	
+	class controls {
+
+        class leftTabContent: RscListBox {
+            idc = IDC_leftTabContent;
+            colorBackground[]={0,0,0,0};
+            colorSelectBackground[]={1,1,1,0.5};
+            colorSelectBackground2[]={1,1,1,0.5};
+            colorPictureSelected[]={1,1,1,1};
+            colorSelect[]={1,1,1,1};
+            colorSelect2[]={1,1,1,1};
+            colorPictureRightSelected[]={1,1,1,1};
+            onLBSelChanged = QUOTE(_this call FUNC(onSelChangedLeft));
+            onSetFocus = QUOTE(ace_arsenal_leftTabFocus = true);
+            onKillFocus = QUOTE(ace_arsenal_leftTabFocus = false);
+            x = QUOTE(safezoneX + 13 * GRID_W);
+            y = QUOTE(safezoneY + 14 * GRID_H);
+            w = QUOTE(80 * GRID_W);
+            h = QUOTE(safezoneH - 24.5 * GRID_H); // was 24.5
+            sizeEx = QUOTE(7 * GRID_H);
+        };
+
+
+        class leftTabCustom: RscControlsGroup {
+            idc = 9990000;
+
+            colorBackground[]={255,255,255,255};
+            x = QUOTE(safezoneX + 13 * GRID_W);
+            y = QUOTE((safezoneY + 14 * GRID_H) + (safezoneH - 24.5 * GRID_H));
+            w = QUOTE(80 * GRID_W);
+            h = 0;
+            sizeEx = QUOTE(7 * GRID_H);
+
+            class controls {
+                
+                class Title: RscText {
+                    idc = 9990001;
+                    sizeEx = QUOTE(7 * GRID_H);
+                    shadow = 0;
+                    text = "Label";
+                    x = QUOTE(0 * GRID_W);
+                    y = QUOTE(0 * GRID_H);
+                    w = QUOTE(80 * GRID_W);
+                    h = QUOTE(7 * GRID_H);
+                };
+
+                class ModTitle: RscText {
+                    idc = 9990002;
+                    sizeEx = QUOTE(4 * GRID_H);
+                    shadow = 0;
+                    text = "Author";
+                    x = QUOTE(0 * GRID_W);
+                    y = QUOTE(7 * GRID_H);
+                    w = QUOTE(80 * GRID_W);
+                    h = QUOTE(4 * GRID_H);
+                };
+
+
+
+
+            };
+
+        };
+
+
+	};
+	
+
+};
+
+
+class GVAR(configTitle): RscText {
+    sizeEx = QUOTE(5 * GRID_H);
+    shadow = 0;
+    text = "Label";
+    x = QUOTE(0 * GRID_W);
+    y = QUOTE(0 * GRID_H);
+    w = QUOTE(80 * GRID_W);
+    h = QUOTE(5 * GRID_H);
+};
+class GVAR(valueImage): RscPicture {
+    text = "";
+    x = QUOTE(0 * GRID_W);
+    y = QUOTE(0 * GRID_H);
+    w = QUOTE(19.5 * GRID_W);
+    h = QUOTE(10 * GRID_H);
+    colorBackground[] = {0,0,0,1};
+};
+class GVAR(valueCheckbox): RscCheckBox {
+    x = QUOTE(0 * GRID_W);
+    y = QUOTE(2.5 * GRID_H);
+    w = QUOTE(5 * GRID_W);
+    h = QUOTE(5 * GRID_H);
+
+    onCheckedChanged = QUOTE([ARR_3(ctrlParent (_this select 0), _this select 0, _this select 1)] call FUNC(onValueCheckedChanged));
+};
+class GVAR(valueButton): RscButton {
+    text = "Label";
+    sizeEx = QUOTE(5 * GRID_H);
+    x = QUOTE(5 * GRID_W);
+    y = QUOTE(0 * GRID_H);
+    w = QUOTE(14.5 * GRID_W);
+    h = QUOTE(10 * GRID_H);
+
+    colorText[] = {255,255,255,1};
+    colorBackground[] = {0, 0, 0, 0};
+    colorFocused[] = {0, 0, 0, 0};
+    colorShadow[] = {0, 0, 0, 0};
+    colorBorder[] = {0, 0, 0, 0};
+    colorBackgroundActive[] = {0, 0, 0, 0};
+    colorDisabled[] = {0, 0, 0, 0};
+    colorBackgroundDisabled[] = {0, 0, 0, 0};
+
+    onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), _this select 0)] call FUNC(onValueButton));
+};
