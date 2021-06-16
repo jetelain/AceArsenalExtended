@@ -114,18 +114,28 @@ class GVAR(valueImage): RscPicture {
 };
 class GVAR(valueCheckbox): RscCheckBox {
     x = QUOTE(0 * GRID_W);
-    y = QUOTE(2.5 * GRID_H);
-    w = QUOTE(5 * GRID_W);
-    h = QUOTE(5 * GRID_H);
+    y = QUOTE(0 * GRID_H);
+    w = QUOTE(19.5 * GRID_W);
+    h = QUOTE(10 * GRID_H);
+	textureChecked = QPATHTOF(data\ui\checked.paa);
+	textureUnchecked = QPATHTOF(data\ui\unchecked.paa);
+	textureFocusedChecked = QPATHTOF(data\ui\checked.paa);
+	textureFocusedUnchecked = QPATHTOF(data\ui\unchecked.paa);
+	textureHoverChecked = QPATHTOF(data\ui\checked.paa);
+	textureHoverUnchecked = QPATHTOF(data\ui\unchecked.paa);
+	texturePressedChecked = QPATHTOF(data\ui\checked.paa);
+	texturePressedUnchecked = QPATHTOF(data\ui\unchecked.paa);
+	textureDisabledChecked = QPATHTOF(data\ui\checked.paa);
+	textureDisabledUnchecked = QPATHTOF(data\ui\unchecked.paa);
 
     onCheckedChanged = QUOTE([ARR_3(ctrlParent (_this select 0), _this select 0, _this select 1)] call FUNC(onValueCheckedChanged));
 };
 class GVAR(valueButton): RscButton {
     text = "Label";
     sizeEx = QUOTE(5 * GRID_H);
-    x = QUOTE(5 * GRID_W);
+    x = QUOTE(0 * GRID_W);
     y = QUOTE(0 * GRID_H);
-    w = QUOTE(14.5 * GRID_W);
+    w = QUOTE(19.5 * GRID_W);
     h = QUOTE(10 * GRID_H);
 
     colorText[] = {255,255,255,1};

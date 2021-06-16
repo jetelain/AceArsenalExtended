@@ -7,9 +7,7 @@ params ["_control", "_curSel"];
 
 (call FUNC(leftPanelConfig)) params ["_index", "_config"];
 
-if ( _index == -1 ) exitWith { };
-
-disableSerialization;
+if ( _index == -1 ) exitWith {};
 
 private _display = ctrlParent _control;
 private _value = ace_arsenal_currentItems select _index;
@@ -32,7 +30,7 @@ if ( _master != GVAR(currentMaster) ) then {
 
 	if ( _master != "" ) then {
 
-		_listControl ctrlSetPositionH (safezoneH - 124.5 * GRID_H);
+		_listControl ctrlSetPositionH (safezoneH - 128.5 * GRID_H);
 		_configControl ctrlSetPositionY ((safezoneY + 14 * GRID_H) + (safezoneH - 124.5 * GRID_H));
 		_configControl ctrlSetPositionH (100 * GRID_H);
 
@@ -67,7 +65,7 @@ if ( _master != GVAR(currentMaster) ) then {
 			_ctrl ctrlCommit 0;
 
 			private _posX = 0;
-			_posY = _posY + 5;
+			_posY = _posY + 6;
 
 			{
 				private _valueName = _x;
@@ -91,12 +89,12 @@ if ( _master != GVAR(currentMaster) ) then {
 				_ctrl ctrlCommit 0;
 
 				_ctrl = _display ctrlCreate [QGVAR(valueCheckbox), _valueIdcBase + 1, _configControl];
-				_ctrl ctrlSetPosition [_posX * GRID_W, (_posY + 2.5) * GRID_H];
+				_ctrl ctrlSetPosition [_posX * GRID_W, _posY * GRID_H];
 				_ctrl cbSetChecked (_valueName == _currentValue);
 				_ctrl ctrlCommit 0;
 
 				_ctrl = _display ctrlCreate [QGVAR(valueButton), _valueIdcBase + 2, _configControl];
-				_ctrl ctrlSetPosition [(_posX + 5) * GRID_W, _posY * GRID_H];
+				_ctrl ctrlSetPosition [_posX * GRID_W, _posY * GRID_H];
 				_ctrl ctrlSetText _valueLabel;
 				_ctrl ctrlCommit 0;
 
@@ -112,6 +110,7 @@ if ( _master != GVAR(currentMaster) ) then {
 			{
 				_posY = _posY + 10;
 			};
+			_posY = _posY + 2;
 		} forEach _configs;
 
 	} else {

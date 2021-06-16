@@ -5,8 +5,6 @@ params ["_display"];
 
 (call FUNC(leftPanelConfig)) params ["_index", "_config"];
 
-INFO_2("onLeftPanelFilled %1 %2", _index, _config);
-
 if ( _index == -1 ) exitWith { };
 
 private _ctrlPanel = _display displayCtrl IDC_leftTabContent;
