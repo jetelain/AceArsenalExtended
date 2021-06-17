@@ -7,7 +7,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "U_C_CBRN_Suit_01";
+			model = "U_C_CBRN_Suit_01";
 			camo = "White";
 		};
 	};
@@ -15,7 +15,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "U_C_CBRN_Suit_01";
+			model = "U_C_CBRN_Suit_01";
 			camo = "Blue";
 		};
 	};
@@ -23,7 +23,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "U_C_CBRN_Suit_01";
+			model = "U_C_CBRN_Suit_01";
 			camo = "Woodland";
 		};
 	};
@@ -31,7 +31,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "U_C_CBRN_Suit_01";
+			model = "U_C_CBRN_Suit_01";
 			camo = "MTP";
 		};
 	};
@@ -39,7 +39,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "U_C_CBRN_Suit_01";
+			model = "U_C_CBRN_Suit_01";
 			camo = "Tropic";
 		};
 	};
@@ -47,7 +47,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "U_C_CBRN_Suit_01";
+			model = "U_C_CBRN_Suit_01";
 			camo = "AAF";
 		};
 	};
@@ -55,7 +55,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "U_C_CBRN_Suit_01";
+			model = "U_C_CBRN_Suit_01";
 			camo = "EAF";
 		};
 	};

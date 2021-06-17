@@ -2,14 +2,14 @@
 #include "..\defines.hpp"
 
 params ["_display", "_data"];
-_data params ["_configIndex", "_configName", "_valueIndex", "_valueName"];
+_data params ["_optionIndex", "_optionName", "_valueIndex", "_valueName"];
 
-if ( (GVAR(currentMasterConfig) select _configIndex) != _valueName) then {
+if ( (GVAR(currentModelOptions) select _optionIndex) != _valueName) then {
 
-	private _newconfig = +GVAR(currentMasterConfig);
-	_newconfig set [_configIndex, _valueName];
+	private _options = +GVAR(currentModelOptions);
+	_options set [_optionIndex, _valueName];
 
-	private _result = [GVAR(currentConfig), GVAR(currentMaster), _newconfig] call EFUNC(gearinfo,findModel);
+	private _result = [GVAR(currentConfig), GVAR(currentModel), _options] call EFUNC(gearinfo,findConfig);
 
 	if (!isNull _result) then{
 		private _ctrlPanel = _display displayCtrl IDC_leftTabContent;
@@ -22,7 +22,7 @@ if ( (GVAR(currentMasterConfig) select _configIndex) != _valueName) then {
 			ERROR("No selected value ?!?");
 		};
 	} else {
-		ERROR_2("Nothing found for %1 %2", GVAR(currentMaster), _newconfig);
+		ERROR_2("Nothing found for %1 %2", GVAR(currentModel), _options);
 	};
 
 };

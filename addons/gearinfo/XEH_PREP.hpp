@@ -1,2 +1,2 @@
-PREP(findModel);
-PREP(findModelName);
+PREP(findConfig);
+PREP(findConfigName);

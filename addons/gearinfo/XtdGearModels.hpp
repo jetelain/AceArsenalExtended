@@ -1,4 +1,4 @@
-class XtdGearMasters
+class XtdGearModels
 {
 	class CamoBase
 	{
@@ -70,7 +70,7 @@ class XtdGearMasters
 		{
 			label = "CBRN Suit";
 			author = "Bohemia Interactive";
-			configs[] = {"camo"};
+			options[] = {"camo"};
 			class camo : CamoBase
 			{
 				values[] = {"White", "Blue", "Woodland", "MTP", "Tropic", "AAF", "EAF"};

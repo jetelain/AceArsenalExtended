@@ -6,12 +6,12 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"aceax_gearinfo", "amf_uniforms", "AMF_Headgear_02"};
+        requiredAddons[] = {"amf_uniforms", "AMF_Headgear_02", "aceax_gearinfo"};
         author = "AUTHOR";
         VERSION_CONFIG;
     };
 };
 
-#include "XtdGearMasters.hpp"
+#include "XtdGearModels.hpp"
 
 #include "CfgWeapons.hpp"

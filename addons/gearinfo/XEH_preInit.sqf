@@ -2,3 +2,5 @@
 ADDON = false;
 #include "XEH_PREP.hpp"
 ADDON = true;
+
+GVAR(cache) = createHashMap;

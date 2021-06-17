@@ -1,4 +1,4 @@
-class XtdGearMasters
+class XtdGearModels
 {
 	class CamoBase;
 	class SleevesBase;
@@ -9,7 +9,7 @@ class XtdGearMasters
 		{
 			label = "Treillis F3/Ubas";
 			author = "Arma Mod France";
-			configs[] = {"camo","sleeves"};
+			options[] = {"camo","sleeves"};
 			class camo : CamoBase
 			{
 				values[] = {"CE_TAN","CE_OD","DA","SERVAL"};
@@ -44,7 +44,7 @@ class XtdGearMasters
 		{
 			label = "Treillis F3";
 			author = "Arma Mod France";
-			configs[] = {"camo"};
+			options[] = {"camo"};
 			class camo : CamoBase
 			{
 				values[] = {"CE","DA","SERVAL"};
@@ -70,7 +70,7 @@ class XtdGearMasters
 		{
 			label = "MSA Felin";
 			author = "Arma Mod France";
-			configs[] = {"cover","sordin"};
+			options[] = {"cover","sordin"};
 			class cover
 			{
 				label = "Cover";

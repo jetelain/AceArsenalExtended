@@ -27,7 +27,7 @@ class ace_arsenal_display {
 	
 	class controls {
 
-        class leftTabContent: RscListBox { // code from ACE3 Arsenal to intercept calls to onSelChangedLeft
+        class leftTabContent: RscListBox { // Config forked from ACE3 Arsenal to intercept calls to onSelChangedLeft
             idc = IDC_leftTabContent;
             colorBackground[]={0,0,0,0};
             colorSelectBackground[]={1,1,1,0.5};
@@ -125,8 +125,8 @@ class GVAR(valueCheckbox): RscCheckBox {
 	textureHoverUnchecked = QPATHTOF(data\ui\unchecked.paa);
 	texturePressedChecked = QPATHTOF(data\ui\checked.paa);
 	texturePressedUnchecked = QPATHTOF(data\ui\unchecked.paa);
-	textureDisabledChecked = QPATHTOF(data\ui\checked.paa);
-	textureDisabledUnchecked = QPATHTOF(data\ui\unchecked.paa);
+	textureDisabledChecked = QPATHTOF(data\ui\disabled.paa);
+	textureDisabledUnchecked = QPATHTOF(data\ui\disabled.paa);
 
     onCheckedChanged = QUOTE([ARR_3(ctrlParent (_this select 0), _this select 0, _this select 1)] call FUNC(onValueCheckedChanged));
 };

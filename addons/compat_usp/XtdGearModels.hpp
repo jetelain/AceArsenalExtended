@@ -1,4 +1,4 @@
-class XtdGearMasters
+class XtdGearModels
 {
 	class CamoBase;
 	class SleevesBase;
@@ -6,10 +6,9 @@ class XtdGearMasters
 	{
 		class USP_G3C
 		{
-			label = "[USP] Crye G3C";
+			label = "Crye G3C";
 			author = "UnderSiege Productions";
-			configs[] = {"camo", "gloves", "sleeves", "collar", "kneepads"};
-
+			options[] = {"camo", "gloves", "sleeves", "collar", "kneepads","shoes"};
 			class camo : CamoBase
 			{
 				values[] = {"BLK","GRY","KHK","RGR","M81","MC","MCB","MCD","MCT","MCW","AOR1","AOR2","ATT","TSD","TSW"};
@@ -35,6 +34,12 @@ class XtdGearMasters
 			class sleeves : SleevesBase
 			{
 				values[] = {"Full", "Quarter", "Half"};
+			};
+			class shoes
+			{
+				label = "Shoes";
+				changeingame = 0;
+				values[] = {"SL", "VQ","IST"};
 			};
 		};
 	};

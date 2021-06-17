@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-GVAR(currentMaster) = "";
+GVAR(currentModel) = "";
 GVAR(valuesIdx) = [];
 GVAR(idcToConfig) = createHashMap;
 

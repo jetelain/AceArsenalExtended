@@ -6,7 +6,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_uniform_ubas";
+			model = "amf_uniform_ubas";
 			camo = "CE_TAN";
 			sleeves = "Full";
 		};
@@ -15,7 +15,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_uniform_ubas";
+			model = "amf_uniform_ubas";
 			camo = "CE_TAN";
 			sleeves = "Half";
 		};
@@ -24,7 +24,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_uniform_ubas";
+			model = "amf_uniform_ubas";
 			camo = "CE_OD";
 			sleeves = "Full";
 		};
@@ -33,7 +33,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_uniform_ubas";
+			model = "amf_uniform_ubas";
 			camo = "CE_OD";
 			sleeves = "Half";
 		};
@@ -42,7 +42,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_uniform_ubas";
+			model = "amf_uniform_ubas";
 			camo = "DA";
 			sleeves = "Full";
 		};
@@ -51,7 +51,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_uniform_ubas";
+			model = "amf_uniform_ubas";
 			camo = "DA";
 			sleeves = "Half";
 		};
@@ -60,7 +60,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_uniform_ubas";
+			model = "amf_uniform_ubas";
 			camo = "SERVAL";
 			sleeves = "Full";
 		};
@@ -69,7 +69,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_uniform_ubas";
+			model = "amf_uniform_ubas";
 			camo = "SERVAL";
 			sleeves = "Half";
 		};
@@ -78,7 +78,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_uniform_f3";
+			model = "amf_uniform_f3";
 			camo = "CE";
 		};
 	};
@@ -86,7 +86,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_uniform_f3";
+			model = "amf_uniform_f3";
 			camo = "DA";
 		};
 	};
@@ -94,7 +94,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_uniform_f3";
+			model = "amf_uniform_f3";
 			camo = "SERVAL";
 		};
 	};
@@ -105,7 +105,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_felin";
+			model = "amf_felin";
 			cover = "ce";
 			sordin = "none";
 		};
@@ -114,7 +114,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_felin";
+			model = "amf_felin";
 			cover = "ce";
 			sordin = "od";
 		};
@@ -123,7 +123,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_felin";
+			model = "amf_felin";
 			cover = "ce";
 			sordin = "blk";
 		};
@@ -132,7 +132,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_felin";
+			model = "amf_felin";
 			cover = "ce";
 			sordin = "tan";
 		};
@@ -141,7 +141,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_felin";
+			model = "amf_felin";
 			cover = "mount";
 			sordin = "none";
 		};
@@ -150,7 +150,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_felin";
+			model = "amf_felin";
 			cover = "mount";
 			sordin = "od";
 		};
@@ -159,7 +159,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_felin";
+			model = "amf_felin";
 			cover = "mount";
 			sordin = "blk";
 		};
@@ -168,7 +168,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_felin";
+			model = "amf_felin";
 			cover = "mount";
 			sordin = "tan";
 		};
@@ -177,7 +177,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_felin";
+			model = "amf_felin";
 			cover = "none";
 			sordin = "none";
 		};
@@ -186,7 +186,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_felin";
+			model = "amf_felin";
 			cover = "none";
 			sordin = "od";
 		};
@@ -195,7 +195,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_felin";
+			model = "amf_felin";
 			cover = "none";
 			sordin = "blk";
 		};
@@ -204,7 +204,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_felin";
+			model = "amf_felin";
 			cover = "none";
 			sordin = "tan";
 		};
@@ -213,7 +213,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_felin";
+			model = "amf_felin";
 			cover = "tan";
 			sordin = "none";
 		};
@@ -222,7 +222,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_felin";
+			model = "amf_felin";
 			cover = "tan";
 			sordin = "od";
 		};
@@ -231,7 +231,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_felin";
+			model = "amf_felin";
 			cover = "tan";
 			sordin = "blk";
 		};
@@ -240,7 +240,7 @@ class CfgWeapons
 	{
 		class XtdGearInfo
 		{
-			master = "amf_felin";
+			model = "amf_felin";
 			cover = "tan";
 			sordin = "tan";
 		};
