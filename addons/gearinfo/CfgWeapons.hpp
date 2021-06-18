@@ -8,7 +8,7 @@ class CfgWeapons
 		class XtdGearInfo
 		{
 			model = "U_C_CBRN_Suit_01";
-			camo = "White";
+			camo = "WHT";
 		};
 	};
 	class U_C_CBRN_Suit_01_Blue_F : Uniform_Base
@@ -16,7 +16,7 @@ class CfgWeapons
 		class XtdGearInfo
 		{
 			model = "U_C_CBRN_Suit_01";
-			camo = "Blue";
+			camo = "BLU";
 		};
 	};
 	class U_B_CBRN_Suit_01_Wdl_F : Uniform_Base
