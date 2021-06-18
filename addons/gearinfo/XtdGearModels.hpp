@@ -130,14 +130,17 @@ class XtdGearModels
 		class Full
 		{
 			label = "Full";
+			actionLabel = "Roll down sleeves";
 		};
 		class Quarter
 		{
-			label = "1/4";
+			label = "3/4";
+			actionLabel = "Roll up sleeves to 3/4";
 		};
 		class Half
 		{
 			label = "1/2";
+			actionLabel = "Roll up sleeves to half";
 		};
 		class Cut
 		{
