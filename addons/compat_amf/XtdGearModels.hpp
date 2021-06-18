@@ -10,7 +10,7 @@ class XtdGearModels
 			label = "Treillis F3/Ubas";
 			author = "Arma Mod France";
 			options[] = {"camo","sleeves"};
-			class camo : CamoBase
+			class camo //: CamoBase
 			{
 				values[] = {"CE_TAN","CE_OD","DA","SERVAL"};
 				class CE_TAN
@@ -34,7 +34,7 @@ class XtdGearModels
 					image = QPATHTOF(data\serval.paa);
 				};
 			};
-			class sleeves : SleevesBase
+			class sleeves //: SleevesBase
 			{
 				values[] = {"Full", "Half"};
 			};
@@ -45,7 +45,7 @@ class XtdGearModels
 			label = "Treillis F3";
 			author = "Arma Mod France";
 			options[] = {"camo"};
-			class camo : CamoBase
+			class camo //: CamoBase
 			{
 				values[] = {"CE","DA","SERVAL"};
 				class CE

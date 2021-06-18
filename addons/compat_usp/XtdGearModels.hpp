@@ -9,7 +9,7 @@ class XtdGearModels
 			label = "Crye G3C";
 			author = "UnderSiege Productions";
 			options[] = {"camo", "gloves", "sleeves", "collar", "kneepads","shoes"};
-			class camo : CamoBase
+			class camo //: CamoBase
 			{
 				values[] = {"BLK","GRY","KHK","RGR","M81","MC","MCB","MCD","MCT","MCW","AOR1","AOR2","ATT","TSD","TSW"};
 			};
@@ -31,7 +31,7 @@ class XtdGearModels
 				changeingame = 0;
 				values[] = {"none", "MX", "OR"};
 			};
-			class sleeves : SleevesBase
+			class sleeves //: SleevesBase
 			{
 				values[] = {"Full", "Quarter", "Half"};
 			};

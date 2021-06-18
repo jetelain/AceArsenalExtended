@@ -111,7 +111,10 @@ class GVAR(valueImage): RscPicture {
     w = QUOTE(19.5 * GRID_W);
     h = QUOTE(10 * GRID_H);
     colorBackground[] = {0,0,0,1};
-};
+    style = 144;
+    tileH = 0.5128;
+    tileW = 1;
+}; 
 class GVAR(valueCheckbox): RscCheckBox {
     x = QUOTE(0 * GRID_W);
     y = QUOTE(0 * GRID_H);

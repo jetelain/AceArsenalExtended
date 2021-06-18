@@ -7,9 +7,16 @@ params ["_control", "_curSel"];
 
 (call FUNC(leftPanelConfig)) params ["_index", "_classRoot"];
 
-if ( _index == -1 ) exitWith {};
-
 private _display = ctrlParent _control;
+
+if ( _index == -1 ) exitWith {
+	if ( GVAR(currentModel) != "" ) then {
+		[_display, "", ""] call FUNC(generateOptionsUI);
+		GVAR(currentModel) = "";
+		GVAR(currentConfig) = "";
+	};
+};
+
 private _selectedConfig = ace_arsenal_currentItems select _index;
 private _selectedModel = "";
 if ( _selectedConfig != "" ) then {

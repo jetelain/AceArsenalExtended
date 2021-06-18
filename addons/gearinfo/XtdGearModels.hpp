@@ -104,7 +104,7 @@ class XtdGearModels
 		class RGR
 		{
 			label = "RGR";
-			description = "Rangers Green";
+			description = "Ranger Green";
 			image = QPATHTOF(data\camo\rgr.paa);
 		};
 		class TSD
