@@ -16,9 +16,9 @@ class XtdGearModels
 			label = "Blue";
 			image = QPATHTOF(data\camo\blue.paa);
 		};
-		class Woodland
+		class M81
 		{
-			label = "Woodland";
+			label = "M81";
 			image = QPATHTOF(data\camo\woodland.paa);
 		};
 		class MTP
@@ -61,8 +61,21 @@ class XtdGearModels
 		{
 			label = "1/2";
 		};
+		class Cut
+		{
+			label = "Cut";
+			changeingame = -1;
+		};
 	};
 
+	/**
+	 * Conventional options names that can be used by mods, to avoid dependency to this pbo.
+	 */
+	class Conventional 
+	{
+		class camo: CamoBase {};
+		class sleeves: SleevesBase{};
+	};
 
 	class CfgWeapons 
 	{
@@ -73,7 +86,7 @@ class XtdGearModels
 			options[] = {"camo"};
 			class camo : CamoBase
 			{
-				values[] = {"White", "Blue", "Woodland", "MTP", "Tropic", "AAF", "EAF"};
+				values[] = {"White", "Blue", "M81", "MTP", "Tropic", "AAF", "EAF"};
 			};
 		};
 	};

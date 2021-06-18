@@ -5,9 +5,19 @@ Based on an original idea of Krogar from [Arma Mod France](https://discord.gg/uP
 
 ## For users
 
+### ACE Arsenal
+
+### Ingame self-actions
 
 ## For mod creators
 
+### Modelisation
+
+
+### The bluit-in approach
+
+
+### The compat mod approach
 
 ## How to build ?
 
@@ -17,6 +27,6 @@ Place hemtt.exe at the project root, and launch `.\hemtt.exe build`
 
 ## License
 
-This software is under [GNU GPL v2](LICENSE).
+This software is under [GNU GPL v2](LICENSE). Mods Configuration is under the MIT License.
 
 It includes sources files from [CBA_A3](https://github.com/CBATeam/CBA_A3/) (script_macros_common.hpp) and [ACE3](https://github.com/acemod/ACE3/) (defines.hpp).

@@ -5,3 +5,4 @@ PREP(changeCurrentConfig);
 PREP(refreshCheckboxes);
 PREP(leftPanelConfig);
 PREP(onLeftPanelFilled);
+PREP(generateOptionsUI);

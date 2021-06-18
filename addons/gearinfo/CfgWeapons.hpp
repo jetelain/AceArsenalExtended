@@ -24,7 +24,7 @@ class CfgWeapons
 		class XtdGearInfo
 		{
 			model = "U_C_CBRN_Suit_01";
-			camo = "Woodland";
+			camo = "M81";
 		};
 	};
 	class U_B_CBRN_Suit_01_MTP_F : Uniform_Base
