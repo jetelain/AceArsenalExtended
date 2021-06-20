@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"amf_uniforms", "AMF_Headgear_02", "aceax_gearinfo"};
+        requiredAddons[] = {"amf_uniforms", "AMF_Headgear_02","amf_vests"};
         author = "AUTHOR";
         VERSION_CONFIG;
     };

@@ -27,6 +27,6 @@ Place hemtt.exe at the project root, and launch `.\hemtt.exe build`
 
 ## License
 
-This software is under [GNU GPL v2](LICENSE). Mods Configuration is under the MIT License.
+Arsenal integration is under [GNU GPL v2 License](addons/arsenal/LICENSE). Other parts are under the [MIT License](addons/gearinfo/LICENSE).
 
 It includes sources files from [CBA_A3](https://github.com/CBATeam/CBA_A3/) (script_macros_common.hpp) and [ACE3](https://github.com/acemod/ACE3/) (defines.hpp).

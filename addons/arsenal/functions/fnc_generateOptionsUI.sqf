@@ -97,3 +97,16 @@ if ( _selectedModel != "" ) then {
 	_listControl ctrlCommit 0.1;
 	_configControl ctrlCommit 0.1;
 };
+
+// workaround scrollbar issue
+[{
+	params ["_listControl", "_configControl"];
+	if ( GVAR(currentModel) != "" ) then {
+		_listControl ctrlSetPositionH (safezoneH - 128.5 * GRID_H);
+		_configControl ctrlSetPositionY ((safezoneY + 14 * GRID_H) + (safezoneH - 124.5 * GRID_H));
+		_configControl ctrlSetPositionH (100 * GRID_H);
+		_listControl ctrlCommit 0;
+		_configControl ctrlCommit 0;
+	};
+}, [_listControl,_configControl], 1] call CBA_fnc_waitAndExecute;
+
