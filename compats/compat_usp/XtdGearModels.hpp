@@ -179,6 +179,89 @@ class XtdGearModels
 				values[] = {"no", "yes"};
 			};
 		};
+
+
+		class USP_CRYE_JPC
+		{
+			label = "Crye JPC";
+			author = "UnderSiege Productions";
+			options[] = {"camo", "loadout","belt"};
+			class camo
+			{
+				values[] = {"MC","CBR","KHK","RGR"};
+			};
+			class loadout
+			{
+				values[] = {"none","ASLT","DM","GR","MG","TL","FS"};
+			};
+			class belt
+			{
+				values[] = {"no","yes"};
+			};
+		};
+
+		class USP_CRYE_NCPC
+		{
+			label = "Crye NCPC";
+			author = "UnderSiege Productions";
+			options[] = {"camo", "loadout"};
+			class camo
+			{
+				values[] = {"CBR","AOR1","AOR2","TGS","KTH","KTYY","M81"};
+			};
+			class loadout
+			{
+				values[] = {"none","ASLT","FAST"};
+			};
+		};
+
+		
+		class USP_CRYE_CPC
+		{
+			label = "Crye CPC";
+			author = "UnderSiege Productions";
+			options[] = {"camo", "loadout","belt"};
+			class camo
+			{
+				values[] = {"CBR","AOR2","MC","MCA","MCB","MCD","MCT","RGR"};
+			};
+			class loadout
+			{
+				values[] = {"none","COMMS","FAST","LEAD","LIGHT","MEDIC","WEAPON"};
+			};
+			class belt
+			{
+				values[] = {"no","yes"};
+			};
+		};
+
+		
+		class USP_BASEBALL
+		{
+			label = "Baseball Cap";
+			author = "UnderSiege Productions";
+			options[] = {"camo", "light","eyewear","comms","side"};
+			class camo
+			{
+				values[] = {"CBR","AOR2","MC","MCA","MCB","MCD","MCT","RGR"};
+			};
+			class light
+			{
+				values[] = {"none","FS","PT"};
+			};
+			class eyewear
+			{
+				values[] = {"none","GG","DC","SJ"};
+			};
+			class comms
+			{
+				values[] = {"none","BM","CT"};
+			};
+			class side
+			{
+				values[] = {"front","back"};
+			};
+		};
 	};
 
 };
