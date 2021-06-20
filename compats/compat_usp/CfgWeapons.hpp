@@ -475,18 +475,61 @@
 
 #define PATTERN_CAP_Y(name, base, c, o, s) \
 	PATTERN_CAP_L(##name##D,base,c,DC,o,s) \
-	PATTERN_CAP_L(##name##G,base,c,GS,o,s) \
+	PATTERN_CAP_L(##name##G,base,c,GG,o,s) \
 	PATTERN_CAP_L(##name##J,base,c,SJ,o,s)       
 
 #define PATTERN_CAP_ALL(name,  c, s) \
-	PATTERN_CAP(  name,      H_HelmetB,none,c, none, none, s) \
-	PATTERN_CAP(  ##name##BP,name,     PT,  c, none, BM,   s) \
-	PATTERN_CAP(  ##name##S, name,     FS,  c, none, none, s) \
-	PATTERN_CAP_L(##name##B, name,          c, none, BM,   s) \
-	PATTERN_CAP_L(##name##C, name,          c, none, CT,   s) \
-    PATTERN_CAP_Y(name,      name,          c,       none, s) \
-	PATTERN_CAP_Y(##name##B, name,          c,       BM,   s) \
-	PATTERN_CAP_Y(##name##C, name,          c,       CT,   s)
+	PATTERN_CAP(  name,       H_HelmetB,none,c, none, none, s) \
+	PATTERN_CAP(  ##name##_BP,name,     PT,  c, none, BM,   s) \
+	PATTERN_CAP(  ##name##_S, name,     FS,  c, none, none, s) \
+	PATTERN_CAP(  ##name##_S, name,     FS,  c, none, none, s) \
+	PATTERN_CAP_L(##name##_B, name,          c, none, BM,   s) \
+	PATTERN_CAP_L(##name##_C, name,          c, none, CT,   s) \
+    PATTERN_CAP_Y(##name##_,  name,          c,       none, s) \
+	PATTERN_CAP_Y(##name##_B, name,          c,       BM,   s) \
+	PATTERN_CAP_Y(##name##_C, name,          c,       CT,   s)
+
+#define PATTERN_CAP_CT3(name,o,s) \
+	PATTERN_CAP(name,H_HelmetB,none,MC,none,o,s)                      \
+	PATTERN_CAP(##name##_ABU,name,none,ABU,none,o,s)                  \
+	PATTERN_CAP(##name##_AOR1,name,none,AOR1,none,o,s)                \
+	PATTERN_CAP(##name##_AOR2,name,none,AOR2,none,o,s)                \
+	PATTERN_CAP(##name##_ATACSAU,name,none,ATACSAU,none,o,s)          \
+	PATTERN_CAP(##name##_ATACSFG,name,none,ATACSFG,none,o,s)          \
+	PATTERN_CAP(##name##_ATACSIX,name,none,ATACSIX,none,o,s)          \
+	PATTERN_CAP(##name##_BLK,name,none,BLK,none,o,s)                  \
+	PATTERN_CAP(##name##_CBR,name,none,CBR,none,o,s)                  \
+	PATTERN_CAP(##name##_DCU,name,none,DCU,none,o,s)                  \
+	PATTERN_CAP(##name##_KHK,name,none,KHK,none,o,s)                  \
+	PATTERN_CAP(##name##_KTBANSHEE,name,none,KTBANSHEE,none,o,s)      \
+	PATTERN_CAP(##name##_KTHIGHLANDER,name,none,KTHIGHLANDER,none,o,s)\
+	PATTERN_CAP(##name##_KTNEPTUNE,name,none,KTNEPTUNE,none,o,s)      \
+	PATTERN_CAP(##name##_KTNOMAD,name,none,KTNOMAD,none,o,s)          \
+	PATTERN_CAP(##name##_KTPONTUS,name,none,KTPONTUS,none,o,s)        \
+	PATTERN_CAP(##name##_KTTYPHON,name,none,KTTYPHON,none,o,s)        \
+	PATTERN_CAP(##name##_KTYETI,name,none,KTYETI,none,o,s)            \
+	PATTERN_CAP(##name##_M81,name,none,M81,none,o,s)                  \
+	PATTERN_CAP(##name##_MCA,name,none,MCA,none,o,s)                  \
+	PATTERN_CAP(##name##_MCB,name,none,MCB,none,o,s)                  \
+	PATTERN_CAP(##name##_MCD,name,none,MCD,none,o,s)                  \
+	PATTERN_CAP(##name##_MCT,name,none,MCT,none,o,s)                  \
+	PATTERN_CAP(##name##_MPW,name,none,MPW,none,o,s)                  \
+	PATTERN_CAP(##name##_MTP,name,none,MTP,none,o,s)                  \
+	PATTERN_CAP(##name##_OD,name,none,OD,none,o,s)                    \
+	PATTERN_CAP(##name##_PANTHERS,H_HelmetB,none,PANTHERS,none,o,s)   \
+	PATTERN_CAP(##name##_RGR,name,none,RGR,none,o,s)                  \
+	PATTERN_CAP(##name##_RT,name,none,RT,none,o,s)                    \
+	PATTERN_CAP(##name##_RT2,name,none,RT2,none,o,s)                  \
+	PATTERN_CAP(##name##_RT3,name,none,RT3,none,o,s)                  \
+	PATTERN_CAP(##name##_RT4,name,none,RT4,none,o,s)                  \
+	PATTERN_CAP(##name##_RT5,name,none,RT5,none,o,s)                  \
+	PATTERN_CAP(##name##_RT6,name,none,RT6,none,o,s)                  \
+	PATTERN_CAP(##name##_RT7,name,none,RT7,none,o,s)                  \
+	PATTERN_CAP(##name##_TGR,name,none,TGR,none,o,s)                  \
+	PATTERN_CAP(##name##_TGRD,name,none,TGRD,none,o,s)                \
+	PATTERN_CAP(##name##_UCP,name,none,UCP,none,o,s)                  \
+	PATTERN_CAP(##name##_UCPD,name,none,UCPD,none,o,s)                \
+	PATTERN_CAP(##name##_US4CES,name,none,US4CES,none,o,s)            
 
 class CfgWeapons
 {
@@ -700,22 +743,91 @@ class CfgWeapons
 	PATTERN_VEST(USP_CRYE_CPC_WEAPON_MC,USP_CRYE_CPC_WEAPON            ,USP_CRYE_CPC,MC,WEAPON,no)
 	PATTERN_VEST(USP_CRYE_CPC_WEAPON_RGR,USP_CRYE_CPC_WEAPON           ,USP_CRYE_CPC,RGR,WEAPON,no)
 
-/*
-	PATTERN_CAP_ALL(USP_BASEBALL_CAP,  MC, front)
-	PATTERN_CAP_ALL(USP_BASEBALL_CAPB, MC, back)
-	PATTERN_CAP_ALL(USP_BASEBALL_CAP_ABU,  ABU, front)
-	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_ABU, ABU, back)
-	PATTERN_CAP_ALL(USP_BASEBALL_CAP_AOR1,  AOR1, front)
-	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_AOR1, AOR1, back)
-	PATTERN_CAP_ALL(USP_BASEBALL_CAP_AOR2,  AOR2, front)
-	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_AOR2, AOR2, back)
-	PATTERN_CAP_ALL(USP_BASEBALL_CAP_ATACSAU,  ATACSAU, front)
-	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_ATACSAU, ATACSAU, back)
-	PATTERN_CAP_ALL(USP_BASEBALL_CAP_ATACSFG,  ATACSFG, front)
-	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_ATACSFG, ATACSFG, back)
-	PATTERN_CAP_ALL(USP_BASEBALL_CAP_AATACSIX,  ATACSIX, front)
-	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_ATACSIX, ATACSIX, back)
-	PATTERN_CAP_ALL(USP_BASEBALL_CAP_BLK,  BLK, front)
-	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_BLK, BLK, back)
-*/
+
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP,           MC, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB,          MC, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_ABU,       ABU, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_ABU,      ABU, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_AOR1,      AOR1, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_AOR1,     AOR1, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_AOR2,      AOR2, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_AOR2,     AOR2, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_ATACSAU,   ATACSAU, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_ATACSAU,  ATACSAU, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_ATACSFG,   ATACSFG, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_ATACSFG,  ATACSFG, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_ATACSIX,   ATACSIX, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_ATACSIX,  ATACSIX, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_BLK,       BLK, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_BLK,      BLK, back)
+
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_CBR,CBR, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_CBR,CBR, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_DCU,DCU, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_DCU,DCU, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_KHK,KHK, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_KHK,KHK, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_KTBANSHEE,KTBANSHEE, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_KTBANSHEE,KTBANSHEE, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_KTHIGHLANDER,KTHIGHLANDER, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_KTHIGHLANDER,KTHIGHLANDER, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_KTNEPTUNE,KTNEPTUNE, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_KTNEPTUNE,KTNEPTUNE, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_KTNOMAD,KTNOMAD, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_KTNOMAD,KTNOMAD, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_KTPONTUS,KTPONTUS, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_KTPONTUS,KTPONTUS, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_KTTYPHON,KTTYPHON, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_KTTYPHON,KTTYPHON, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_KTYETI,KTYETI, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_KTYETI,KTYETI, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_M81,M81, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_M81,M81, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_MCA,MCA, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_MCA,MCA, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_MCB,MCB, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_MCB,MCB, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_MCD,MCD, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_MCD,MCD, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_MCT,MCT, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_MCT,MCT, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_MPW,MPW, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_MPW,MPW, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_MTP,MTP, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_MTP,MTP, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_OD,OD, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_OD,OD, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_RGR,RGR, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_RGR,RGR, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_RT,RT, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_RT,RT, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_RT2,RT2, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_RT2,RT2, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_RT3,RT3, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_RT3,RT3, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_RT4,RT4, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_RT4,RT4, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_RT5,RT5, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_RT5,RT5, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_RT6,RT6, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_RT6,RT6, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_RT7,RT7, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_RT7,RT7, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_TGR,TGR, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_TGR,TGR, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_TGRD,TGRD, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_TGRD,TGRD, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_UCP,UCP, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_UCP,UCP, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_UCPD,UCPD, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_UCPD,UCPD, back)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAP_US4CES,US4CES, front)
+	PATTERN_CAP_ALL(USP_BASEBALL_CAPB_US4CES,US4CES, back)
+
+	PATTERN_CAP_CT3(USP_BASEBALL_CAP_CT3,CT3,front)
+	PATTERN_CAP_CT3(USP_BASEBALL_CAP_CT3O,CT3off,front)
+	PATTERN_CAP_CT3(USP_BASEBALL_CAPB_CT3,CT3,back)
+	PATTERN_CAP_CT3(USP_BASEBALL_CAPB_CT3O,CT3off,back)
+
+
 };

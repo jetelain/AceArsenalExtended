@@ -243,7 +243,7 @@ class XtdGearModels
 			options[] = {"camo", "light","eyewear","comms","side"};
 			class camo
 			{
-				values[] = {"CBR","AOR2","MC","MCA","MCB","MCD","MCT","RGR"};
+				values[] = {"MC","ABU","AOR1","AOR2","ATACSAU","ATACSFG","ATACSIX","BLK","CBR","DCU","KHK","KTBANSHEE","KTHIGHLANDER","KTNEPTUNE","KTNOMAD","KTPONTUS","KTTYPHON","KTYETI","M81","MCA","MCB","MCD","MCT","MPW","MTP","OD","RGR","RT","RT2","RT3","RT4","RT5","RT6","RT7","TGR","TGRD","UCP","UCPD","US4CES", "PANTHERS"};
 			};
 			class light
 			{
@@ -255,7 +255,7 @@ class XtdGearModels
 			};
 			class comms
 			{
-				values[] = {"none","BM","CT"};
+				values[] = {"none","BM","CT","CT3","CT3off"};
 			};
 			class side
 			{
