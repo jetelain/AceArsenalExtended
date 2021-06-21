@@ -37,22 +37,22 @@ All these objets are found in Arma 3 configuration :
 ```c++
 class XtdGearModels
 {
-	class CfgWeapons 
-	{
-		class my_model
-		{
-			label = "Model label";
-			author = "My name";
-			options[] = {"camo","optionA"};
-			class camo // coventional name
-			{
-				values[] = {"MTP", "Tropic"};
+    class CfgWeapons 
+    {
+        class my_model
+        {
+            label = "Model label";
+            author = "My name";
+            options[] = {"camo","optionA"};
+            class camo // coventional name
+            {
+                values[] = {"MTP", "Tropic"};
                 // all values already exists, no need to create subentries
-			};
-			class optionA
-			{
+            };
+            class optionA
+            {
                 label = "Option A label";
-				values[] = {"value1", "value2"};
+                values[] = {"value1", "value2"};
                 changeingame = 0; // 1 if value can be changed in game via ACE menu
                 // icon = "xxx"; If can changeingame, action group icon in ACE menu
                 class value1
@@ -67,9 +67,9 @@ class XtdGearModels
                 {
                     label = "2";
                 };
-			};
-		};
-	};
+            };
+        };
+    };
 };
 class CfgWeapons 
 {
