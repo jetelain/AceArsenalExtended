@@ -207,7 +207,7 @@ class XtdGearModels
 			options[] = {"camo", "loadout"};
 			class camo
 			{
-				values[] = {"CBR","AOR1","AOR2","TGS","KTH","KTYY","M81"};
+				values[] = {"CBR","AOR1","AOR2","TGS","KTH","KTTY","M81"};
 			};
 			class loadout
 			{

@@ -39,6 +39,8 @@ class ace_arsenal_display {
             onLBSelChanged = QUOTE(_this call FUNC(onSelChangedLeft));
             onSetFocus = QUOTE(ace_arsenal_leftTabFocus = true);
             onKillFocus = QUOTE(ace_arsenal_leftTabFocus = false);
+            colorTextRight[] = {0.5,0.5,0.5,1};
+            colorSelect2Right[] = {0,0,0,1};
             x = QUOTE(safezoneX + 13 * GRID_W);
             y = QUOTE(safezoneY + 14 * GRID_H);
             w = QUOTE(80 * GRID_W);
