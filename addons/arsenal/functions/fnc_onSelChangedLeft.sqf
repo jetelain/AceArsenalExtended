@@ -32,4 +32,6 @@ if ( _selectedModel != GVAR(currentModel) ) then {
 if ( _selectedModel != "" ) then {
 	GVAR(currentModelOptions) = [_classRoot, _selectedConfig, _selectedModel] call EFUNC(gearinfo,getConfigOptions);
 	[_display] call FUNC(refreshCheckboxes);
+
+	[ace_arsenal_center] call EFUNC(gearinfo,applyTextureOptions); 
 };

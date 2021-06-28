@@ -22,6 +22,7 @@ class RscText;
 class RscCheckBox;
 class RscPicture;
 class RscButton;
+class RscPictureKeepAspect;
 
 class ace_arsenal_display {
 	
@@ -117,6 +118,14 @@ class GVAR(valueImage): RscPicture {
     tileH = 0.5128;
     tileW = 1;
 }; 
+class GVAR(valueImageCenterSquare): RscPictureKeepAspect {
+    text = "";
+    x = QUOTE(0 * GRID_W);
+    y = QUOTE(0 * GRID_H);
+    w = QUOTE(19.5 * GRID_W);
+    h = QUOTE(10 * GRID_H);
+    colorBackground[] = {0,0,0,1};
+}; 
 class GVAR(valueCheckbox): RscCheckBox {
     x = QUOTE(0 * GRID_W);
     y = QUOTE(0 * GRID_H);
@@ -132,8 +141,6 @@ class GVAR(valueCheckbox): RscCheckBox {
 	texturePressedUnchecked = QPATHTOF(data\ui\unchecked.paa);
 	textureDisabledChecked = QPATHTOF(data\ui\disabled.paa);
 	textureDisabledUnchecked = QPATHTOF(data\ui\disabled.paa);
-
-    onCheckedChanged = QUOTE([ARR_3(ctrlParent (_this select 0), _this select 0, _this select 1)] call FUNC(onValueCheckedChanged));
 };
 class GVAR(valueButton): RscButton {
     text = "Label";
@@ -151,6 +158,4 @@ class GVAR(valueButton): RscButton {
     colorBackgroundActive[] = {0, 0, 0, 0};
     colorDisabled[] = {0, 0, 0, 0};
     colorBackgroundDisabled[] = {0, 0, 0, 0};
-
-    onButtonClick = QUOTE([ARR_2(ctrlParent (_this select 0), _this select 0)] call FUNC(onValueButton));
 };

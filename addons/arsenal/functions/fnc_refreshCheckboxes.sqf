@@ -26,8 +26,26 @@ if ( _model != "" ) then {
 			_ctrl cbSetChecked (_valueName == _currentValue);
 			_ctrl ctrlEnable !isNull ([GVAR(currentConfig), GVAR(currentModel), _previewOptions] call EFUNC(gearinfo,findConfig));
 			_ctrl ctrlCommit 0;
-
 		} forEach _optionValues;
 
 	} forEach _options;
+
+
+	private _textureoptions = [_config, _model, _modelDefinition, "textureoptions"] call EFUNC(gearinfo,getModelOptions);
+	{
+		private _optionIndex = _foreachIndex;
+		_x params  ["_optionName", "", "", "", "_values"];
+		private _currentValue = [ace_arsenal_center, GVAR(currentModel), _optionName] call EFUNC(gearinfo,getTextureOption);
+		private _posX = 0;
+		{
+			private _valueIndex = _foreachIndex;
+			_x params ["_valueName"];
+			private _valueIdcBase = 9975000 + (_optionIndex * 200) + (_valueIndex * 4);
+			private _ctrl = _display displayCtrl (_valueIdcBase + 1);
+			_ctrl cbSetChecked (_valueName == _currentValue);
+			_ctrl ctrlCommit 0;
+		} forEach _values;
+	} forEach _textureoptions;
+	
+
 };

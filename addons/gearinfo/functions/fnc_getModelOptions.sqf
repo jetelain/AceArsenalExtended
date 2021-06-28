@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params ["_classRoot", "_model", ["_modelDefinition", configNull]];
+params ["_classRoot", "_model", ["_modelDefinition", configNull], ["_kind", "options"]];
 
 // XXX: Add cache ?
 
@@ -10,7 +10,7 @@ if ( isNull _modelDefinition ) then {
 
 private _st = diag_tickTime;
 
-private _optionsNames = getArray ( _modelDefinition >> "options" );
+private _optionsNames = getArray ( _modelDefinition >> _kind );
 
 private _options = [];
 
@@ -37,6 +37,7 @@ READ(Number)
 	private _optionIcon = [_optionDef1, _optionDef2, "icon", ""] call _readText;
 	private _optionInGame = [_optionDef1, _optionDef2, "changeingame", 0] call _readNumber;
 	private _values = [];
+	private _optionCenterImage = getNumber (_optionDef1 >> "centerImage");
 	private _optionValues = getArray (_optionDef1 >> "values");
 
 	{
@@ -56,7 +57,7 @@ READ(Number)
 
 	} forEach _optionValues;
 
-	_options pushBack [_optionName, _optionLabel, _optionIcon, _optionInGame, _values];
+	_options pushBack [_optionName, _optionLabel, _optionIcon, _optionInGame, _values, _optionCenterImage];
 	
 } forEach _optionsNames;
 

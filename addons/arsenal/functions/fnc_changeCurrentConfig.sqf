@@ -2,7 +2,12 @@
 #include "..\defines.hpp"
 
 params ["_display", "_data"];
-_data params ["_optionIndex", "_optionName", "_valueIndex", "_valueName"];
+_data params ["_optionIndex", "_optionName", "_valueIndex", "_valueName", ["_type", ""]];
+
+if ( _type == "textureoptions" ) exitWith {
+	[ace_arsenal_center, GVAR(currentModel), _optionName, _valueName] call EFUNC(gearinfo,setTextureOption); 
+	[_display] call FUNC(refreshCheckboxes);
+};
 
 if ( (GVAR(currentModelOptions) select _optionIndex) != _valueName) then {
 

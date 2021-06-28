@@ -1,4 +1,3 @@
-PREP(onValueCheckedChanged);
 PREP(onValueButton);
 PREP(onSelChangedLeft);
 PREP(changeCurrentConfig);

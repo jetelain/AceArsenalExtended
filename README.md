@@ -88,6 +88,54 @@ class CfgWeapons
 };
 ```
 
+### Texture Options
+
+On uniforms and backback, you can add special options called "texture options". Those options will not change the "Config", but will allow you to change a texture of an hiddenselection defined in the "Config". 
+
+Those options are listed in the `textureOptions` array in the "Model". 
+Options are defined like all others options with an additional string or number `hiddenselection`. 
+"Values" have an additional string `texture`.
+
+```c++
+class XtdGearModels
+{
+    class CfgWeapons 
+    {
+        class my_model
+        {
+            // ...
+            textureOptions = { "bloodgroup" };
+            class bloodgroup
+            {
+                label = "Blood group";
+                values[] = {"A", "B", "AB", "O"};
+                hiddenselection = "selectionName";
+                class A
+                {
+                    texture = "path\to\texture.paa";
+                };
+                // ...
+            };
+        };
+    };
+};
+class CfgWeapons 
+{
+    class baseClass;
+    class my_model_MTP_value1 : baseClass
+    {
+        class XtdGearInfo
+        {
+            model = "my_model";
+            // ...
+        };
+        hiddenselections = { /*..., */ "selectionName" };
+        // ...
+    };
+    // ...
+};
+```
+
 ### The bluit-in approach
 
 You can builtin configuration for ACE3 Arsenal Extended within your mod, without creating a dependency. You may duplicate all what you need, or use conventional names.

@@ -8,3 +8,16 @@ GVAR(cache) = createHashMap;
 #ifdef DEBUG_MODE_FULL
 [""] call FUNC(diag_detectErrors);
 #endif
+/*
+["loadout", {
+    params ["_unit"];
+
+
+}] call CBA_fnc_addPlayerEventHandler;
+
+["vehicle", {
+    params ["_unit"];
+
+
+}] call CBA_fnc_addPlayerEventHandler;
+*/
