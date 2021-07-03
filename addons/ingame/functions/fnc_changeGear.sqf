@@ -7,7 +7,7 @@ _params params ["_player", "_layout", "_actionLabel", "_config"];
 
 private _callback = {
 		params ["_args"];
-		_args params ["_player", "_layout", "", "_config"];
+		_args params ["_player", "_layout", "", "_config", "_giveBack", "_consume"];
 
 		private _insignia = [_player] call BIS_fnc_getUnitInsignia;
 		// setUnitLoadout will clear insignia, but BIS_fnc_setUnitInsignia does
@@ -15,8 +15,6 @@ private _callback = {
 		[_player, ""] call BIS_fnc_setUnitInsignia;
 
 		private _loadout = getUnitLoadout _player;
-
-		INFO_1("Loadout before: %1", _loadout);
 
 		_layout params ["", "_loadoutIndex", "_loadoutSecondary"];
 
@@ -28,12 +26,17 @@ private _callback = {
 
 		_player setUnitLoadout _loadout;
 
-		INFO_1("Loadout after: %1", _loadout);
-
 		[_player, _insignia] call BIS_fnc_setUnitInsignia;
 
 		if ( currentWeapon _player != "" ) then {
 			_player playMoveNow "amovpercmstpslowwrfldnon";
+		};
+
+		if ( _consume != "" ) then { 
+			_player removeItem _consume;
+		};
+		if ( _giveBack != "" ) then { 
+			_player addItem _giveBack;
 		};
 	};
 

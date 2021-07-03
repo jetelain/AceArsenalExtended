@@ -52,15 +52,14 @@ READ(Number)
 		private _valueDesc   = [_valueDef1, _valueDef2, "description", ""] call _readText;
 		private _valueAction = [_valueDef1, _valueDef2, "actionLabel", format ["%1 %2", _optionLabel, _valueLabel]] call _readText;
 		private _valueInGame = [_valueDef1, _valueDef2, "changeingame", _optionInGame] call _readNumber;
+		private _itemInGame =  [_valueDef1, _valueDef2, "itemingame", ""] call _readText;
 		
-		_values pushBack [_valueName, _valueLabel, _valueImage, _valueIcon, _valueDesc, _valueAction, _valueInGame];
+		_values pushBack [_valueName, _valueLabel, _valueImage, _valueIcon, _valueDesc, _valueAction, _valueInGame, _itemInGame];
 
 	} forEach _optionValues;
 
 	_options pushBack [_optionName, _optionLabel, _optionIcon, _optionInGame, _values, _optionCenterImage];
 	
 } forEach _optionsNames;
-
-INFO_3("%1 (%2 sec) => %3", _model, diag_tickTime - _st, _options);
 
 _options

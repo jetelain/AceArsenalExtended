@@ -35,10 +35,10 @@ private _loadout = getUnitLoadout _player;
 
                     private _optionValue = _optionsValues select _optionIndex;
                     private _optionActions = [];
-                    
+                    private _itemBack = "";
                     {
                         private _valueIndex = _foreachIndex;
-                        _x params ["_valueName", "", "", "_valueIcon", "", "_valueAction", "_valueInGame"];
+                        _x params ["_valueName", "", "", "_valueIcon", "", "_valueAction", "_valueInGame", "_itemInGame"];
                     
                         if ( _valueInGame > 0 ) then {
 
@@ -47,19 +47,20 @@ private _loadout = getUnitLoadout _player;
                                 _previewOptions set [_optionIndex, _valueName];
                                 private _previewConfig = [_classRoot, _model, _previewOptions] call EFUNC(gearinfo,findConfigName);
                                 if ( _previewConfig != "") then {
-                                    _optionActions pushBack [_valueAction, _valueIcon, _previewConfig];
+                                    _optionActions pushBack [_valueAction, _valueIcon, _previewConfig, _itemInGame];
                                 };
+                            } else {
+                                _itemBack = _itemInGame;
                             };
 
                         };
                     } forEach _values;
 
-                    private _actionParams = [_player, _layout, _optionIndex, _optionActions];
+                    private _actionParams = [_player, _layout, _optionIndex, _optionActions, _itemBack];
 
                     switch (count _optionActions) do {
                         case 0 :   { /* Nothing */ };
                         case 1 :   { 
-                            private _data = _optionActions select 0;
                             _actions pushBack (( [_target, "", _actionParams] call FUNC(generateActions) ) select 0);
                         };
                         default { 

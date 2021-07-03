@@ -62,6 +62,7 @@ class XtdGearModels
                     // image = "xxx"; Background image in Arsenal
                     // icon = "xxx"; If can changeingame, action icon in ACE menu
                     // actionlabel = "xxx"; If can changeingame, action label in ACE menu
+                    // itemingame = "xxx"; If can changeingame, requires this item to be present in inventory. Item will be removed from inventory (added back if an other value is choosen)
                 };
                 class value2
                 {
@@ -95,6 +96,8 @@ On uniforms and backback, you can add special options called "texture options". 
 Those options are listed in the `textureOptions` array in the "Model". 
 Options are defined like all others options with an additional string or number `hiddenselection`. 
 "Values" have an additional string `texture`.
+
+Texture options does not yet support `changeingame`.
 
 ```c++
 class XtdGearModels
