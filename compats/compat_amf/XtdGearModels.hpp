@@ -421,6 +421,94 @@ class XtdGearModels
 			class rank : VestRankBase {};
 		};
 
+		class amf_opscore_xp
+		{
+			label = "GENTEX OPSCORE FAST XP";
+			author = "Arma Mod France";
+			options[] = {"cover","sordin","goggles"};
+			class cover
+			{
+				label = "Paint";
+				changeingame = 0;
+				values[] = {"od", "blk", "tan", "gry"};
+				class blk
+				{
+					label = "Black";
+					image="#(rgb,8,8,3)color(0.1,0.1,0.1,1)";
+				};
+				class od
+				{
+					label = "OD";
+					image="#(rgb,8,8,3)color(0.3,0.29,0.24,1)";
+				};
+				class tan
+				{
+					label = "TAN";
+					image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
+				};
+				class gry
+				{
+					label = "GRY";
+					image="#(rgb,8,8,3)color(0.4,0.4,0.4,1)";
+				};
+			};
+			class sordin : SordinBase {
+				values[] = {"blk","tan","od"};
+			};
+			class goggles : GogglesBase {};
 
+		};
+
+		class amf_opscore_bump
+		{
+			label = "GENTEX OPSCORE BUMP";
+			author = "Arma Mod France";
+			options[] = {"cover","sordin","goggles","top"};
+			class cover
+			{
+				label = "Paint";
+				changeingame = 0;
+				values[] = {"od", "blk", "tan", "gry"};
+				class blk
+				{
+					label = "Black";
+					image="#(rgb,8,8,3)color(0.1,0.1,0.1,1)";
+				};
+				class od
+				{
+					label = "OD";
+					image="#(rgb,8,8,3)color(0.3,0.29,0.24,1)";
+				};
+				class tan
+				{
+					label = "TAN";
+					image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
+				};
+				class gry
+				{
+					label = "GRY";
+					image="#(rgb,8,8,3)color(0.4,0.4,0.4,1)";
+				};
+			};
+			class sordin : SordinBase {
+				values[] = {"blk","tan","od"};
+			};
+			class goggles : GogglesBase {};
+
+			class top
+			{
+				label = "Top";
+				changeingame = 0;
+				values[] = {"none", "irf"};
+				class none
+				{
+					label = "(none)";
+				};
+				class irf
+				{
+					label = "IRF";
+				};
+			};
+		};
 	};
 };
