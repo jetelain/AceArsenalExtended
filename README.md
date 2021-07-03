@@ -104,10 +104,10 @@ class XtdGearModels
         class my_model
         {
             // ...
-            textureOptions = { "bloodgroup" };
-            class bloodgroup
+            textureOptions = { "bloodtype" };
+            class bloodtype
             {
-                label = "Blood group";
+                label = "Blood type";
                 values[] = {"A", "B", "AB", "O"};
                 hiddenselection = "selectionName";
                 class A
