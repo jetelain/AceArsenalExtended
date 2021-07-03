@@ -2,21 +2,19 @@
 
 params ["_classRoot", "_model", "_options"];
 
-private _optionsNames = getArray (configFile >> "XtdGearModels" >> _classRoot >> _model >> "options");
 private _variations = GVAR(cache) getOrDefault [_model, []];
 
 if ( count _variations == 0 ) then {
-	private _condition = "getText (_x >> 'XtdGearInfo' >> 'model') == '"+_model+"'";
-	_variations = _condition configClasses (configFile >> _classRoot);
+	private _optionsNames = getArray (configFile >> "XtdGearModels" >> _classRoot >> _model >> "options");
+	private _configs = ("getText (_x >> 'XtdGearInfo' >> 'model') == '"+_model+"'") configClasses (configFile >> _classRoot);
+
+	_variations = createHashMap;
+	{
+		private _variation = _x;
+		_variations set [(_optionsNames apply { getText (_variation >> "XtdGearInfo" >> _x) }), _variation];
+	} foreach _configs;
+
 	GVAR(cache) set [_model, _variations];
 };
 
-private _result = configNull;
-{
-	private _variation = _x;
-	if ( (_optionsNames apply { getText (_variation >> "XtdGearInfo" >> _x) }) isEqualTo _options ) exitWith {
-		_result = _variation;
-	};
-} foreach _variations;
-
-_result
+_variations getOrDefault [_options, configNull]
