@@ -37,75 +37,157 @@ class XtdGearModels
 			label="SDT";
 			description="Deuxième classe";
 			image = "";
+			texture = "";
 		};
 		class 1CL
 		{
 			description="Première classe (distinction)";
 			image = "amf_vests\data\grades\1cl_co.paa";
+			texture = "amf_vests\data\grades\1cl_co.paa";
 		};
 		class CPL
 		{
 			description="Caporal";
 			image = "amf_vests\data\grades\cpl_co.paa";
+			texture = "amf_vests\data\grades\cpl_co.paa";
 		};
 		class CCH
 		{
 			description="Caporal-chef";
 			image = "amf_vests\data\grades\cplchef_co.paa";
+			texture = "amf_vests\data\grades\cplchef_co.paa";
 		};
 		class CC1
 		{
 			description="Caporal-chef de première classe";
 			image = "amf_vests\data\grades\cplchef1_co.paa";
+			texture = "amf_vests\data\grades\cplchef1_co.paa";
 		};
 		class SGT
 		{
 			description="Sergent";
 			image = "amf_vests\data\grades\sgt_co.paa";
+			texture = "amf_vests\data\grades\sgt_co.paa";
 		};
 		class SCH
 		{
 			description="Sergent-chef";
 			image = "amf_vests\data\grades\sgtchef_co.paa";
+			texture = "amf_vests\data\grades\sgtchef_co.paa";
 		};
 		class ADJ
 		{
 			description="Adjudant";
 			image = "amf_vests\data\grades\adj_co.paa";
+			texture = "amf_vests\data\grades\adj_co.paa";
 		};
 		class ADC
 		{
 			description="Adjudant-chef";
 			image = "amf_vests\data\grades\adjchel_co.paa";
+			texture = "amf_vests\data\grades\adjchel_co.paa";
 		};
 		class MAJ
 		{
 			description="Major";
 			image = "amf_vests\data\grades\maj_co.paa";
+			texture = "amf_vests\data\grades\maj_co.paa";
 		};
 		class ASP
 		{
 			description="Aspirant";
 			image = "amf_vests\data\grades\asp_co.paa";
+			texture = "amf_vests\data\grades\asp_co.paa";
 		};
 		class LTN
 		{
 			description="Lieutenant";
 			image = "amf_vests\data\grades\lt_co.paa";
+			texture = "amf_vests\data\grades\lt_co.paa";
 		};
 	};
+
+
+	class BloodTypeBase
+	{
+		label = "Blood type";
+		changeingame = 0;
+		centerImage = 1;
+		values[] = {"none","APOS","ANEG","BPOS","BNEG","OPOS","ONEG","ABPOS","ABNEG"};
+		class none
+		{
+			label="(none)";
+			image = "";
+			texture = "";
+		};
+		class APOS
+		{
+			label="A+";
+			image = "amf_vests\data\blood\apos_co.paa";
+			texture = "amf_vests\data\blood\apos_co.paa";
+		};
+		class ANEG
+		{
+			label="A-";
+			image = "amf_vests\data\blood\aneg_co.paa";
+			texture = "amf_vests\data\blood\aneg_co.paa";
+		};
+		class BPOS
+		{
+			label="B+";
+			image = "amf_vests\data\blood\bpos_co.paa";
+			texture = "amf_vests\data\blood\bpos_co.paa";
+		};
+		class BNEG
+		{
+			label="B-";
+			image = "amf_vests\data\blood\bneg_co.paa";
+			texture = "amf_vests\data\blood\bneg_co.paa";
+		};
+		class OPOS
+		{
+			label="O+";
+			image = "amf_vests\data\blood\opos_co.paa";
+			texture = "amf_vests\data\blood\opos_co.paa";
+		};
+		class ONEG
+		{
+			label="O-";
+			image = "amf_vests\data\blood\oneg_co.paa";
+			texture = "amf_vests\data\blood\oneg_co.paa";
+		};
+		class ABPOS
+		{
+			label="AB+";
+			image = "amf_vests\data\blood\abpos_co.paa";
+			texture = "amf_vests\data\blood\abpos_co.paa";
+		};
+		class ABNEG
+		{
+			label="AB-";
+			image = "amf_vests\data\blood\abneg_co.paa";
+			texture = "amf_vests\data\blood\abneg_co.paa";
+		};
+	};
+
 
 	class GlovesBase
 	{
 		label = "Gloves";
 		values[] = {"none", "MX"};
+		changeingame = 1;
 		class none 
 		{
 			label = "(none)";
+			actionlabel="Remove gloves";
+			icon = QPATHTOF(data\nogloves.paa);
 		};
 		class MX 
 		{
 			label = "MX";
+			itemingame = "AMF_Gloves_MX";
+			actionlabel="Equip MX gloves";
+			icon = QPATHTOF(data\mx.paa);
 		};
 	};
 
@@ -130,6 +212,7 @@ class XtdGearModels
 			label = "Treillis F3/Ubas";
 			author = "Arma Mod France";
 			options[] = {"camo","sleeves","gloves"};
+			// textureoptions[]={"rank","bloodtype"}; will be added in v7.1 in september 
 			class camo // coventional name
 			{
 				values[] = {"CE_TAN","CE_OD","DA","SERVAL"};
@@ -159,6 +242,12 @@ class XtdGearModels
 				values[] = {"Full", "Half"};
 			};
 			class gloves : GlovesBase { };
+			class rank : VestRankBase {
+				hiddenselection = "grade";
+			};
+			class bloodtype : BloodTypeBase {
+				hiddenselection = "sang";
+			};
 		};
 
 		class amf_uniform_f3

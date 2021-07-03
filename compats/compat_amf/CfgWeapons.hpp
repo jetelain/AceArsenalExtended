@@ -394,4 +394,19 @@ class CfgWeapons
 	PATTERN_OPSCB(AMF_OPSCORE3_BLACK2_2,AMF_OPSCORE3,amf_opscore_bump,blk,od, down,none)
 
 
+	class CBA_MiscItem;
+	class CBA_MiscItem_ItemInfo;
+
+	class AMF_Gloves_MX: CBA_MiscItem {
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		displayName = "MX Gloves";
+		descriptionShort = "MX Gloves";
+		model = QPATHTOF(data\mx.p3d);
+		picture = QPATHTOF(data\mx.paa);
+		class ItemInfo: CBA_MiscItem_ItemInfo {
+			mass = 4;
+		};
+	};
 };
