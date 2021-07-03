@@ -599,5 +599,44 @@ class XtdGearModels
 				};
 			};
 		};
+
+
+		class amf_hk416a5_short
+		{
+			label = "HK416 A5 11""";
+			author = "Arma Mod France";
+			options[] = {"paint","butt","handguard"};
+			class paint
+			{
+				values[] = {"BLK","TAN","TDF","Paint"};
+			};
+			class butt
+			{
+				values[] = {"STD","MOE","UBR"};
+			};
+			class handguard
+			{
+				values[] = {"STD","SMR"};
+			};
+		};
+
+		class amf_hk416a5_long
+		{
+			label = "HK416 A5 13""";
+			author = "Arma Mod France";
+			options[] = {"paint","butt","handguard"};
+			class paint
+			{
+				values[] = {"BLK","TAN","TDF","Paint"};
+			};
+			class butt
+			{
+				values[] = {"STD","MOE","UBR"};
+			};
+			class handguard
+			{
+				values[] = {"STD","SMR"};
+			};
+		};
 	};
 };

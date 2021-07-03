@@ -93,6 +93,18 @@
 	PATTERN_SMB_R(name,m, c, l, w, b, ASP, "amf_vests\data\grades\asp_co.paa") \
 	PATTERN_SMB_R(name,m, c, l, w, b, LTN, "amf_vests\data\grades\lt_co.paa") 
 
+#define PATTERN_HK614A5(name, base, m, p, b, h) \
+	class name: base                              \
+	{                                             \
+		class XtdGearInfo                         \
+		{                                         \
+			model = #m;                           \
+			paint = #p;                           \
+			butt = #b;                          \
+			handguard = #h;                         \
+		};                                        \
+	}; 
+
 
 class CfgWeapons
 {
@@ -379,7 +391,7 @@ class CfgWeapons
 	PATTERN_OPSCB(AMF_OPSCORE3_TAN1,    AMF_OPSCORE3,amf_opscore_bump,tan,tan,none,none)
 	PATTERN_OPSCB(AMF_OPSCORE3_TAN1_2,  AMF_OPSCORE3,amf_opscore_bump,tan,tan,down,none)
 	PATTERN_OPSCB(AMF_OPSCORE3_TAN2,    AMF_OPSCORE3,amf_opscore_bump,tan,od, none,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_TAN2_2,  AMF_OPSCORE3,amf_opscore_bump,tan,od, down,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_TAN2_2_2,AMF_OPSCORE3,amf_opscore_bump,tan,od, down,none)
 	PATTERN_OPSCB(AMF_OPSCORE3_GREY,    AMF_OPSCORE3,amf_opscore_bump,gry,blk,none,none)
 	PATTERN_OPSCB(AMF_OPSCORE3_GREY_2,  AMF_OPSCORE3,amf_opscore_bump,gry,blk,down,none)
 	PATTERN_OPSCB(AMF_OPSCORE3_GREY1,   AMF_OPSCORE3,amf_opscore_bump,gry,tan,none,none)
@@ -409,4 +421,41 @@ class CfgWeapons
 			mass = 4;
 		};
 	};
+
+	class AMF_614_short_01_Base_F;
+	PATTERN_HK614A5(AMF_614_short_FS_BLK,   AMF_614_short_01_Base_F, amf_hk416a5_short, BLK,   MOE, STD) 
+	PATTERN_HK614A5(AMF_614_short_fs_paint, AMF_614_short_01_Base_F, amf_hk416a5_short, Paint, MOE, STD) 
+	PATTERN_HK614A5(AMF_614_short_FS_TAN,   AMF_614_short_01_Base_F, amf_hk416a5_short, TDF,   MOE, STD) 
+	PATTERN_HK614A5(AMF_614_short_FS_TAN2,  AMF_614_short_01_Base_F, amf_hk416a5_short, TAN,   MOE, STD) 
+	PATTERN_HK614A5(AMF_614_short_fs2_blk,  AMF_614_short_01_Base_F, amf_hk416a5_short, BLK,   STD, STD) 
+	PATTERN_HK614A5(AMF_614_short_fs2_pain, AMF_614_short_01_Base_F, amf_hk416a5_short, Paint, STD, STD) 
+	PATTERN_HK614A5(AMF_614_short_fs2_tan,  AMF_614_short_01_Base_F, amf_hk416a5_short, TDF,   STD, STD) 
+	PATTERN_HK614A5(AMF_614_short_FS3_BLK,  AMF_614_short_01_Base_F, amf_hk416a5_short, BLK,   UBR, STD) 
+	PATTERN_HK614A5(AMF_614_short_FS3_TAN,  AMF_614_short_01_Base_F, amf_hk416a5_short, TDF,   UBR, STD) 
+	PATTERN_HK614A5(AMF_614_short_FS3_TAN2, AMF_614_short_01_Base_F, amf_hk416a5_short, TAN,   UBR, STD) 
+	PATTERN_HK614A5(AMF_614_short_FS4_BLK,  AMF_614_short_01_Base_F, amf_hk416a5_short, BLK,   MOE, SMR) 
+	PATTERN_HK614A5(AMF_614_short_FS4_TAN,  AMF_614_short_01_Base_F, amf_hk416a5_short, TAN,   MOE, SMR) 
+	PATTERN_HK614A5(AMF_614_short_FS4_tan2, AMF_614_short_01_Base_F, amf_hk416a5_short, TDF,   MOE, SMR) 
+	PATTERN_HK614A5(AMF_614_short_FS5_BLK,  AMF_614_short_01_Base_F, amf_hk416a5_short, BLK,   UBR, SMR) 
+	PATTERN_HK614A5(AMF_614_short_FS5_TAN,  AMF_614_short_01_Base_F, amf_hk416a5_short, TAN,   UBR, SMR) 
+	PATTERN_HK614A5(AMF_614_short_FS5_TAN2, AMF_614_short_01_Base_F, amf_hk416a5_short, TDF,   UBR, SMR) 
+
+	class AMF_614_long_01_Base_F;
+	PATTERN_HK614A5(AMF_614_long_FS_BLK,   AMF_614_long_01_Base_F, amf_hk416a5_long, BLK,   MOE, STD) 
+	PATTERN_HK614A5(AMF_614_long_fs_paint, AMF_614_long_01_Base_F, amf_hk416a5_long, Paint, MOE, STD) 
+	PATTERN_HK614A5(AMF_614_long_FS_TAN,   AMF_614_long_01_Base_F, amf_hk416a5_long, TDF,   MOE, STD) 
+	PATTERN_HK614A5(AMF_614_long_FS_TAN2,  AMF_614_long_01_Base_F, amf_hk416a5_long, TAN,   MOE, STD) 
+	PATTERN_HK614A5(AMF_614_long_fs2_blk,  AMF_614_long_01_Base_F, amf_hk416a5_long, BLK,   STD, STD) 
+	PATTERN_HK614A5(AMF_614_long_fs2_pain, AMF_614_long_01_Base_F, amf_hk416a5_long, Paint, STD, STD) 
+	PATTERN_HK614A5(AMF_614_long_fs2_tan,  AMF_614_long_01_Base_F, amf_hk416a5_long, TDF,   STD, STD) 
+	PATTERN_HK614A5(AMF_614_long_FS3_BLK,  AMF_614_long_01_Base_F, amf_hk416a5_long, BLK,   UBR, STD) 
+	PATTERN_HK614A5(AMF_614_long_FS3_TAN,  AMF_614_long_01_Base_F, amf_hk416a5_long, TDF,   UBR, STD) 
+	PATTERN_HK614A5(AMF_614_long_FS3_TAN2, AMF_614_long_01_Base_F, amf_hk416a5_long, TAN,   UBR, STD) 
+	PATTERN_HK614A5(AMF_614_long_FS4_BLK,  AMF_614_long_01_Base_F, amf_hk416a5_long, BLK,   MOE, SMR) 
+	PATTERN_HK614A5(AMF_614_long_FS4_TAN,  AMF_614_long_01_Base_F, amf_hk416a5_long, TAN,   MOE, SMR) 
+	PATTERN_HK614A5(AMF_614_long_FS4_tan2, AMF_614_long_01_Base_F, amf_hk416a5_long, TDF,   MOE, SMR) 
+	PATTERN_HK614A5(AMF_614_long_FS5_BLK,  AMF_614_long_01_Base_F, amf_hk416a5_long, BLK,   UBR, SMR) 
+	PATTERN_HK614A5(AMF_614_long_FS5_TAN,  AMF_614_long_01_Base_F, amf_hk416a5_long, TAN,   UBR, SMR) 
+	PATTERN_HK614A5(AMF_614_long_FS5_TAN2, AMF_614_long_01_Base_F, amf_hk416a5_long, TDF,   UBR, SMR) 
+
 };
