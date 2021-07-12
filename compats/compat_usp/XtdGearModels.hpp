@@ -268,7 +268,7 @@ class XtdGearModels
 		{
 			label = "Ops-Core Fast MT";
 			author = "UnderSiege Productions";
-			options[] = {"camo", "comms","cmopt","goggles","light","counterweight"};
+			options[] = {"camo", "comms","camera","goggles","light","counterweight"};
 			class camo
 			{
 				values[] = {"TAN", "OD", "MC", "ABU", "AOR1", "AOR2", "CBR", "DCU", "FLECKTARN", "KTBANSHEE", "KTHIGHLANDER", "KTNEPTUNE", "KTNOMAD", "KTTYPHON", "KTYETI", "M81", "MCA", "MCD", "MCT", "RGR", "TGS", "TROPENTARN", "UCP"};
@@ -277,7 +277,7 @@ class XtdGearModels
 			{
 				values[] = {"none","CT"};
 			};
-			class cmopt
+			class camera
 			{
 				values[] = {"none","CM"};
 			};
@@ -294,6 +294,43 @@ class XtdGearModels
 				values[] = {"none","CW"};
 			};
 		};
+
+		class USP_AIRFRAME
+		{
+			label = "Crye AirFrame Helmet";
+			author = "UnderSiege Productions";
+			options[] = {"camo", "vlopt","camera","goggles","light","iropt","counterweight"};
+			class camo
+			{
+				values[] = {"TAN","MC","MCD","OD"};
+			};
+			class vlopt
+			{
+				values[] = {"none","VL"};
+			};
+			class camera
+			{
+				values[] = {"none","CM"};
+			};
+			class goggles
+			{
+				values[] = {"none","GU"};
+			};
+			class light
+			{
+				values[] = {"none","SF","TL"};
+			};
+			class iropt
+			{
+				values[] = {"none","IR"};
+			};
+			class counterweight
+			{
+				values[] = {"none","CW"};
+			};
+		};
+
+
 	};
 
 };
