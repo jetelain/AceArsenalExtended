@@ -34,3 +34,5 @@ while{_i < _size} do
 		_i = _i + 1;
 	};
 };
+
+_ctrlPanel lbSetCurSel -1; // workaround selection made wrong by lbDelete (?)

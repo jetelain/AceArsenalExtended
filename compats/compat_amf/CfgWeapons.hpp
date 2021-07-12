@@ -28,7 +28,7 @@
 		class XtdGearInfo                         \
 		{                                         \
 			model = #m;                           \
-			cover = #c;                           \
+			camo = #c;                           \
 			sordin = #s;                          \
 			goggles = #g;                         \
 		};                                        \
@@ -41,7 +41,7 @@
 		class XtdGearInfo                         \
 		{                                         \
 			model = #m;                           \
-			cover = #c;                           \
+			camo = #c;                           \
 			sordin = #s;                          \
 			goggles = #g;                         \
 			top = #t;                             \
@@ -82,16 +82,16 @@
 		class ItemInfo; \
 	}; 											  \
 	PATTERN_SMB_R(name,m, c, l, w, b, 2CL, "") \
-	PATTERN_SMB_R(name,m, c, l, w, b, CPL, "amf_vests\data\grades\cpl_co.paa") \
-	PATTERN_SMB_R(name,m, c, l, w, b, CCH, "amf_vests\data\grades\cplchef_co.paa") \
-	PATTERN_SMB_R(name,m, c, l, w, b, CC1, "amf_vests\data\grades\cplchef1_co.paa") \
-	PATTERN_SMB_R(name,m, c, l, w, b, SGT, "amf_vests\data\grades\sgt_co.paa") \
-	PATTERN_SMB_R(name,m, c, l, w, b, SCH, "amf_vests\data\grades\sgtchef_co.paa") \
-	PATTERN_SMB_R(name,m, c, l, w, b, ADJ, "amf_vests\data\grades\adj_co.paa") \
-	PATTERN_SMB_R(name,m, c, l, w, b, ADC, "amf_vests\data\grades\adjchel_co.paa") \
-	PATTERN_SMB_R(name,m, c, l, w, b, MAJ, "amf_vests\data\grades\maj_co.paa") \
-	PATTERN_SMB_R(name,m, c, l, w, b, ASP, "amf_vests\data\grades\asp_co.paa") \
-	PATTERN_SMB_R(name,m, c, l, w, b, LTN, "amf_vests\data\grades\lt_co.paa") 
+	PATTERN_SMB_R(name,m, c, l, w, b, CPL, QPATHTOF(data\grades\cpl_co.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, CCH, QPATHTOF(data\grades\cplchef_co.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, CC1, QPATHTOF(data\grades\cplchef1_co.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, SGT, QPATHTOF(data\grades\sgt_co.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, SCH, QPATHTOF(data\grades\sgtchef_co.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, ADJ, QPATHTOF(data\grades\adj_co.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, ADC, QPATHTOF(data\grades\adjchel_co.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, MAJ, QPATHTOF(data\grades\maj_co.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, ASP, QPATHTOF(data\grades\asp_co.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, LTN, QPATHTOF(data\grades\lt_co.paa)) 
 
 #define PATTERN_HK614A5(name, base, m, p, b, h) \
 	class name: base                              \
@@ -99,10 +99,22 @@
 		class XtdGearInfo                         \
 		{                                         \
 			model = #m;                           \
-			paint = #p;                           \
+			camo = #p;                           \
 			butt = #b;                          \
 			handguard = #h;                         \
 		};                                        \
+	}; 
+
+
+#define PATTERN_DCS(name, base, l, c) \
+	class name: base           \
+	{                          \
+		class XtdGearInfo      \
+		{                      \
+			model = "amf_dcs"; \
+			camo = #c;         \
+			loadout = #l;      \
+		};                     \
 	}; 
 
 
@@ -143,143 +155,143 @@ class CfgWeapons
 
 	// amf_felin
 	PATTERN_HELMET(amf_felin_cover,            H_HelmetB,      amf_felin,ce,none,down)
-	PATTERN_HELMET(AMF_FELIN_COVER_EARPROT_OD, amf_felin_cover,amf_felin,ce,od,down)
-	PATTERN_HELMET(AMF_FELIN_COVER_EARPROT_BLK,amf_felin_cover,amf_felin,ce,blk,down)
-	PATTERN_HELMET(AMF_FELIN_COVER_EARPROT_TAN,amf_felin_cover,amf_felin,ce,tan,down)
+	PATTERN_HELMET(AMF_FELIN_COVER_EARPROT_OD, amf_felin_cover,amf_felin,ce,OD,down)
+	PATTERN_HELMET(AMF_FELIN_COVER_EARPROT_BLK,amf_felin_cover,amf_felin,ce,BLK,down)
+	PATTERN_HELMET(AMF_FELIN_COVER_EARPROT_TAN,amf_felin_cover,amf_felin,ce,TAN,down)
 
 	PATTERN_HELMET(amf_felin_mount,            amf_felin_cover,amf_felin,mount,none,down)
-	PATTERN_HELMET(AMF_FELIN_MOUNT_EARPROT_OD, amf_felin_mount,amf_felin,mount,od,down)
-	PATTERN_HELMET(AMF_FELIN_MOUNT_EARPROT_BLK,amf_felin_mount,amf_felin,mount,blk,down)
-	PATTERN_HELMET(AMF_FELIN_MOUNT_EARPROT_TAN,amf_felin_mount,amf_felin,mount,tan,down)
+	PATTERN_HELMET(AMF_FELIN_MOUNT_EARPROT_OD, amf_felin_mount,amf_felin,mount,OD,down)
+	PATTERN_HELMET(AMF_FELIN_MOUNT_EARPROT_BLK,amf_felin_mount,amf_felin,mount,BLK,down)
+	PATTERN_HELMET(AMF_FELIN_MOUNT_EARPROT_TAN,amf_felin_mount,amf_felin,mount,TAN,down)
 
 	PATTERN_HELMET(amf_felin,            amf_felin_cover,amf_felin,none,none,none)
-	PATTERN_HELMET(AMF_FELIN_EARPROT_OD, amf_felin,      amf_felin,none,od,down)
-	PATTERN_HELMET(AMF_FELIN_EARPROT_NLK,amf_felin,      amf_felin,none,blk,down)
-	PATTERN_HELMET(AMF_FELIN_EARPROT_TAN,amf_felin,      amf_felin,none,tan,down)
+	PATTERN_HELMET(AMF_FELIN_EARPROT_OD, amf_felin,      amf_felin,none,OD,down)
+	PATTERN_HELMET(AMF_FELIN_EARPROT_NLK,amf_felin,      amf_felin,none,BLK,down)
+	PATTERN_HELMET(AMF_FELIN_EARPROT_TAN,amf_felin,      amf_felin,none,TAN,down)
 	
-	PATTERN_HELMET(amf_felin_cover_tan,            amf_felin_cover,amf_felin,tan,none,down)
-	PATTERN_HELMET(AMF_FELIN_COVER_TAN_EARPROT_OD, amf_felin_cover,amf_felin,tan,od,down)
-	PATTERN_HELMET(AMF_FELIN_COVER_TAN_EARPROT_BLK,amf_felin_cover,amf_felin,tan,blk,down)
-	PATTERN_HELMET(AMF_FELIN_COVER_TAN_EARPROT_TAN,amf_felin_cover,amf_felin,tan,tan,down)
+	PATTERN_HELMET(amf_felin_cover_tan,            amf_felin_cover,amf_felin,TAN,none,down)
+	PATTERN_HELMET(AMF_FELIN_COVER_TAN_EARPROT_OD, amf_felin_cover,amf_felin,TAN,OD,down)
+	PATTERN_HELMET(AMF_FELIN_COVER_TAN_EARPROT_BLK,amf_felin_cover,amf_felin,TAN,BLK,down)
+	PATTERN_HELMET(AMF_FELIN_COVER_TAN_EARPROT_TAN,amf_felin_cover,amf_felin,TAN,TAN,down)
 
 	PATTERN_HELMET(amf_felin_cover_ONU,            amf_felin_cover,amf_felin,ONU,none,down)
-	PATTERN_HELMET(AMF_FELIN_COVER_ONU_EARPROT_OD, amf_felin_cover,amf_felin,ONU,od,down)
-	PATTERN_HELMET(AMF_FELIN_COVER_ONU_EARPROT_BLK,amf_felin_cover,amf_felin,ONU,blk,down)
-	PATTERN_HELMET(AMF_FELIN_COVER_ONU_EARPROT_TAN,amf_felin_cover,amf_felin,ONU,tan,down)
+	PATTERN_HELMET(AMF_FELIN_COVER_ONU_EARPROT_OD, amf_felin_cover,amf_felin,ONU,OD,down)
+	PATTERN_HELMET(AMF_FELIN_COVER_ONU_EARPROT_BLK,amf_felin_cover,amf_felin,ONU,BLK,down)
+	PATTERN_HELMET(AMF_FELIN_COVER_ONU_EARPROT_TAN,amf_felin_cover,amf_felin,ONU,TAN,down)
 
 	PATTERN_HELMET(amf_felin_cover_CE_2,         amf_felin_cover,amf_felin,ce,none,none)
-	PATTERN_HELMET(AMF_FELIN_COVER_EARPROT_OD_2, amf_felin_cover,amf_felin,ce,od,none)
-	PATTERN_HELMET(AMF_FELIN_COVER_EARPROT_BLK_2,amf_felin_cover,amf_felin,ce,blk,none)
-	PATTERN_HELMET(AMF_FELIN_COVER_EARPROT_TAN_2,amf_felin_cover,amf_felin,ce,tan,none)
+	PATTERN_HELMET(AMF_FELIN_COVER_EARPROT_OD_2, amf_felin_cover,amf_felin,ce,OD,none)
+	PATTERN_HELMET(AMF_FELIN_COVER_EARPROT_BLK_2,amf_felin_cover,amf_felin,ce,BLK,none)
+	PATTERN_HELMET(AMF_FELIN_COVER_EARPROT_TAN_2,amf_felin_cover,amf_felin,ce,TAN,none)
 
 	PATTERN_HELMET(amf_felin_mount_2,            amf_felin_cover,amf_felin,mount,none,none)
-	PATTERN_HELMET(AMF_FELIN_MOUNT_EARPROT_OD_2, amf_felin_mount,amf_felin,mount,od,none)
-	PATTERN_HELMET(AMF_FELIN_MOUNT_EARPROT_BLK_2,amf_felin_mount,amf_felin,mount,blk,none)
-	PATTERN_HELMET(AMF_FELIN_MOUNT_EARPROT_TAN_2,amf_felin_mount,amf_felin,mount,tan,none)
+	PATTERN_HELMET(AMF_FELIN_MOUNT_EARPROT_OD_2, amf_felin_mount,amf_felin,mount,OD,none)
+	PATTERN_HELMET(AMF_FELIN_MOUNT_EARPROT_BLK_2,amf_felin_mount,amf_felin,mount,BLK,none)
+	PATTERN_HELMET(AMF_FELIN_MOUNT_EARPROT_TAN_2,amf_felin_mount,amf_felin,mount,TAN,none)
 
 	PATTERN_HELMET(amf_felin_2,            amf_felin_cover,amf_felin,none,none,down)
-	PATTERN_HELMET(AMF_FELIN_EARPROT_OD_2, amf_felin,      amf_felin,none,od,none)
-	PATTERN_HELMET(AMF_FELIN_EARPROT_NLK_2,amf_felin,      amf_felin,none,blk,none)
-	PATTERN_HELMET(AMF_FELIN_EARPROT_TAN_2,amf_felin,      amf_felin,none,tan,none)
+	PATTERN_HELMET(AMF_FELIN_EARPROT_OD_2, amf_felin,      amf_felin,none,OD,none)
+	PATTERN_HELMET(AMF_FELIN_EARPROT_NLK_2,amf_felin,      amf_felin,none,BLK,none)
+	PATTERN_HELMET(AMF_FELIN_EARPROT_TAN_2,amf_felin,      amf_felin,none,TAN,none)
 	
-	PATTERN_HELMET(amf_felin_cover_tan_2,            amf_felin_cover,amf_felin,tan,none,none)
-	PATTERN_HELMET(AMF_FELIN_COVER_TAN_EARPROT_OD_2, amf_felin_cover,amf_felin,tan,od,none)
-	PATTERN_HELMET(AMF_FELIN_COVER_TAN_EARPROT_BLK_2,amf_felin_cover,amf_felin,tan,blk,none)
-	PATTERN_HELMET(AMF_FELIN_COVER_TAN_EARPROT_TAN_2,amf_felin_cover,amf_felin,tan,tan,none)
+	PATTERN_HELMET(amf_felin_cover_tan_2,            amf_felin_cover,amf_felin,TAN,none,none)
+	PATTERN_HELMET(AMF_FELIN_COVER_TAN_EARPROT_OD_2, amf_felin_cover,amf_felin,TAN,OD,none)
+	PATTERN_HELMET(AMF_FELIN_COVER_TAN_EARPROT_BLK_2,amf_felin_cover,amf_felin,TAN,BLK,none)
+	PATTERN_HELMET(AMF_FELIN_COVER_TAN_EARPROT_TAN_2,amf_felin_cover,amf_felin,TAN,TAN,none)
 
 	PATTERN_HELMET(amf_felin_cover_ONU_2,            amf_felin_cover,amf_felin,ONU,none,none)
-	PATTERN_HELMET(AMF_FELIN_COVER_ONU_EARPROT_OD_2, amf_felin_cover,amf_felin,ONU,od,none)
-	PATTERN_HELMET(AMF_FELIN_COVER_ONU_EARPROT_BLK_2,amf_felin_cover,amf_felin,ONU,blk,none)
-	PATTERN_HELMET(AMF_FELIN_COVER_ONU_EARPROT_TAN_2,amf_felin_cover,amf_felin,ONU,tan,none)
+	PATTERN_HELMET(AMF_FELIN_COVER_ONU_EARPROT_OD_2, amf_felin_cover,amf_felin,ONU,OD,none)
+	PATTERN_HELMET(AMF_FELIN_COVER_ONU_EARPROT_BLK_2,amf_felin_cover,amf_felin,ONU,BLK,none)
+	PATTERN_HELMET(AMF_FELIN_COVER_ONU_EARPROT_TAN_2,amf_felin_cover,amf_felin,ONU,TAN,none)
 	
 	// amf_tc3000
-	PATTERN_HELMET(AMF_TC3000,               H_HelmetB,amf_tc3000,grn,none,none)
-	PATTERN_HELMET(AMF_TC3000_earprot_blk_f, H_HelmetB,amf_tc3000,grn,blk,none)
-	PATTERN_HELMET(AMF_TC3000_earprot_od_f,  H_HelmetB,amf_tc3000,grn,od,none)
-	PATTERN_HELMET(AMF_TC3000_earprot_tan_f, H_HelmetB,amf_tc3000,grn,tan,none)
-	PATTERN_HELMET(AMF_TC3000_tan,               AMF_TC3000,    amf_tc3000,tan,none,none)
-	PATTERN_HELMET(AMF_TC3000_tan_earprot_blk_f, AMF_TC3000_tan,amf_tc3000,tan,blk,none)
-	PATTERN_HELMET(AMF_TC3000_tan_earprot_od_f,  AMF_TC3000_tan,amf_tc3000,tan,od,none)
-	PATTERN_HELMET(AMF_TC3000_tan_earprot_tan_f, AMF_TC3000_tan,amf_tc3000,tan,tan,none)
-	PATTERN_HELMET(AMF_TC3000_2,               H_HelmetB,amf_tc3000,grn,none,down)
-	PATTERN_HELMET(AMF_TC3000_earprot_blk_f_2, H_HelmetB,amf_tc3000,grn,blk,down)
-	PATTERN_HELMET(AMF_TC3000_earprot_od_f_2,  H_HelmetB,amf_tc3000,grn,od,down)
-	PATTERN_HELMET(AMF_TC3000_earprot_tan_f_2, H_HelmetB,amf_tc3000,grn,tan,down)
-	PATTERN_HELMET(AMF_TC3000_tan_2,               AMF_TC3000,    amf_tc3000,tan,none,down)
-	PATTERN_HELMET(AMF_TC3000_tan_earprot_blk_f_2, AMF_TC3000_tan,amf_tc3000,tan,blk,down)
-	PATTERN_HELMET(AMF_TC3000_tan_earprot_od_f_2,  AMF_TC3000_tan,amf_tc3000,tan,od,down)
-	PATTERN_HELMET(AMF_TC3000_tan_earprot_tan_f_2, AMF_TC3000_tan,amf_tc3000,tan,tan,down)
+	PATTERN_HELMET(AMF_TC3000,               H_HelmetB,amf_tc3000,OD,none,none)
+	PATTERN_HELMET(AMF_TC3000_earprot_blk_f, H_HelmetB,amf_tc3000,OD,BLK,none)
+	PATTERN_HELMET(AMF_TC3000_earprot_od_f,  H_HelmetB,amf_tc3000,OD,OD,none)
+	PATTERN_HELMET(AMF_TC3000_earprot_tan_f, H_HelmetB,amf_tc3000,OD,TAN,none)
+	PATTERN_HELMET(AMF_TC3000_tan,               AMF_TC3000,    amf_tc3000,TAN,none,none)
+	PATTERN_HELMET(AMF_TC3000_tan_earprot_blk_f, AMF_TC3000_tan,amf_tc3000,TAN,BLK,none)
+	PATTERN_HELMET(AMF_TC3000_tan_earprot_od_f,  AMF_TC3000_tan,amf_tc3000,TAN,OD,none)
+	PATTERN_HELMET(AMF_TC3000_tan_earprot_tan_f, AMF_TC3000_tan,amf_tc3000,TAN,TAN,none)
+	PATTERN_HELMET(AMF_TC3000_2,               H_HelmetB,amf_tc3000,OD,none,down)
+	PATTERN_HELMET(AMF_TC3000_earprot_blk_f_2, H_HelmetB,amf_tc3000,OD,BLK,down)
+	PATTERN_HELMET(AMF_TC3000_earprot_od_f_2,  H_HelmetB,amf_tc3000,OD,OD,down)
+	PATTERN_HELMET(AMF_TC3000_earprot_tan_f_2, H_HelmetB,amf_tc3000,OD,TAN,down)
+	PATTERN_HELMET(AMF_TC3000_tan_2,               AMF_TC3000,    amf_tc3000,TAN,none,down)
+	PATTERN_HELMET(AMF_TC3000_tan_earprot_blk_f_2, AMF_TC3000_tan,amf_tc3000,TAN,BLK,down)
+	PATTERN_HELMET(AMF_TC3000_tan_earprot_od_f_2,  AMF_TC3000_tan,amf_tc3000,TAN,OD,down)
+	PATTERN_HELMET(AMF_TC3000_tan_earprot_tan_f_2, AMF_TC3000_tan,amf_tc3000,TAN,TAN,down)
 
 	// amf_tc3001
-	PATTERN_HELMET(AMF_TC3001,                          H_HelmetB,amf_tc3001,grn,none,none)
-	PATTERN_HELMET(AMF_TC3001_earprot_blk_f,            H_HelmetB,amf_tc3001,grn,blk,none)
-	PATTERN_HELMET(AMF_TC3001_earprot_od_f,             H_HelmetB,amf_tc3001,grn,od,none)
-	PATTERN_HELMET(AMF_TC3001_earprot_tan_f,            H_HelmetB,amf_tc3001,grn,tan,none)
-	PATTERN_HELMET(AMF_TC3001_tan,                 AMF_TC3001,    amf_tc3001,tan,none,none)
-	PATTERN_HELMET(AMF_TC3001_tan_earprot_blk_f,   AMF_TC3001_tan,amf_tc3001,tan,blk,none)
-	PATTERN_HELMET(AMF_TC3001_tan_earprot_od_f,    AMF_TC3001_tan,amf_tc3001,tan,od,none)
-	PATTERN_HELMET(AMF_TC3001_tan_earprot_tan_f,   AMF_TC3001_tan,amf_tc3001,tan,tan,none)
-	PATTERN_HELMET(AMF_TC3001_2,                        H_HelmetB,amf_tc3001,grn,none,down)
-	PATTERN_HELMET(AMF_TC3001_earprot_blk_f_2,          H_HelmetB,amf_tc3001,grn,blk,down)
-	PATTERN_HELMET(AMF_TC3001_earprot_od_f_2,           H_HelmetB,amf_tc3001,grn,od,down)
-	PATTERN_HELMET(AMF_TC3001_earprot_tan_f_2,          H_HelmetB,amf_tc3001,grn,tan,down)
-	PATTERN_HELMET(AMF_TC3001_tan_2,               AMF_TC3001,    amf_tc3001,tan,none,down)
-	PATTERN_HELMET(AMF_TC3001_tan_earprot_blk_f_2, AMF_TC3001_tan,amf_tc3001,tan,blk,down)
-	PATTERN_HELMET(AMF_TC3001_tan_earprot_od_f_2,  AMF_TC3001_tan,amf_tc3001,tan,od,down)
-	PATTERN_HELMET(AMF_TC3001_tan_earprot_tan_f_2, AMF_TC3001_tan,amf_tc3001,tan,tan,down)
+	PATTERN_HELMET(AMF_TC3001,                          H_HelmetB,amf_tc3001,OD,none,none)
+	PATTERN_HELMET(AMF_TC3001_earprot_blk_f,            H_HelmetB,amf_tc3001,OD,BLK,none)
+	PATTERN_HELMET(AMF_TC3001_earprot_od_f,             H_HelmetB,amf_tc3001,OD,OD,none)
+	PATTERN_HELMET(AMF_TC3001_earprot_tan_f,            H_HelmetB,amf_tc3001,OD,TAN,none)
+	PATTERN_HELMET(AMF_TC3001_tan,                 AMF_TC3001,    amf_tc3001,TAN,none,none)
+	PATTERN_HELMET(AMF_TC3001_tan_earprot_blk_f,   AMF_TC3001_tan,amf_tc3001,TAN,BLK,none)
+	PATTERN_HELMET(AMF_TC3001_tan_earprot_od_f,    AMF_TC3001_tan,amf_tc3001,TAN,OD,none)
+	PATTERN_HELMET(AMF_TC3001_tan_earprot_tan_f,   AMF_TC3001_tan,amf_tc3001,TAN,TAN,none)
+	PATTERN_HELMET(AMF_TC3001_2,                        H_HelmetB,amf_tc3001,OD,none,down)
+	PATTERN_HELMET(AMF_TC3001_earprot_blk_f_2,          H_HelmetB,amf_tc3001,OD,BLK,down)
+	PATTERN_HELMET(AMF_TC3001_earprot_od_f_2,           H_HelmetB,amf_tc3001,OD,OD,down)
+	PATTERN_HELMET(AMF_TC3001_earprot_tan_f_2,          H_HelmetB,amf_tc3001,OD,TAN,down)
+	PATTERN_HELMET(AMF_TC3001_tan_2,               AMF_TC3001,    amf_tc3001,TAN,none,down)
+	PATTERN_HELMET(AMF_TC3001_tan_earprot_blk_f_2, AMF_TC3001_tan,amf_tc3001,TAN,BLK,down)
+	PATTERN_HELMET(AMF_TC3001_tan_earprot_od_f_2,  AMF_TC3001_tan,amf_tc3001,TAN,OD,down)
+	PATTERN_HELMET(AMF_TC3001_tan_earprot_tan_f_2, AMF_TC3001_tan,amf_tc3001,TAN,TAN,down)
 
 
 	// amf_tc800
-	PATTERN_HELMET(AMF_TC800,                   H_HelmetB,    amf_tc800,blk,none,none)
-	PATTERN_HELMET(AMF_TC800_EARPROT_BLK,       AMF_TC800,    amf_tc800,blk,blk,none)
-	PATTERN_HELMET(AMF_TC800_EARPROT_OD,        AMF_TC800,    amf_tc800,blk,od,none)
-	PATTERN_HELMET(AMF_TC800_EARPROT_TAN,       AMF_TC800,    amf_tc800,blk,tan,none)
-	PATTERN_HELMET(AMF_TC800_GRN,               AMF_TC800,    amf_tc800,grn,none,none)
-	PATTERN_HELMET(AMF_TC800_GRN_EARPROT_BLK,   AMF_TC800_GRN,amf_tc800,grn,blk,none)
-	PATTERN_HELMET(AMF_TC800_GRN_EARPROT_OD,    AMF_TC800_GRN,amf_tc800,grn,od,none)
-	PATTERN_HELMET(AMF_TC800_GRN_EARPROT_TAN,   AMF_TC800_GRN,amf_tc800,grn,tan,none)
-	PATTERN_HELMET(AMF_TC800_TAN,               AMF_TC800,    amf_tc800,tan,none,none)
-	PATTERN_HELMET(AMF_TC800_TAN_EARPROT_BLK,   AMF_TC800_TAN,amf_tc800,tan,blk,none)
-	PATTERN_HELMET(AMF_TC800_TAN_EARPROT_OD,    AMF_TC800_TAN,amf_tc800,tan,od,none)
-	PATTERN_HELMET(AMF_TC800_TAN_EARPROT_TAN,   AMF_TC800_TAN,amf_tc800,tan,tan,none)
-  //PATTERN_HELMET(AMF_TC800_2,                 H_HelmetB,    amf_tc800,blk,none,down) -- Missing
-	PATTERN_HELMET(AMF_TC800_EARPROT_BLK_2,     AMF_TC800,    amf_tc800,blk,blk,down)
-	PATTERN_HELMET(AMF_TC800_EARPROT_OD_2,      AMF_TC800,    amf_tc800,blk,od,down)
-	PATTERN_HELMET(AMF_TC800_EARPROT_TAN_2,     AMF_TC800,    amf_tc800,blk,tan,down)
-	PATTERN_HELMET(AMF_TC800_GRN_2,             AMF_TC800,    amf_tc800,grn,none,down)
-	PATTERN_HELMET(AMF_TC800_GRN_EARPROT_BLK_2, AMF_TC800_GRN,amf_tc800,grn,blk,down)
-	PATTERN_HELMET(AMF_TC800_GRN_EARPROT_OD_2,  AMF_TC800_GRN,amf_tc800,grn,od,down)
-	PATTERN_HELMET(AMF_TC800_GRN_EARPROT_TAN_2, AMF_TC800_GRN,amf_tc800,grn,tan,down)
-	PATTERN_HELMET(AMF_TC800_TAN_2,             AMF_TC800,    amf_tc800,tan,none,down)
-	PATTERN_HELMET(AMF_TC800_TAN_EARPROT_BLK_2, AMF_TC800_TAN,amf_tc800,tan,blk,down)
-	PATTERN_HELMET(AMF_TC800_TAN_EARPROT_OD_2,  AMF_TC800_TAN,amf_tc800,tan,od,down)
-	PATTERN_HELMET(AMF_TC800_TAN_EARPROT_TAN_2, AMF_TC800_TAN,amf_tc800,tan,tan,down)
+	PATTERN_HELMET(AMF_TC800,                   H_HelmetB,    amf_tc800,BLK,none,none)
+	PATTERN_HELMET(AMF_TC800_EARPROT_BLK,       AMF_TC800,    amf_tc800,BLK,BLK,none)
+	PATTERN_HELMET(AMF_TC800_EARPROT_OD,        AMF_TC800,    amf_tc800,BLK,OD,none)
+	PATTERN_HELMET(AMF_TC800_EARPROT_TAN,       AMF_TC800,    amf_tc800,BLK,TAN,none)
+	PATTERN_HELMET(AMF_TC800_GRN,               AMF_TC800,    amf_tc800,OD,none,none)
+	PATTERN_HELMET(AMF_TC800_GRN_EARPROT_BLK,   AMF_TC800_GRN,amf_tc800,OD,BLK,none)
+	PATTERN_HELMET(AMF_TC800_GRN_EARPROT_OD,    AMF_TC800_GRN,amf_tc800,OD,OD,none)
+	PATTERN_HELMET(AMF_TC800_GRN_EARPROT_TAN,   AMF_TC800_GRN,amf_tc800,OD,TAN,none)
+	PATTERN_HELMET(AMF_TC800_TAN,               AMF_TC800,    amf_tc800,TAN,none,none)
+	PATTERN_HELMET(AMF_TC800_TAN_EARPROT_BLK,   AMF_TC800_TAN,amf_tc800,TAN,BLK,none)
+	PATTERN_HELMET(AMF_TC800_TAN_EARPROT_OD,    AMF_TC800_TAN,amf_tc800,TAN,OD,none)
+	PATTERN_HELMET(AMF_TC800_TAN_EARPROT_TAN,   AMF_TC800_TAN,amf_tc800,TAN,TAN,none)
+  //PATTERN_HELMET(AMF_TC800_2,                 H_HelmetB,    amf_tc800,BLK,none,down) -- Missing
+	PATTERN_HELMET(AMF_TC800_EARPROT_BLK_2,     AMF_TC800,    amf_tc800,BLK,BLK,down)
+	PATTERN_HELMET(AMF_TC800_EARPROT_OD_2,      AMF_TC800,    amf_tc800,BLK,OD,down)
+	PATTERN_HELMET(AMF_TC800_EARPROT_TAN_2,     AMF_TC800,    amf_tc800,BLK,TAN,down)
+	PATTERN_HELMET(AMF_TC800_GRN_2,             AMF_TC800,    amf_tc800,OD,none,down)
+	PATTERN_HELMET(AMF_TC800_GRN_EARPROT_BLK_2, AMF_TC800_GRN,amf_tc800,OD,BLK,down)
+	PATTERN_HELMET(AMF_TC800_GRN_EARPROT_OD_2,  AMF_TC800_GRN,amf_tc800,OD,OD,down)
+	PATTERN_HELMET(AMF_TC800_GRN_EARPROT_TAN_2, AMF_TC800_GRN,amf_tc800,OD,TAN,down)
+	PATTERN_HELMET(AMF_TC800_TAN_2,             AMF_TC800,    amf_tc800,TAN,none,down)
+	PATTERN_HELMET(AMF_TC800_TAN_EARPROT_BLK_2, AMF_TC800_TAN,amf_tc800,TAN,BLK,down)
+	PATTERN_HELMET(AMF_TC800_TAN_EARPROT_OD_2,  AMF_TC800_TAN,amf_tc800,TAN,OD,down)
+	PATTERN_HELMET(AMF_TC800_TAN_EARPROT_TAN_2, AMF_TC800_TAN,amf_tc800,TAN,TAN,down)
 	
 	// amf_tc801
-	PATTERN_HELMET(AMF_TC801,                   H_HelmetB,    amf_tc801,blk,none,none)
-	PATTERN_HELMET(AMF_TC801_EARPROT_BLK,       AMF_TC801,    amf_tc801,blk,blk,none)
-	PATTERN_HELMET(AMF_TC801_EARPROT_OD,        AMF_TC801,    amf_tc801,blk,od,none)
-	PATTERN_HELMET(AMF_TC801_EARPROT_TAN,       AMF_TC801,    amf_tc801,blk,tan,none)
-	PATTERN_HELMET(AMF_TC801_GRN,               AMF_TC801,    amf_tc801,grn,none,none)
-	PATTERN_HELMET(AMF_TC801_GRN_EARPROT_BLK,   AMF_TC801_GRN,amf_tc801,grn,blk,none)
-	PATTERN_HELMET(AMF_TC801_GRN_EARPROT_OD,    AMF_TC801_GRN,amf_tc801,grn,od,none)
-	PATTERN_HELMET(AMF_TC801_GRN_EARPROT_TAN,   AMF_TC801_GRN,amf_tc801,grn,tan,none)
-	PATTERN_HELMET(AMF_TC801_TAN,               AMF_TC801,    amf_tc801,tan,none,none)
-	PATTERN_HELMET(AMF_TC801_TAN_EARPROT_BLK,   AMF_TC801_TAN,amf_tc801,tan,blk,none)
-	PATTERN_HELMET(AMF_TC801_TAN_EARPROT_OD,    AMF_TC801_TAN,amf_tc801,tan,od,none)
-	PATTERN_HELMET(AMF_TC801_TAN_EARPROT_TAN,   AMF_TC801_TAN,amf_tc801,tan,tan,none)
-  //PATTERN_HELMET(AMF_TC801_2,                 H_HelmetB,    amf_tc801,blk,none,down) -- Missing
-	PATTERN_HELMET(AMF_TC801_EARPROT_BLK_2,     AMF_TC801,    amf_tc801,blk,blk,down)
-	PATTERN_HELMET(AMF_TC801_EARPROT_OD_2,      AMF_TC801,    amf_tc801,blk,od,down)
-	PATTERN_HELMET(AMF_TC801_EARPROT_TAN_2,     AMF_TC801,    amf_tc801,blk,tan,down)
-	PATTERN_HELMET(AMF_TC801_GRN_2,             AMF_TC801,    amf_tc801,grn,none,down)
-	PATTERN_HELMET(AMF_TC801_GRN_EARPROT_BLK_2, AMF_TC801_GRN,amf_tc801,grn,blk,down)
-	PATTERN_HELMET(AMF_TC801_GRN_EARPROT_OD_2,  AMF_TC801_GRN,amf_tc801,grn,od,down)
-	PATTERN_HELMET(AMF_TC801_GRN_EARPROT_TAN_2, AMF_TC801_GRN,amf_tc801,grn,tan,down)
-	PATTERN_HELMET(AMF_TC801_TAN_2,             AMF_TC801,    amf_tc801,tan,none,down)
-	PATTERN_HELMET(AMF_TC801_TAN_EARPROT_BLK_2, AMF_TC801_TAN,amf_tc801,tan,blk,down)
-	PATTERN_HELMET(AMF_TC801_TAN_EARPROT_OD_2,  AMF_TC801_TAN,amf_tc801,tan,od,down)
-	PATTERN_HELMET(AMF_TC801_TAN_EARPROT_TAN_2, AMF_TC801_TAN,amf_tc801,tan,tan,down)
+	PATTERN_HELMET(AMF_TC801,                   H_HelmetB,    amf_tc801,BLK,none,none)
+	PATTERN_HELMET(AMF_TC801_EARPROT_BLK,       AMF_TC801,    amf_tc801,BLK,BLK,none)
+	PATTERN_HELMET(AMF_TC801_EARPROT_OD,        AMF_TC801,    amf_tc801,BLK,OD,none)
+	PATTERN_HELMET(AMF_TC801_EARPROT_TAN,       AMF_TC801,    amf_tc801,BLK,TAN,none)
+	PATTERN_HELMET(AMF_TC801_GRN,               AMF_TC801,    amf_tc801,OD,none,none)
+	PATTERN_HELMET(AMF_TC801_GRN_EARPROT_BLK,   AMF_TC801_GRN,amf_tc801,OD,BLK,none)
+	PATTERN_HELMET(AMF_TC801_GRN_EARPROT_OD,    AMF_TC801_GRN,amf_tc801,OD,OD,none)
+	PATTERN_HELMET(AMF_TC801_GRN_EARPROT_TAN,   AMF_TC801_GRN,amf_tc801,OD,TAN,none)
+	PATTERN_HELMET(AMF_TC801_TAN,               AMF_TC801,    amf_tc801,TAN,none,none)
+	PATTERN_HELMET(AMF_TC801_TAN_EARPROT_BLK,   AMF_TC801_TAN,amf_tc801,TAN,BLK,none)
+	PATTERN_HELMET(AMF_TC801_TAN_EARPROT_OD,    AMF_TC801_TAN,amf_tc801,TAN,OD,none)
+	PATTERN_HELMET(AMF_TC801_TAN_EARPROT_TAN,   AMF_TC801_TAN,amf_tc801,TAN,TAN,none)
+  //PATTERN_HELMET(AMF_TC801_2,                 H_HelmetB,    amf_tc801,BLK,none,down) -- Missing
+	PATTERN_HELMET(AMF_TC801_EARPROT_BLK_2,     AMF_TC801,    amf_tc801,BLK,BLK,down)
+	PATTERN_HELMET(AMF_TC801_EARPROT_OD_2,      AMF_TC801,    amf_tc801,BLK,OD,down)
+	PATTERN_HELMET(AMF_TC801_EARPROT_TAN_2,     AMF_TC801,    amf_tc801,BLK,TAN,down)
+	PATTERN_HELMET(AMF_TC801_GRN_2,             AMF_TC801,    amf_tc801,OD,none,down)
+	PATTERN_HELMET(AMF_TC801_GRN_EARPROT_BLK_2, AMF_TC801_GRN,amf_tc801,OD,BLK,down)
+	PATTERN_HELMET(AMF_TC801_GRN_EARPROT_OD_2,  AMF_TC801_GRN,amf_tc801,OD,OD,down)
+	PATTERN_HELMET(AMF_TC801_GRN_EARPROT_TAN_2, AMF_TC801_GRN,amf_tc801,OD,TAN,down)
+	PATTERN_HELMET(AMF_TC801_TAN_2,             AMF_TC801,    amf_tc801,TAN,none,down)
+	PATTERN_HELMET(AMF_TC801_TAN_EARPROT_BLK_2, AMF_TC801_TAN,amf_tc801,TAN,BLK,down)
+	PATTERN_HELMET(AMF_TC801_TAN_EARPROT_OD_2,  AMF_TC801_TAN,amf_tc801,TAN,OD,down)
+	PATTERN_HELMET(AMF_TC801_TAN_EARPROT_TAN_2, AMF_TC801_TAN,amf_tc801,TAN,TAN,down)
 	
 	// amf_smb
 	PATTERN_SMB(amf_smb_gr,           ItemCore,   amf_smb,TAN,LG,HK416,no)
@@ -327,83 +339,82 @@ class CfgWeapons
 	PATTERN_SMB(amf_smb_tp_scarh_grn, amf_smb_grb,amf_smb_tp,OD, TP,SCARH,no)
 
 
-	PATTERN_HELMET(AMF_OPSCORE,       H_HelmetB,         amf_opscore_xp,blk,blk,none)
+	PATTERN_HELMET(AMF_OPSCORE,       H_HelmetB,         amf_opscore_xp,BLK,BLK,none)
 
-	PATTERN_HELMET(AMF_OPSCORE_TAN,       AMF_OPSCORE,    amf_opscore_xp,blk,od,none)
-	PATTERN_HELMET(AMF_OPSCORE_TAN,       AMF_OPSCORE,    amf_opscore_xp,blk,tan,none)
+	PATTERN_HELMET(AMF_OPSCORE_TAN,       AMF_OPSCORE,    amf_opscore_xp,BLK,OD,none)
+	PATTERN_HELMET(AMF_OPSCORE_TAN,       AMF_OPSCORE,    amf_opscore_xp,BLK,TAN,none)
 
-	PATTERN_HELMET(AMF_opscore,         H_HelmetB,  amf_opscore_xp,od, blk,none)
-	PATTERN_HELMET(AMF_OPSCORE_OD1,     AMF_OPSCORE,amf_opscore_xp,od, od, none)
-	PATTERN_HELMET(AMF_OPSCORE_OD1_2,   AMF_OPSCORE,amf_opscore_xp,od, od, down)
-	PATTERN_HELMET(AMF_OPSCORE_OD2,     AMF_OPSCORE,amf_opscore_xp,od, tan,none)
-	PATTERN_HELMET(AMF_OPSCORE_OD2_2,   AMF_OPSCORE,amf_opscore_xp,od, tan,down)
-	PATTERN_HELMET(AMF_OPSCORE_TAN,     AMF_OPSCORE,amf_opscore_xp,tan,blk,none)
-	PATTERN_HELMET(AMF_OPSCORE_TAN_2,   AMF_OPSCORE,amf_opscore_xp,tan,blk,down)
-	PATTERN_HELMET(AMF_OPSCORE_TAN1,    AMF_OPSCORE,amf_opscore_xp,tan,tan,none)
-	PATTERN_HELMET(AMF_OPSCORE_TAN1_2,  AMF_OPSCORE,amf_opscore_xp,tan,tan,down)
-	PATTERN_HELMET(AMF_OPSCORE_TAN2,    AMF_OPSCORE,amf_opscore_xp,tan,od, none)
-	PATTERN_HELMET(AMF_OPSCORE_TAN2_2,  AMF_OPSCORE,amf_opscore_xp,tan,od, down)
-	PATTERN_HELMET(AMF_OPSCORE_GREY,    AMF_OPSCORE,amf_opscore_xp,gry,blk,none)
-	PATTERN_HELMET(AMF_OPSCORE_GREY_2,  AMF_OPSCORE,amf_opscore_xp,gry,blk,down)
-	PATTERN_HELMET(AMF_OPSCORE_GREY1,   AMF_OPSCORE,amf_opscore_xp,gry,tan,none)
-	PATTERN_HELMET(AMF_OPSCORE_GREY1_2, AMF_OPSCORE,amf_opscore_xp,gry,tan,down)
-	PATTERN_HELMET(AMF_OPSCORE_GREY2,   AMF_OPSCORE,amf_opscore_xp,gry,od, none)
-	PATTERN_HELMET(AMF_OPSCORE_GREY2_2, AMF_OPSCORE,amf_opscore_xp,gry,od, down)
-	PATTERN_HELMET(AMF_OPSCORE_BLACK,   AMF_OPSCORE,amf_opscore_xp,blk,blk,none)
-	PATTERN_HELMET(AMF_OPSCORE_BLACK_2, AMF_OPSCORE,amf_opscore_xp,blk,blk,down)
-	PATTERN_HELMET(AMF_OPSCORE_BLACK1,  AMF_OPSCORE,amf_opscore_xp,blk,tan,none)
-	PATTERN_HELMET(AMF_OPSCORE_BLACK1_2,AMF_OPSCORE,amf_opscore_xp,blk,tan,down)
-	PATTERN_HELMET(AMF_OPSCORE_BLACK2,  AMF_OPSCORE,amf_opscore_xp,blk,od, none)
-	PATTERN_HELMET(AMF_OPSCORE_BLACK2_2,AMF_OPSCORE,amf_opscore_xp,blk,od, down)
+	PATTERN_HELMET(AMF_opscore,         H_HelmetB,  amf_opscore_xp,OD, BLK,none)
+	PATTERN_HELMET(AMF_OPSCORE_OD1,     AMF_OPSCORE,amf_opscore_xp,OD, OD, none)
+	PATTERN_HELMET(AMF_OPSCORE_OD1_2,   AMF_OPSCORE,amf_opscore_xp,OD, OD, down)
+	PATTERN_HELMET(AMF_OPSCORE_OD2,     AMF_OPSCORE,amf_opscore_xp,OD, TAN,none)
+	PATTERN_HELMET(AMF_OPSCORE_OD2_2,   AMF_OPSCORE,amf_opscore_xp,OD, TAN,down)
+	PATTERN_HELMET(AMF_OPSCORE_TAN,     AMF_OPSCORE,amf_opscore_xp,TAN,BLK,none)
+	PATTERN_HELMET(AMF_OPSCORE_TAN_2,   AMF_OPSCORE,amf_opscore_xp,TAN,BLK,down)
+	PATTERN_HELMET(AMF_OPSCORE_TAN1,    AMF_OPSCORE,amf_opscore_xp,TAN,TAN,none)
+	PATTERN_HELMET(AMF_OPSCORE_TAN1_2,  AMF_OPSCORE,amf_opscore_xp,TAN,TAN,down)
+	PATTERN_HELMET(AMF_OPSCORE_TAN2,    AMF_OPSCORE,amf_opscore_xp,TAN,OD, none)
+	PATTERN_HELMET(AMF_OPSCORE_TAN2_2,  AMF_OPSCORE,amf_opscore_xp,TAN,OD, down)
+	PATTERN_HELMET(AMF_OPSCORE_GREY,    AMF_OPSCORE,amf_opscore_xp,GRY,BLK,none)
+	PATTERN_HELMET(AMF_OPSCORE_GREY_2,  AMF_OPSCORE,amf_opscore_xp,GRY,BLK,down)
+	PATTERN_HELMET(AMF_OPSCORE_GREY1,   AMF_OPSCORE,amf_opscore_xp,GRY,TAN,none)
+	PATTERN_HELMET(AMF_OPSCORE_GREY1_2, AMF_OPSCORE,amf_opscore_xp,GRY,TAN,down)
+	PATTERN_HELMET(AMF_OPSCORE_GREY2,   AMF_OPSCORE,amf_opscore_xp,GRY,OD, none)
+	PATTERN_HELMET(AMF_OPSCORE_GREY2_2, AMF_OPSCORE,amf_opscore_xp,GRY,OD, down)
+	PATTERN_HELMET(AMF_OPSCORE_BLACK,   AMF_OPSCORE,amf_opscore_xp,BLK,BLK,none)
+	PATTERN_HELMET(AMF_OPSCORE_BLACK_2, AMF_OPSCORE,amf_opscore_xp,BLK,BLK,down)
+	PATTERN_HELMET(AMF_OPSCORE_BLACK1,  AMF_OPSCORE,amf_opscore_xp,BLK,TAN,none)
+	PATTERN_HELMET(AMF_OPSCORE_BLACK1_2,AMF_OPSCORE,amf_opscore_xp,BLK,TAN,down)
+	PATTERN_HELMET(AMF_OPSCORE_BLACK2,  AMF_OPSCORE,amf_opscore_xp,BLK,OD, none)
+	PATTERN_HELMET(AMF_OPSCORE_BLACK2_2,AMF_OPSCORE,amf_opscore_xp,BLK,OD, down)
 
+	PATTERN_OPSCB(AMF_opscore2,         H_HelmetB,   amf_opscore_bump,OD, BLK,none,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_OD1,     AMF_OPSCORE2,amf_opscore_bump,OD, OD, none,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_OD1_2,   AMF_OPSCORE2,amf_opscore_bump,OD, OD, down,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_OD2,     AMF_OPSCORE2,amf_opscore_bump,OD, TAN,none,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_OD2_2,   AMF_OPSCORE2,amf_opscore_bump,OD, TAN,down,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_TAN,     AMF_OPSCORE2,amf_opscore_bump,TAN,BLK,none,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_TAN_2,   AMF_OPSCORE2,amf_opscore_bump,TAN,BLK,down,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_TAN1,    AMF_OPSCORE2,amf_opscore_bump,TAN,TAN,none,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_TAN1_2,  AMF_OPSCORE2,amf_opscore_bump,TAN,TAN,down,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_TAN2,    AMF_OPSCORE2,amf_opscore_bump,TAN,OD, none,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_TAN2_2,  AMF_OPSCORE2,amf_opscore_bump,TAN,OD, down,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_GREY,    AMF_OPSCORE2,amf_opscore_bump,GRY,BLK,none,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_GREY_2,  AMF_OPSCORE2,amf_opscore_bump,GRY,BLK,down,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_GREY1,   AMF_OPSCORE2,amf_opscore_bump,GRY,TAN,none,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_GREY1_2, AMF_OPSCORE2,amf_opscore_bump,GRY,TAN,down,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_GREY2,   AMF_OPSCORE2,amf_opscore_bump,GRY,OD, none,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_GREY2_2, AMF_OPSCORE2,amf_opscore_bump,GRY,OD, down,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_BLACK,   AMF_OPSCORE2,amf_opscore_bump,BLK,BLK,none,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_BLACK_2, AMF_OPSCORE2,amf_opscore_bump,BLK,BLK,down,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_BLACK1,  AMF_OPSCORE2,amf_opscore_bump,BLK,TAN,none,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_BLACK1_2,AMF_OPSCORE2,amf_opscore_bump,BLK,TAN,down,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_BLACK2,  AMF_OPSCORE2,amf_opscore_bump,BLK,OD, none,irf)
+	PATTERN_OPSCB(AMF_OPSCORE2_BLACK2_2,AMF_OPSCORE2,amf_opscore_bump,BLK,OD, down,irf)
 
-	PATTERN_OPSCB(AMF_opscore2,         H_HelmetB,   amf_opscore_bump,od, blk,none,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_OD1,     AMF_OPSCORE2,amf_opscore_bump,od, od, none,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_OD1_2,   AMF_OPSCORE2,amf_opscore_bump,od, od, down,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_OD2,     AMF_OPSCORE2,amf_opscore_bump,od, tan,none,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_OD2_2,   AMF_OPSCORE2,amf_opscore_bump,od, tan,down,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_TAN,     AMF_OPSCORE2,amf_opscore_bump,tan,blk,none,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_TAN_2,   AMF_OPSCORE2,amf_opscore_bump,tan,blk,down,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_TAN1,    AMF_OPSCORE2,amf_opscore_bump,tan,tan,none,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_TAN1_2,  AMF_OPSCORE2,amf_opscore_bump,tan,tan,down,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_TAN2,    AMF_OPSCORE2,amf_opscore_bump,tan,od, none,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_TAN2_2,  AMF_OPSCORE2,amf_opscore_bump,tan,od, down,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_GREY,    AMF_OPSCORE2,amf_opscore_bump,gry,blk,none,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_GREY_2,  AMF_OPSCORE2,amf_opscore_bump,gry,blk,down,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_GREY1,   AMF_OPSCORE2,amf_opscore_bump,gry,tan,none,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_GREY1_2, AMF_OPSCORE2,amf_opscore_bump,gry,tan,down,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_GREY2,   AMF_OPSCORE2,amf_opscore_bump,gry,od, none,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_GREY2_2, AMF_OPSCORE2,amf_opscore_bump,gry,od, down,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_BLACK,   AMF_OPSCORE2,amf_opscore_bump,blk,blk,none,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_BLACK_2, AMF_OPSCORE2,amf_opscore_bump,blk,blk,down,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_BLACK1,  AMF_OPSCORE2,amf_opscore_bump,blk,tan,none,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_BLACK1_2,AMF_OPSCORE2,amf_opscore_bump,blk,tan,down,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_BLACK2,  AMF_OPSCORE2,amf_opscore_bump,blk,od, none,irf)
-	PATTERN_OPSCB(AMF_OPSCORE2_BLACK2_2,AMF_OPSCORE2,amf_opscore_bump,blk,od, down,irf)
-
-	PATTERN_OPSCB(AMF_opscore3,         H_HelmetB,   amf_opscore_bump,od,blk, none,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_OD1,     AMF_OPSCORE3,amf_opscore_bump,od, od, none,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_OD1_2,   AMF_OPSCORE3,amf_opscore_bump,od, od, down,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_OD2,     AMF_OPSCORE3,amf_opscore_bump,od, tan,none,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_OD2_2,   AMF_OPSCORE3,amf_opscore_bump,od, tan,down,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_TAN,     AMF_OPSCORE3,amf_opscore_bump,tan,blk,none,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_TAN_2,   AMF_OPSCORE3,amf_opscore_bump,tan,blk,down,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_TAN1,    AMF_OPSCORE3,amf_opscore_bump,tan,tan,none,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_TAN1_2,  AMF_OPSCORE3,amf_opscore_bump,tan,tan,down,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_TAN2,    AMF_OPSCORE3,amf_opscore_bump,tan,od, none,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_TAN2_2_2,AMF_OPSCORE3,amf_opscore_bump,tan,od, down,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_GREY,    AMF_OPSCORE3,amf_opscore_bump,gry,blk,none,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_GREY_2,  AMF_OPSCORE3,amf_opscore_bump,gry,blk,down,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_GREY1,   AMF_OPSCORE3,amf_opscore_bump,gry,tan,none,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_GREY1_2, AMF_OPSCORE3,amf_opscore_bump,gry,tan,down,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_GREY2,   AMF_OPSCORE3,amf_opscore_bump,gry,od, none,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_GREY2_2, AMF_OPSCORE3,amf_opscore_bump,gry,od, down,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_BLACK,   AMF_OPSCORE3,amf_opscore_bump,blk,blk,none,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_BLACK_2, AMF_OPSCORE3,amf_opscore_bump,blk,blk,down,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_BLACK1,  AMF_OPSCORE3,amf_opscore_bump,blk,tan,none,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_BLACK1_2,AMF_OPSCORE3,amf_opscore_bump,blk,tan,down,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_BLACK2,  AMF_OPSCORE3,amf_opscore_bump,blk,od, none,none)
-	PATTERN_OPSCB(AMF_OPSCORE3_BLACK2_2,AMF_OPSCORE3,amf_opscore_bump,blk,od, down,none)
+	PATTERN_OPSCB(AMF_opscore3,         H_HelmetB,   amf_opscore_bump,OD,BLK, none,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_OD1,     AMF_OPSCORE3,amf_opscore_bump,OD, OD, none,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_OD1_2,   AMF_OPSCORE3,amf_opscore_bump,OD, OD, down,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_OD2,     AMF_OPSCORE3,amf_opscore_bump,OD, TAN,none,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_OD2_2,   AMF_OPSCORE3,amf_opscore_bump,OD, TAN,down,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_TAN,     AMF_OPSCORE3,amf_opscore_bump,TAN,BLK,none,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_TAN_2,   AMF_OPSCORE3,amf_opscore_bump,TAN,BLK,down,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_TAN1,    AMF_OPSCORE3,amf_opscore_bump,TAN,TAN,none,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_TAN1_2,  AMF_OPSCORE3,amf_opscore_bump,TAN,TAN,down,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_TAN2,    AMF_OPSCORE3,amf_opscore_bump,TAN,OD, none,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_TAN2_2_2,AMF_OPSCORE3,amf_opscore_bump,TAN,OD, down,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_GREY,    AMF_OPSCORE3,amf_opscore_bump,GRY,BLK,none,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_GREY_2,  AMF_OPSCORE3,amf_opscore_bump,GRY,BLK,down,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_GREY1,   AMF_OPSCORE3,amf_opscore_bump,GRY,TAN,none,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_GREY1_2, AMF_OPSCORE3,amf_opscore_bump,GRY,TAN,down,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_GREY2,   AMF_OPSCORE3,amf_opscore_bump,GRY,OD, none,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_GREY2_2, AMF_OPSCORE3,amf_opscore_bump,GRY,OD, down,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_BLACK,   AMF_OPSCORE3,amf_opscore_bump,BLK,BLK,none,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_BLACK_2, AMF_OPSCORE3,amf_opscore_bump,BLK,BLK,down,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_BLACK1,  AMF_OPSCORE3,amf_opscore_bump,BLK,TAN,none,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_BLACK1_2,AMF_OPSCORE3,amf_opscore_bump,BLK,TAN,down,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_BLACK2,  AMF_OPSCORE3,amf_opscore_bump,BLK,OD, none,none)
+	PATTERN_OPSCB(AMF_OPSCORE3_BLACK2_2,AMF_OPSCORE3,amf_opscore_bump,BLK,OD, down,none)
 
 
 	class CBA_MiscItem;
@@ -428,7 +439,7 @@ class CfgWeapons
 	PATTERN_HK614A5(AMF_614_short_FS_TAN,   AMF_614_short_01_Base_F, amf_hk416a5_short, TDF,   MOE, STD) 
 	PATTERN_HK614A5(AMF_614_short_FS_TAN2,  AMF_614_short_01_Base_F, amf_hk416a5_short, TAN,   MOE, STD) 
 	PATTERN_HK614A5(AMF_614_short_fs2_blk,  AMF_614_short_01_Base_F, amf_hk416a5_short, BLK,   STD, STD) 
-	PATTERN_HK614A5(AMF_614_short_fs2_pain, AMF_614_short_01_Base_F, amf_hk416a5_short, Paint, STD, STD) 
+	PATTERN_HK614A5(AMF_614_short_fs2_paint,AMF_614_short_01_Base_F, amf_hk416a5_short, Paint, STD, STD) 
 	PATTERN_HK614A5(AMF_614_short_fs2_tan,  AMF_614_short_01_Base_F, amf_hk416a5_short, TDF,   STD, STD) 
 	PATTERN_HK614A5(AMF_614_short_FS3_BLK,  AMF_614_short_01_Base_F, amf_hk416a5_short, BLK,   UBR, STD) 
 	PATTERN_HK614A5(AMF_614_short_FS3_TAN,  AMF_614_short_01_Base_F, amf_hk416a5_short, TDF,   UBR, STD) 
@@ -446,7 +457,7 @@ class CfgWeapons
 	PATTERN_HK614A5(AMF_614_long_FS_TAN,   AMF_614_long_01_Base_F, amf_hk416a5_long, TDF,   MOE, STD) 
 	PATTERN_HK614A5(AMF_614_long_FS_TAN2,  AMF_614_long_01_Base_F, amf_hk416a5_long, TAN,   MOE, STD) 
 	PATTERN_HK614A5(AMF_614_long_fs2_blk,  AMF_614_long_01_Base_F, amf_hk416a5_long, BLK,   STD, STD) 
-	PATTERN_HK614A5(AMF_614_long_fs2_pain, AMF_614_long_01_Base_F, amf_hk416a5_long, Paint, STD, STD) 
+	PATTERN_HK614A5(AMF_614_long_fs2_paint,AMF_614_long_01_Base_F, amf_hk416a5_long, Paint, STD, STD) 
 	PATTERN_HK614A5(AMF_614_long_fs2_tan,  AMF_614_long_01_Base_F, amf_hk416a5_long, TDF,   STD, STD) 
 	PATTERN_HK614A5(AMF_614_long_FS3_BLK,  AMF_614_long_01_Base_F, amf_hk416a5_long, BLK,   UBR, STD) 
 	PATTERN_HK614A5(AMF_614_long_FS3_TAN,  AMF_614_long_01_Base_F, amf_hk416a5_long, TDF,   UBR, STD) 
@@ -457,5 +468,31 @@ class CfgWeapons
 	PATTERN_HK614A5(AMF_614_long_FS5_BLK,  AMF_614_long_01_Base_F, amf_hk416a5_long, BLK,   UBR, SMR) 
 	PATTERN_HK614A5(AMF_614_long_FS5_TAN,  AMF_614_long_01_Base_F, amf_hk416a5_long, TAN,   UBR, SMR) 
 	PATTERN_HK614A5(AMF_614_long_FS5_TAN2, AMF_614_long_01_Base_F, amf_hk416a5_long, TDF,   UBR, SMR) 
+
+	PATTERN_DCS(amf_DCS_01_RG,ItemCore,L1,TDF)
+	PATTERN_DCS(amf_DCS_01_OD,ItemCore,L1,OD)
+	PATTERN_DCS(amf_DCS_01_TAN,ItemCore,L1,TAN)
+	PATTERN_DCS(amf_DCS_01_BLK,ItemCore,L1,BLK)
+	PATTERN_DCS(amf_DCS_01_MTP,ItemCore,L1,MTP)
+	PATTERN_DCS(amf_DCS_02,amf_DCS_01_RG,L2,TDF)
+	PATTERN_DCS(amf_DCS_02_OD,amf_DCS_01_RG,L2,OD)
+	PATTERN_DCS(amf_DCS_02_TAN,amf_DCS_01_RG,L2,TAN)
+	PATTERN_DCS(amf_DCS_02_BLK,amf_DCS_01_RG,L2,BLK)
+	PATTERN_DCS(amf_DCS_02_MTP,amf_DCS_01_RG,L2,MTP)
+	PATTERN_DCS(amf_DCS_03,amf_DCS_01_RG,L3,TDF)
+	PATTERN_DCS(amf_DCS_03_OD,amf_DCS_01_RG,L3,OD)
+	PATTERN_DCS(amf_DCS_03_TAN,amf_DCS_01_RG,L3,TAN)
+	PATTERN_DCS(amf_DCS_03_BLK,amf_DCS_01_RG,L3,BLK)
+	PATTERN_DCS(amf_DCS_03_MTP,amf_DCS_01_RG,L3,MTP)
+	PATTERN_DCS(amf_DCS_04_RG,amf_DCS_01_RG,L4,TDF)
+	PATTERN_DCS(amf_DCS_04_OD,amf_DCS_01_RG,L4,OD)
+	PATTERN_DCS(amf_DCS_04_TAN,amf_DCS_01_RG,L4,TAN)
+	PATTERN_DCS(amf_DCS_04_BLK,amf_DCS_01_RG,L4,BLK)
+	PATTERN_DCS(amf_DCS_04_MTP,amf_DCS_01_RG,L4,MTP)
+	PATTERN_DCS(amf_DCS_05_RG,amf_DCS_01_RG,L5,TDF)
+	PATTERN_DCS(amf_DCS_05_OD,amf_DCS_01_RG,L5,OD)
+	PATTERN_DCS(amf_DCS_05_TAN,amf_DCS_01_RG,L5,TAN)
+	PATTERN_DCS(amf_DCS_05_BLK,amf_DCS_01_RG,L5,BLK)
+	PATTERN_DCS(amf_DCS_05_MTP,amf_DCS_01_RG,L5,MTP)
 
 };

@@ -15,9 +15,4 @@ GVAR(cache) = createHashMap;
 
 }] call CBA_fnc_addPlayerEventHandler;
 
-["vehicle", {
-    params ["_unit"];
-
-
-}] call CBA_fnc_addPlayerEventHandler;
 */

@@ -119,6 +119,21 @@ class XtdGearModels
 			description = "Tiger Stripe Woodland";
 			image = QPATHTOF(data\camo\tsw.paa);
 		};
+		class OD
+		{
+			label = "OD";
+			image="#(rgb,8,8,3)color(0.3,0.29,0.24,1)";
+		};
+		class TAN
+		{
+			label = "TAN";
+			image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
+		};
+		class ONU
+		{
+			label = "ONU";
+			image="#(rgb,8,8,3)color(0.38,0.48,0.61,1)";
+		};
 	};
 
 	class SleevesBase

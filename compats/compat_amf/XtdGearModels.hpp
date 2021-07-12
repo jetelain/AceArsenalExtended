@@ -4,23 +4,23 @@ class XtdGearModels
 	{
 		label = "MSA SORDIN";
 		changeingame = 0;
-		values[] = {"none", "od", "blk", "tan"};
+		values[] = {"none", "OD", "BLK", "TAN"};
 		class none
 		{
 			label = "(none)";
 		};
-		class od
+		class OD
 		{
 			label = "OD";
 			descritpion = "Olive Drab";
 			image="#(rgb,8,8,3)color(0.3,0.29,0.24,1)";
 		};
-		class blk
+		class BLK
 		{
 			label = "Black";
 			image="#(rgb,8,8,3)color(0.1,0.1,0.1,1)";
 		};
-		class tan
+		class TAN
 		{
 			label = "TAN";
 			image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
@@ -281,12 +281,12 @@ class XtdGearModels
 		{
 			label = "MSA Felin";
 			author = "Arma Mod France";
-			options[] = {"cover","sordin","goggles"};
-			class cover
+			options[] = {"camo","sordin","goggles"};
+			class camo
 			{
 				label = "Cover";
 				changeingame = 0;
-				values[] = {"none", "mount", "ce", "tan", "ONU"};
+				values[] = {"none", "mount", "ce", "TAN", "ONU"};
 				class none
 				{
 					label = "(none)";
@@ -301,7 +301,7 @@ class XtdGearModels
 					descritpion = "Centre-Europe";
 					image = QPATHTOF(data\ce.paa);
 				};
-				class tan
+				class TAN
 				{
 					label = "TAN";
 					image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
@@ -317,22 +317,22 @@ class XtdGearModels
 		{
 			label = "MSA TC-3000";
 			author = "Arma Mod France";
-			options[] = {"cover","sordin","goggles"};
-			class cover
+			options[] = {"camo","sordin","goggles"};
+			class camo
 			{
 				label = "Paint";
 				changeingame = 0;
-				values[] = {"grn", "tan"};
-				class grn
+				values[] = {"OD", "TAN"};
+				/*class OD
 				{
 					label = "OD";
 					image="#(rgb,8,8,3)color(0.3,0.29,0.24,1)";
 				};
-				class tan
+				class TAN
 				{
 					label = "TAN";
 					image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
-				};
+				};*/
 			};
 			class sordin : SordinBase {};
 			class goggles : GogglesBase {};
@@ -343,22 +343,22 @@ class XtdGearModels
 		{
 			label = "MSA TC-3001";
 			author = "Arma Mod France";
-			options[] = {"cover","sordin","goggles"};
-			class cover
+			options[] = {"camo","sordin","goggles"};
+			class camo
 			{
 				label = "Paint";
 				changeingame = 0;
-				values[] = {"grn", "tan"};
-				class grn
+				values[] = {"OD", "TAN"};
+				/*class OD
 				{
 					label = "OD";
 					image="#(rgb,8,8,3)color(0.3,0.29,0.24,1)";
 				};
-				class tan
+				class TAN
 				{
 					label = "TAN";
 					image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
-				};
+				};*/
 			};
 			class sordin : SordinBase {};
 			class goggles : GogglesBase {};
@@ -368,27 +368,27 @@ class XtdGearModels
 		{
 			label = "MSA TC-800";
 			author = "Arma Mod France";
-			options[] = {"cover","sordin","goggles"};
-			class cover
+			options[] = {"camo","sordin","goggles"};
+			class camo
 			{
 				label = "Paint";
 				changeingame = 0;
-				values[] = {"grn", "blk", "tan"};
-				class blk
+				values[] = {"OD", "BLK", "TAN"};
+				/*class BLK
 				{
 					label = "Black";
 					image="#(rgb,8,8,3)color(0.1,0.1,0.1,1)";
 				};
-				class grn
+				class OD
 				{
 					label = "OD";
 					image="#(rgb,8,8,3)color(0.3,0.29,0.24,1)";
 				};
-				class tan
+				class TAN
 				{
 					label = "TAN";
 					image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
-				};
+				};*/
 			};
 			class sordin : SordinBase {};
 			class goggles : GogglesBase {};
@@ -399,27 +399,27 @@ class XtdGearModels
 		{
 			label = "MSA TC-801";
 			author = "Arma Mod France";
-			options[] = {"cover","sordin","goggles"};
-			class cover
+			options[] = {"camo","sordin","goggles"};
+			class camo
 			{
 				label = "Paint";
 				changeingame = 0;
-				values[] = {"grn", "blk", "tan"};
-				class blk
+				values[] = {"OD", "BLK", "TAN"};
+				/*class BLK
 				{
 					label = "Black";
 					image="#(rgb,8,8,3)color(0.1,0.1,0.1,1)";
 				};
-				class grn
+				class OD
 				{
 					label = "OD";
 					image="#(rgb,8,8,3)color(0.3,0.29,0.24,1)";
 				};
-				class tan
+				class TAN
 				{
 					label = "TAN";
 					image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
-				};
+				};*/
 			};
 			class sordin : SordinBase {};
 			class goggles : GogglesBase {};
@@ -436,16 +436,6 @@ class XtdGearModels
 				label = "Camo";
 				changeingame = 0;
 				values[] = {"TAN", "OD"};
-				class OD
-				{
-					label = "OD";
-					image="#(rgb,8,8,3)color(0.3,0.29,0.24,1)";
-				};
-				class TAN
-				{
-					label = "TAN";
-					image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
-				};
 			};
 			class weapon
 			{
@@ -478,16 +468,6 @@ class XtdGearModels
 				label = "Camo";
 				changeingame = 0;
 				values[] = {"TAN", "OD"};
-				class OD
-				{
-					label = "OD";
-					image="#(rgb,8,8,3)color(0.3,0.29,0.24,1)";
-				};
-				class TAN
-				{
-					label = "TAN";
-					image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
-				};
 			};
 			class weapon
 			{
@@ -514,35 +494,35 @@ class XtdGearModels
 		{
 			label = "GENTEX OPSCORE FAST XP";
 			author = "Arma Mod France";
-			options[] = {"cover","sordin","goggles"};
-			class cover
+			options[] = {"camo","sordin","goggles"};
+			class camo
 			{
 				label = "Paint";
 				changeingame = 0;
-				values[] = {"od", "blk", "tan", "gry"};
-				class blk
+				values[] = {"OD", "BLK", "TAN", "GRY"};
+				/*class BLK
 				{
 					label = "Black";
 					image="#(rgb,8,8,3)color(0.1,0.1,0.1,1)";
 				};
-				class od
+				class OD
 				{
 					label = "OD";
 					image="#(rgb,8,8,3)color(0.3,0.29,0.24,1)";
 				};
-				class tan
+				class TAN
 				{
 					label = "TAN";
 					image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
 				};
-				class gry
+				class GRY
 				{
 					label = "GRY";
 					image="#(rgb,8,8,3)color(0.4,0.4,0.4,1)";
-				};
+				};*/
 			};
 			class sordin : SordinBase {
-				values[] = {"blk","tan","od"};
+				values[] = {"BLK","TAN","OD"};
 			};
 			class goggles : GogglesBase {};
 
@@ -552,35 +532,35 @@ class XtdGearModels
 		{
 			label = "GENTEX OPSCORE BUMP";
 			author = "Arma Mod France";
-			options[] = {"cover","sordin","goggles","top"};
-			class cover
+			options[] = {"camo","sordin","goggles","top"};
+			class camo
 			{
 				label = "Paint";
 				changeingame = 0;
-				values[] = {"od", "blk", "tan", "gry"};
-				class blk
+				values[] = {"OD", "BLK", "TAN", "GRY"};
+				/*class BLK
 				{
 					label = "Black";
 					image="#(rgb,8,8,3)color(0.1,0.1,0.1,1)";
 				};
-				class od
+				class OD
 				{
 					label = "OD";
 					image="#(rgb,8,8,3)color(0.3,0.29,0.24,1)";
 				};
-				class tan
+				class TAN
 				{
 					label = "TAN";
 					image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
 				};
-				class gry
+				class GRY
 				{
 					label = "GRY";
 					image="#(rgb,8,8,3)color(0.4,0.4,0.4,1)";
-				};
+				};*/
 			};
 			class sordin : SordinBase {
-				values[] = {"blk","tan","od"};
+				values[] = {"BLK","TAN","OD"};
 			};
 			class goggles : GogglesBase {};
 
@@ -605,8 +585,8 @@ class XtdGearModels
 		{
 			label = "HK416 A5 11""";
 			author = "Arma Mod France";
-			options[] = {"paint","butt","handguard"};
-			class paint
+			options[] = {"camo","butt","handguard"};
+			class camo
 			{
 				values[] = {"BLK","TAN","TDF","Paint"};
 			};
@@ -624,8 +604,8 @@ class XtdGearModels
 		{
 			label = "HK416 A5 13""";
 			author = "Arma Mod France";
-			options[] = {"paint","butt","handguard"};
-			class paint
+			options[] = {"camo","butt","handguard"};
+			class camo
 			{
 				values[] = {"BLK","TAN","TDF","Paint"};
 			};
@@ -636,6 +616,22 @@ class XtdGearModels
 			class handguard
 			{
 				values[] = {"STD","SMR"};
+			};
+		};
+
+		
+		class amf_dcs
+		{
+			label = "DCS WARRIOR ASSAULT";
+			author = "Arma Mod France";
+			options[] = {"camo","loadout"};
+			class camo
+			{
+				values[] = {"TDF","OD","TAN","BLK","MTP"};
+			};
+			class loadout
+			{
+				values[] = {"L1","L2","L3","L4","L5"};
 			};
 		};
 	};
