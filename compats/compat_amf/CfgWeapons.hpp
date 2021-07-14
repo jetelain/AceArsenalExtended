@@ -416,23 +416,6 @@ class CfgWeapons
 	PATTERN_OPSCB(AMF_OPSCORE3_BLACK2,  AMF_OPSCORE3,amf_opscore_bump,BLK,OD, none,none)
 	PATTERN_OPSCB(AMF_OPSCORE3_BLACK2_2,AMF_OPSCORE3,amf_opscore_bump,BLK,OD, down,none)
 
-
-	class CBA_MiscItem;
-	class CBA_MiscItem_ItemInfo;
-
-	class AMF_Gloves_MX: CBA_MiscItem {
-		scope = 2;
-		scopeArsenal = 2;
-		scopeCurator = 2;
-		displayName = "MX Gloves";
-		descriptionShort = "MX Gloves";
-		model = QPATHTOF(data\mx.p3d);
-		picture = QPATHTOF(data\mx.paa);
-		class ItemInfo: CBA_MiscItem_ItemInfo {
-			mass = 4;
-		};
-	};
-
 	class AMF_614_short_01_Base_F;
 	PATTERN_HK614A5(AMF_614_short_FS_BLK,   AMF_614_short_01_Base_F, amf_hk416a5_short, BLK,   MOE, STD) 
 	PATTERN_HK614A5(AMF_614_short_fs_paint, AMF_614_short_01_Base_F, amf_hk416a5_short, Paint, MOE, STD) 
@@ -494,5 +477,36 @@ class CfgWeapons
 	PATTERN_DCS(amf_DCS_05_TAN,amf_DCS_01_RG,L5,TAN)
 	PATTERN_DCS(amf_DCS_05_BLK,amf_DCS_01_RG,L5,BLK)
 	PATTERN_DCS(amf_DCS_05_MTP,amf_DCS_01_RG,L5,MTP)
+
+
+
+	class CBA_MiscItem;
+	class CBA_MiscItem_ItemInfo;
+
+	class AMF_MSC_MXGLV_BLK: CBA_MiscItem {
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		displayName = "MX Gloves";
+		descriptionShort = "MX Gloves";
+		model = QPATHTOF(data\mx.p3d);
+		picture = QPATHTOF(data\mx.paa);
+		class ItemInfo: CBA_MiscItem_ItemInfo {
+			mass = 1;
+		};
+	};
+
+	class AMF_MSC_GOGGLES_BLK: CBA_MiscItem {
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		displayName = "Goggles";
+		descriptionShort = "Goggles";
+		model = "\A3\characters_f_beta\heads\glasses\g_combat.p3d"; // TODO
+		picture = "\A3\Characters_F\data\ui\icon_g_combat_CA.paa"; // TODO
+		class ItemInfo: CBA_MiscItem_ItemInfo {
+			mass = 2;
+		};
+	};
 
 };

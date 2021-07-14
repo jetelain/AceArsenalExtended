@@ -7,7 +7,7 @@ class XtdGearModels
 		values[] = {"none", "OD", "BLK", "TAN"};
 		class none
 		{
-			label = "(none)";
+			label = CSTRING(None);
 		};
 		class OD
 		{
@@ -28,7 +28,7 @@ class XtdGearModels
 	};
 	class VestRankBase
 	{
-		label = "Rank";
+		label = CSTRING(Rank);
 		changeingame = 0;
 		centerImage = 1;
 		values[] = {"2CL","1CL","CPL","CCH","CC1","SGT","SCH","ADJ","ADC","MAJ","ASP","LTN"};
@@ -110,13 +110,13 @@ class XtdGearModels
 
 	class BloodTypeBase
 	{
-		label = "Blood type";
+		label = CSTRING(BloodType);
 		changeingame = 0;
 		centerImage = 1;
 		values[] = {"none","APOS","ANEG","BPOS","BNEG","OPOS","ONEG","ABPOS","ABNEG"};
 		class none
 		{
-			label="(none)";
+			label=CSTRING(None);
 			image = "";
 			texture = "";
 		};
@@ -173,35 +173,41 @@ class XtdGearModels
 
 	class GlovesBase
 	{
-		label = "Gloves";
+		label = CSTRING(Gloves);
 		values[] = {"none", "MX"};
 		changeingame = 1;
 		class none 
 		{
-			label = "(none)";
-			actionlabel="Remove gloves";
+			label = CSTRING(None);
+			actionlabel=CSTRING(GlovesNoneAction);
 			icon = QPATHTOF(data\nogloves.paa);
 		};
 		class MX 
 		{
-			label = "MX";
-			itemingame = "AMF_Gloves_MX";
-			actionlabel="Equip MX gloves";
+			label = CSTRING(GlovesMX);
+			actionlabel=CSTRING(GlovesMXAction);
+			itemingame = "AMF_MSC_MXGLV_BLK";
 			icon = QPATHTOF(data\mx.paa);
 		};
 	};
 
 	class GogglesBase
 	{
-		label = "Goggles";
+		label = CSTRING(Goggles);
 		values[] = {"none", "down"};
+		changeingame = 1;
 		class none 
 		{
-			label = "(none)";
+			label = CSTRING(None);
+			actionlabel=CSTRING(GogglesNoneAction);
+			icon = QPATHTOF(data\nogoggles.paa);
 		};
 		class down 
 		{
-			label = "Down";
+			label = CSTRING(GogglesDown);
+			actionlabel=CSTRING(GogglesDownAction);
+			itemingame = "AMF_MSC_GOGGLES_BLK";
+			icon = "\A3\Characters_F\data\ui\icon_g_combat_CA.paa";
 		};
 	};
 
@@ -284,12 +290,10 @@ class XtdGearModels
 			options[] = {"camo","sordin","goggles"};
 			class camo
 			{
-				label = "Cover";
-				changeingame = 0;
 				values[] = {"none", "mount", "ce", "TAN", "ONU"};
 				class none
 				{
-					label = "(none)";
+					label = CSTRING(None);
 				};
 				class mount
 				{
@@ -320,19 +324,7 @@ class XtdGearModels
 			options[] = {"camo","sordin","goggles"};
 			class camo
 			{
-				label = "Paint";
-				changeingame = 0;
 				values[] = {"OD", "TAN"};
-				/*class OD
-				{
-					label = "OD";
-					image="#(rgb,8,8,3)color(0.3,0.29,0.24,1)";
-				};
-				class TAN
-				{
-					label = "TAN";
-					image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
-				};*/
 			};
 			class sordin : SordinBase {};
 			class goggles : GogglesBase {};
@@ -346,19 +338,7 @@ class XtdGearModels
 			options[] = {"camo","sordin","goggles"};
 			class camo
 			{
-				label = "Paint";
-				changeingame = 0;
 				values[] = {"OD", "TAN"};
-				/*class OD
-				{
-					label = "OD";
-					image="#(rgb,8,8,3)color(0.3,0.29,0.24,1)";
-				};
-				class TAN
-				{
-					label = "TAN";
-					image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
-				};*/
 			};
 			class sordin : SordinBase {};
 			class goggles : GogglesBase {};
@@ -371,24 +351,7 @@ class XtdGearModels
 			options[] = {"camo","sordin","goggles"};
 			class camo
 			{
-				label = "Paint";
-				changeingame = 0;
 				values[] = {"OD", "BLK", "TAN"};
-				/*class BLK
-				{
-					label = "Black";
-					image="#(rgb,8,8,3)color(0.1,0.1,0.1,1)";
-				};
-				class OD
-				{
-					label = "OD";
-					image="#(rgb,8,8,3)color(0.3,0.29,0.24,1)";
-				};
-				class TAN
-				{
-					label = "TAN";
-					image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
-				};*/
 			};
 			class sordin : SordinBase {};
 			class goggles : GogglesBase {};
@@ -402,24 +365,7 @@ class XtdGearModels
 			options[] = {"camo","sordin","goggles"};
 			class camo
 			{
-				label = "Paint";
-				changeingame = 0;
 				values[] = {"OD", "BLK", "TAN"};
-				/*class BLK
-				{
-					label = "Black";
-					image="#(rgb,8,8,3)color(0.1,0.1,0.1,1)";
-				};
-				class OD
-				{
-					label = "OD";
-					image="#(rgb,8,8,3)color(0.3,0.29,0.24,1)";
-				};
-				class TAN
-				{
-					label = "TAN";
-					image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
-				};*/
 			};
 			class sordin : SordinBase {};
 			class goggles : GogglesBase {};
@@ -433,27 +379,34 @@ class XtdGearModels
 			options[] = {"camo","weapon", "loadout", "belt", "rank"};
 			class camo
 			{
-				label = "Camo";
 				changeingame = 0;
 				values[] = {"TAN", "OD"};
 			};
 			class weapon
 			{
-				label = "Magazines";
+				label = CSTRING(Magazines);
 				changeingame = 0;
 				values[] = {"HK416","FAMAS"};
 			};
 			class loadout
 			{
-				label = "Loadout";
+				label = CSTRING(Loadout);
 				changeingame = 0;
 				values[] = {"LG","GV","CDG","SC2","AR"};
 			};
 			class belt
 			{
-				label = "Belt";
+				label = CSTRING(Belt);
 				changeingame = 0;
 				values[] = {"no","yes"};
+				class no
+				{
+					label = CSTRING(BeltNo);
+				};
+				class yes
+				{
+					label = CSTRING(BeltYes);
+				};
 			};
 			class rank : VestRankBase {};
 		};
@@ -465,27 +418,33 @@ class XtdGearModels
 			options[] = {"camo","weapon", "loadout", "belt","rank"};
 			class camo
 			{
-				label = "Camo";
-				changeingame = 0;
 				values[] = {"TAN", "OD"};
 			};
 			class weapon
 			{
-				label = "Magazines";
+				label = CSTRING(Magazines);
 				changeingame = 0;
 				values[] = {"FRF2","HK417","SCARH"};
 			};
 			class loadout
 			{
-				label = "Loadout";
+				label = CSTRING(Loadout);
 				changeingame = 0;
 				values[] = {"TP"};
 			};
 			class belt
 			{
-				label = "Belt";
+				label = CSTRING(Belt);
 				changeingame = 0;
 				values[] = {"no","yes"};
+				class no
+				{
+					label = CSTRING(BeltNo);
+				};
+				class yes
+				{
+					label = CSTRING(BeltYes);
+				};
 			};
 			class rank : VestRankBase {};
 		};
@@ -497,29 +456,7 @@ class XtdGearModels
 			options[] = {"camo","sordin","goggles"};
 			class camo
 			{
-				label = "Paint";
-				changeingame = 0;
 				values[] = {"OD", "BLK", "TAN", "GRY"};
-				/*class BLK
-				{
-					label = "Black";
-					image="#(rgb,8,8,3)color(0.1,0.1,0.1,1)";
-				};
-				class OD
-				{
-					label = "OD";
-					image="#(rgb,8,8,3)color(0.3,0.29,0.24,1)";
-				};
-				class TAN
-				{
-					label = "TAN";
-					image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
-				};
-				class GRY
-				{
-					label = "GRY";
-					image="#(rgb,8,8,3)color(0.4,0.4,0.4,1)";
-				};*/
 			};
 			class sordin : SordinBase {
 				values[] = {"BLK","TAN","OD"};
@@ -535,29 +472,7 @@ class XtdGearModels
 			options[] = {"camo","sordin","goggles","top"};
 			class camo
 			{
-				label = "Paint";
-				changeingame = 0;
 				values[] = {"OD", "BLK", "TAN", "GRY"};
-				/*class BLK
-				{
-					label = "Black";
-					image="#(rgb,8,8,3)color(0.1,0.1,0.1,1)";
-				};
-				class OD
-				{
-					label = "OD";
-					image="#(rgb,8,8,3)color(0.3,0.29,0.24,1)";
-				};
-				class TAN
-				{
-					label = "TAN";
-					image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
-				};
-				class GRY
-				{
-					label = "GRY";
-					image="#(rgb,8,8,3)color(0.4,0.4,0.4,1)";
-				};*/
 			};
 			class sordin : SordinBase {
 				values[] = {"BLK","TAN","OD"};
@@ -571,7 +486,7 @@ class XtdGearModels
 				values[] = {"none", "irf"};
 				class none
 				{
-					label = "(none)";
+					label = CSTRING(None);
 				};
 				class irf
 				{
@@ -592,10 +507,12 @@ class XtdGearModels
 			};
 			class butt
 			{
+				label = CSTRING(Butt);
 				values[] = {"STD","MOE","UBR"};
 			};
 			class handguard
 			{
+				label = CSTRING(Handguard);
 				values[] = {"STD","SMR"};
 			};
 		};
@@ -611,10 +528,12 @@ class XtdGearModels
 			};
 			class butt
 			{
+				label = CSTRING(Butt);
 				values[] = {"STD","MOE","UBR"};
 			};
 			class handguard
 			{
+				label = CSTRING(Handguard);
 				values[] = {"STD","SMR"};
 			};
 		};
@@ -631,6 +550,7 @@ class XtdGearModels
 			};
 			class loadout
 			{
+				label = CSTRING(Loadout);
 				values[] = {"L1","L2","L3","L4","L5"};
 			};
 		};

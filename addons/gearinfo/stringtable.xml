@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACEAX">
+    <Package name="GearInfo">
+        <Key ID="STR_ACEAX_GearInfo_Camo">
+            <English>Camo / Paint</English>
+            <French>Camouflage / Teinte</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_White">
+            <English>White</English>
+            <French>Blanc</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_Black">
+            <English>Black</English>
+            <French>Noir</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_Blue">
+            <English>Blue</English>
+            <French>Bleu</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_Grey">
+            <English>Grey</English>
+            <French>Gris</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_Khaki">
+            <English>Khaki</English>
+            <French>Khaki</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_Navy">
+            <English>Navy</English>
+            <French>Marine</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_Sleeves">
+            <English>Sleeves</English>
+            <French>Manches</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_SleevesFull">
+            <English>Full</English>
+            <French>Complet</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_SleevesFullAction">
+            <English>Roll down sleeves</English>
+            <French>Remettre les manches</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_SleevesQuarter">
+            <English>3/4</English>
+            <French>3/4</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_SleevesQuarterAction">
+            <English>Roll up sleeves to 3/4</English>
+            <French>Retrousser les manches d'un quart</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_SleevesHalf">
+            <English>1/2</English>
+            <French>1/2</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_SleevesHalfAction">
+            <English>Roll up sleeves</English>
+            <French>Retrousser les manches</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_SleevesCut">
+            <English>Cut</English>
+            <French>Coupées</French>
+        </Key>
+    </Package>
+</Project>

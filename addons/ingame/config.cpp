@@ -19,8 +19,9 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_SelfActions {
             class GVAR(gear) {
-                displayName = "Gear";
+                displayName = CSTRING(Gear);
                 condition = QUOTE(true);
+                icon = QPATHTOF(data\gear.paa);
                 exceptions[] = {"isNotInside", "isNotSitting"};
                 statement = "";
                 insertChildren = QUOTE(_this call FUNC(aceSelfActions));

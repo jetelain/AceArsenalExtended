@@ -2,33 +2,33 @@ class XtdGearModels
 {
 	class CamoBase
 	{
-		label = "Camo";
+		label = CSTRING(Camo);
 		icon = QPATHTOF(data\ui\camo.paa);
 		changeingame = 0;
 		values[] = {};
 	    class WHT
 		{
-			label = "White";
+			label = CSTRING(White);
 			image = QPATHTOF(data\camo\wht.paa);
 		};
 	    class BLK
 		{
-			label = "Black";
+			label = CSTRING(Black);
 			image = QPATHTOF(data\camo\blk.paa);
 		};
 		class BLU
 		{
-			label = "Blue";
+			label = CSTRING(Blue);
 			image = QPATHTOF(data\camo\blu.paa);
 		};
 		class GRY
 		{
-			label = "Grey";
+			label = CSTRING(Grey);
 			image = QPATHTOF(data\camo\gry.paa);
 		};
 		class KHK
 		{
-			label = "Khaki";
+			label = CSTRING(Khaki);
 			image = QPATHTOF(data\camo\khk.paa);
 		};
 		class AOR1
@@ -98,7 +98,7 @@ class XtdGearModels
 		};
 		class NAV
 		{
-			label = "Navy";
+			label = CSTRING(Navy);
 			image = QPATHTOF(data\camo\nav.paa);
 		};
 		class RGR
@@ -138,31 +138,31 @@ class XtdGearModels
 
 	class SleevesBase
 	{
-		label = "Sleeves";
+		label = CSTRING(Sleeves);
 		icon = QPATHTOF(data\ui\sleeves.paa);
 		changeingame = 1;
 		values[] = {};
 		class Full
 		{
-			label = "Full";
-			actionLabel = "Roll down sleeves";
+			label = CSTRING(SleevesFull);
+			actionLabel = CSTRING(SleevesFullAction);
 			icon = QPATHTOF(data\ui\sleeves.paa);
 		};
 		class Quarter
 		{
-			label = "3/4";
-			actionLabel = "Roll up sleeves to 3/4";
+			label = CSTRING(SleevesQuarter);
+			actionLabel = CSTRING(SleevesQuarterAction);
 			icon = QPATHTOF(data\ui\sleeves_quarter.paa);
 		};
 		class Half
 		{
-			label = "1/2";
-			actionLabel = "Roll up sleeves to half";
+			label = CSTRING(SleevesHalf);
+			actionLabel = CSTRING(SleevesHalfAction);
 			icon = QPATHTOF(data\ui\sleeves_half.paa);
 		};
 		class Cut
 		{
-			label = "Cut";
+			label = CSTRING(SleevesCut);
 			changeingame = -1;
 		};
 	};

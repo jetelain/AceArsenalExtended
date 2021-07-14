@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACEAX">
+    <Package name="Ingame">
+        <Key ID="STR_ACEAX_Ingame_Gear">
+            <English>Gear change</English>
+            <French>Modifier équipement</French>
+        </Key>
+    </Package>
+</Project>
