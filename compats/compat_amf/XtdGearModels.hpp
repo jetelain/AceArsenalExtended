@@ -170,6 +170,38 @@ class XtdGearModels
 		};
 	};
 
+	class FlagBase
+	{
+		label = "Drapeau";
+		changeingame = 0;
+		centerImage = 1;
+		values[] = {"none","HV","BV","Legion"};
+		class none
+		{
+			label=CSTRING(None);
+			image = "";
+			texture = "";
+		};
+		class HV
+		{
+			label="HV";
+			image = QPATHTOF(data\flag_hv.paa);
+			texture = QPATHTOF(data\flag_hv.paa);
+		};
+		class BV
+		{
+			label="BV";
+			image = QPATHTOF(data\flag_bv.paa);
+			texture = QPATHTOF(data\flag_bv.paa);
+		};
+		class Legion
+		{
+			label="Legion";
+			image = QPATHTOF(data\flag_legion.paa);
+			texture = QPATHTOF(data\flag_legion.paa);
+		};
+	};
+
 
 	class GlovesBase
 	{
@@ -218,7 +250,7 @@ class XtdGearModels
 			label = "Treillis F3/Ubas";
 			author = "Arma Mod France";
 			options[] = {"camo","sleeves","gloves"};
-			// textureoptions[]={"rank","bloodtype"}; will be added in v7.1 in september 
+			textureoptions[]={"rank","bloodtype","flag"}; //will be added in v7.1 in september 
 			class camo // coventional name
 			{
 				values[] = {"CE_TAN","CE_OD","DA","SERVAL"};
@@ -254,6 +286,20 @@ class XtdGearModels
 			class bloodtype : BloodTypeBase {
 				hiddenselection = "sang";
 			};
+			class flag : FlagBase {
+				hiddenselection = "drapeau";
+			};
+		};
+
+		class amf_g3
+		{
+			label = "Crye G3";
+			author = "Arma Mod France";
+			options[] = {"sleeves"};
+			class sleeves // coventional name
+			{
+				values[] = {"Full", "Half"};
+			};
 		};
 
 		class amf_uniform_f3
@@ -261,6 +307,7 @@ class XtdGearModels
 			label = "Treillis F3";
 			author = "Arma Mod France";
 			options[] = {"camo","gloves"};
+			textureoptions[]={"rank","bloodtype","flag"}; //will be added in v7.1 in september 
 			class camo // coventional name
 			{
 				values[] = {"CE","DA","SERVAL","MTP"};
@@ -281,6 +328,15 @@ class XtdGearModels
 				};
 			};
 			class gloves : GlovesBase { };
+			class rank : VestRankBase {
+				hiddenselection = "grade";
+			};
+			class bloodtype : BloodTypeBase {
+				hiddenselection = "sang";
+			};
+			class flag : FlagBase {
+				hiddenselection = "drapeau";
+			};
 		};
 
 		class amf_felin
@@ -554,5 +610,48 @@ class XtdGearModels
 				values[] = {"L1","L2","L3","L4","L5"};
 			};
 		};
+
+		class amf_spectra
+		{
+			label = "MSA SPECTRA";
+			author = "Arma Mod France";
+			options[] = {"camo"};
+			class camo
+			{
+				values[] = {"OD","CE","DA","UN"};
+			};
+		};
+
+		class amf_tcnvg
+		{
+			label = "MSA TC-NVG";
+			author = "Arma Mod France";
+			options[] = {"camo"};
+			class camo
+			{
+				values[] = {"CE","DA"};
+			};
+		};
+
 	};
+
+	class CfgGlasses 
+	{
+		class amf_balaclava
+		{
+			label = "CAGOULE";
+			author = "Arma Mod France";
+			options[] = {"camo","sordin","goggles"};
+			class camo
+			{
+				values[] = {"BLK", "OD", "TAN", "RGR"};
+			};
+			class sordin : SordinBase {};
+			class goggles : GogglesBase {};
+
+		};
+	};
+
+
+
 };

@@ -11,6 +11,16 @@
 		};                                        \
 	}; 
 
+#define PATTERN_UNIFORM_G3(name, s) \
+	class name: Uniform_Base                      \
+	{                                             \
+		class XtdGearInfo                         \
+		{                                         \
+			model = "amf_g3";           \
+			sleeves = #s;                         \
+		};                                        \
+	}; 
+
 #define PATTERN_UNIFORM_F3(name, c, g) \
 	class name: Uniform_Base                      \
 	{                                             \
@@ -114,6 +124,16 @@
 			model = "amf_dcs"; \
 			camo = #c;         \
 			loadout = #l;      \
+		};                     \
+	}; 
+
+#define PATTERN_CAMO(name, base, m, c) \
+	class name: base           \
+	{                          \
+		class XtdGearInfo      \
+		{                      \
+			model = #m; \
+			camo = #c;         \
 		};                     \
 	}; 
 
@@ -478,7 +498,16 @@ class CfgWeapons
 	PATTERN_DCS(amf_DCS_05_BLK,amf_DCS_01_RG,L5,BLK)
 	PATTERN_DCS(amf_DCS_05_MTP,amf_DCS_01_RG,L5,MTP)
 
+	PATTERN_CAMO(AMF_SPECTRA,     H_HelmetB,amf_spectra,OD)
+	PATTERN_CAMO(AMF_SPECTRA_2,   H_HelmetB,amf_spectra,CE)
+	PATTERN_CAMO(AMF_SPECTRA_2_DA,H_HelmetB,amf_spectra,DA)
+	PATTERN_CAMO(AMF_SPECTRA_2_UN,H_HelmetB,amf_spectra,UN)
 
+	PATTERN_CAMO(AMF_TCNVG,   H_HelmetB,amf_tcnvg,CE)
+	PATTERN_CAMO(AMF_TCNVG_DA,H_HelmetB,amf_tcnvg,DA)
+
+	PATTERN_UNIFORM_G3(amf_uniform_04_MTP, Full)
+	PATTERN_UNIFORM_G3(amf_uniform_05_MTP, Half)
 
 	class CBA_MiscItem;
 	class CBA_MiscItem_ItemInfo;
