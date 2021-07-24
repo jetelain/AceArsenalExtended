@@ -12,7 +12,7 @@ INFO_1("Scanning %1 for XtdGearInfo errors", _classRoot);
 
 private _errors = 0;
 
-private _configs = "(isText (_x >> 'XtdGearInfo' >> 'model')) && ((getNumber (_x >> 'scope')) == 2) && (count (_x >> 'linkeditems') == 0)" configClasses (configFile >> _classRoot);
+private _configs = "(isText (_x >> 'XtdGearInfo' >> 'model')) && ((getNumber (_x >> 'scope')) == 2) && (count (_x >> 'linkeditems') == 0)  && ( ! isNumber (_x >> 'scopeArsenal') || getNumber (_x >> 'scopeArsenal') == 2 )" configClasses (configFile >> _classRoot);
 {
 	private _model = getText(_x  >> "XtdGearInfo" >> "model");
 	if(!isClass (configFile >> "XtdGearModels" >> _classRoot >> _model)) then {
@@ -26,7 +26,7 @@ private _models  = "isArray (_x >> 'options')" configClasses (configFile >> "Xtd
 	private _model = configName _x;
 	private _modelDef = _x;
 	private _optionNames = getArray (_x >> "options");
-	private _modelConfigs = ("(getText (_x >> 'XtdGearInfo' >> 'model') == '"+_model+"') && ((getNumber (_x >> 'scope')) == 2) && (count (_x >> 'linkeditems') == 0)") configClasses (configFile >> _classRoot);
+	private _modelConfigs = ("(getText (_x >> 'XtdGearInfo' >> 'model') == '"+_model+"') && ((getNumber (_x >> 'scope')) == 2) && (count (_x >> 'linkeditems') == 0) && ( ! isNumber (_x >> 'scopeArsenal') || getNumber (_x >> 'scopeArsenal') == 2 )") configClasses (configFile >> _classRoot);
 	private _configMap = createHashMap;
 	private _modelValidOptions = _optionNames apply { getArray(_modelDef >> _x >> "values") };
 
