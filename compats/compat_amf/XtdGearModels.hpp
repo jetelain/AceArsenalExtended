@@ -595,6 +595,8 @@ class XtdGearModels
 		};
 
 		
+
+
 		class amf_dcs
 		{
 			label = "DCS WARRIOR ASSAULT";
@@ -608,6 +610,22 @@ class XtdGearModels
 			{
 				label = CSTRING(Loadout);
 				values[] = {"L1","L2","L3","L4","L5"};
+			};
+		};
+
+		class amf_plate
+		{
+			label = "EAGLE MC-CIRAS";
+			author = "Arma Mod France";
+			options[] = {"camo","loadout"};
+			class camo
+			{
+				values[] = {"OD","TAN"};
+			};
+			class loadout
+			{
+				label = CSTRING(Loadout);
+				values[] = {"none","GV"};
 			};
 		};
 
@@ -630,6 +648,21 @@ class XtdGearModels
 			class camo
 			{
 				values[] = {"CE","DA"};
+			};
+		};
+
+		class amf_scar_h
+		{
+			label = "FN SCAR H";
+			author = "Arma Mod France";
+			options[] = {"camo","variant"};
+			class camo
+			{
+				values[] = {"BLK", "TAN"};
+			};
+			class variant
+			{
+				values[] = {"STD", "CQC"};
 			};
 		};
 

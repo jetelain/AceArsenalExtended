@@ -115,17 +115,19 @@
 		};                                        \
 	}; 
 
-
-#define PATTERN_DCS(name, base, l, c) \
+#define PATTERN_VEST(name, base, m, l, c) \
 	class name: base           \
 	{                          \
 		class XtdGearInfo      \
 		{                      \
-			model = "amf_dcs"; \
+			model = #m; \
 			camo = #c;         \
 			loadout = #l;      \
 		};                     \
 	}; 
+
+#define PATTERN_CIRAS(name, base, l, c) PATTERN_VEST(name,base,amf_plate,l,c)
+#define PATTERN_DCS(name, base, l, c)   PATTERN_VEST(name,base,amf_dcs,l,c)
 
 #define PATTERN_CAMO(name, base, m, c) \
 	class name: base           \
@@ -137,6 +139,16 @@
 		};                     \
 	}; 
 
+#define PATTERN_SCARH(name, base, l, c) \
+	class name: base           \
+	{                          \
+		class XtdGearInfo      \
+		{                      \
+			model = "amf_scar_h"; \
+			camo = #c;         \
+			variant = #l;      \
+		};                     \
+	}; 
 
 class CfgWeapons
 {
@@ -508,6 +520,23 @@ class CfgWeapons
 
 	PATTERN_UNIFORM_G3(amf_uniform_04_MTP, Full)
 	PATTERN_UNIFORM_G3(amf_uniform_05_MTP, Half)
+
+	PATTERN_CIRAS(amf_plate_ca_tan,ItemCore,none,TAN)
+	PATTERN_CIRAS(amf_plate_ca_green,amf_plate_ca_tan,none,OD)
+	PATTERN_CIRAS(amf_plate_ca3_tan,ItemCore,GV,TAN)
+	PATTERN_CIRAS(amf_plate_ca3_green,amf_plate_ca3_tan,GV,OD)
+
+	class AMF_SCAR_H_01_Base_F;
+/*
+	PATTERN_SCARH(AMF_SCAR_H_01_F,    AMF_SCAR_H_01_Base_F, PR, TAN)
+	PATTERN_SCARH(AMF_SCAR_H_painted, AMF_SCAR_H_01_Base_F, PR, Paint)
+*/
+	PATTERN_SCARH(AMF_SCAR_H_02_F,    AMF_SCAR_H_01_Base_F, STD, TAN)
+	PATTERN_SCARH(AMF_SCAR_H_02_F_BLK,AMF_SCAR_H_01_Base_F, STD, BLK)
+	PATTERN_SCARH(AMF_SCAR_H_03_F,    AMF_SCAR_H_01_Base_F, CQC, TAN)
+	PATTERN_SCARH(AMF_SCAR_H_03_F_BLK,AMF_SCAR_H_01_Base_F, CQC, BLK)
+
+
 
 	class CBA_MiscItem;
 	class CBA_MiscItem_ItemInfo;
