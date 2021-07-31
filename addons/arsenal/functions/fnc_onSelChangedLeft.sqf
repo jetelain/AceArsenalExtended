@@ -20,7 +20,7 @@ if ( _index == -1 ) exitWith {
 private _selectedConfig = ace_arsenal_currentItems select _index;
 private _selectedModel = "";
 if ( _selectedConfig != "" ) then {
-	_selectedModel = [configFile >> _classRoot >> _selectedConfig >> "XtdGearInfo", "model", ""] call BIS_fnc_returnConfigEntry;
+	_selectedModel = [_classRoot, _selectedConfig] call EFUNC(gearinfo,getConfigModel);
 };
 
 if ( _selectedModel != GVAR(currentModel) ) then {

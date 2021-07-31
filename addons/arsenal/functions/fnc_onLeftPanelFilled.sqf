@@ -9,7 +9,7 @@ if ( _index == -1 ) exitWith { };
 
 private _ctrlPanel = _display displayCtrl IDC_leftTabContent;
 private _selectedConfig = ace_arsenal_currentItems select _index;
-private _selectedModel = [configFile >> _classRoot >> _selectedConfig >> "XtdGearInfo", "model", ""] call BIS_fnc_returnConfigEntry;
+private _selectedModel = [_classRoot, _selectedConfig] call EFUNC(gearinfo,getConfigModel);
 
 private _size = lbSize _ctrlPanel;
 private _i = 0;
@@ -20,7 +20,7 @@ _done set [_selectedModel, true];
 while{_i < _size} do 
 { 
     private _data = _ctrlPanel lbData _i;
-	private _model = [configFile >> _classRoot >> _data >> "XtdGearInfo", "model", ""] call BIS_fnc_returnConfigEntry;
+	private _model = [_classRoot, _data] call EFUNC(gearinfo,getConfigModel);
 	if ( _model != "" ) then {
 		if ( !(_model in _done) || _data == _selectedConfig ) then {
 			_done set [_model, true];
