@@ -12,9 +12,18 @@ INFO_1("Scanning %1 for XtdGearInfo errors", _classRoot);
 
 private _errors = 0;
 
-private _configs = "(isText (_x >> 'XtdGearInfo' >> 'model')) && ((getNumber (_x >> 'scope')) == 2) && (count (_x >> 'linkeditems') == 0)  && ( ! isNumber (_x >> 'scopeArsenal') || getNumber (_x >> 'scopeArsenal') == 2 )" configClasses (configFile >> _classRoot);
+private _configs = QUOTE((isText (_x >> 'XtdGearInfo' >> 'model')) && CLASS_FILTER(_x)) configClasses (configFile >> _classRoot);
 {
 	private _model = getText(_x  >> "XtdGearInfo" >> "model");
+	if(!isClass (configFile >> "XtdGearModels" >> _classRoot >> _model)) then {
+		private _configName = configName _x;
+		ERROR_3("Config '%1/%2' references a non existent model '%3'", _classRoot, _configName, _model);
+	};
+} foreach _configs;
+
+_configs = "true" configClasses (configFile >> "XtdGearInfos" >> _classRoot);
+{
+	private _model = getText(_x  >> "model");
 	if(!isClass (configFile >> "XtdGearModels" >> _classRoot >> _model)) then {
 		private _configName = configName _x;
 		ERROR_3("Config '%1/%2' references a non existent model '%3'", _classRoot, _configName, _model);
@@ -26,25 +35,21 @@ private _models  = "isArray (_x >> 'options')" configClasses (configFile >> "Xtd
 	private _model = configName _x;
 	private _modelDef = _x;
 	private _optionNames = getArray (_x >> "options");
-	private _modelConfigs = ("(getText (_x >> 'XtdGearInfo' >> 'model') == '"+_model+"') && ((getNumber (_x >> 'scope')) == 2) && (count (_x >> 'linkeditems') == 0) && ( ! isNumber (_x >> 'scopeArsenal') || getNumber (_x >> 'scopeArsenal') == 2 )") configClasses (configFile >> _classRoot);
 	private _configMap = createHashMap;
 	private _modelValidOptions = _optionNames apply { getArray(_modelDef >> _x >> "values") };
 
 	{
-		private _optionsValues = [];
-		private _configName = configName _x;
-		private _xtdGearInfo = _x >> "XtdGearInfo";
+		_x params ["_config","_optionsValues"],
+
+		private _configName = configName _config;
 
 		{
-			private _v = _xtdGearInfo >> _x;
-			if ( !isText(_v)) then {
+			private _str = _configOptions select _foreachIndex;
+			if ( _str == "" ) then {
 				ERROR_3("Config '%1/%2' has no value for option '%3'", _classRoot, _configName, _x);
 				_errors = _errors + 1;
-				_optionsValues pushBack "";
 			} else {
-				private _str = getText _v;
 				private _valid = _modelValidOptions select _foreachIndex;
-				_optionsValues pushBack _str;
 				if ( !(_str in _valid)) then {
 					ERROR_5("Config '%1/%2' has unknown value '%3' for option '%4' (%5 are allowed)", _classRoot, _configName, _str, _x, _valid);
 					_errors = _errors + 1;
@@ -60,7 +65,7 @@ private _models  = "isArray (_x >> 'options')" configClasses (configFile >> "Xtd
 			_configMap set [_optionsValues, _configName];
 		};
 
-	} foreach _modelConfigs;
+	} foreach ([_classRoot, _model] call FUNC(getModelConfigs));
 
 } foreach _models;
 

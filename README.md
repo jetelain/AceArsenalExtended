@@ -25,7 +25,7 @@ Install mod from Steam Workshop
 ![Model](./docs/model.svg)
 
 All these objets are found in Arma 3 configuration :
-- A "Config" is a class in `CfgWeapons`/`CfgGlasses`/`CfgVehicle`, that have a `XtdGearInfo` subclass.
+- A "Config" is a class in `CfgWeapons`/`CfgGlasses`/`CfgVehicle`, that have a `XtdGearInfo` subclass or that have a class with the same name in `XtdGearModels >> CfgWeapons`/`CfgGlasses`/`CfgVehicle`.
 - A "Model", in a class in `XtdGearModels >> CfgWeapons`/`CfgGlasses`/`CfgVehicle`.
 - An "Option" is a class within a "Model", with it's name referenced in `options` property.
 - A "Value" is a class within a "Option", with it's name referenced in `values` property.
@@ -89,6 +89,28 @@ class CfgWeapons
 };
 ```
 
+Alternative syntax to avoid impacting `CfgWeapons`/`CfgGlasses`/`CfgVehicle` :
+
+```c++
+class XtdGearModels
+{
+    // identical to previous sample
+};
+class XtdGearInfos
+{
+    class CfgWeapons 
+    {
+        class my_model_MTP_value1 // exact class name in CfgWeapons (case sensitive !)
+        {
+            model = "my_model"; // class name in XtdGearModels >> CfgWeapons
+            camo = "MTP";
+            optionA = "value1";
+        };
+        // ...
+    };
+};
+```
+
 ### Texture Options
 
 On uniforms and backback, you can add special options called "texture options". Those options will not change the "Config", but will allow you to change a texture of an hiddenselection defined in the "Config". 
@@ -146,6 +168,10 @@ You can builtin configuration for ACE3 Arsenal Extended within your mod, without
 ### The compat mod approach
 
 You can also build a compat addon that overrides entries in `CfgWeapons`/`CfgGlasses`/`CfgVehicle` to add required informations.
+
+### The all-in-one ACEAX mod approach
+
+You can also add data to the ACEAX mod in `XtdGearInfos` to extends a mod without creating a direct dependency on it (Pull-Request are welcome !).
 
 ## How to build ?
 
