@@ -17,3 +17,30 @@ class CfgPatches {
 #include "XtdGearModels.hpp"
 
 #include "CfgWeapons.hpp"
+
+class Cfg3DEN
+{
+	class Object
+	{
+        class AttributeCategories
+		{
+            class Identity
+			{
+				class Attributes
+				{
+					class GVARMAIN(textureOptions)
+					{
+						property=QGVARMAIN(textureOptions);
+						control="Edit";
+						displayName="Texture options (ACE Arsenal Extended)";
+						tooltip="";
+						expression=QUOTE([ARRAY_3(_this, _value, false)] call FUNC(setTextureOptions););
+						defaultValue="''";
+						condition="objectBrain";
+						wikiType="[[String]]";
+					};
+                };
+            };
+        };
+    };
+};
