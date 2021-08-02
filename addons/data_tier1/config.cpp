@@ -6,12 +6,11 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"Tier1_Weapons_cfg"};
+        requiredAddons[] = {"aceax_gearinfo"};
         author = "AUTHOR";
         VERSION_CONFIG;
     };
 };
 
 #include "XtdGearModels.hpp"
-
-#include "CfgWeapons.hpp"
+#include "XtdGearInfos.hpp"

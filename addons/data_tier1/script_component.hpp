@@ -1,5 +1,4 @@
-#define COMPONENT compat_tier1
-#define SUBPREFIX compats
+#define COMPONENT data_tier1
 #include "\z\aceax\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
