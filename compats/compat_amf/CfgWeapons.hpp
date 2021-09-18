@@ -90,21 +90,22 @@
 			rank = "1CL"                          \
 		};                                        \
 		class ItemInfo; \
-		hiddenSelectionsTextures[]= { QPATHTOF(data\patchs\GRADE\BV_1CL.paa), "" }; \
+		hiddenSelectionsTextures[]= { QPATHTOF(data\patchs\GRADE_VEST\BV_1CL.paa), "" }; \
 	}; 											  \
 	PATTERN_SMB_R(name,m, c, l, w, b, 2CL, "") \
-	PATTERN_SMB_R(name,m, c, l, w, b, CPL, QPATHTOF(data\patchs\GRADE\BV_CPL.paa)) \
-	PATTERN_SMB_R(name,m, c, l, w, b, CCH, QPATHTOF(data\patchs\GRADE\BV_CCH.paa)) \
-	PATTERN_SMB_R(name,m, c, l, w, b, ESO, QPATHTOF(data\patchs\GRADE\BV_ESO.paa)) \
-	PATTERN_SMB_R(name,m, c, l, w, b, SGT, QPATHTOF(data\patchs\GRADE\BV_SGT.paa)) \
-	PATTERN_SMB_R(name,m, c, l, w, b, SCH, QPATHTOF(data\patchs\GRADE\BV_SCH.paa)) \
-	PATTERN_SMB_R(name,m, c, l, w, b, ADJ, QPATHTOF(data\patchs\GRADE\BV_ADJ.paa)) \
-	PATTERN_SMB_R(name,m, c, l, w, b, ADC, QPATHTOF(data\patchs\GRADE\BV_ADC.paa)) \
-	PATTERN_SMB_R(name,m, c, l, w, b, MAJ, QPATHTOF(data\patchs\GRADE\BV_MJR.paa)) \
-	PATTERN_SMB_R(name,m, c, l, w, b, ASP, QPATHTOF(data\patchs\GRADE\BV_ASP.paa)) \
-	PATTERN_SMB_R(name,m, c, l, w, b, SLT, QPATHTOF(data\patchs\GRADE\BV_SLT.paa)) \
-	PATTERN_SMB_R(name,m, c, l, w, b, LTN, QPATHTOF(data\patchs\GRADE\BV_LTN.paa)) \
-	PATTERN_SMB_R(name,m, c, l, w, b, CNE, QPATHTOF(data\patchs\GRADE\BV_CNE.paa)) 
+	PATTERN_SMB_R(name,m, c, l, w, b, CPL, QPATHTOF(data\patchs\GRADE_VEST\BV_CPL.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, CCH, QPATHTOF(data\patchs\GRADE_VEST\BV_CCH.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, ESO, QPATHTOF(data\patchs\GRADE_VEST\BV_ESO.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, SGT, QPATHTOF(data\patchs\GRADE_VEST\BV_SGT.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, SCH, QPATHTOF(data\patchs\GRADE_VEST\BV_SCH.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, ADJ, QPATHTOF(data\patchs\GRADE_VEST\BV_ADJ.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, ADC, QPATHTOF(data\patchs\GRADE_VEST\BV_ADC.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, MAJ, QPATHTOF(data\patchs\GRADE_VEST\BV_MJR.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, ASP, QPATHTOF(data\patchs\GRADE_VEST\BV_ASP.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, SLT, QPATHTOF(data\patchs\GRADE_VEST\BV_SLT.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, LTN, QPATHTOF(data\patchs\GRADE_VEST\BV_LTN.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, CNE, QPATHTOF(data\patchs\GRADE_VEST\BV_CNE.paa)) \
+	PATTERN_SMB_R(name,m, c, l, w, b, CMD, QPATHTOF(data\patchs\GRADE_VEST\BV_CMD.paa))  
 
 #define PATTERN_HK614A5(name, base, m, p, b, h) \
 	class name: base                              \

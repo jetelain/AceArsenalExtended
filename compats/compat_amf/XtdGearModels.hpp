@@ -353,7 +353,7 @@ class XtdGearModels
 			label = "Treillis F3/Ubas";
 			author = "Arma Mod France";
 			options[] = {"camo","sleeves","gloves"};
-			textureoptions[]={"rank","bloodtype","flag"}; //will be added in v7.1 in september 
+			// textureoptions[]={"rank","bloodtype","flag"}; //will be added in v7.1 in september 
 			class camo // coventional name
 			{
 				values[] = {"CE_TAN","CE_OD","DA","SERVAL"};
@@ -410,7 +410,7 @@ class XtdGearModels
 			label = "Treillis F3";
 			author = "Arma Mod France";
 			options[] = {"camo","gloves"};
-			textureoptions[]={"rank","bloodtype","flag"}; //will be added in v7.1 in september 
+			// textureoptions[]={"rank","bloodtype","flag"}; //will be added later, need to wait for updated p3ds
 			class camo // coventional name
 			{
 				values[] = {"CE","DA","SERVAL","MTP"};
@@ -567,7 +567,12 @@ class XtdGearModels
 					label = CSTRING(BeltYes);
 				};
 			};
-			class rank : RankBase {};
+			class rank : RankBase {
+				values[] = {
+					"2CL","1CL","CPL","CCH",
+					"ESO","SGT","SCH","ADJ","ADC","MAJ",
+					"ASP","SLT","LTN","CNE","CMD"};
+			};
 		};
 
 		class amf_smb_tp
@@ -605,7 +610,12 @@ class XtdGearModels
 					label = CSTRING(BeltYes);
 				};
 			};
-			class rank : RankBase {};
+			class rank : RankBase {
+				values[] = {
+					"2CL","1CL","CPL","CCH",
+					"ESO","SGT","SCH","ADJ","ADC","MAJ",
+					"ASP","SLT","LTN","CNE","CMD"};
+			};
 		};
 
 		class amf_opscore_xp
