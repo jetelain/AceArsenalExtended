@@ -3,36 +3,34 @@
 
 params ["_display"];
 
-(call FUNC(leftPanelConfig)) params ["_index", "_classRoot"];
+(call FUNC(leftPanelConfig)) params ["", "_virt", "_virtSub", "_index", "_classRoot"];
 
 if ( _index == -1 ) exitWith { };
 
-private _ctrlPanel = _display displayCtrl IDC_leftTabContent;
 private _selectedConfig = ace_arsenal_currentItems select _index;
 private _selectedModel = [_classRoot, _selectedConfig] call EFUNC(gearinfo,getConfigModel);
 
+
+private _ctrlPanel = _display displayCtrl IDC_leftTabContent;
 private _size = lbSize _ctrlPanel;
-private _i = 0;
-private _done = createHashMap;
 
-_done set [_selectedModel, true];
-
-while{_i < _size} do 
-{ 
-    private _data = _ctrlPanel lbData _i;
-	private _model = [_classRoot, _data] call EFUNC(gearinfo,getConfigModel);
+for "_i" from 0 to (_size -1) do { 
+    private _config = _ctrlPanel lbData _i;
+	private _model = [_classRoot, _config] call EFUNC(gearinfo,getConfigModel);
 	if ( _model != "" ) then {
-		if ( !(_model in _done) || _data == _selectedConfig ) then {
-			_done set [_model, true];
-			_ctrlPanel lbSetTextRight [_i, getText(configFile >> "XtdGearModels" >> _classRoot >> _model >> "label")];
-			_i = _i + 1;
-		} else {
-			_ctrlPanel lbDelete _i;
-			_size = _size - 1;
-		};
-	} else {
-		_i = _i + 1;
-	};
-};
+		_ctrlPanel lbSetTextRight [_i, getText(configFile >> "XtdGearModels" >> _classRoot >> _model >> "label")];
 
-_ctrlPanel lbSetCurSel -1; // workaround selection made wrong by lbDelete (?)
+		if ( _selectedModel == _model && _config != _selectedConfig) then {
+			// Current value must match this list item, but it is out-of-sync
+			// Update the list and the filtered virtual items
+			private _virtItems = GVAR(filteredVirtualItems) select _virt;
+			if ( _virtSub != -1 ) then {
+				_virtItems = _virtItems select _virtSub;
+			};
+			_virtItems set [_virtItems find _config, _selectedConfig];
+			_ctrlPanel lbSetData [_i, _selectedConfig];
+			_ctrlPanel lbSetText [_i, getText (configFile >> _classRoot >> _selectedConfig >> "displayName")];
+		};
+
+	};
+ };

@@ -18,11 +18,23 @@ if ( (GVAR(currentModelOptions) select _optionIndex) != _valueName) then {
 
 	if (!isNull _result) then{
 		private _ctrlPanel = _display displayCtrl IDC_leftTabContent;
-		private _index = lbCurSel _ctrlPanel;
-		if ( _index != -1 ) then {
-			_ctrlPanel lbSetData [_index, configName _result];
-			_ctrlPanel lbSetText [_index, getText (_result >> "displayName")];
-			[_ctrlPanel, _index] call FUNC(onSelChangedLeft);
+		private _i = lbCurSel _ctrlPanel;
+		if ( _i != -1 ) then {
+			// Update filtered VirtualItems
+			private _previous = _ctrlPanel lbData _i;
+			private _newValue = configName _result;
+			(call FUNC(leftPanelConfig)) params ["", "_virt", "_virtSub"];
+			private _virtItems = GVAR(filteredVirtualItems) select _virt;
+			if ( _virtSub != -1 ) then {
+				_virtItems = _virtItems select _virtSub;
+			};
+			private _prevIndex = _virtItems find _previous;
+			_virtItems set [_prevIndex, _newValue];
+
+			// Change and propagate selected value
+			_ctrlPanel lbSetData [_i, _newValue];
+			_ctrlPanel lbSetText [_i, getText (_result >> "displayName")];
+			[_ctrlPanel, _i] call FUNC(onSelChangedLeft);
 		} else {
 			ERROR("No selected value ?!?");
 		};

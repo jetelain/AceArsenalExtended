@@ -5,7 +5,7 @@ params ["_control", "_curSel"];
 
 [_control, _curSel] call ace_arsenal_fnc_onSelChangedLeft;
 
-(call FUNC(leftPanelConfig)) params ["_index", "_classRoot"];
+(call FUNC(leftPanelConfig)) params ["", "", "", "_index", "_classRoot"];
 
 private _display = ctrlParent _control;
 

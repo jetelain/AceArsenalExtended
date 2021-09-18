@@ -15,6 +15,7 @@ if ( _selectedModel != "" ) then {
 	_listControl ctrlSetPositionH (safezoneH - 128.5 * GRID_H);
 	_configControl ctrlSetPositionY ((safezoneY + 14 * GRID_H) + (safezoneH - 124.5 * GRID_H));
 	_configControl ctrlSetPositionH (100 * GRID_H);
+	_configControl ctrlShow true; // ensures visible
 	_listControl ctrlCommit 0.1;
 	_configControl ctrlCommit 0.1;
 	

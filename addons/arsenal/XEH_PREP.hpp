@@ -5,3 +5,5 @@ PREP(refreshCheckboxes);
 PREP(leftPanelConfig);
 PREP(onLeftPanelFilled);
 PREP(generateOptionsUI);
+PREP(filterVirtualItems);
+PREP(toggleUI);
