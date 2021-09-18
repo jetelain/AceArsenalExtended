@@ -359,4 +359,5 @@ keys/*
 # APL-ND assets / Will be available later in AMF
 /compats/compat_amf/data/*_gloves*
 /compats/compat_amf/data/*.p3d
+/compats/compat_amf/data/patchs/*
 .test/

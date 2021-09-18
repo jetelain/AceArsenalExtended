@@ -26,12 +26,16 @@ class XtdGearModels
 			image="#(rgb,8,8,3)color(0.49,0.43,0.33,1)";
 		};
 	};
-	class VestRankBase
+	class RankBase
 	{
 		label = CSTRING(Rank);
 		changeingame = 0;
 		centerImage = 1;
-		values[] = {"2CL","1CL","CPL","CCH","CC1","SGT","SCH","ADJ","ADC","MAJ","ASP","LTN"};
+		values[] = {
+			"2CL","1CL","CPL","CCH",
+			"ESO","SGT","SCH","ADJ","ADC","MAJ",
+			"ASP","SLT","LTN","CNE","CMD","LCL","LCL2","COL",
+			"G2","G3","G4","G5"};
 		class 2CL
 		{
 			label="SDT";
@@ -42,68 +46,135 @@ class XtdGearModels
 		class 1CL
 		{
 			description="Première classe (distinction)";
-			image = "amf_vests\data\grades\1cl_co.paa";
-			texture = "amf_vests\data\grades\1cl_co.paa";
+			image = QPATHTOF(data\patchs\GRADE\BV_1CL.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_1CL.paa);
 		};
 		class CPL
 		{
 			description="Caporal";
-			image = "amf_vests\data\grades\cpl_co.paa";
-			texture = "amf_vests\data\grades\cpl_co.paa";
+			image = QPATHTOF(data\patchs\GRADE\BV_CPL.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_CPL.paa);
 		};
 		class CCH
 		{
 			description="Caporal-chef";
-			image = "amf_vests\data\grades\cplchef_co.paa";
-			texture = "amf_vests\data\grades\cplchef_co.paa";
+			image = QPATHTOF(data\patchs\GRADE\BV_CCH.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_CCH.paa);
 		};
-		class CC1
+		/*class CC1
 		{
 			description="Caporal-chef de première classe";
-			image = "amf_vests\data\grades\cplchef1_co.paa";
-			texture = "amf_vests\data\grades\cplchef1_co.paa";
+			image = QPATHTOF(data\patchs\GRADE\BV_CC1.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_CC1.paa);
+		};
+		*/
+		class ESO
+		{
+			description="Elève Sous-Officier";
+			image = QPATHTOF(data\patchs\GRADE\BV_ESO.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_ESO.paa);
 		};
 		class SGT
 		{
 			description="Sergent";
-			image = "amf_vests\data\grades\sgt_co.paa";
-			texture = "amf_vests\data\grades\sgt_co.paa";
+			image = QPATHTOF(data\patchs\GRADE\BV_SGT.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_SGT.paa);
 		};
 		class SCH
 		{
 			description="Sergent-chef";
-			image = "amf_vests\data\grades\sgtchef_co.paa";
-			texture = "amf_vests\data\grades\sgtchef_co.paa";
+			image = QPATHTOF(data\patchs\GRADE\BV_SCH.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_SCH.paa);
 		};
 		class ADJ
 		{
 			description="Adjudant";
-			image = "amf_vests\data\grades\adj_co.paa";
-			texture = "amf_vests\data\grades\adj_co.paa";
+			image = QPATHTOF(data\patchs\GRADE\BV_ADJ.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_ADJ.paa);
 		};
 		class ADC
 		{
 			description="Adjudant-chef";
-			image = "amf_vests\data\grades\adjchel_co.paa";
-			texture = "amf_vests\data\grades\adjchel_co.paa";
+			image = QPATHTOF(data\patchs\GRADE\BV_ADC.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_ADC.paa);
 		};
 		class MAJ
 		{
 			description="Major";
-			image = "amf_vests\data\grades\maj_co.paa";
-			texture = "amf_vests\data\grades\maj_co.paa";
+			image = QPATHTOF(data\patchs\GRADE\BV_MJR.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_MJR.paa);
 		};
 		class ASP
 		{
 			description="Aspirant";
-			image = "amf_vests\data\grades\asp_co.paa";
-			texture = "amf_vests\data\grades\asp_co.paa";
+			image = QPATHTOF(data\patchs\GRADE\BV_ASP.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_ASP.paa);
+		};
+		class SLT
+		{
+			description="Sous-lieutenant";
+			image = QPATHTOF(data\patchs\GRADE\BV_SLT.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_SLT.paa);
 		};
 		class LTN
 		{
 			description="Lieutenant";
-			image = "amf_vests\data\grades\lt_co.paa";
-			texture = "amf_vests\data\grades\lt_co.paa";
+			image = QPATHTOF(data\patchs\GRADE\BV_LTN.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_LTN.paa);
+		};
+		class CNE
+		{
+			description="Capitaine";
+			image = QPATHTOF(data\patchs\GRADE\BV_CNE.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_CNE.paa);
+		};
+		class CMD
+		{
+			description="Commandant";
+			image = QPATHTOF(data\patchs\GRADE\BV_CMD.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_CMD.paa);
+		};
+		class LCL
+		{
+			description="Lieutenant-colonel";
+			image = QPATHTOF(data\patchs\GRADE\BV_LCL.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_LCL.paa);
+		};
+		class LCL2
+		{
+			description="Lieutenant-colonel";
+			image = QPATHTOF(data\patchs\GRADE\BV_LCL_2.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_LCL_2.paa);
+		};
+		class COL
+		{
+			description="Colonel";
+			image = QPATHTOF(data\patchs\GRADE\BV_COL.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_COL.paa);
+		};
+		class G2
+		{
+			description="Général de brigade";
+			image = QPATHTOF(data\patchs\GRADE\BV_G2.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_G2.paa);
+		};
+		class G3
+		{
+			description="Général de division";
+			image = QPATHTOF(data\patchs\GRADE\BV_G3.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_G3.paa);
+		};
+		class G4
+		{
+			description="Général de corps d'armée";
+			image = QPATHTOF(data\patchs\GRADE\BV_G4.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_G4.paa);
+		};
+		class G5
+		{
+			description="Général d'armée";
+			image = QPATHTOF(data\patchs\GRADE\BV_G5.paa);
+			texture = QPATHTOF(data\patchs\GRADE\BV_G5.paa);
 		};
 	};
 
@@ -113,61 +184,69 @@ class XtdGearModels
 		label = CSTRING(BloodType);
 		changeingame = 0;
 		centerImage = 1;
-		values[] = {"none","APOS","ANEG","BPOS","BNEG","OPOS","ONEG","ABPOS","ABNEG"};
+		
+		#define BLOOD_TYPE_LIST(COLOR)  QUOTE(APOS_##COLOR),QUOTE(ANEG_##COLOR),QUOTE(BPOS_##COLOR),QUOTE(BNEG_##COLOR),QUOTE(OPOS_##COLOR),QUOTE(ONEG_##COLOR),QUOTE(ABPOS_##COLOR),QUOTE(ABNEG_##COLOR)
+		values[] = {"none",BLOOD_TYPE_LIST(SAND),BLOOD_TYPE_LIST(GREEN)/*,BLOOD_TYPE_LIST(BLACK)*/};
+		
 		class none
 		{
 			label=CSTRING(None);
 			image = "";
 			texture = "";
 		};
-		class APOS
-		{
-			label="A+";
-			image = "amf_vests\data\blood\apos_co.paa";
-			texture = "amf_vests\data\blood\apos_co.paa";
+		
+		#define BLOOD_TYPE_PATTERN(COLOR)                 \
+		class APOS_##COLOR                                 \
+		{                                                 \
+			label="A+";                                   \
+			image   = QPATHTOF(data\patchs\SANG\##COLOR##_A_POS.paa); \
+			texture = QPATHTOF(data\patchs\SANG\##COLOR##_A_POS.paa); \
+		};                                                \
+		class ANEG_##COLOR                                 \
+		{                                                 \
+			label="A-";                                   \
+			image   = QPATHTOF(data\patchs\SANG\##COLOR##_A_NEG.paa); \
+			texture = QPATHTOF(data\patchs\SANG\##COLOR##_A_NEG.paa); \
+		};                                                \
+		class BPOS_##COLOR                                 \
+		{                                                 \
+			label="B+";                                   \
+			image   = QPATHTOF(data\patchs\SANG\##COLOR##_B_POS.paa); \
+			texture = QPATHTOF(data\patchs\SANG\##COLOR##_B_POS.paa); \
+		};                                                \
+		class BNEG_##COLOR                                 \
+		{                                                 \
+			label="B-";                                   \
+			image   = QPATHTOF(data\patchs\SANG\##COLOR##_B_NEG.paa); \
+			texture = QPATHTOF(data\patchs\SANG\##COLOR##_B_NEG.paa); \
+		};                                                \
+		class OPOS_##COLOR                                 \
+		{                                                 \
+			label="O+";                                   \
+			image   = QPATHTOF(data\patchs\SANG\##COLOR##_O_POS.paa); \
+			texture = QPATHTOF(data\patchs\SANG\##COLOR##_O_POS.paa); \
+		};                                                \
+		class ONEG_##COLOR                                 \
+		{                                                 \
+			label="O-";                                   \
+			image   = QPATHTOF(data\patchs\SANG\##COLOR##_O_NEG.paa); \
+			texture = QPATHTOF(data\patchs\SANG\##COLOR##_O_NEG.paa); \
+		};                                                \
+		class ABPOS_##COLOR                                \
+		{                                                 \
+			label="AB+";                                  \
+			image   = QPATHTOF(data\patchs\SANG\##COLOR##_AB_POS.paa); \
+			texture = QPATHTOF(data\patchs\SANG\##COLOR##_AB_POS.paa); \
+		};                                                \
+		class ABNEG_##COLOR                                \
+		{                                                 \
+			label="AB-";                                  \
+			image   = QPATHTOF(data\patchs\SANG\##COLOR##_AB_NEG.paa); \
+			texture = QPATHTOF(data\patchs\SANG\##COLOR##_AB_NEG.paa); \
 		};
-		class ANEG
-		{
-			label="A-";
-			image = "amf_vests\data\blood\aneg_co.paa";
-			texture = "amf_vests\data\blood\aneg_co.paa";
-		};
-		class BPOS
-		{
-			label="B+";
-			image = "amf_vests\data\blood\bpos_co.paa";
-			texture = "amf_vests\data\blood\bpos_co.paa";
-		};
-		class BNEG
-		{
-			label="B-";
-			image = "amf_vests\data\blood\bneg_co.paa";
-			texture = "amf_vests\data\blood\bneg_co.paa";
-		};
-		class OPOS
-		{
-			label="O+";
-			image = "amf_vests\data\blood\opos_co.paa";
-			texture = "amf_vests\data\blood\opos_co.paa";
-		};
-		class ONEG
-		{
-			label="O-";
-			image = "amf_vests\data\blood\oneg_co.paa";
-			texture = "amf_vests\data\blood\oneg_co.paa";
-		};
-		class ABPOS
-		{
-			label="AB+";
-			image = "amf_vests\data\blood\abpos_co.paa";
-			texture = "amf_vests\data\blood\abpos_co.paa";
-		};
-		class ABNEG
-		{
-			label="AB-";
-			image = "amf_vests\data\blood\abneg_co.paa";
-			texture = "amf_vests\data\blood\abneg_co.paa";
-		};
+		/*BLOOD_TYPE_PATTERN(BLACK)*/
+		BLOOD_TYPE_PATTERN(GREEN)
+		BLOOD_TYPE_PATTERN(SAND)
 	};
 
 	class FlagBase
@@ -175,30 +254,54 @@ class XtdGearModels
 		label = "Drapeau";
 		changeingame = 0;
 		centerImage = 1;
-		values[] = {"none","HV","BV","Legion"};
+		values[] = {"none","FRANCE_BV","FRANCE_HV","FRANCE_SABLE","FRANCE_LEGION_BLANC_HV","FRANCE_LEGION_JAUNE_HV","NATO_BLACK","NATO_BLEU"};
 		class none
 		{
 			label=CSTRING(None);
 			image = "";
 			texture = "";
 		};
-		class HV
-		{
-			label="HV";
-			image = QPATHTOF(data\flag_hv.paa);
-			texture = QPATHTOF(data\flag_hv.paa);
-		};
-		class BV
+		class FRANCE_BV
 		{
 			label="BV";
-			image = QPATHTOF(data\flag_bv.paa);
-			texture = QPATHTOF(data\flag_bv.paa);
+			image = QPATHTOF(data\patchs\DRAPEAU\FRANCE_BV.paa);
+			texture = QPATHTOF(data\patchs\DRAPEAU\FRANCE_BV.paa);
 		};
-		class Legion
+		class FRANCE_HV
+		{
+			label="HV";
+			image = QPATHTOF(data\patchs\DRAPEAU\FRANCE_HV.paa);
+			texture = QPATHTOF(data\patchs\DRAPEAU\FRANCE_HV.paa);
+		};
+		class FRANCE_SABLE
+		{
+			label="SABLE";
+			image = QPATHTOF(data\patchs\DRAPEAU\FRANCE_SABLE.paa);
+			texture = QPATHTOF(data\patchs\DRAPEAU\FRANCE_SABLE.paa);
+		};
+		class FRANCE_LEGION_BLANC_HV
 		{
 			label="Legion";
-			image = QPATHTOF(data\flag_legion.paa);
-			texture = QPATHTOF(data\flag_legion.paa);
+			image = QPATHTOF(data\patchs\DRAPEAU\FRANCE_LEGION_BLANC_HV.paa);
+			texture = QPATHTOF(data\patchs\DRAPEAU\FRANCE_LEGION_BLANC_HV.paa);
+		};
+		class FRANCE_LEGION_JAUNE_HV
+		{
+			label="Legion";
+			image = QPATHTOF(data\patchs\DRAPEAU\FRANCE_LEGION_JAUNE_HV.paa);
+			texture = QPATHTOF(data\patchs\DRAPEAU\FRANCE_LEGION_JAUNE_HV.paa);
+		};
+		class NATO_BLACK
+		{
+			label="OTAN";
+			image = QPATHTOF(data\patchs\DRAPEAU\NATO_BLACK.paa);
+			texture = QPATHTOF(data\patchs\DRAPEAU\NATO_BLACK.paa);
+		};
+		class NATO_BLEU
+		{
+			label="OTAN";
+			image = QPATHTOF(data\patchs\DRAPEAU\NATO_BLEU.paa);
+			texture = QPATHTOF(data\patchs\DRAPEAU\NATO_BLEU.paa);
 		};
 	};
 
@@ -280,7 +383,7 @@ class XtdGearModels
 				values[] = {"Full", "Half"};
 			};
 			class gloves : GlovesBase { };
-			class rank : VestRankBase {
+			class rank : RankBase {
 				hiddenselection = "grade";
 			};
 			class bloodtype : BloodTypeBase {
@@ -328,7 +431,7 @@ class XtdGearModels
 				};
 			};
 			class gloves : GlovesBase { };
-			class rank : VestRankBase {
+			class rank : RankBase {
 				hiddenselection = "grade";
 			};
 			class bloodtype : BloodTypeBase {
@@ -464,7 +567,7 @@ class XtdGearModels
 					label = CSTRING(BeltYes);
 				};
 			};
-			class rank : VestRankBase {};
+			class rank : RankBase {};
 		};
 
 		class amf_smb_tp
@@ -502,7 +605,7 @@ class XtdGearModels
 					label = CSTRING(BeltYes);
 				};
 			};
-			class rank : VestRankBase {};
+			class rank : RankBase {};
 		};
 
 		class amf_opscore_xp

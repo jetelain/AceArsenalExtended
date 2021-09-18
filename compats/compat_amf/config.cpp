@@ -17,3 +17,5 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 
 #include "CfgGlasses.hpp"
+
+#include "CfgUnitInsignia.hpp"
