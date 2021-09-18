@@ -29,10 +29,15 @@ if ( isText _hiddenselection ) then {
 if ( _hiddenSelectionIndex == -1 ) exitWith {};
 
 private _texture = "";
+private _material = "\a3\data_f\default.rvmat";
 if ( _value == "$INSIGNIA$" ) then {
 	// TODO
 } else {
 	_texture = getText (_optionDefintion >> _value >> "texture");
+	if ( isText (_optionDefintion >> _value >> "material") ) then {
+		_material = getText (_optionDefintion >> _value >> "material");
+	};
 };
 
-_target setObjectTextureGlobal [_hiddenSelectionIndex, _texture];
+_target setObjectMaterialGlobal [_hiddenSelectionIndex, _material];
+_target setObjectTextureGlobal  [_hiddenSelectionIndex, _texture];
