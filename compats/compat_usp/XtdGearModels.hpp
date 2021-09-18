@@ -9,9 +9,10 @@ class XtdGearModels
 			label = "Crye G3C";
 			author = "UnderSiege Productions";
 			options[] = {"camo", "gloves", "sleeves", "collar", "kneepads","shoes"};
+			textureoptions[] = { "pantscamo" };
 			class camo //: CamoBase
 			{
-				values[] = {"BLK","GRY","KHK","RGR","NAV","M81","MC","MCB","MCD","MCT","MCW","AOR1","AOR2","ATT","TSD","TSW"};
+				values[] = {"BLK","GRY","KHK","RGR","NAV","M81","MC","MCB","MCD","MCT","MCW","AOR1","AOR2", /*"ATT", due to scope=1*/ "TSD","TSW"};
 			};
 			class collar
 			{
@@ -45,6 +46,32 @@ class XtdGearModels
 				label = "Shoes";
 				changeingame = 0;
 				values[] = {"SL", "VQ","IST"};
+			};
+			class pantscamo
+			{
+				hiddenselection = "Camo1";
+				values[] = {"DEFAULT", "BLK", "GRY", "KHK", "RGR", "NAV", "M81","MC","MCB","MCD","MCT","MCW","AOR1","AOR2",/*"ATT",*/"TSD","TSW"};
+				class DEFAULT {
+					label="(default)";
+					texture="!DEFAULT!";
+				};
+				#define PANT_CAMO(N) class N { texture = QUOTE(\usp_gear_body\model\tx\usp_g3c_pants_##N##_co.paa); };
+				PANT_CAMO(BLK)
+				PANT_CAMO(GRY)
+				PANT_CAMO(KHK)
+				PANT_CAMO(RGR)
+				PANT_CAMO(NAV)
+				PANT_CAMO(M81)
+				PANT_CAMO(MC)
+				PANT_CAMO(MCB)
+				PANT_CAMO(MCD)
+				PANT_CAMO(MCT)
+				PANT_CAMO(MCW)
+				PANT_CAMO(AOR1)
+				PANT_CAMO(AOR2)
+				PANT_CAMO(ATT)
+				PANT_CAMO(TSD)
+				PANT_CAMO(TSW)
 			};
 		};
 

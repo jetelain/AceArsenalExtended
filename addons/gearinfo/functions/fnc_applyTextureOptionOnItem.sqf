@@ -28,15 +28,31 @@ if ( isText _hiddenselection ) then {
 
 if ( _hiddenSelectionIndex == -1 ) exitWith {};
 
-private _texture = "";
+private _texture = getText (_optionDefintion >> _value >> "texture");
 private _material = "\a3\data_f\default.rvmat";
-if ( _value == "$INSIGNIA$" ) then {
-	// TODO
-} else {
-	_texture = getText (_optionDefintion >> _value >> "texture");
-	if ( isText (_optionDefintion >> _value >> "material") ) then {
-		_material = getText (_optionDefintion >> _value >> "material");
+if ( isText (_optionDefintion >> _value >> "material") ) then {
+	_material = getText (_optionDefintion >> _value >> "material");
+};
+
+if ( _texture == "!DEFAULT!" ) then {
+	private _hiddenSelectionsTextures = [];
+	private _hiddenSelectionsMaterials = [];
+	if ( _classRoot == "CfgWeapons" ) then {
+		private _uniformClass = getText (configFile >> _classRoot >> _config >> "ItemInfo" >> "uniformClass");
+		_hiddenSelectionsTextures = getArray(configFile >> "CfgVehicles" >> _uniformClass >> "hiddenSelectionsTextures");
+		_hiddenSelectionsMaterials = getArray(configFile >> "CfgVehicles" >> _uniformClass >> "hiddenSelectionsMaterials");
+	} else {
+		_hiddenSelectionsTextures = getArray(configFile >> _classRoot >> _config >> "hiddenSelectionsTextures");
+		_hiddenSelectionsMaterials = getArray(configFile >> _classRoot >> _config >> "hiddenSelectionsMaterials");
 	};
+	_texture = _hiddenSelectionsTextures select _hiddenSelectionIndex;
+	if ( count _hiddenSelectionsMaterials >  _hiddenSelectionIndex ) then {
+		_material = _hiddenSelectionsMaterials select _hiddenSelectionIndex;
+	};
+};
+
+if ( _texture == "!INSIGNIA!" ) then {
+
 };
 
 _target setObjectMaterialGlobal [_hiddenSelectionIndex, _material];

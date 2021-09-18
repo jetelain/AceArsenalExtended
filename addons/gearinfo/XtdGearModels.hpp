@@ -173,6 +173,9 @@ class XtdGearModels
 	class Conventional 
 	{
 		class camo: CamoBase {};
+		class pantscamo: CamoBase {
+			label = CSTRING(PantsCamo);
+		};
 		class sleeves: SleevesBase{};
 	};
 

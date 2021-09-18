@@ -29,7 +29,7 @@
 	PATTERN_USP_G3C_S(##suffix##_AOR2,suffix,AOR2,c,k,g,s,p) \
 	PATTERN_USP_G3C_S(##suffix##_ATT,suffix,ATT,c,k,g,s,p) \
 	PATTERN_USP_G3C_S(##suffix##_TSD,suffix,TSD,c,k,g,s,p) \
-	PATTERN_USP_G3C_S(##suffix##_TSW,suffix,TSW,c,k,g,s,p) \
+	PATTERN_USP_G3C_S(##suffix##_TSW,suffix,TSW,c,k,g,s,p) 
 
 #define PATTERN_USP_PCU_G3C(suffix, base, c, t, k, g) \
 	class suffix: base                            \

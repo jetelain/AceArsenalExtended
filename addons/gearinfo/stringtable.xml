@@ -5,6 +5,10 @@
             <English>Camo / Paint</English>
             <French>Camouflage / Teinte</French>
         </Key>
+        <Key ID="STR_ACEAX_GearInfo_PantsCamo">
+            <English>Pants Camo</English>
+            <French>Camouflage pantalon</French>
+        </Key>
         <Key ID="STR_ACEAX_GearInfo_White">
             <English>White</English>
             <French>Blanc</French>
