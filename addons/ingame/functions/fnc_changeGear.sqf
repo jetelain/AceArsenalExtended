@@ -26,6 +26,8 @@ private _callback = {
 
 		_player setUnitLoadout _loadout;
 
+		[_player] call EFUNC(gearinfo,applyTextureOptions);
+
 		[_player, _insignia] call BIS_fnc_setUnitInsignia;
 
 		if ( currentWeapon _player != "" ) then {
