@@ -34,7 +34,7 @@ class Cfg3DEN
 						control="Edit";
 						displayName="Texture options (ACE Arsenal Extended)";
 						tooltip="";
-						expression=QUOTE([ARRAY_3(_this, _value, false)] call FUNC(setTextureOptions););
+						expression=QUOTE([ARR_3(_this, _value, false)] call FUNC(setTextureOptions););
 						defaultValue="''";
 						condition="objectBrain";
 						wikiType="[[String]]";

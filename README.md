@@ -13,6 +13,17 @@ Install mod from Steam Workshop
 
 ### Ingame self-actions
 
+## For mission creators
+
+### 3DEN Editor
+
+ACE3 Arsenal Extended is also now available in 3DEN Editor. 
+
+An additional property "Texture options (ACE Arsenal Extended)" is available. This property is used by Arsenal to store "texture options" that would be otehrwise lost. 
+This property is an array of key-value pairs `[["model_option","value"], ...]`, example : `[["USP_G3C_pantscamo","M81"]]`.
+
+Known issue : "Texture options" are not shown within 3DEN Editor, but works in-game (multiplayer not yet tested) and in Arsenal.
+
 ## For mod creators
 
 ### Modelisation
