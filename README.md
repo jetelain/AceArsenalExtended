@@ -138,7 +138,7 @@ class XtdGearModels
                 class A
                 {
                     texture = "path\to\texture.paa";
-					// material = = "path\to\material.rvmat"; (default is "\a3\data_f\default.rvmat")
+                    // material = "path\to\material.rvmat"; (if you use material on an option, you MUST set it on all options to avoid undefined behavior)
                 };
                 // ...
             };
