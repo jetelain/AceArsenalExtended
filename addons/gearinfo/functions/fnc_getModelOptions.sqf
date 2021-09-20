@@ -40,6 +40,11 @@ READ(Number)
 	private _optionCenterImage = getNumber (_optionDef1 >> "centerImage");
 	private _optionValues = getArray (_optionDef1 >> "values");
 
+	private _requires = [];
+	if ( isArray (_optionDef1 >> "requires") ) then {
+		_requires = (getArray (_optionDef1 >> "requires")) apply { [ (getArray ( _modelDefinition >> "options" )) find (_x select 0), _x select 1 ] };
+	};
+
 	{
 		private _valueName = _x;
 		private _valueIndex = _foreachIndex;
@@ -58,7 +63,7 @@ READ(Number)
 
 	} forEach _optionValues;
 
-	_options pushBack [_optionName, _optionLabel, _optionIcon, _optionInGame, _values, _optionCenterImage];
+	_options pushBack [_optionName, _optionLabel, _optionIcon, _optionInGame, _values, _optionCenterImage, _requires];
 	
 } forEach _optionsNames;
 

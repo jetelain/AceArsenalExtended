@@ -31,7 +31,7 @@ if ( _selectedModel != "" ) then {
 
 	{
 		private _kind = _x;
-		private _idcShift = _foreachIndex * 5000; 
+		private _idcShift = _foreachIndex * 40000; 
 
 		private _options = [_classRoot, _selectedModel, _modelDefinition, _kind] call EFUNC(gearinfo,getModelOptions);
 		{
@@ -57,9 +57,9 @@ if ( _selectedModel != "" ) then {
 				private _valueIndex = _foreachIndex;
 				_x params ["_valueName", "_valueLabel", "_valueImage", "", "_valueDesc"];
 
-				// up to 25 options, up to 50 values per option
-				private _valueIdcBase = _idcShift + 9970000 + (_optionIndex * 200) + (_valueIndex * 4);
-				
+				// up to 40 options, up to 250 values per option
+				private _valueIdcBase = _idcShift + 9900000 + (_optionIndex * 1000) + (_valueIndex * 4);
+
 				GVAR(valuesIdc) pushBack _valueIdcBase;
 				GVAR(valuesIdc) pushBack _valueIdcBase+1;
 				GVAR(valuesIdc) pushBack _valueIdcBase+2;
