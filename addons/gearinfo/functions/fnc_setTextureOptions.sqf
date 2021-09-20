@@ -3,7 +3,12 @@
 params ["_unit", "_unitTextureOptions", ["_useInsignia", true]];
 
 if ( _unitTextureOptions isEqualType "" ) then {
-	_unitTextureOptions = parseSimpleArray _unitTextureOptions;
+	if ( _unitTextureOptions == "" ) then {
+		_unitTextureOptions = [];
+		WARNING_1("Unexpected call to setTextureOptions on %1", _unit);
+	} else {
+		_unitTextureOptions = parseSimpleArray _unitTextureOptions;
+	};
 };
 
 private _map = createHashMapFromArray _unitTextureOptions;

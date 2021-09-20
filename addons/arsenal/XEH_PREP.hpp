@@ -7,3 +7,4 @@ PREP(onLeftPanelFilled);
 PREP(generateOptionsUI);
 PREP(filterVirtualItems);
 PREP(toggleUI);
+PREP(onArsenalClose);

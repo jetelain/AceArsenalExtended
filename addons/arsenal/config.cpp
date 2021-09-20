@@ -25,7 +25,9 @@ class RscButton;
 class RscPictureKeepAspect;
 
 class ace_arsenal_display {
-	
+
+	onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QUOTE(ace_arsenal_display)))] call FUNC(onArsenalClose));
+
 	class controls {
 
         class leftTabContent: RscListBox { // Config forked from ACE3 Arsenal to intercept calls to onSelChangedLeft

@@ -48,17 +48,6 @@ if ( is3DEN ) then {
       GVAR(textureOptions) = "";
     };
   }] call CBA_fnc_addEventHandler;
-
-  ["ace_arsenal_displayClosed", {
-    private _textureOptions = [ace_arsenal_center, false] call EFUNC(gearinfo,getTextureOptions);
-    INFO_1("Save to 3DEN, textureOptions=%1",_textureOptions);
-    if (_textureOptions isNotEqualTo []) then {
-      GVAR(edenEntity) set3DENAttribute [QGVARMAIN(textureOptions), format["%1",_textureOptions]];
-    } else {
-      GVAR(edenEntity) clear3DENAttribute QGVARMAIN(textureOptions);
-    };
-    // FIXME: ACE reset GVAR(edenEntity) loadout just after, we have no event to bind to get this right in editor, but works fine when mission is played
-  }] call CBA_fnc_addEventHandler;
 };
 
 ["ace_arsenal_loadoutsDisplayOpened", {

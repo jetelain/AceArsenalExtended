@@ -19,10 +19,8 @@ Install mod from Steam Workshop
 
 ACE3 Arsenal Extended is also now available in 3DEN Editor. 
 
-An additional property "Texture options (ACE Arsenal Extended)" is available. This property is used by Arsenal to store "texture options" that would be otehrwise lost. 
+An additional property "Texture options (ACE Arsenal Extended)" is available. This property is used by Arsenal to store "texture options" that would be otherwise lost. 
 This property is an array of key-value pairs `[["model_option","value"], ...]`, example : `[["USP_G3C_pantscamo","M81"]]`.
-
-Known issue : "Texture options" are not shown within 3DEN Editor, but works in-game (multiplayer not yet tested) and in Arsenal.
 
 ## For mod creators
 

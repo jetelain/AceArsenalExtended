@@ -8,11 +8,14 @@ GVAR(cache) = createHashMap;
 #ifdef DEBUG_MODE_FULL
 [""] call FUNC(diag_detectErrors);
 #endif
-/*
-["loadout", {
-    params ["_unit"];
 
-
-}] call CBA_fnc_addPlayerEventHandler;
-
-*/
+if (is3DEN) then {
+    INFO("Restore texture options for 3DEN Editor");
+    all3DENEntities params ["_objects"];
+    {
+        private _attr = _x get3DENAttribute QGVARMAIN(textureOptions);
+        if ( count _attr == 1 && { _attr isNotEqualTo [""] } ) then {
+            [_x, _attr select 0, false] call EFUNC(gearinfo,setTextureOptions); 
+        };
+    } forEach _objects;
+};
