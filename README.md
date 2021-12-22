@@ -8,6 +8,7 @@ Based on an original idea of Krogar from [Arma Mod France](https://discord.gg/uP
 Install mod from Steam Workshop 
 - [For USP AIO](https://steamcommunity.com/sharedfiles/filedetails/?id=2522642015)
 - [For AMF AIO](https://steamcommunity.com/sharedfiles/filedetails/?id=2522640148)
+- [For Australian Commandos Weapon Pack](https://steamcommunity.com/sharedfiles/filedetails/?id=2689711987)
 
 ### ACE Arsenal
 
