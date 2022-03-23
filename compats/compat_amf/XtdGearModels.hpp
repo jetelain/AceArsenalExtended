@@ -36,145 +36,151 @@ class XtdGearModels
 			"ESO","SGT","SCH","ADJ","ADC","MAJ",
 			"ASP","SLT","LTN","CNE","CMD","LCL","LCL2","COL",
 			"G2","G3","G4","G5"};
+
+		class RankBase
+		{
+			material = AMFPATCHES(data\GRADE\GRADE.rvmat);
+		};
 		class 2CL
 		{
 			label="SDT";
 			description="Deuxième classe";
 			image = "";
 			texture = "";
+			material = "\a3\data_f\default.rvmat";
 		};
-		class 1CL
+		class 1CL : RankBase
 		{
 			description="Première classe (distinction)";
-			image = QPATHTOF(data\patchs\GRADE\BV_1CL.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_1CL.paa);
+			image = AMFPATCHES(data\GRADE\BV_1CL.paa);
+			texture = AMFPATCHES(data\GRADE\BV_1CL.paa);
 		};
-		class CPL
+		class CPL : RankBase
 		{
 			description="Caporal";
-			image = QPATHTOF(data\patchs\GRADE\BV_CPL.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_CPL.paa);
+			image = AMFPATCHES(data\GRADE\BV_CPL.paa);
+			texture = AMFPATCHES(data\GRADE\BV_CPL.paa);
 		};
-		class CCH
+		class CCH : RankBase
 		{
 			description="Caporal-chef";
-			image = QPATHTOF(data\patchs\GRADE\BV_CCH.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_CCH.paa);
+			image = AMFPATCHES(data\GRADE\BV_CCH.paa);
+			texture = AMFPATCHES(data\GRADE\BV_CCH.paa);
 		};
 		/*class CC1
 		{
 			description="Caporal-chef de première classe";
-			image = QPATHTOF(data\patchs\GRADE\BV_CC1.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_CC1.paa);
+			image = AMFPATCHES(data\GRADE\BV_CC1.paa);
+			texture = AMFPATCHES(data\GRADE\BV_CC1.paa);
 		};
 		*/
-		class ESO
+		class ESO : RankBase
 		{
 			description="Elève Sous-Officier";
-			image = QPATHTOF(data\patchs\GRADE\BV_ESO.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_ESO.paa);
+			image = AMFPATCHES(data\GRADE\BV_ESO.paa);
+			texture = AMFPATCHES(data\GRADE\BV_ESO.paa);
 		};
-		class SGT
+		class SGT : RankBase
 		{
 			description="Sergent";
-			image = QPATHTOF(data\patchs\GRADE\BV_SGT.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_SGT.paa);
+			image = AMFPATCHES(data\GRADE\BV_SGT.paa);
+			texture = AMFPATCHES(data\GRADE\BV_SGT.paa);
 		};
-		class SCH
+		class SCH : RankBase
 		{
 			description="Sergent-chef";
-			image = QPATHTOF(data\patchs\GRADE\BV_SCH.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_SCH.paa);
+			image = AMFPATCHES(data\GRADE\BV_SCH.paa);
+			texture = AMFPATCHES(data\GRADE\BV_SCH.paa);
 		};
-		class ADJ
+		class ADJ : RankBase
 		{
 			description="Adjudant";
-			image = QPATHTOF(data\patchs\GRADE\BV_ADJ.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_ADJ.paa);
+			image = AMFPATCHES(data\GRADE\BV_ADJ.paa);
+			texture = AMFPATCHES(data\GRADE\BV_ADJ.paa);
 		};
-		class ADC
+		class ADC : RankBase
 		{
 			description="Adjudant-chef";
-			image = QPATHTOF(data\patchs\GRADE\BV_ADC.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_ADC.paa);
+			image = AMFPATCHES(data\GRADE\BV_ADC.paa);
+			texture = AMFPATCHES(data\GRADE\BV_ADC.paa);
 		};
-		class MAJ
+		class MAJ : RankBase
 		{
 			description="Major";
-			image = QPATHTOF(data\patchs\GRADE\BV_MJR.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_MJR.paa);
+			image = AMFPATCHES(data\GRADE\BV_MJR.paa);
+			texture = AMFPATCHES(data\GRADE\BV_MJR.paa);
 		};
-		class ASP
+		class ASP : RankBase
 		{
 			description="Aspirant";
-			image = QPATHTOF(data\patchs\GRADE\BV_ASP.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_ASP.paa);
+			image = AMFPATCHES(data\GRADE\BV_ASP.paa);
+			texture = AMFPATCHES(data\GRADE\BV_ASP.paa);
 		};
-		class SLT
+		class SLT : RankBase
 		{
 			description="Sous-lieutenant";
-			image = QPATHTOF(data\patchs\GRADE\BV_SLT.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_SLT.paa);
+			image = AMFPATCHES(data\GRADE\BV_SLT.paa);
+			texture = AMFPATCHES(data\GRADE\BV_SLT.paa);
 		};
-		class LTN
+		class LTN : RankBase
 		{
 			description="Lieutenant";
-			image = QPATHTOF(data\patchs\GRADE\BV_LTN.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_LTN.paa);
+			image = AMFPATCHES(data\GRADE\BV_LTN.paa);
+			texture = AMFPATCHES(data\GRADE\BV_LTN.paa);
 		};
-		class CNE
+		class CNE : RankBase
 		{
 			description="Capitaine";
-			image = QPATHTOF(data\patchs\GRADE\BV_CNE.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_CNE.paa);
+			image = AMFPATCHES(data\GRADE\BV_CNE.paa);
+			texture = AMFPATCHES(data\GRADE\BV_CNE.paa);
 		};
-		class CMD
+		class CMD : RankBase
 		{
 			description="Commandant";
-			image = QPATHTOF(data\patchs\GRADE\BV_CMD.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_CMD.paa);
+			image = AMFPATCHES(data\GRADE\BV_CMD.paa);
+			texture = AMFPATCHES(data\GRADE\BV_CMD.paa);
 		};
-		class LCL
+		class LCL : RankBase
 		{
 			description="Lieutenant-colonel";
-			image = QPATHTOF(data\patchs\GRADE\BV_LCL.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_LCL.paa);
+			image = AMFPATCHES(data\GRADE\BV_LCL.paa);
+			texture = AMFPATCHES(data\GRADE\BV_LCL.paa);
 		};
-		class LCL2
+		class LCL2 : RankBase
 		{
 			description="Lieutenant-colonel";
-			image = QPATHTOF(data\patchs\GRADE\BV_LCL_2.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_LCL_2.paa);
+			image = AMFPATCHES(data\GRADE\BV_LCL_2.paa);
+			texture = AMFPATCHES(data\GRADE\BV_LCL_2.paa);
 		};
-		class COL
+		class COL : RankBase
 		{
 			description="Colonel";
-			image = QPATHTOF(data\patchs\GRADE\BV_COL.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_COL.paa);
+			image = AMFPATCHES(data\GRADE\BV_COL.paa);
+			texture = AMFPATCHES(data\GRADE\BV_COL.paa);
 		};
-		class G2
+		class G2 : RankBase
 		{
 			description="Général de brigade";
-			image = QPATHTOF(data\patchs\GRADE\BV_G2.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_G2.paa);
+			image = AMFPATCHES(data\GRADE\BV_G2.paa);
+			texture = AMFPATCHES(data\GRADE\BV_G2.paa);
 		};
-		class G3
+		class G3 : RankBase
 		{
 			description="Général de division";
-			image = QPATHTOF(data\patchs\GRADE\BV_G3.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_G3.paa);
+			image = AMFPATCHES(data\GRADE\BV_G3.paa);
+			texture = AMFPATCHES(data\GRADE\BV_G3.paa);
 		};
-		class G4
+		class G4 : RankBase
 		{
 			description="Général de corps d'armée";
-			image = QPATHTOF(data\patchs\GRADE\BV_G4.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_G4.paa);
+			image = AMFPATCHES(data\GRADE\BV_G4.paa);
+			texture = AMFPATCHES(data\GRADE\BV_G4.paa);
 		};
-		class G5
+		class G5 : RankBase
 		{
 			description="Général d'armée";
-			image = QPATHTOF(data\patchs\GRADE\BV_G5.paa);
-			texture = QPATHTOF(data\patchs\GRADE\BV_G5.paa);
+			image = AMFPATCHES(data\GRADE\BV_G5.paa);
+			texture = AMFPATCHES(data\GRADE\BV_G5.paa);
 		};
 	};
 
@@ -193,56 +199,62 @@ class XtdGearModels
 			label=CSTRING(None);
 			image = "";
 			texture = "";
+			material = "\a3\data_f\default.rvmat";
 		};
 		
+		class BloodBase
+		{
+			material = AMFPATCHES(data\SANG\SANG.rvmat);
+		};
+
 		#define BLOOD_TYPE_PATTERN(COLOR)                 \
-		class APOS_##COLOR                                 \
+		class APOS_##COLOR : BloodBase                    \
 		{                                                 \
 			label="A+";                                   \
-			image   = QPATHTOF(data\patchs\SANG\##COLOR##_A_POS.paa); \
-			texture = QPATHTOF(data\patchs\SANG\##COLOR##_A_POS.paa); \
+			image   = AMFPATCHES(data\SANG\##COLOR##_A_POS.paa); \
+			texture = AMFPATCHES(data\SANG\##COLOR##_A_POS.paa); \
 		};                                                \
-		class ANEG_##COLOR                                 \
+		class ANEG_##COLOR : BloodBase                    \
 		{                                                 \
 			label="A-";                                   \
-			image   = QPATHTOF(data\patchs\SANG\##COLOR##_A_NEG.paa); \
-			texture = QPATHTOF(data\patchs\SANG\##COLOR##_A_NEG.paa); \
+			image   = AMFPATCHES(data\SANG\##COLOR##_A_NEG.paa); \
+			texture = AMFPATCHES(data\SANG\##COLOR##_A_NEG.paa); \
 		};                                                \
-		class BPOS_##COLOR                                 \
+		class BPOS_##COLOR : BloodBase                    \
 		{                                                 \
 			label="B+";                                   \
-			image   = QPATHTOF(data\patchs\SANG\##COLOR##_B_POS.paa); \
-			texture = QPATHTOF(data\patchs\SANG\##COLOR##_B_POS.paa); \
+			image   = AMFPATCHES(data\SANG\##COLOR##_B_POS.paa); \
+			texture = AMFPATCHES(data\SANG\##COLOR##_B_POS.paa); \
 		};                                                \
-		class BNEG_##COLOR                                 \
+		class BNEG_##COLOR : BloodBase                    \
 		{                                                 \
 			label="B-";                                   \
-			image   = QPATHTOF(data\patchs\SANG\##COLOR##_B_NEG.paa); \
-			texture = QPATHTOF(data\patchs\SANG\##COLOR##_B_NEG.paa); \
+			image   = AMFPATCHES(data\SANG\##COLOR##_B_NEG.paa); \
+			texture = AMFPATCHES(data\SANG\##COLOR##_B_NEG.paa); \
 		};                                                \
-		class OPOS_##COLOR                                 \
+		class OPOS_##COLOR : BloodBase                    \
 		{                                                 \
 			label="O+";                                   \
-			image   = QPATHTOF(data\patchs\SANG\##COLOR##_O_POS.paa); \
-			texture = QPATHTOF(data\patchs\SANG\##COLOR##_O_POS.paa); \
+			image   = AMFPATCHES(data\SANG\##COLOR##_O_POS.paa); \
+			texture = AMFPATCHES(data\SANG\##COLOR##_O_POS.paa); \
 		};                                                \
-		class ONEG_##COLOR                                 \
+		class ONEG_##COLOR : BloodBase                    \
 		{                                                 \
 			label="O-";                                   \
-			image   = QPATHTOF(data\patchs\SANG\##COLOR##_O_NEG.paa); \
-			texture = QPATHTOF(data\patchs\SANG\##COLOR##_O_NEG.paa); \
+			image   = AMFPATCHES(data\SANG\##COLOR##_O_NEG.paa); \
+			texture = AMFPATCHES(data\SANG\##COLOR##_O_NEG.paa); \
 		};                                                \
-		class ABPOS_##COLOR                                \
+		class ABPOS_##COLOR : BloodBase                   \
 		{                                                 \
 			label="AB+";                                  \
-			image   = QPATHTOF(data\patchs\SANG\##COLOR##_AB_POS.paa); \
-			texture = QPATHTOF(data\patchs\SANG\##COLOR##_AB_POS.paa); \
+			image   = AMFPATCHES(data\SANG\##COLOR##_AB_POS.paa); \
+			texture = AMFPATCHES(data\SANG\##COLOR##_AB_POS.paa); \
 		};                                                \
-		class ABNEG_##COLOR                                \
+		class ABNEG_##COLOR : BloodBase                   \
 		{                                                 \
 			label="AB-";                                  \
-			image   = QPATHTOF(data\patchs\SANG\##COLOR##_AB_NEG.paa); \
-			texture = QPATHTOF(data\patchs\SANG\##COLOR##_AB_NEG.paa); \
+			image   = AMFPATCHES(data\SANG\##COLOR##_AB_NEG.paa); \
+			texture = AMFPATCHES(data\SANG\##COLOR##_AB_NEG.paa); \
 		};
 		/*BLOOD_TYPE_PATTERN(BLACK)*/
 		BLOOD_TYPE_PATTERN(GREEN)
@@ -260,48 +272,56 @@ class XtdGearModels
 			label=CSTRING(None);
 			image = "";
 			texture = "";
+			material = "\a3\data_f\default.rvmat";
 		};
 		class FRANCE_BV
 		{
 			label="BV";
-			image = QPATHTOF(data\patchs\DRAPEAU\FRANCE_BV.paa);
-			texture = QPATHTOF(data\patchs\DRAPEAU\FRANCE_BV.paa);
+			image = AMFPATCHES(data\DRAPEAU\FRANCE_BV.paa);
+			texture = AMFPATCHES(data\DRAPEAU\FRANCE_BV.paa);
+			material = AMFPATCHES(data\DRAPEAU\FRANCE.rvmat);
 		};
 		class FRANCE_HV
 		{
 			label="HV";
-			image = QPATHTOF(data\patchs\DRAPEAU\FRANCE_HV.paa);
-			texture = QPATHTOF(data\patchs\DRAPEAU\FRANCE_HV.paa);
+			image = AMFPATCHES(data\DRAPEAU\FRANCE_HV.paa);
+			texture = AMFPATCHES(data\DRAPEAU\FRANCE_HV.paa);
+			material = AMFPATCHES(data\DRAPEAU\FRANCE.rvmat);
 		};
 		class FRANCE_SABLE
 		{
 			label="SABLE";
-			image = QPATHTOF(data\patchs\DRAPEAU\FRANCE_SABLE.paa);
-			texture = QPATHTOF(data\patchs\DRAPEAU\FRANCE_SABLE.paa);
+			image = AMFPATCHES(data\DRAPEAU\FRANCE_SABLE.paa);
+			texture = AMFPATCHES(data\DRAPEAU\FRANCE_SABLE.paa);
+			material = AMFPATCHES(data\DRAPEAU\FRANCE.rvmat);
 		};
 		class FRANCE_LEGION_BLANC_HV
 		{
 			label="Legion";
-			image = QPATHTOF(data\patchs\DRAPEAU\FRANCE_LEGION_BLANC_HV.paa);
-			texture = QPATHTOF(data\patchs\DRAPEAU\FRANCE_LEGION_BLANC_HV.paa);
+			image = AMFPATCHES(data\DRAPEAU\FRANCE_LEGION_BLANC_HV.paa);
+			texture = AMFPATCHES(data\DRAPEAU\FRANCE_LEGION_BLANC_HV.paa);
+			material = AMFPATCHES(data\DRAPEAU\FRANCE_LEGION.rvmat);
 		};
 		class FRANCE_LEGION_JAUNE_HV
 		{
 			label="Legion";
-			image = QPATHTOF(data\patchs\DRAPEAU\FRANCE_LEGION_JAUNE_HV.paa);
-			texture = QPATHTOF(data\patchs\DRAPEAU\FRANCE_LEGION_JAUNE_HV.paa);
+			image = AMFPATCHES(data\DRAPEAU\FRANCE_LEGION_JAUNE_HV.paa);
+			texture = AMFPATCHES(data\DRAPEAU\FRANCE_LEGION_JAUNE_HV.paa);
+			material = AMFPATCHES(data\DRAPEAU\FRANCE_LEGION.rvmat);
 		};
 		class NATO_BLACK
 		{
 			label="OTAN";
-			image = QPATHTOF(data\patchs\DRAPEAU\NATO_BLACK.paa);
-			texture = QPATHTOF(data\patchs\DRAPEAU\NATO_BLACK.paa);
+			image = AMFPATCHES(data\DRAPEAU\NATO_BLACK.paa);
+			texture = AMFPATCHES(data\DRAPEAU\NATO_BLACK.paa);
+			material = AMFPATCHES(data\DRAPEAU\NATO_BLACK.rvmat);
 		};
 		class NATO_BLEU
 		{
 			label="OTAN";
-			image = QPATHTOF(data\patchs\DRAPEAU\NATO_BLEU.paa);
-			texture = QPATHTOF(data\patchs\DRAPEAU\NATO_BLEU.paa);
+			image = AMFPATCHES(data\DRAPEAU\NATO_BLEU.paa);
+			texture = AMFPATCHES(data\DRAPEAU\NATO_BLEU.paa);
+			material = AMFPATCHES(data\DRAPEAU\NATO_BLEU.rvmat);
 		};
 	};
 
@@ -323,6 +343,21 @@ class XtdGearModels
 			actionlabel=CSTRING(GlovesMXAction);
 			itemingame = "AMF_MSC_MXGLV_BLK";
 			icon = QPATHTOF(data\mx.paa);
+		};
+	};
+
+	class GlovesColorBase
+	{
+		hiddenselection = "Camo4";
+		label = "Couleur gants";
+		values[] = {"BLK", "TAN"};
+		class BLK 
+		{
+			texture="!DEFAULT!";
+		};
+		class TAN 
+		{
+			texture = "amf_uniforms\data\usp_gloves_tan_CO.paa";
 		};
 	};
 
@@ -353,10 +388,10 @@ class XtdGearModels
 			label = "Treillis F3/Ubas";
 			author = "Arma Mod France";
 			options[] = {"camo","sleeves","gloves"};
-			// textureoptions[]={"rank","bloodtype","flag"}; //will be added in v7.1 in september 
+			textureoptions[]={"rank","bloodtype","flag","glovescolor"}; //will be added in v8 in september 
 			class camo // coventional name
 			{
-				values[] = {"CE_TAN","CE_OD","DA","SERVAL"};
+				values[] = {"CE_TAN","CE_OD","DA","SERVAL","TUNDRA"};
 				class CE_TAN
 				{
 					label = "CE/TAN";
@@ -377,6 +412,11 @@ class XtdGearModels
 					label = "SERVAL";
 					image = QPATHTOF(data\serval.paa);
 				};
+				class TUNDRA
+				{
+					label = "TUNDRA";
+					image = QPATHTOF(data\tundra.paa);
+				};
 			};
 			class sleeves // coventional name
 			{
@@ -392,28 +432,18 @@ class XtdGearModels
 			class flag : FlagBase {
 				hiddenselection = "drapeau";
 			};
+			class glovescolor : GlovesColorBase {};
 		};
 
-		class amf_g3
+		class amf_uniform_t4s2
 		{
-			label = "Crye G3";
-			author = "Arma Mod France";
-			options[] = {"sleeves"};
-			class sleeves // coventional name
-			{
-				values[] = {"Full", "Half"};
-			};
-		};
-
-		class amf_uniform_f3
-		{
-			label = "Treillis F3";
+			label = "Treillis T4S2";
 			author = "Arma Mod France";
 			options[] = {"camo","gloves"};
-			// textureoptions[]={"rank","bloodtype","flag"}; //will be added later, need to wait for updated p3ds
+			textureoptions[]={"rank","bloodtype","flag","glovescolor"}; //will be added in v8 in september 
 			class camo // coventional name
 			{
-				values[] = {"CE","DA","SERVAL","MTP"};
+				values[] = {"CE","DA","SERVAL"};
 				class CE
 				{
 					label = "CE";
@@ -440,6 +470,61 @@ class XtdGearModels
 			class flag : FlagBase {
 				hiddenselection = "drapeau";
 			};
+			class glovescolor : GlovesColorBase {};
+		};
+
+		class amf_g3
+		{
+			label = "Crye G3";
+			author = "Arma Mod France";
+			options[] = {"sleeves"};
+			class sleeves // coventional name
+			{
+				values[] = {"Full", "Half"};
+			};
+		};
+
+		class amf_uniform_f3
+		{
+			label = "Treillis F3";
+			author = "Arma Mod France";
+			options[] = {"camo","gloves"};
+			textureoptions[]={"rank","bloodtype","flag","glovescolor"}; //will be added later, need to wait for updated p3ds
+			class camo // coventional name
+			{
+				values[] = {"CE","DA","SERVAL","MTP","TUNDRA"};
+				class CE
+				{
+					label = "CE";
+					image = QPATHTOF(data\ce.paa);
+				};
+				class DA
+				{
+					label = "DA";
+					image = QPATHTOF(data\da.paa);
+				};
+				class SERVAL
+				{
+					label = "SERVAL";
+					image = QPATHTOF(data\serval.paa);
+				};
+				class TUNDRA
+				{
+					label = "TUNDRA";
+					image = QPATHTOF(data\tundra.paa);
+				};
+			};
+			class gloves : GlovesBase { };
+			class rank : RankBase {
+				hiddenselection = "grade";
+			};
+			class bloodtype : BloodTypeBase {
+				hiddenselection = "sang";
+			};
+			class flag : FlagBase {
+				hiddenselection = "drapeau";
+			};
+			class glovescolor : GlovesColorBase {};
 		};
 
 		class amf_felin

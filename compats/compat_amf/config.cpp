@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"amf_uniforms", "AMF_Headgear_02","amf_vests","AMF_weapon_F","amf_facewear"};
+        requiredAddons[] = {"amf_vests"};
         author = "AUTHOR";
         VERSION_CONFIG;
     };
@@ -18,4 +18,4 @@ class CfgPatches {
 
 #include "CfgGlasses.hpp"
 
-#include "CfgUnitInsignia.hpp"
+#include "XtdGearInfos.hpp"

@@ -1,8 +1,6 @@
-#define PATTERN_USP_G3C_S(suffix, base, m, c, k, g, s, p) \
-	class suffix: base                    \
+#define PATTERN_USP_G3C_S(suffix, m, c, k, g, s, p) \
+	class suffix                    \
 	{                                             \
-		class XtdGearInfo                         \
-		{                                         \
 			model = "USP_G3C";                   \
 			camo = #m;                         \
 			collar = #c;                          \
@@ -10,166 +8,162 @@
 			gloves = #g;                          \
 			sleeves = #s;                         \
 			shoes = #p;                           \
-		};                                        \
 	};   
 
 #define PATTERN_USP_G3C(suffix, c, k, g, s, p) \
-	PATTERN_USP_G3C_S(suffix,  Uniform_Base,BLK,c,k,g,s,p) \
-	PATTERN_USP_G3C_S(##suffix##_GRY,suffix,GRY,c,k,g,s,p) \
-	PATTERN_USP_G3C_S(##suffix##_KHK,suffix,KHK,c,k,g,s,p) \
-	PATTERN_USP_G3C_S(##suffix##_NAV,suffix,NAV,c,k,g,s,p) \
-	PATTERN_USP_G3C_S(##suffix##_RGR,suffix,RGR,c,k,g,s,p) \
-	PATTERN_USP_G3C_S(##suffix##_M81,suffix,M81,c,k,g,s,p) \
-	PATTERN_USP_G3C_S(##suffix##_MC,suffix,MC,c,k,g,s,p) \
-	PATTERN_USP_G3C_S(##suffix##_MCB,suffix,MCB,c,k,g,s,p) \
-	PATTERN_USP_G3C_S(##suffix##_MCD,suffix,MCD,c,k,g,s,p) \
-	PATTERN_USP_G3C_S(##suffix##_MCT,suffix,MCT,c,k,g,s,p) \
-	PATTERN_USP_G3C_S(##suffix##_MCW,suffix,MCW,c,k,g,s,p) \
-	PATTERN_USP_G3C_S(##suffix##_AOR1,suffix,AOR1,c,k,g,s,p) \
-	PATTERN_USP_G3C_S(##suffix##_AOR2,suffix,AOR2,c,k,g,s,p) \
-	PATTERN_USP_G3C_S(##suffix##_ATT,suffix,ATT,c,k,g,s,p) \
-	PATTERN_USP_G3C_S(##suffix##_TSD,suffix,TSD,c,k,g,s,p) \
-	PATTERN_USP_G3C_S(##suffix##_TSW,suffix,TSW,c,k,g,s,p) 
+	PATTERN_USP_G3C_S(suffix,  BLK,c,k,g,s,p) \
+	PATTERN_USP_G3C_S(##suffix##_GRY,GRY,c,k,g,s,p) \
+	PATTERN_USP_G3C_S(##suffix##_KHK,KHK,c,k,g,s,p) \
+	PATTERN_USP_G3C_S(##suffix##_NAV,NAV,c,k,g,s,p) \
+	PATTERN_USP_G3C_S(##suffix##_RGR,RGR,c,k,g,s,p) \
+	PATTERN_USP_G3C_S(##suffix##_M81,M81,c,k,g,s,p) \
+	PATTERN_USP_G3C_S(##suffix##_MC,MC,c,k,g,s,p) \
+	PATTERN_USP_G3C_S(##suffix##_MCB,MCB,c,k,g,s,p) \
+	PATTERN_USP_G3C_S(##suffix##_MCD,MCD,c,k,g,s,p) \
+	PATTERN_USP_G3C_S(##suffix##_MCT,MCT,c,k,g,s,p) \
+	PATTERN_USP_G3C_S(##suffix##_MCW,MCW,c,k,g,s,p) \
+	PATTERN_USP_G3C_S(##suffix##_AOR1,AOR1,c,k,g,s,p) \
+	PATTERN_USP_G3C_S(##suffix##_AOR2,AOR2,c,k,g,s,p) \
+	PATTERN_USP_G3C_S(##suffix##_ATT,ATT,c,k,g,s,p) \
+	PATTERN_USP_G3C_S(##suffix##_TSD,TSD,c,k,g,s,p) \
+	PATTERN_USP_G3C_S(##suffix##_TSW,TSW,c,k,g,s,p) 
 
-#define PATTERN_USP_PCU_G3C(suffix, base, c, t, k, g) \
-	class suffix: base                            \
+#define PATTERN_USP_PCU_G3C(suffix, c, t, k, g) \
+	class suffix                            \
 	{                                             \
-		class XtdGearInfo                         \
-		{                                         \
 			model = "USP_PCU_G3C";                \
 			camo = #c;                            \
 			top = #t;                             \
 			kneepads = #k;                        \
 			gloves = #g;                          \
-		};                                        \
 	};                                            
 
 #define PATTERN_USP_PCU_G3C_BLK(suffix, k, g) \
-	PATTERN_USP_PCU_G3C(suffix,         Uniform_Base,  BLK, BLK,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_BLK_AOR1,suffix,AOR1,BLK,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_BLK_AOR2,suffix,AOR2,BLK,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_BLK_ATT, suffix,ATT, BLK,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_BLK_GRY, suffix,GRY, BLK,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_BLK_KHK, suffix,KHK, BLK,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_BLK_M81, suffix,M81, BLK,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_BLK_MC,  suffix,MC,  BLK,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_BLK_MCB, suffix,MCB, BLK,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_BLK_MCD, suffix,MCD, BLK,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_BLK_MCT, suffix,MCT, BLK,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_BLK_MCW, suffix,MCW, BLK,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_BLK_NAV, suffix,NAV, BLK,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_BLK_RGR, suffix,RGR, BLK,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_BLK_TSD, suffix,TSD, BLK,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_BLK_TSW, suffix,TSW, BLK,k,g)
+	PATTERN_USP_PCU_G3C(suffix,             BLK, BLK,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_BLK_AOR1,AOR1,BLK,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_BLK_AOR2,AOR2,BLK,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_BLK_ATT, ATT, BLK,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_BLK_GRY, GRY, BLK,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_BLK_KHK, KHK, BLK,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_BLK_M81, M81, BLK,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_BLK_MC,  MC,  BLK,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_BLK_MCB, MCB, BLK,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_BLK_MCD, MCD, BLK,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_BLK_MCT, MCT, BLK,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_BLK_MCW, MCW, BLK,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_BLK_NAV, NAV, BLK,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_BLK_RGR, RGR, BLK,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_BLK_TSD, TSD, BLK,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_BLK_TSW, TSW, BLK,k,g)
 
 #define PATTERN_USP_PCU_G3C_GRY(suffix, k, g) \
-	PATTERN_USP_PCU_G3C(##suffix##_GRY,     suffix,GRY, GRY,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_GRY_AOR1,suffix,AOR1,GRY,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_GRY_AOR2,suffix,AOR2,GRY,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_GRY_ATT, suffix,ATT, GRY,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_GRY_BLK, suffix,BLK, GRY,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_GRY_KHK, suffix,KHK, GRY,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_GRY_M81, suffix,M81, GRY,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_GRY_MC,  suffix,MC,  GRY,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_GRY_MCB, suffix,MCB, GRY,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_GRY_MCD, suffix,MCD, GRY,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_GRY_MCT, suffix,MCT, GRY,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_GRY_MCW, suffix,MCW, GRY,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_GRY_NAV, suffix,NAV, GRY,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_GRY_RGR, suffix,RGR, GRY,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_GRY_TSD, suffix,TSD, GRY,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_GRY_TSW, suffix,TSW, GRY,k,g)
+	PATTERN_USP_PCU_G3C(##suffix##_GRY,     GRY, GRY,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_GRY_AOR1,AOR1,GRY,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_GRY_AOR2,AOR2,GRY,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_GRY_ATT, ATT, GRY,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_GRY_BLK, BLK, GRY,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_GRY_KHK, KHK, GRY,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_GRY_M81, M81, GRY,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_GRY_MC,  MC,  GRY,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_GRY_MCB, MCB, GRY,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_GRY_MCD, MCD, GRY,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_GRY_MCT, MCT, GRY,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_GRY_MCW, MCW, GRY,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_GRY_NAV, NAV, GRY,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_GRY_RGR, RGR, GRY,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_GRY_TSD, TSD, GRY,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_GRY_TSW, TSW, GRY,k,g)
 
 #define PATTERN_USP_PCU_G3C_MC(suffix, k, g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MC,     suffix,MC,  MC,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MC_AOR1,suffix,AOR1,MC,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MC_AOR2,suffix,AOR2,MC,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MC_ATT, suffix,ATT, MC,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MC_BLK, suffix,BLK, MC,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MC_KHK, suffix,KHK, MC,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MC_M81, suffix,M81, MC,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MC_GRY, suffix,GRY, MC,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MC_MCB, suffix,MCB, MC,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MC_MCD, suffix,MCD, MC,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MC_MCT, suffix,MCT, MC,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MC_MCW, suffix,MCW, MC,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MC_NAV, suffix,NAV, MC,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MC_RGR, suffix,RGR, MC,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MC_TSD, suffix,TSD, MC,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MC_TSW, suffix,TSW, MC,k,g)
+	PATTERN_USP_PCU_G3C(##suffix##_MC,     MC,  MC,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MC_AOR1,AOR1,MC,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MC_AOR2,AOR2,MC,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MC_ATT, ATT, MC,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MC_BLK, BLK, MC,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MC_KHK, KHK, MC,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MC_M81, M81, MC,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MC_GRY, GRY, MC,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MC_MCB, MCB, MC,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MC_MCD, MCD, MC,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MC_MCT, MCT, MC,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MC_MCW, MCW, MC,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MC_NAV, NAV, MC,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MC_RGR, RGR, MC,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MC_TSD, TSD, MC,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MC_TSW, TSW, MC,k,g)
 
 
 #define PATTERN_USP_PCU_G3C_MCA(suffix, k, g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCA_MC,  suffix,MC,  MCA,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCA_AOR1,suffix,AOR1,MCA,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCA_AOR2,suffix,AOR2,MCA,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCA_ATT, suffix,ATT, MCA,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCA_BLK, suffix,BLK, MCA,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCA_KHK, suffix,KHK, MCA,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCA_M81, suffix,M81, MCA,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCA_GRY, suffix,GRY, MCA,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCA_MCB, suffix,MCB, MCA,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCA_MCD, suffix,MCD, MCA,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCA_MCT, suffix,MCT, MCA,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCA_MCW, suffix,MCW, MCA,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCA_NAV, suffix,NAV, MCA,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCA_RGR, suffix,RGR, MCA,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCA_TSD, suffix,TSD, MCA,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCA_TSW, suffix,TSW, MCA,k,g)
+	PATTERN_USP_PCU_G3C(##suffix##_MCA_MC,  MC,  MCA,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCA_AOR1,AOR1,MCA,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCA_AOR2,AOR2,MCA,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCA_ATT, ATT, MCA,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCA_BLK, BLK, MCA,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCA_KHK, KHK, MCA,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCA_M81, M81, MCA,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCA_GRY, GRY, MCA,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCA_MCB, MCB, MCA,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCA_MCD, MCD, MCA,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCA_MCT, MCT, MCA,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCA_MCW, MCW, MCA,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCA_NAV, NAV, MCA,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCA_RGR, RGR, MCA,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCA_TSD, TSD, MCA,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCA_TSW, TSW, MCA,k,g)
 
 #define PATTERN_USP_PCU_G3C_MCB(suffix, k, g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCB,     suffix,MCB, MCB,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCB_AOR1,suffix,AOR1,MCB,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCB_AOR2,suffix,AOR2,MCB,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCB_ATT, suffix,ATT, MCB,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCB_BLK, suffix,BLK, MCB,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCB_KHK, suffix,KHK, MCB,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCB_M81, suffix,M81, MCB,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCB_GRY, suffix,GRY, MCB,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCB_MC , suffix,MC,  MCB,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCB_MCD, suffix,MCD, MCB,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCB_MCT, suffix,MCT, MCB,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCB_MCW, suffix,MCW, MCB,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCB_NAV, suffix,NAV, MCB,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCB_RGR, suffix,RGR, MCB,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCB_TSD, suffix,TSD, MCB,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCB_TSW, suffix,TSW, MCB,k,g)
+	PATTERN_USP_PCU_G3C(##suffix##_MCB,     MCB, MCB,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCB_AOR1,AOR1,MCB,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCB_AOR2,AOR2,MCB,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCB_ATT, ATT, MCB,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCB_BLK, BLK, MCB,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCB_KHK, KHK, MCB,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCB_M81, M81, MCB,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCB_GRY, GRY, MCB,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCB_MC , MC,  MCB,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCB_MCD, MCD, MCB,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCB_MCT, MCT, MCB,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCB_MCW, MCW, MCB,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCB_NAV, NAV, MCB,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCB_RGR, RGR, MCB,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCB_TSD, TSD, MCB,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCB_TSW, TSW, MCB,k,g)
 
 #define PATTERN_USP_PCU_G3C_MCD(suffix, k, g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCD,     suffix,MCD, MCD,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCD_AOR1,suffix,AOR1,MCD,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCD_AOR2,suffix,AOR2,MCD,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCD_ATT, suffix,ATT, MCD,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCD_BLK, suffix,BLK, MCD,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCD_KHK, suffix,KHK, MCD,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCD_M81, suffix,M81, MCD,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCD_GRY, suffix,GRY, MCD,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCD_MC , suffix,MC,  MCD,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCD_MCB, suffix,MCB, MCD,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCD_MCT, suffix,MCT, MCD,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCD_MCW, suffix,MCW, MCD,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCD_NAV, suffix,NAV, MCD,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCD_RGR, suffix,RGR, MCD,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCD_TSD, suffix,TSD, MCD,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCD_TSW, suffix,TSW, MCD,k,g)
+	PATTERN_USP_PCU_G3C(##suffix##_MCD,     MCD, MCD,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCD_AOR1,AOR1,MCD,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCD_AOR2,AOR2,MCD,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCD_ATT, ATT, MCD,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCD_BLK, BLK, MCD,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCD_KHK, KHK, MCD,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCD_M81, M81, MCD,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCD_GRY, GRY, MCD,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCD_MC , MC,  MCD,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCD_MCB, MCB, MCD,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCD_MCT, MCT, MCD,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCD_MCW, MCW, MCD,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCD_NAV, NAV, MCD,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCD_RGR, RGR, MCD,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCD_TSD, TSD, MCD,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCD_TSW, TSW, MCD,k,g)
 
 #define PATTERN_USP_PCU_G3C_MCT(suffix, k, g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCT,     suffix,MCT, MCT,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCT_AOR1,suffix,AOR1,MCT,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCT_AOR2,suffix,AOR2,MCT,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCT_ATT, suffix,ATT, MCT,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCT_BLK, suffix,BLK, MCT,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCT_KHK, suffix,KHK, MCT,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCT_M81, suffix,M81, MCT,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCT_GRY, suffix,GRY, MCT,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCT_MC , suffix,MC,  MCT,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCT_MCB, suffix,MCB, MCT,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCT_MCD, suffix,MCD, MCT,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCT_MCW, suffix,MCW, MCT,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCT_NAV, suffix,NAV, MCT,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCT_RGR, suffix,RGR, MCT,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCT_TSD, suffix,TSD, MCT,k,g) \
-	PATTERN_USP_PCU_G3C(##suffix##_MCT_TSW, suffix,TSW, MCT,k,g)
+	PATTERN_USP_PCU_G3C(##suffix##_MCT,     MCT, MCT,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCT_AOR1,AOR1,MCT,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCT_AOR2,AOR2,MCT,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCT_ATT, ATT, MCT,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCT_BLK, BLK, MCT,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCT_KHK, KHK, MCT,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCT_M81, M81, MCT,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCT_GRY, GRY, MCT,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCT_MC , MC,  MCT,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCT_MCB, MCB, MCT,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCT_MCD, MCD, MCT,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCT_MCW, MCW, MCT,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCT_NAV, NAV, MCT,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCT_RGR, RGR, MCT,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCT_TSD, TSD, MCT,k,g) \
+	PATTERN_USP_PCU_G3C(##suffix##_MCT_TSW, TSW, MCT,k,g)
 
 #define PATTERN_USP_PCU_G3C_ALL(suffix,k,g) \
 	PATTERN_USP_PCU_G3C_BLK(suffix,k,g) \
@@ -180,109 +174,106 @@
     PATTERN_USP_PCU_G3C_MCD(suffix,k,g) \
     PATTERN_USP_PCU_G3C_MCT(suffix,k,g) 
 
-#define PATTERN_USP_SOFTSHELL_G3C(suffix, base, c, t, k, g) \
-	class suffix: base                            \
+#define PATTERN_USP_SOFTSHELL_G3C(suffix, c, t, k, g) \
+	class suffix                            \
 	{                                             \
-		class XtdGearInfo                         \
-		{                                         \
 			model = "USP_SOFTSHELL_G3C";                \
 			camo = #c;                            \
 			top = #t;                             \
 			kneepads = #k;                        \
 			gloves = #g;                          \
-		};                                        \
 	};         
 
 
 #define PATTERN_USP_SOFTSHELL_G3C_BLK(suffix, k, g) \
-	PATTERN_USP_SOFTSHELL_G3C(suffix,         Uniform_Base,  BLK, BLK,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_AOR1,suffix,AOR1,BLK,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_AOR2,suffix,AOR2,BLK,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_ATT, suffix,ATT, BLK,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_GRY, suffix,GRY, BLK,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_KHK, suffix,KHK, BLK,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_M81, suffix,M81, BLK,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_MC,  suffix,MC,  BLK,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_MCB, suffix,MCB, BLK,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_MCD, suffix,MCD, BLK,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_MCT, suffix,MCT, BLK,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_MCW, suffix,MCW, BLK,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_NAV, suffix,NAV, BLK,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_RGR, suffix,RGR, BLK,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_TSD, suffix,TSD, BLK,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_TSW, suffix,TSW, BLK,k,g)
+	PATTERN_USP_SOFTSHELL_G3C(suffix,             BLK, BLK,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_AOR1,AOR1,BLK,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_AOR2,AOR2,BLK,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_ATT, ATT, BLK,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_GRY, GRY, BLK,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_KHK, KHK, BLK,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_M81, M81, BLK,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_MC,  MC,  BLK,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_MCB, MCB, BLK,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_MCD, MCD, BLK,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_MCT, MCT, BLK,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_MCW, MCW, BLK,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_NAV, NAV, BLK,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_RGR, RGR, BLK,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_TSD, TSD, BLK,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_BLK_TSW, TSW, BLK,k,g)
 
 #define PATTERN_USP_SOFTSHELL_G3C_CBR(suffix, k, g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_BLK, suffix,BLK, CBR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_AOR1,suffix,AOR1,CBR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_AOR2,suffix,AOR2,CBR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_ATT, suffix,ATT, CBR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_GRY, suffix,GRY, CBR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_KHK, suffix,KHK, CBR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_M81, suffix,M81, CBR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_MC,  suffix,MC,  CBR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_MCB, suffix,MCB, CBR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_MCD, suffix,MCD, CBR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_MCT, suffix,MCT, CBR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_MCW, suffix,MCW, CBR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_NAV, suffix,NAV, CBR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_RGR, suffix,RGR, CBR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_TSD, suffix,TSD, CBR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_TSW, suffix,TSW, CBR,k,g)
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_BLK, BLK, CBR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_AOR1,AOR1,CBR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_AOR2,AOR2,CBR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_ATT, ATT, CBR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_GRY, GRY, CBR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_KHK, KHK, CBR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_M81, M81, CBR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_MC,  MC,  CBR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_MCB, MCB, CBR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_MCD, MCD, CBR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_MCT, MCT, CBR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_MCW, MCW, CBR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_NAV, NAV, CBR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_RGR, RGR, CBR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_TSD, TSD, CBR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_CBR_TSW, TSW, CBR,k,g)
 
 #define PATTERN_USP_SOFTSHELL_G3C_GRY(suffix, k, g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_BLK, suffix,BLK, GRY,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_AOR1,suffix,AOR1,GRY,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_AOR2,suffix,AOR2,GRY,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_ATT, suffix,ATT, GRY,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY,     suffix,GRY, GRY,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_KHK, suffix,KHK, GRY,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_M81, suffix,M81, GRY,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_MC,  suffix,MC,  GRY,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_MCB, suffix,MCB, GRY,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_MCD, suffix,MCD, GRY,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_MCT, suffix,MCT, GRY,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_MCW, suffix,MCW, GRY,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_NAV, suffix,NAV, GRY,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_RGR, suffix,RGR, GRY,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_TSD, suffix,TSD, GRY,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_TSW, suffix,TSW, GRY,k,g)
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_BLK, BLK, GRY,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_AOR1,AOR1,GRY,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_AOR2,AOR2,GRY,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_ATT, ATT, GRY,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY,     GRY, GRY,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_KHK, KHK, GRY,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_M81, M81, GRY,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_MC,  MC,  GRY,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_MCB, MCB, GRY,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_MCD, MCD, GRY,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_MCT, MCT, GRY,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_MCW, MCW, GRY,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_NAV, NAV, GRY,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_RGR, RGR, GRY,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_TSD, TSD, GRY,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_GRY_TSW, TSW, GRY,k,g)
 
 #define PATTERN_USP_SOFTSHELL_G3C_MC(suffix, k, g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_BLK, suffix,BLK, MC,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_AOR1,suffix,AOR1,MC,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_AOR2,suffix,AOR2,MC,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_ATT, suffix,ATT, MC,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_GRY, suffix,GRY, MC,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_KHK, suffix,KHK, MC,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_M81, suffix,M81, MC,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC,     suffix,MC,  MC,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_MCB, suffix,MCB, MC,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_MCD, suffix,MCD, MC,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_MCT, suffix,MCT, MC,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_MCW, suffix,MCW, MC,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_NAV, suffix,NAV, MC,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_RGR, suffix,RGR, MC,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_TSD, suffix,TSD, MC,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_TSW, suffix,TSW, MC,k,g)
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_BLK, BLK, MC,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_AOR1,AOR1,MC,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_AOR2,AOR2,MC,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_ATT, ATT, MC,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_GRY, GRY, MC,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_KHK, KHK, MC,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_M81, M81, MC,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC,     MC,  MC,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_MCB, MCB, MC,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_MCD, MCD, MC,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_MCT, MCT, MC,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_MCW, MCW, MC,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_NAV, NAV, MC,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_RGR, RGR, MC,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_TSD, TSD, MC,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_MC_TSW, TSW, MC,k,g)
 
 #define PATTERN_USP_SOFTSHELL_G3C_RGR(suffix, k, g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_BLK, suffix,BLK, RGR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_AOR1,suffix,AOR1,RGR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_AOR2,suffix,AOR2,RGR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_ATT, suffix,ATT, RGR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_GRY, suffix,GRY, RGR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_KHK, suffix,KHK, RGR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_M81, suffix,M81, RGR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_MC,  suffix,MC,  RGR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_MCB, suffix,MCB, RGR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_MCD, suffix,MCD, RGR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_MCT, suffix,MCT, RGR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_MCW, suffix,MCW, RGR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_NAV, suffix,NAV, RGR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR,     suffix,RGR, RGR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_TSD, suffix,TSD, RGR,k,g) \
-	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_TSW, suffix,TSW, RGR,k,g)
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_BLK, BLK, RGR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_AOR1,AOR1,RGR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_AOR2,AOR2,RGR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_ATT, ATT, RGR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_GRY, GRY, RGR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_KHK, KHK, RGR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_M81, M81, RGR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_MC,  MC,  RGR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_MCB, MCB, RGR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_MCD, MCD, RGR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_MCT, MCT, RGR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_MCW, MCW, RGR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_NAV, NAV, RGR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR,     RGR, RGR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_TSD, TSD, RGR,k,g) \
+	PATTERN_USP_SOFTSHELL_G3C(##suffix##_RGR_TSW, TSW, RGR,k,g)
 
 #define PATTERN_USP_SOFTSHELL_G3C_ALL(suffix, k, g) \
 	PATTERN_USP_SOFTSHELL_G3C_BLK(suffix,k,g) \
@@ -292,15 +283,12 @@
     PATTERN_USP_SOFTSHELL_G3C_RGR(suffix,k,g) \
 	
 #define PATTERN_USP_OVERWHITE_G3C(suffix, base, c, k, g) \
-	class suffix: base                            \
+	class suffix                            \
 	{                                             \
-		class XtdGearInfo                         \
-		{                                         \
 			model = "USP_OVERWHITE_G3C";          \
 			camo = #c;                            \
 			kneepads = #k;                        \
 			gloves = #g;                          \
-		};                                        \
 	};                                            
 
 #define PATTERN_USP_OVERWHITE_G3C_MCA(suffix, k, g) \
@@ -322,17 +310,14 @@
 	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_TSW, suffix,TSW, k,g)
 
 #define PATTERN_USP_TSHIRT_G3C(suffix, base, c, t, k, g, i) \
-	class suffix: base                            \
+	class suffix                            \
 	{                                             \
-		class XtdGearInfo                         \
-		{                                         \
 			model = "USP_TSHIRT_G3C";             \
 			camo = #c;                            \
 			top = #t;                             \
 			kneepads = #k;                        \
 			gloves = #g;                          \
 			inside = #i;                          \
-		};                                        \
 	}; 
 
 #define PATTERN_USP_TSHIRT_G3C_BLK(suffix, k, g, i) \
@@ -436,15 +421,12 @@
 
 
 #define PATTERN_VEST(name, base, m, c, l, b) \
-	class name: base                              \
+	class name                              \
 	{                                             \
-		class XtdGearInfo                         \
-		{                                         \
 			model = #m;                           \
 			camo = #c;                            \
 			loadout = #l;                         \
 			belt = #b;                            \
-		};                                        \
 	}; 
 
 #define PATTERN_VEST_JPC(name, l, b) \
@@ -454,17 +436,14 @@
 	PATTERN_VEST(##name##_RGR,name,USP_CRYE_JPC,RGR,l,b) 
 
 #define PATTERN_CAP(name, base, l, c, y, o, s) \
-	class name: base                              \
+	class name                              \
 	{                                             \
-		class XtdGearInfo                         \
-		{                                         \
 			model = "USP_BASEBALL";               \
 			camo = #c;                            \
 			light = #l;                           \
 			eyewear = #y;                         \
 			comms = #o;                           \
 			side = #s;                            \
-		};                                        \
 	}; 
 
 
@@ -531,10 +510,8 @@
 	PATTERN_CAP(##name##_US4CES,name,none,US4CES,none,o,s)            
 
 #define PATTERN_OPSCORE_FASTMT(name, base, ct, cm, gg, lt, cw, c) \
-	class name: base                              \
+	class name                              \
 	{                                             \
-		class XtdGearInfo                         \
-		{                                         \
 			model = "USP_OPSCORE_FAST";           \
 			camo = #c;                            \
 			comms = #ct;                          \
@@ -542,14 +519,11 @@
 			goggles = #gg;                        \
 			light = #lt;                          \
 			counterweight = #cw;                  \
-		};                                        \
 	}; 
 
 #define PATTERN_AIRFRAME(name, base, cm, lt, cw, gu, ir, vl,c) \
-	class name: base                              \
+	class name                              \
 	{                                             \
-		class XtdGearInfo                         \
-		{                                         \
 			model = "USP_AIRFRAME";               \
 			camo = #c;                            \
 			vlopt = #vl;                          \
@@ -558,14 +532,11 @@
 			light = #lt;                          \
 			iropt = #ir;                          \
 			counterweight = #cw;                  \
-		};                                        \
 	}; 
 
 #define PATTERN_OPSCORE_FASTFCV(name, base, ct, cm, gg, lt, cw, c) \
-	class name: base                              \
+	class name                              \
 	{                                             \
-		class XtdGearInfo                         \
-		{                                         \
 			model = "USP_OPSCORE_FASTFCV";            \
 			camo = #c;                            \
 			comms = #ct;                          \
@@ -573,15 +544,14 @@
 			goggles = #gg;                          \
 			light = #lt;                          \
 			counterweight = #cw;                  \
-		};                                        \
 	}; 
+
+class XtdGearInfos
+{
 
 class CfgWeapons
 {
-	class Uniform_Base;
-	class Vest_NoCamo_Base;
-	class H_HelmetB;
-	
+
 	// USP_G3C (some combinaisons does not exists, so it's splitted in small chunks)
 	PATTERN_USP_G3C(USP_G3C,             down,no, none,Full,   SL)
 	PATTERN_USP_G3C(USP_G3C_CU,          up,  no, none,Full,   SL)
@@ -2159,22 +2129,7 @@ class CfgWeapons
 	PATTERN_OPSCORE_FASTFCV(USP_OPSCORE_FASTMT_FCV_OD_T,USP_OPSCORE_FASTMT_FCV_T,none,none,none,TL,none,OD)
 	PATTERN_OPSCORE_FASTFCV(USP_OPSCORE_FASTMT_FCV_OD_TW,USP_OPSCORE_FASTMT_FCV_TW,none,none,none,TL,CW,OD)
 	PATTERN_OPSCORE_FASTFCV(USP_OPSCORE_FASTMT_FCV_OD_W,USP_OPSCORE_FASTMT_FCV_W,none,none,none,none,CW,OD)
-	
-	class USP_OPSCORE_FASTMT_FCV_FULL : USP_OPSCORE_FASTMT_FCV
-	{
-		class XtdGearInfo
-		{
-			delete  model;
-		};
-	};
-	class USP_OPSCORE_FASTMT_FCV_FULL_C : USP_OPSCORE_FASTMT_FCV
-	{
-		class XtdGearInfo
-		{
-			delete  model;
-		};
-	};
 
-
+};
 
 };
