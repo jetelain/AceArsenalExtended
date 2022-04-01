@@ -477,7 +477,11 @@ class XtdGearModels
 		{
 			label = "Crye G3";
 			author = "Arma Mod France";
-			options[] = {"sleeves"};
+			options[] = {"camo", "sleeves"};
+			class camo // coventional name
+			{
+				values[] = {"MTP", "BLK"};
+			};
 			class sleeves // coventional name
 			{
 				values[] = {"Full", "Half"};

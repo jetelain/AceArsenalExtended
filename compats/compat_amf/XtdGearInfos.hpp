@@ -8,10 +8,11 @@
 			gloves = #g;                         \
 	}; 
 
-#define PATTERN_UNIFORM_G3(name, s) \
+#define PATTERN_UNIFORM_G3(name, c, s) \
 	class name                      \
 	{                                             \
 			model = "amf_g3";           \
+			camo = #c;                         \
 			sleeves = #s;                         \
 	}; 
 
@@ -83,10 +84,10 @@ class XtdGearInfos
 	class CfgWeapons
 	{
 		// amf_uniform_t4s2
-		class amf_uniform_04_ce   { model="amf_uniform_t4s2"; camo="CE"; gloves="MX"; };
-		class amf_uniform_04_ce_2 { model="amf_uniform_t4s2"; camo="CE"; gloves="none"; };
-		class amf_uniform_04_da   { model="amf_uniform_t4s2"; camo="DA"; gloves="MX"; };
-		class amf_uniform_04_da_2 { model="amf_uniform_t4s2"; camo="DA"; gloves="none"; };
+		class amf_uniform_04_ce   { model="amf_uniform_t4s2"; camo="CE";     gloves="MX"; };
+		class amf_uniform_04_ce_2 { model="amf_uniform_t4s2"; camo="CE";     gloves="none"; };
+		class amf_uniform_04_da   { model="amf_uniform_t4s2"; camo="DA";     gloves="MX"; };
+		class amf_uniform_04_da_2 { model="amf_uniform_t4s2"; camo="DA";     gloves="none"; };
 		class amf_uniform_04_S    { model="amf_uniform_t4s2"; camo="SERVAL"; gloves="MX"; };
 		class amf_uniform_04_S_2  { model="amf_uniform_t4s2"; camo="SERVAL"; gloves="none"; };
 
@@ -408,8 +409,10 @@ class XtdGearInfos
 		PATTERN_CAMO(AMF_TCNVG,   amf_tcnvg,CE)
 		PATTERN_CAMO(AMF_TCNVG_DA,amf_tcnvg,DA)
 
-		PATTERN_UNIFORM_G3(amf_uniform_04_MTP, Full)
-		PATTERN_UNIFORM_G3(amf_uniform_05_MTP, Half)
+		PATTERN_UNIFORM_G3(amf_uniform_04_MTP,MTP,Full)
+		PATTERN_UNIFORM_G3(amf_uniform_05_MTP,MTP,Half)
+		PATTERN_UNIFORM_G3(amf_uniform_04_BLK,BLK,Full)
+		PATTERN_UNIFORM_G3(amf_uniform_05_BLK,BLK,Half)
 
 		PATTERN_CIRAS(amf_plate_ca_tan,   none,TAN)
 		PATTERN_CIRAS(amf_plate_ca_green, none,OD)
