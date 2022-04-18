@@ -16,7 +16,7 @@ class CfgPatches {
 
 #include "XtdGearModels.hpp"
 
-#include "CfgWeapons.hpp"
+#include "XtdGearInfos.hpp"
 
 class Cfg3DEN
 {
