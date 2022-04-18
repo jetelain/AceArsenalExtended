@@ -13,6 +13,7 @@ INFO_1("Scanning %1 for XtdGearInfo errors", _classRoot);
 private _errors = 0;
 
 private _configs = QUOTE((isText (_x >> 'XtdGearInfo' >> 'model')) && CLASS_FILTER(_x)) configClasses (configFile >> _classRoot);
+_configs = [_classRoot, _configs] call FUNC(filterConfigEntries);
 {
 	private _model = getText(_x  >> "XtdGearInfo" >> "model");
 	if(!isClass (configFile >> "XtdGearModels" >> _classRoot >> _model)) then {

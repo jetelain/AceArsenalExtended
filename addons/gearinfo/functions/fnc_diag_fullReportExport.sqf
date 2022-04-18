@@ -14,7 +14,7 @@ private _result = [];
 			private _hasModel = isText (_x >> "XtdGearInfo" >> "model");
 			_result pushBack ([_classRoot, _name, _parent, _displayName, _hasModel] joinString ";");
 		};
-	} forEach ( QUOTE(CLASS_FILTER(_x)) configClasses (configFile >> _classRoot));
+	} forEach ([_classRoot, QUOTE(CLASS_FILTER(_x)) configClasses (configFile >> _classRoot)] call FUNC(filterConfigEntries));
 } forEach ["CfgWeapons","CfgGlasses"];
 
 copyToClipboard (_result joinString endl);

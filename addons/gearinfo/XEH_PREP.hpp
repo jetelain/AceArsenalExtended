@@ -16,3 +16,6 @@ PREP(setTextureOptions);
 PREP(getModelConfigs);
 PREP(getUnitLoadout);
 PREP(setUnitLoadout);
+
+PREP(isValidCfgWeapon);
+PREP(filterConfigEntries);

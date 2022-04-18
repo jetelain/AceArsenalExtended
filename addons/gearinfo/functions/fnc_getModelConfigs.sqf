@@ -7,6 +7,7 @@ private _optionsNames = getArray (configFile >> "XtdGearModels" >> _classRoot >>
 private _allConfigs = [];
 
 private _configs = ("(getText (_x >> 'XtdGearInfo' >> 'model') == '"+_model+"') && " + QUOTE(CLASS_FILTER(_x))) configClasses (configFile >> _classRoot);
+_configs = [_classRoot, _configs] call FUNC(filterConfigEntries);
 {
 	private _variation = _x;
 	_allConfigs pushBack [_variation, (_optionsNames apply { getText (_variation >> "XtdGearInfo" >> _x) })];
