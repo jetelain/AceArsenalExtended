@@ -411,8 +411,10 @@ class XtdGearInfos
 
 		PATTERN_UNIFORM_G3(amf_uniform_04_MTP,MTP,Full)
 		PATTERN_UNIFORM_G3(amf_uniform_05_MTP,MTP,Half)
+#ifdef AMF_v8
 		PATTERN_UNIFORM_G3(amf_uniform_04_BLK,BLK,Full)
 		PATTERN_UNIFORM_G3(amf_uniform_05_BLK,BLK,Half)
+#endif
 
 		PATTERN_CIRAS(amf_plate_ca_tan,   none,TAN)
 		PATTERN_CIRAS(amf_plate_ca_green, none,OD)

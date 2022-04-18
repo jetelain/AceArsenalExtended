@@ -345,7 +345,8 @@ class XtdGearModels
 			icon = QPATHTOF(data\mx.paa);
 		};
 	};
-
+	
+#ifdef AMF_v8
 	class GlovesColorBase
 	{
 		hiddenselection = "Camo4";
@@ -360,6 +361,7 @@ class XtdGearModels
 			texture = "amf_uniforms\data\usp_gloves_tan_CO.paa";
 		};
 	};
+#endif
 
 	class GogglesBase
 	{
@@ -388,10 +390,16 @@ class XtdGearModels
 			label = "Treillis F3/Ubas";
 			author = "Arma Mod France";
 			options[] = {"camo","sleeves","gloves"};
-			textureoptions[]={"rank","bloodtype","flag","glovescolor"}; //will be added in v8 in september 
+#ifdef AMF_v8
+			textureoptions[]={"rank","bloodtype","flag","glovescolor"};
+#endif
 			class camo // coventional name
 			{
+#ifdef AMF_v8
 				values[] = {"CE_TAN","CE_OD","DA","SERVAL","TUNDRA"};
+#else
+				values[] = {"CE_TAN","CE_OD","DA","SERVAL"};
+#endif
 				class CE_TAN
 				{
 					label = "CE/TAN";
@@ -412,11 +420,13 @@ class XtdGearModels
 					label = "SERVAL";
 					image = QPATHTOF(data\serval.paa);
 				};
+#ifdef AMF_v8
 				class TUNDRA
 				{
 					label = "TUNDRA";
 					image = QPATHTOF(data\tundra.paa);
 				};
+#endif
 			};
 			class sleeves // coventional name
 			{
@@ -432,15 +442,17 @@ class XtdGearModels
 			class flag : FlagBase {
 				hiddenselection = "drapeau";
 			};
+#ifdef AMF_v8
 			class glovescolor : GlovesColorBase {};
+#endif
 		};
-
+#ifdef AMF_v8
 		class amf_uniform_t4s2
 		{
 			label = "Treillis T4S2";
 			author = "Arma Mod France";
 			options[] = {"camo","gloves"};
-			textureoptions[]={"rank","bloodtype","flag","glovescolor"}; //will be added in v8 in september 
+			textureoptions[]={"rank","bloodtype","flag","glovescolor"};
 			class camo // coventional name
 			{
 				values[] = {"CE","DA","SERVAL"};
@@ -472,16 +484,20 @@ class XtdGearModels
 			};
 			class glovescolor : GlovesColorBase {};
 		};
-
+#endif
 		class amf_g3
 		{
 			label = "Crye G3";
 			author = "Arma Mod France";
+#ifdef AMF_v8
 			options[] = {"camo", "sleeves"};
 			class camo // coventional name
 			{
 				values[] = {"MTP", "BLK"};
 			};
+#else
+			options[] = {"sleeves"};
+#endif
 			class sleeves // coventional name
 			{
 				values[] = {"Full", "Half"};
@@ -493,10 +509,16 @@ class XtdGearModels
 			label = "Treillis F3";
 			author = "Arma Mod France";
 			options[] = {"camo","gloves"};
+#ifdef AMF_v8
 			textureoptions[]={"rank","bloodtype","flag","glovescolor"}; //will be added later, need to wait for updated p3ds
+#endif
 			class camo // coventional name
 			{
+#ifdef AMF_v8
 				values[] = {"CE","DA","SERVAL","MTP","TUNDRA"};
+#else
+				values[] = {"CE","DA","SERVAL","MTP"};
+#endif
 				class CE
 				{
 					label = "CE";
@@ -512,11 +534,13 @@ class XtdGearModels
 					label = "SERVAL";
 					image = QPATHTOF(data\serval.paa);
 				};
+#ifdef AMF_v8
 				class TUNDRA
 				{
 					label = "TUNDRA";
 					image = QPATHTOF(data\tundra.paa);
 				};
+#endif
 			};
 			class gloves : GlovesBase { };
 			class rank : RankBase {
@@ -528,7 +552,9 @@ class XtdGearModels
 			class flag : FlagBase {
 				hiddenselection = "drapeau";
 			};
+#ifdef AMF_v8
 			class glovescolor : GlovesColorBase {};
+#endif
 		};
 
 		class amf_felin
