@@ -81,7 +81,8 @@ private _callback = {
 		{
 			// Check if player has backpack and backpack is TFAR radio
 			// systemChat "TFAR Active - 3";
-			_playerBag = (_loadout select 5) select 0;
+			private _newLoadout = getUnitLoadout _player;
+			_playerBag = (_newLoadout select 5) select 0;
 
 			if ([_playerBag] call TFAR_fnc_isLRRadio) then
 			{
@@ -110,7 +111,7 @@ private _callback = {
 	private _isOnFoot = isNull objectParent _player;
 	if (_isOnFoot) then
 	{
-		[2, _params, _callback, {systemChat "failed"}, _actionLabel + "...",{true}] call ace_common_fnc_progressBar;
+		[2, _params, _callback, {}, _actionLabel + "..."] call ace_common_fnc_progressBar;
 	} else {
 		[_params,_callback] spawn {
 			params ["_params","_callback"];			
