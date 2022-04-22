@@ -32,8 +32,6 @@ private _callback = {
 		// Before setting the player's loadout, let's grab their TFAR radio
 		// settings so we can copy the settings to the "new" radio bag.
 		// TFAR code snippets were adapted from TFAR_fnc_CopySettings.
-		// Init variables
-		// systemChat "Changed Gear";
 		private _playerBag = (_loadout select 5) select 0;
 		private _tfarSource = [];
 		private _lrSettingsSource = [];
@@ -42,16 +40,12 @@ private _callback = {
 		private _tfarIsActive = isClass (configFile >> "CfgPatches" >> "tfar_core");
 		if (_tfarIsActive) then
 		{
-			// systemChat "TFAR Active - 1";
 			// Check if player has backpack and backpack is TFAR radio
-			// Set source and destination bags
-
 			if ([_playerBag] call TFAR_fnc_isLRRadio) then
 			{
-				// systemChat "Player Bag is Radio - 2";
+				// Get player backpack radio and settigns
 				_tfarSource = _player call TFAR_fnc_backpackLr;
 				_lrSettingsSource = _tfarSource call TFAR_fnc_getLrSettings;
-				// systemChat format ["Source: %1", _lrSettingsSource];
 			};
 		};
 
@@ -80,16 +74,14 @@ private _callback = {
 		if (_tfarIsActive) then
 		{
 			// Check if player has backpack and backpack is TFAR radio
-			// systemChat "TFAR Active - 3";
 			private _newLoadout = getUnitLoadout _player;
 			_playerBag = (_newLoadout select 5) select 0;
 
 			if ([_playerBag] call TFAR_fnc_isLRRadio) then
 			{
-				// systemChat "Player Bag is Radio - 4";
+				// Get player backpack radio and set settings
 				private _tfarDestination = _player call TFAR_fnc_backpackLr;
 				[_tfarDestination,[]+_lrSettingsSource] call TFAR_fnc_setLRSettings;
-				// systemChat "LR Radio Set - 5";
 			};
 		};
 
