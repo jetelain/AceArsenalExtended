@@ -167,6 +167,19 @@ class XtdGearModels
 		};
 	};
 
+	class Faction
+    {
+        label = CSTRING(Faction);
+        values[] = {};
+        FACTION_OPTION(NATO,NATO_FACTION;CTRG_FACTION);
+        FACTION_OPTION(CTRG,CTRG_FACTION);
+        FACTION_OPTION(USA,NATO_FACTION);
+        FACTION_OPTION(CSAT,CSAT_FACTION);
+        FACTION_OPTION(AAF,AAF_FACTION);
+        FACTION_OPTION(FIA,FIA_FACTION);
+        FACTION_OPTION(LDF,LDF_FACTION);
+    };
+
 	/**
 	 * Conventional options names that can be used by mods, to avoid dependency to this pbo.
 	 */
@@ -176,7 +189,8 @@ class XtdGearModels
 		class pantscamo: CamoBase {
 			label = CSTRING(PantsCamo);
 		};
-		class sleeves: SleevesBase{};
+		class sleeves : SleevesBase {};
+		class faction : Faction {};
 	};
 
 	class CfgWeapons 

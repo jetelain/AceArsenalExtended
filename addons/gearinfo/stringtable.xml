@@ -65,5 +65,50 @@
             <English>Cut</English>
             <French>Coupées</French>
         </Key>
+        <Key ID="STR_ACEAX_GearInfo_Faction">
+            <English>Faction</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_USAFaction">
+            <English>USA</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_USAFaction_DESC">
+            <English>[NATO] The United States Army (USA) is the primary land force branch of the U.S. military</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_NATOFaction">
+            <English>NATO</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_NATOFaction_DESC">
+            <English>[NATO] North Atlantic Treaty Organization</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_CSATFaction">
+            <English>CSAT</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_CSATFaction_DESC">
+            <English>[CSAT] Canton Protocol Strategic Alliance Treaty</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_CTRGFaction">
+            <English>CTRG</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_CTRGFaction_DESC">
+            <English>[NATO] The Combat Technology Research Group (CTRG) is an elite NATO special operations force</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_AAFFaction">
+            <English>AAF</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_AAFFaction_DESC">
+            <English>[AAF] Altis Armed Forces</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_LDFFaction">
+            <English>LDF</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_LDFFaction_DESC">
+            <English>[NATO] Livonian Defense Force</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_FIAFaction">
+            <English>FIA</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_FIAFaction_DESC">
+            <English>[FIA] Freedom and Independence Army</English>
+        </Key>
     </Package>
 </Project>
