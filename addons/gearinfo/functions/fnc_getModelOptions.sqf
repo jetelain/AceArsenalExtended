@@ -56,12 +56,13 @@ READ(Number)
 		private _valueImage  = [_valueDef1, _valueDef2, "image", ""] call _readText;
 		private _valueIcon   = [_valueDef1, _valueDef2, "icon", ""] call _readText;
 		private _valueDesc   = [_valueDef1, _valueDef2, "description", ""] call _readText;
+		private _factionFilter =  [_valueDef1, _valueDef2, "faction", ""] call _readText;
 		private _valueAction = [_valueDef1, _valueDef2, "actionLabel", format ["%1 %2", _optionLabel, _valueLabel]] call _readText;
 		private _valueInGame = [_valueDef1, _valueDef2, "changeingame", _optionInGame] call _readNumber;
 		private _valueDelay  = [_valueDef1, _valueDef2, "changedelay", _optionDelay] call _readNumber;
 		private _itemInGame  = [_valueDef1, _valueDef2, "itemingame", ""] call _readText;
-		
-		_values pushBack [_valueName, _valueLabel, _valueImage, _valueIcon, _valueDesc, _valueAction, _valueInGame, _itemInGame, _valueDelay];
+
+		_values pushBack [_valueName, _valueLabel, _valueImage, _valueIcon, _valueDesc, _factionFilter, _valueAction, _valueInGame, _itemInGame, _valueDelay];
 
 	} forEach _optionValues;
 

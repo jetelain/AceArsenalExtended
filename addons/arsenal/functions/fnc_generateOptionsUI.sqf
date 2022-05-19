@@ -21,13 +21,14 @@ if ( _selectedModel != "" ) then {
 	
 	private _modelDefinition = configFile >> "XtdGearModels" >> _classRoot >> _selectedModel;
 
-
 	private _label   = getText  ( _modelDefinition >> "label" );
 	private _author  = getText  ( _modelDefinition >> "author" );
 
 	(_display displayCtrl 9990001) ctrlSetText _label;
 	(_display displayCtrl 9990002) ctrlSetText _author;
 	private _posY = 12;
+
+	private _currentFaction = if (not isNull player) then { faction player } else { "" };
 
 	{
 		private _kind = _x;
@@ -53,9 +54,16 @@ if ( _selectedModel != "" ) then {
 			_posY = _posY + 6;
 
 			{
-
 				private _valueIndex = _foreachIndex;
-				_x params ["_valueName", "_valueLabel", "_valueImage", "", "_valueDesc"];
+				_x params ["_valueName", "_valueLabel", "_valueImage", "", "_valueDesc", "_factionFilter"];
+
+				// Hide value if faction is provided and doesn't match but ignore civil faction
+				if (_factionFilter != "" and not (_currentFaction in ["", "CIV_F"])) then {
+				    private _acceptedFactions = _factionFilter splitString ", ;";
+				    if (not (_currentFaction in _acceptedFactions)) then {
+				        continue;
+				    };
+				};
 
 				// up to 40 options, up to 250 values per option
 				private _valueIdcBase = _idcShift + 9900000 + (_optionIndex * 1000) + (_valueIndex * 4);
