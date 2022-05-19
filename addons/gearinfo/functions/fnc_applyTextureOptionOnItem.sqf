@@ -10,6 +10,11 @@ private _model = [_classRoot, _config] call FUNC(getConfigModel);
 if ( _model != _targetModel ) exitWith {};
 
 private _optionDefintion = configFile >> "XtdGearModels" >> _classRoot >> _model >> _textureOption;
+
+if (isArray(_optionDefintion >> "hiddenselections")) exitWith {
+	[_classRoot, _target, _config, _value, _optionDefintion] call FUNC(applyTextureOptionOnItemArray);
+};
+
 private _hiddenselection = _optionDefintion >> "hiddenselection";
 private _hiddenSelectionIndex = -1;
 if ( isNumber _hiddenselection ) then {
@@ -49,10 +54,6 @@ if ( _texture == "!DEFAULT!" ) then {
 	if ( count _hiddenSelectionsMaterials >  _hiddenSelectionIndex ) then {
 		_material = _hiddenSelectionsMaterials select _hiddenSelectionIndex;
 	};
-};
-
-if ( _texture == "!INSIGNIA!" ) then {
-
 };
 
 if ( _material != "" ) then {
