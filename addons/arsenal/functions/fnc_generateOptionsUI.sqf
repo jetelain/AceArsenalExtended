@@ -12,13 +12,6 @@ GVAR(valuesIdc) = [];
 
 if ( _selectedModel != "" ) then {
 
-	_listControl ctrlSetPositionH (safezoneH - 128.5 * GRID_H);
-	_configControl ctrlSetPositionY ((safezoneY + 14 * GRID_H) + (safezoneH - 124.5 * GRID_H));
-	_configControl ctrlSetPositionH (100 * GRID_H);
-	_configControl ctrlShow true; // ensures visible
-	_listControl ctrlCommit 0.1;
-	_configControl ctrlCommit 0.1;
-	
 	private _modelDefinition = configFile >> "XtdGearModels" >> _classRoot >> _selectedModel;
 
 
@@ -99,23 +92,19 @@ if ( _selectedModel != "" ) then {
 
 	} forEach ["options","textureoptions"];
 
+	private _adjustedHeight = 120 min (_posY + 10);
+
+	_listControl ctrlSetPositionH (safezoneH - (_adjustedHeight + 28.5) * GRID_H);
+    _configControl ctrlSetPositionY ((safezoneY + 14 * GRID_H) + (safezoneH - (_adjustedHeight + 24.5) * GRID_H));
+    _configControl ctrlSetPositionH (_adjustedHeight * GRID_H);
+    _configControl ctrlShow true; // ensures visibility
+    _listControl ctrlCommit 0.2;
+    _configControl ctrlCommit 0.2;
+
 } else {
 	_listControl ctrlSetPositionH (safezoneH - 24.5 * GRID_H);
 	_configControl ctrlSetPositionY ((safezoneY + 14 * GRID_H) + (safezoneH - 24.5 * GRID_H));
 	_configControl ctrlSetPositionH (0);
-	_listControl ctrlCommit 0.1;
-	_configControl ctrlCommit 0.1;
+	_listControl ctrlCommit 0.2;
+	_configControl ctrlCommit 0.2;
 };
-
-// workaround scrollbar issue
-[{
-	params ["_listControl", "_configControl"];
-	if ( GVAR(currentModel) != "" ) then {
-		_listControl ctrlSetPositionH (safezoneH - 128.5 * GRID_H);
-		_configControl ctrlSetPositionY ((safezoneY + 14 * GRID_H) + (safezoneH - 124.5 * GRID_H));
-		_configControl ctrlSetPositionH (100 * GRID_H);
-		_listControl ctrlCommit 0;
-		_configControl ctrlCommit 0;
-	};
-}, [_listControl,_configControl], 1] call CBA_fnc_waitAndExecute;
-

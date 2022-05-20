@@ -85,20 +85,10 @@ class ace_arsenal_display {
                     w = QUOTE(80 * GRID_W);
                     h = QUOTE(4 * GRID_H);
                 };
-
-
-
-
             };
-
         };
-
-
 	};
-	
-
 };
-
 
 class GVAR(configTitle): RscText {
     sizeEx = QUOTE(5 * GRID_H);
@@ -109,6 +99,7 @@ class GVAR(configTitle): RscText {
     w = QUOTE(80 * GRID_W);
     h = QUOTE(5 * GRID_H);
 };
+
 class GVAR(valueImage): RscPicture {
     text = "";
     x = QUOTE(0 * GRID_W);
@@ -119,7 +110,8 @@ class GVAR(valueImage): RscPicture {
     style = 144;
     tileH = 0.5128;
     tileW = 1;
-}; 
+};
+
 class GVAR(valueImageCenterSquare): RscPictureKeepAspect {
     text = "";
     x = QUOTE(0 * GRID_W);
@@ -127,7 +119,8 @@ class GVAR(valueImageCenterSquare): RscPictureKeepAspect {
     w = QUOTE(19.5 * GRID_W);
     h = QUOTE(10 * GRID_H);
     colorBackground[] = {0,0,0,1};
-}; 
+};
+
 class GVAR(valueCheckbox): RscCheckBox {
     x = QUOTE(0 * GRID_W);
     y = QUOTE(0 * GRID_H);
@@ -143,7 +136,10 @@ class GVAR(valueCheckbox): RscCheckBox {
 	texturePressedUnchecked = QPATHTOF(data\ui\unchecked.paa);
 	textureDisabledChecked = QPATHTOF(data\ui\disabled.paa);
 	textureDisabledUnchecked = QPATHTOF(data\ui\disabled.paa);
+	colorDisabled[] = {0.1, 0.1, 0.1, 0.5};
+    colorBackgroundDisabled[] = {0.6, 0.6, 0.6, 0.25};
 };
+
 class GVAR(valueButton): RscButton {
     text = "Label";
     sizeEx = QUOTE(5 * GRID_H);
@@ -152,7 +148,7 @@ class GVAR(valueButton): RscButton {
     w = QUOTE(19.5 * GRID_W);
     h = QUOTE(10 * GRID_H);
 
-    colorText[] = {255,255,255,1};
+    colorText[] = {255, 255, 255, 1};
     colorBackground[] = {0, 0, 0, 0};
     colorFocused[] = {0, 0, 0, 0};
     colorShadow[] = {0, 0, 0, 0};
