@@ -174,6 +174,44 @@ class CfgWeapons
 };
 ```
 
+A texture option may impact multiple hidden selections. Instead of `hiddenselection` + `texture`, specify `hiddenselections` + `textures`.
+
+```c++
+class XtdGearModels
+{
+    class CfgWeapons 
+    {
+        class my_model
+        {
+            // ...
+            textureOptions = { "bloodtype" };
+            class bloodtype
+            {
+                label = "Blood type";
+                values[] = {"A", "B", "AB", "O"};
+                hiddenselections[] = { "selectionName1", "selectionName2" };
+                class A
+                {
+                    textures[] = { "path\to\texture.paa", "" };
+                    // materials[] = { "path\to\material.rvmat", "" }; (if you use material on an option, you MUST set it on all options to avoid undefined behavior)
+                };
+                class B
+                {
+                    textures[] = { "", "path\to\texture.paa" };
+                    // materials[] = { "", "path\to\material.rvmat" }; 
+                };
+                class AB
+                {
+                    textures[] = { "path\to\texture.paa", "path\to\texture.paa" };
+                    // materials[] = { "path\to\material.rvmat", "path\to\material.rvmat" }; 
+                };
+                // ...
+            };
+        };
+    };
+};
+```
+
 ### The bluit-in approach
 
 You can builtin configuration for ACE3 Arsenal Extended within your mod, without creating a dependency. You may duplicate all what you need, or use conventional names.
