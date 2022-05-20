@@ -9,37 +9,41 @@ if ( _type == "textureoptions" ) exitWith {
 	[_display] call FUNC(refreshCheckboxes);
 };
 
-if ( (GVAR(currentModelOptions) select _optionIndex) != _valueName) then {
+if ((GVAR(currentModelOptions) select _optionIndex) == _valueName) exitWith {};
 
-	private _options = +GVAR(currentModelOptions);
-	_options set [_optionIndex, _valueName];
+private _options = +GVAR(currentModelOptions);
+private _optionSet = [_optionIndex, _valueName];
+_options set _optionSet;
 
-	private _result = [GVAR(currentConfig), GVAR(currentModel), _options] call EFUNC(gearinfo,findConfig);
+private _match = [GVAR(currentConfig), GVAR(currentModel), _options] call EFUNC(gearinfo,findConfig);
 
-	if (!isNull _result) then{
-		private _ctrlPanel = _display displayCtrl IDC_leftTabContent;
-		private _i = lbCurSel _ctrlPanel;
-		if ( _i != -1 ) then {
-			// Update filtered VirtualItems
-			private _previous = _ctrlPanel lbData _i;
-			private _newValue = configName _result;
-			(call FUNC(leftPanelConfig)) params ["", "_virt", "_virtSub"];
-			private _virtItems = GVAR(filteredVirtualItems) select _virt;
-			if ( _virtSub != -1 ) then {
-				_virtItems = _virtItems select _virtSub;
-			};
-			private _prevIndex = _virtItems find _previous;
-			_virtItems set [_prevIndex, _newValue];
-
-			// Change and propagate selected value
-			_ctrlPanel lbSetData [_i, _newValue];
-			_ctrlPanel lbSetText [_i, getText (_result >> "displayName")];
-			[_ctrlPanel, _i] call FUNC(onSelChangedLeft);
-		} else {
-			ERROR("No selected value ?!?");
-		};
-	} else {
-		ERROR_2("Nothing found for %1 %2", GVAR(currentModel), _options);
-	};
-
+if (isNull _match) then {
+    _match = [GVAR(currentConfig), GVAR(currentModel), _optionSet] call EFUNC(gearinfo,findConfigByValue);
 };
+
+if (isNull _match) exitWith {
+    ERROR_2("Nothing found for %1 %2", GVAR(currentModel), _options);
+};
+
+private _ctrlPanel = _display displayCtrl IDC_leftTabContent;
+private _i = lbCurSel _ctrlPanel;
+
+if ( _i == -1 ) exitWith {
+    ERROR("No selected value ?!?");
+};
+
+// Update filtered VirtualItems
+private _previous = _ctrlPanel lbData _i;
+private _newValue = configName _match;
+(call FUNC(leftPanelConfig)) params ["", "_virt", "_virtSub"];
+private _virtItems = GVAR(filteredVirtualItems) select _virt;
+if ( _virtSub != -1 ) then {
+    _virtItems = _virtItems select _virtSub;
+};
+private _prevIndex = _virtItems find _previous;
+_virtItems set [_prevIndex, _newValue];
+
+// Change and propagate selected value
+_ctrlPanel lbSetData [_i, _newValue];
+_ctrlPanel lbSetText [_i, getText (_match >> "displayName")];
+[_ctrlPanel, _i] call FUNC(onSelChangedLeft);

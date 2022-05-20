@@ -18,9 +18,8 @@ if ( _index == -1 ) exitWith {
 };
 
 private _selectedConfig = ace_arsenal_currentItems select _index;
-private _selectedModel = "";
-if ( _selectedConfig != "" ) then {
-	_selectedModel = [_classRoot, _selectedConfig] call EFUNC(gearinfo,getConfigModel);
+private _selectedModel = if (_selectedConfig == "") then { "" } else {
+	[_classRoot, _selectedConfig] call EFUNC(gearinfo,getConfigModel)
 };
 
 if ( _selectedModel != GVAR(currentModel) ) then {
@@ -29,9 +28,9 @@ if ( _selectedModel != GVAR(currentModel) ) then {
 	GVAR(currentConfig) = _classRoot;
 };
 
-if ( _selectedModel != "" ) then {
-	GVAR(currentModelOptions) = [_classRoot, _selectedConfig, _selectedModel] call EFUNC(gearinfo,getConfigOptions);
-	[_display] call FUNC(refreshCheckboxes);
+if (_selectedModel == "") exitWith {};
 
-	[ace_arsenal_center] call EFUNC(gearinfo,applyTextureOptions); 
-};
+GVAR(currentModelOptions) = [_classRoot, _selectedConfig, _selectedModel] call EFUNC(gearinfo,getConfigOptions);
+[_display] call FUNC(refreshCheckboxes);
+
+[ace_arsenal_center] call EFUNC(gearinfo,applyTextureOptions);

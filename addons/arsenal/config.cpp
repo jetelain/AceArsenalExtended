@@ -148,12 +148,12 @@ class GVAR(valueButton): RscButton {
     w = QUOTE(19.5 * GRID_W);
     h = QUOTE(10 * GRID_H);
 
-    colorText[] = {255, 255, 255, 1};
-    colorBackground[] = {0, 0, 0, 0};
-    colorFocused[] = {0, 0, 0, 0};
-    colorShadow[] = {0, 0, 0, 0};
-    colorBorder[] = {0, 0, 0, 0};
-    colorBackgroundActive[] = {0, 0, 0, 0};
-    colorDisabled[] = {0, 0, 0, 0};
-    colorBackgroundDisabled[] = {0, 0, 0, 0};
+    colorText[] = {EXACT_MATCH_TEXT_COLOR};
+    colorBackground[] = {INVISIBLE_COLOR};
+    colorFocused[] = {INVISIBLE_COLOR};
+    colorShadow[] = {INVISIBLE_COLOR};
+    colorBorder[] = {INVISIBLE_COLOR};
+    colorBackgroundActive[] = {ACTIVE_BG_COLOR};
+    colorDisabled[] = {DISABLED_TEXT_COLOR};
+    colorBackgroundDisabled[] = {INVISIBLE_COLOR};
 };

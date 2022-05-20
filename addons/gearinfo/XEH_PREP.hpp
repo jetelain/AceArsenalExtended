@@ -1,4 +1,6 @@
+PREP(variations);
 PREP(findConfig);
+PREP(findConfigByValue);
 PREP(findConfigName);
 PREP(getConfigOptions);
 PREP(getConfigModel);

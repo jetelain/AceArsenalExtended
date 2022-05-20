@@ -24,6 +24,7 @@ private _options = [];
 	private _optionIcon = [_optionDef1, _optionDef2, "icon", ""] call READ_TEXT;
 	private _optionInGame = [_optionDef1, _optionDef2, "changeingame", 0] call READ_NUMBER;
 	private _optionDelay = [_optionDef1, _optionDef2, "changedelay", 2] call READ_NUMBER;
+	private _alwaysSelectable = 1 == ([_optionDef1, _optionDef2, "alwaysSelectable", 0] call READ_NUMBER);
 	private _values = [];
 	private _optionCenterImage = getNumber (_optionDef1 >> "centerImage");
 	private _optionValues = getArray (_optionDef1 >> "values");
@@ -53,7 +54,7 @@ private _options = [];
 
 	} forEach _optionValues;
 
-	_options pushBack [_optionName, _optionLabel, _optionIcon, _optionInGame, _values, _optionCenterImage, _requires];
+	_options pushBack [_optionName, _optionLabel, _optionIcon, _optionInGame, _values, _alwaysSelectable, _optionCenterImage, _requires];
 	
 } forEach _optionsNames;
 
