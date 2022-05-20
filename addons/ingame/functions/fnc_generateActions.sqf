@@ -20,7 +20,7 @@ private _actions = [];
 				FUNC(changeGear),
 				{true},
 				{},
-				[_player, _layout, _x select 0, _x select 2, _giveBack, _consume]
+				[_player, _layout, _x select 0, _x select 2, _giveBack, _consume, _x select 4]
 			] call ace_interact_menu_fnc_createAction, [], _target];
 	};
 } forEach _optionActions;

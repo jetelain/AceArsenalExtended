@@ -64,6 +64,7 @@ class XtdGearModels
                 label = "Option A label";
                 values[] = {"value1", "value2"};
                 changeingame = 0; // 1 if value can be changed in game via ACE menu
+                // changedelay = 2; If can changeingame, wait delay before change is effective (can be 0, 0.1, or more)
                 // icon = "xxx"; If can changeingame, action group icon in ACE menu
                 class value1
                 {
@@ -73,6 +74,7 @@ class XtdGearModels
                     // icon = "xxx"; If can changeingame, action icon in ACE menu
                     // actionlabel = "xxx"; If can changeingame, action label in ACE menu
                     // itemingame = "xxx"; If can changeingame, requires this item to be present in inventory. Item will be removed from inventory (added back if an other value is choosen)
+                    // changedelay = (inherited by default); If can changeingame, wait delay before change is effective
                 };
                 class value2
                 {

@@ -36,6 +36,7 @@ READ(Number)
 	private _optionLabel = [_optionDef1, _optionDef2, "label", _optionName] call _readText;
 	private _optionIcon = [_optionDef1, _optionDef2, "icon", ""] call _readText;
 	private _optionInGame = [_optionDef1, _optionDef2, "changeingame", 0] call _readNumber;
+	private _optionDelay = [_optionDef1, _optionDef2, "changedelay", 2] call _readNumber;
 	private _values = [];
 	private _optionCenterImage = getNumber (_optionDef1 >> "centerImage");
 	private _optionValues = getArray (_optionDef1 >> "values");
@@ -57,9 +58,10 @@ READ(Number)
 		private _valueDesc   = [_valueDef1, _valueDef2, "description", ""] call _readText;
 		private _valueAction = [_valueDef1, _valueDef2, "actionLabel", format ["%1 %2", _optionLabel, _valueLabel]] call _readText;
 		private _valueInGame = [_valueDef1, _valueDef2, "changeingame", _optionInGame] call _readNumber;
-		private _itemInGame =  [_valueDef1, _valueDef2, "itemingame", ""] call _readText;
+		private _valueDelay  = [_valueDef1, _valueDef2, "changedelay", _optionDelay] call _readNumber;
+		private _itemInGame  = [_valueDef1, _valueDef2, "itemingame", ""] call _readText;
 		
-		_values pushBack [_valueName, _valueLabel, _valueImage, _valueIcon, _valueDesc, _valueAction, _valueInGame, _itemInGame];
+		_values pushBack [_valueName, _valueLabel, _valueImage, _valueIcon, _valueDesc, _valueAction, _valueInGame, _itemInGame, _valueDelay];
 
 	} forEach _optionValues;
 

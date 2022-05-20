@@ -38,7 +38,7 @@ private _loadout = getUnitLoadout _player;
                     private _itemBack = "";
                     {
                         private _valueIndex = _foreachIndex;
-                        _x params ["_valueName", "", "", "_valueIcon", "", "_valueAction", "_valueInGame", "_itemInGame"];
+                        _x params ["_valueName", "", "", "_valueIcon", "", "_valueAction", "_valueInGame", "_itemInGame", "_valueDelay"];
                     
                         if ( _valueInGame > 0 ) then {
 
@@ -47,7 +47,7 @@ private _loadout = getUnitLoadout _player;
                                 _previewOptions set [_optionIndex, _valueName];
                                 private _previewConfig = [_classRoot, _model, _previewOptions] call EFUNC(gearinfo,findConfigName);
                                 if ( _previewConfig != "") then {
-                                    _optionActions pushBack [_valueAction, _valueIcon, _previewConfig, _itemInGame];
+                                    _optionActions pushBack [_valueAction, _valueIcon, _previewConfig, _itemInGame, _valueDelay];
                                 };
                             } else {
                                 _itemBack = _itemInGame;
