@@ -12,3 +12,5 @@
 #endif
 
 #include "\z\aceax\addons\main\script_macros.hpp"
+
+#include "helpers.hpp"
