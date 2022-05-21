@@ -51,9 +51,8 @@ if ( _selectedModel != "" ) then {
 				_x params ["_valueName", "_valueLabel", "_valueImage", "", "_valueDesc", "_factionFilter"];
 
 				// Hide value if faction is provided and doesn't match but ignore civil faction
-				if (_factionFilter != "" and not (_currentFaction in ["", "CIV_F"])) then {
-				    private _acceptedFactions = _factionFilter splitString ", ;";
-				    if (not (_currentFaction in _acceptedFactions)) then {
+				if (count _factionFilter != 0 and { not (_currentFaction in ["", "CIV_F"]) }) then {
+				    if (not (_currentFaction in _factionFilter)) then {
 				        continue;
 				    };
 				};

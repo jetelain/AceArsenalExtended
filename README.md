@@ -75,7 +75,7 @@ class XtdGearModels
                     // actionlabel = "xxx"; If can changeingame, action label in ACE menu 
                     // itemingame = "xxx"; If can changeingame, requires this item to be present in inventory. Item will be removed from inventory (added back if an other value is choosen)
                     // changedelay = (inherited by default); If can changeingame, wait delay before change is effective
-                    faction = "BLU_F, BLU_T_F, BLU_W_F"; // shows this value only for selected factions, identified by their A3 code (optional)
+                    faction[] = {"BLU_F", "BLU_T_F", "BLU_W_F"}; // shows this value only for selected factions, identified by their A3 code (optional)
                 };
                 class value2
                 {
