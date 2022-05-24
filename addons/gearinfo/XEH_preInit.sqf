@@ -4,6 +4,7 @@ ADDON = false;
 ADDON = true;
 
 GVAR(cache) = createHashMap;
+GVAR(weakMatchesCache) = createHashMap;
 
 #ifdef DEBUG_MODE_FULL
 [""] call FUNC(diag_detectErrors);
