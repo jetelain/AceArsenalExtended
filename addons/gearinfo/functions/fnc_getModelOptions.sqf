@@ -2,17 +2,19 @@
 
 params ["_classRoot", "_model", ["_modelDefinition", configNull], ["_kind", "options"]];
 
-// XXX: Add cache ?
-
-if ( isNull _modelDefinition ) then {
+if (isNull _modelDefinition) then {
 	_modelDefinition = configFile >> "XtdGearModels" >> _classRoot >> _model;
 };
 
-private _st = diag_tickTime;
+private _optionPath = _modelDefinition >> _kind;
 
-private _optionsNames = getArray ( _modelDefinition >> _kind );
+private _options = GVAR(optionCache) getOrDefault [_optionPath, []];
 
-private _options = [];
+if (count _options != 0) exitWith {
+    _options
+};
+
+private _optionsNames = getArray (_optionPath);
 
 {
 	private _optionName = _x;
@@ -57,5 +59,7 @@ private _options = [];
 	_options pushBack [_optionName, _optionLabel, _optionIcon, _optionInGame, _values, _alwaysSelectable, _optionCenterImage, _requires];
 	
 } forEach _optionsNames;
+
+GVAR(optionCache) set [_optionPath, _options];
 
 _options
