@@ -5,6 +5,7 @@ ADDON = true;
 
 GVAR(cache) = createHashMap;
 GVAR(optionCache) = createHashMap;
+GVAR(optionValueCache) = createHashMap;
 GVAR(weakMatchesCache) = createHashMap;
 
 #ifdef DEBUG_MODE_FULL

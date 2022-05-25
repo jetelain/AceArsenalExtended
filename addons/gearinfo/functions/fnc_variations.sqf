@@ -8,7 +8,7 @@ if (count _variations == 0) then {
 
 	_variations = createHashMap;
 	{
-		_x params ["_config","_configOptions"],
+		_x params ["_config","_configOptions"];
 		_variations set [_configOptions, _config];
 	} foreach ([_classRoot, _model] call FUNC(getModelConfigs));
 

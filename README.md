@@ -56,13 +56,15 @@ class XtdGearModels
             options[] = {"camo","optionA"};
             class camo // coventional name
             {
+                // Optionally, hand-pick selected values from the base class
+                // If values remains empty or undefined, the list of values is dynamically created
                 values[] = {"MTP", "Tropic"};
                 // all values already exists, no need to create subentries
             };
             class optionA
             {
                 label = "Option A label";
-                values[] = {"value1", "value2"};
+                values[] = {"value1"}; // Hand-pick a subset of values (optional)
                 changeingame = 0; // 1 if value can be changed in game via ACE menu
                 alwaysSelectable = 1; // allows the selection of the values even if there isn't an item with a complete match of options available, falling back to a weak match with this single value (optional)
                 // changedelay = 2; If can changeingame, wait delay before change is effective (can be 0, 0.1, or more)

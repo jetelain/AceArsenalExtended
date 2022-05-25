@@ -22,3 +22,5 @@ PREP(setUnitLoadout);
 
 PREP(isValidCfgWeapon);
 PREP(filterConfigEntries);
+
+PREP(optionValues);
