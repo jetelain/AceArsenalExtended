@@ -200,6 +200,7 @@ class XtdGearModels
 		{
 			label = "CBRN Suit";
 			author = "Bohemia Interactive";
+			enforceBlacklist = 1;
 			options[] = {"camo"};
 			class camo : CamoBase
 			{

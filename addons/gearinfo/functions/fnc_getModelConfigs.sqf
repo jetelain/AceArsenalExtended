@@ -2,21 +2,24 @@
 
 params ["_classRoot", "_model"];
 
-private _optionsNames = getArray (configFile >> "XtdGearModels" >> _classRoot >> _model >> "options");
+private _modelDefinition = configFile >> "XtdGearModels" >> _classRoot >> _model;
+private _optionsNames = [_modelDefinition, "options", []] call BIS_fnc_returnConfigEntry;
 
 private _allConfigs = [];
 
-private _configs = ("(getText (_x >> 'XtdGearInfo' >> 'model') == '"+_model+"') && " + QUOTE(CLASS_FILTER(_x))) configClasses (configFile >> _classRoot);
+private _configSelector = format ["(getText (_x >> 'XtdGearInfo' >> 'model') == '%1') && %2", _model, QUOTE(CLASS_FILTER(_x))];
+private _configs = _configSelector configClasses (configFile >> _classRoot);
 _configs = [_classRoot, _configs] call FUNC(filterConfigEntries);
 {
 	private _variation = _x;
 	_allConfigs pushBack [_variation, (_optionsNames apply { getText (_variation >> "XtdGearInfo" >> _x) })];
-} foreach _configs;
+} forEach _configs;
 
-_configs = ("getText (_x >> 'model') == '"+_model+"'") configClasses (configFile >> "XtdGearInfos" >> _classRoot);
+private _modelConfigSelector = format ["getText (_x >> 'model') == '%1'", _model];
+private _modelConfigs = _modelConfigSelector configClasses (configFile >> "XtdGearInfos" >> _classRoot);
 {
 	private _infos = _x;
 	_allConfigs pushBack [ configFile >> _classRoot >> (configName _infos) , (_optionsNames apply { getText (_infos >> _x) })];
-} foreach _configs;
+} forEach _modelConfigs;
 
 _allConfigs

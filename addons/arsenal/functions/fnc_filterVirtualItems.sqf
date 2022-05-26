@@ -18,6 +18,8 @@ GVAR(filteredVirtualItems) =
 
 GVAR(filteredVirtualItems) append (GVAR(initialVirtualItems) select [10, count GVAR(initialVirtualItems) - 10]);
 
+EGVAR(gearinfo,currentId) = hashValue GVAR(initialVirtualItems);
+
 {
 	_x params ["", "_virt", "_virtSub", "_cur", "_classRoot", "_label"];
 	
@@ -36,6 +38,7 @@ GVAR(filteredVirtualItems) append (GVAR(initialVirtualItems) select [10, count G
 		private _config = _x;
 
 		private _model = [_classRoot, _config] call EFUNC(gearinfo,getConfigModel);
+		[_classRoot, _model, _config] call EFUNC(gearinfo,cacheVirtualItems);
 		if ( _model != "" ) then {
 			if ( !(_model in _done) ) then {
 				_done set [_model, true];

@@ -4,6 +4,7 @@ PREP(findConfigByValue);
 PREP(findConfigName);
 PREP(getConfigOptions);
 PREP(getConfigModel);
+PREP(cacheVirtualItems);
 PREP(getModelOptions);
 PREP(diag_detectErrors);
 PREP(diag_fullReportExport);

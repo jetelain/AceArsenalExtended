@@ -3,10 +3,12 @@ ADDON = false;
 #include "XEH_PREP.hpp"
 ADDON = true;
 
-GVAR(cache) = createHashMap;
+GVAR(currentId) = "";
+GVAR(variationCache) = createHashMap;
 GVAR(optionCache) = createHashMap;
 GVAR(optionValueCache) = createHashMap;
 GVAR(weakMatchesCache) = createHashMap;
+GVAR(virtualItemConfigs) = createHashMap;
 
 #ifdef DEBUG_MODE_FULL
 [""] call FUNC(diag_detectErrors);

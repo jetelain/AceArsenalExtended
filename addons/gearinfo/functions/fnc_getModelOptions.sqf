@@ -6,7 +6,7 @@ if (isNull _modelDefinition) then {
 	_modelDefinition = configFile >> "XtdGearModels" >> _classRoot >> _model;
 };
 
-private _cacheKey = [_classRoot, _model, _kind];
+private _cacheKey = [GVAR(currentId), _classRoot, _model, _kind];
 private _options = GVAR(optionCache) getOrDefault [_cacheKey, []];
 
 if (count _options != 0) exitWith {
@@ -27,7 +27,7 @@ private _optionsNames = [_modelDefinition, _kind, []] call BIS_fnc_returnConfigE
 	private _optionDelay = [_optionDef1, _optionDef2, "changedelay", 2] call READ_NUMBER;
 	private _alwaysSelectable = 1 == ([_optionDef1, _optionDef2, "alwaysSelectable", 0] call READ_NUMBER);
 	private _optionCenterImage = getNumber (_optionDef1 >> "centerImage");
-	private _optionValues = [_classRoot, _model, _optionName] call FUNC(optionValues);
+	private _optionValues = [_classRoot, _model, _optionName, _optionIndex] call FUNC(optionValues);
 
 	private _requires = [];
 	if ( isArray (_optionDef1 >> "requires") ) then {

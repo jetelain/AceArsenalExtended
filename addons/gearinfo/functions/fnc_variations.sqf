@@ -2,17 +2,31 @@
 
 params ["_classRoot", "_model"];
 
-private _variations = GVAR(cache) getOrDefault [_model, []];
+private _cacheKey = [GVAR(currentId), _classRoot, _model];
+private _cached = GVAR(variationCache) getOrDefault [_cacheKey, []];
+if (count _cached > 0) exitWith { _cached };
 
-if (count _variations == 0) then {
+private _variations = createHashMap;
+private _modelDefinition = (configFile >> "XtdGearModels" >> _classRoot >> _model);
+private _enforceBlacklist = 1 == [_modelDefinition, "enforceBlacklist", 0] call BIS_fnc_returnConfigEntry;
+private _modelConfigs = [_classRoot, _model] call FUNC(getModelConfigs);
 
-	_variations = createHashMap;
-	{
-		_x params ["_config","_configOptions"];
-		_variations set [_configOptions, _config];
-	} foreach ([_classRoot, _model] call FUNC(getModelConfigs));
+{
+    _x params ["_config", "_configOptions"];
 
-	GVAR(cache) set [_model, _variations];
-};
+    if (_enforceBlacklist) then {
+        private _viConfigs = GVAR(virtualItemConfigs) getOrDefault [_cacheKey, []];
+        private _configName = configName _config;
+        if (not (_configName in _viConfigs)) then {
+            INFO_2("%1 not in %2",_configName,_viConfigs);
+            continue
+        };
+    };
+
+    _variations set [_configOptions, _config];
+
+} forEach _modelConfigs;
+
+GVAR(variationCache) set [_cacheKey, _variations];
 
 _variations

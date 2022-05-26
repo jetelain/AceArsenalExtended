@@ -2,7 +2,7 @@
 
 params ["_classRoot", "_model", "_optionIndex", "_valueName"];
 
-private _cacheKey = [_classRoot, _model, _optionIndex, _valueName];
+private _cacheKey = [GVAR(currentId), _classRoot, _model, _optionIndex, _valueName];
 private _getter = { GVAR(weakMatchesCache) get _cacheKey };
 if (not isNil _getter) exitWith _getter;
 

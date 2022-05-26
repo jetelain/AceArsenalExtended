@@ -53,6 +53,7 @@ class XtdGearModels
         {
             label = "Model label";
             author = "My name";
+            enforceBlacklist = 1; // Only show the items from the virtual arsenal that are whitelisted or don't belong to the blacklist (optional)
             options[] = {"camo","optionA"};
             class camo // coventional name
             {
