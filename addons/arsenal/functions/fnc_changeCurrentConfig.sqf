@@ -12,13 +12,12 @@ if ( _type == "textureoptions" ) exitWith {
 if ((GVAR(currentModelOptions) select _optionIndex) == _valueName) exitWith {};
 
 private _options = +GVAR(currentModelOptions);
-private _optionSet = [_optionIndex, _valueName];
-_options set _optionSet;
+_options set [_optionIndex, _valueName];
 
 private _match = [GVAR(currentConfig), GVAR(currentModel), _options] call EFUNC(gearinfo,findConfig);
 
 if (isNull _match) then {
-    _match = [GVAR(currentConfig), GVAR(currentModel), _optionSet] call EFUNC(gearinfo,findConfigByValue);
+    _match = [GVAR(currentConfig), GVAR(currentModel), _optionIndex, _valueName] call EFUNC(gearinfo,findConfigByValue);
 };
 
 if (isNull _match) exitWith {
