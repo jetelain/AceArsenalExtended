@@ -21,8 +21,7 @@ private _options = [_config, _model, _modelDefinition, "options"] call EFUNC(gea
         private _valueIdcBase = 9900000 + (_optionIndex * 1000) + (_valueIndex * 4);
 
         private _previewOptions = +GVAR(currentModelOptions);
-        private _optionSet = [_optionIndex, _valueName];
-        _previewOptions set _optionSet;
+        _previewOptions set [_optionIndex, _valueName];
 
         private _ctrl = _display displayCtrl (_valueIdcBase + 1);
         private _button = _display displayCtrl (_valueIdcBase + 2);
@@ -32,7 +31,7 @@ private _options = [_config, _model, _modelDefinition, "options"] call EFUNC(gea
         // If always selectable is enabled, only grey out the button as long as there is a weak config match (i.e. a superset of perfect) available
         private _enabled = if (not _alwaysSelectable) then { _exactMatch } else {
             if (_exactMatch) then { true } else {
-                not isNull ([_config, _model, _optionSet] call EFUNC(gearinfo,findConfigByValue))
+                not isNull ([_config, _model, _optionIndex, _valueName] call EFUNC(gearinfo,findConfigByValue))
             }
         };
 
