@@ -24,9 +24,10 @@ private _optionValues = if (count _definedOptionValues > 0) then { _definedOptio
 
     private _subClassNames = _classPaths apply { _x call Bis_fnc_getCfgSubClasses };
     private _allValues = flatten _subClassNames;
+    private _dedupedValues = _allValues arrayIntersect _allValues;
 
-    if (_optionIndex < 0 or not _enforceBlacklist) then { _allValues } else {
-        _allValues select {
+    if (_optionIndex < 0 or not _enforceBlacklist) then { _dedupedValues } else {
+        _dedupedValues select {
             private _valueName = _x;
             private _unused = isNull ([_classRoot, _model, _optionIndex, _valueName] call FUNC(findConfigByValue));
             not _unused
