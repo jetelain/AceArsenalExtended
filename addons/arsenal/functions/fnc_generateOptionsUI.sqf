@@ -41,8 +41,10 @@ private _posY = 12;
         _ctrl ctrlSetText _optionLabel;
         _ctrl ctrlCommit 0;
 
-        private _posX = 0;
+        private _posX = 1;
         _posY = _posY + 6;
+
+        private _singleOption = count _values <= 1;
 
         {
             private _valueIndex = _foreachIndex;
@@ -57,33 +59,43 @@ private _posY = 12;
 
             GVAR(idcToConfig) set [_valueIdcBase, [_optionIndex, _optionName, _valueIndex, _valueName, _kind]];
 
-            private _ctrl = _display ctrlCreate [ if (_optionCenterImage > 0) then { QGVAR(valueImageCenterSquare) } else { QGVAR(valueImage) }, _valueIdcBase, _configControl];
-            _ctrl ctrlSetPosition [_posX * GRID_W, _posY * GRID_H];
-            _ctrl ctrlSetText _valueImage;
-            _ctrl ctrlCommit 0;
+            private _imagePos = [[_posX * GRID_W, _posY * GRID_H], [60 * GRID_W, (_posY - 5) * GRID_H]] select _singleOption;
 
-            _ctrl = _display ctrlCreate [QGVAR(valueCheckbox), _valueIdcBase + 1, _configControl];
-            _ctrl ctrlSetPosition [_posX * GRID_W, _posY * GRID_H];
-            _ctrl ctrlCommit 0;
+            private _imageTileCtrlClass = [QGVAR(valueImage), QGVAR(valueImageCenterSquare)] select (_optionCenterImage > 0);
+            private _imageTileCtrl = _display ctrlCreate [_imageTileCtrlClass, _valueIdcBase, _configControl];
+            _imageTileCtrl ctrlSetPosition _imagePos;
+            _imageTileCtrl ctrlSetText _valueImage;
+            _imageTileCtrl ctrlCommit 0;
 
-            _ctrl = _display ctrlCreate [QGVAR(valueButton), _valueIdcBase + 2, _configControl];
-            _ctrl ctrlSetPosition [_posX * GRID_W, _posY * GRID_H];
-            _ctrl ctrlSetText _valueLabel;
-            _ctrl ctrlSetTooltip _valueDesc;
-            _ctrl ctrlAddEventHandler ["ButtonClick", { [ctrlParent (_this select 0), _this select 0] call FUNC(onValueButton); }];
-            _ctrl ctrlCommit 0;
+            private _checkBoxCtrlClass = [QGVAR(valueCheckbox), QGVAR(singleOptionCheckbox)] select _singleOption;
+            private _checkBoxCtrl = _display ctrlCreate [_checkBoxCtrlClass, _valueIdcBase + 1, _configControl];
+            _checkBoxCtrl ctrlSetPosition _imagePos;
+            _checkBoxCtrl ctrlEnable (not _singleOption);
+            _checkBoxCtrl ctrlCommit 0;
 
-            _posX = _posX + 20;
-            if (_posX == 80) then
+            private _textCtrlClass = [QGVAR(valueButton), QGVAR(singleOptionText)] select _singleOption;
+            private _textCtrl = _display ctrlCreate [_textCtrlClass, _valueIdcBase + 2, _configControl];
+            _textCtrl ctrlSetPosition [_posX * GRID_W, _posY * GRID_H];
+            _textCtrl ctrlSetText _valueLabel;
+            _textCtrl ctrlSetTooltip _valueDesc;
+            if (not _singleOption) then {
+                _textCtrl ctrlAddEventHandler ["ButtonClick", { [ctrlParent (_this select 0), _this select 0] call FUNC(onValueButton); }];
+            };
+            _textCtrl ctrlCommit 0;
+
+            _posX = _posX + 19.5;
+            if (_posX >= 78) then
             {
-                _posX = 0;
+                _posX = 1;
                 _posY = _posY + 10;
             };
         } forEach _values;
 
-        if (_posX != 0) then
-        {
+        if (_posX > 2) then {
             _posY = _posY + 10;
+        };
+        if (_singleOption) then {
+            _posY = _posY - 4;
         };
         _posY = _posY + 2;
     } forEach _options;

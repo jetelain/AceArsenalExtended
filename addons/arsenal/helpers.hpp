@@ -12,4 +12,12 @@
     cfgCtrl ctrlSetPositionY ((safezoneY + 14 * GRID_H) + (safezoneH - (24.5##configOffsetY) * GRID_H)); \
     cfgCtrl ctrlSetPositionH (configHeight); \
     listCtrl ctrlCommit 0.2; \
-    cfgCtrl ctrlCommit 0.2;
+    cfgCtrl ctrlCommit 0.2
+
+#define VALUE_TILE_SIZE_DEFAULT CTRL_POS_SIZE(0,0,19,10)
+
+#define CTRL_POS_SIZE(xVal,yVal,wVal,hVal) \
+    x = QUOTE(xVal * GRID_W); \
+    y = QUOTE(yVal * GRID_H); \
+    w = QUOTE(wVal * GRID_W); \
+    h = QUOTE(hVal * GRID_H)

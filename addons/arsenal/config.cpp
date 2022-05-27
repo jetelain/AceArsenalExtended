@@ -44,11 +44,8 @@ class ace_arsenal_display {
             onKillFocus = QUOTE(ace_arsenal_leftTabFocus = false);
             colorTextRight[] = {0.5,0.5,0.5,1};
             colorSelect2Right[] = {0,0,0,1};
-            x = QUOTE(safezoneX + 13 * GRID_W);
-            y = QUOTE(safezoneY + 14 * GRID_H);
-            w = QUOTE(80 * GRID_W);
-            h = QUOTE(safezoneH - 24.5 * GRID_H);
             sizeEx = QUOTE(7 * GRID_H);
+            CTRL_POS_SIZE(safezoneX + 13,safezoneY + 14,80,safezoneH - 24.5);
         };
 
 
@@ -56,11 +53,8 @@ class ace_arsenal_display {
             idc = 9990000;
 
             colorBackground[]={255,255,255,255};
-            x = QUOTE(safezoneX + 13 * GRID_W);
-            y = QUOTE((safezoneY + 14 * GRID_H) + (safezoneH - 24.5 * GRID_H));
-            w = QUOTE(80 * GRID_W);
-            h = 0;
             sizeEx = QUOTE(7 * GRID_H);
+            CTRL_POS_SIZE(safezoneX + 13,safezoneY + safezoneH + -10.5,80,0);
 
             class controls {
                 
@@ -69,10 +63,7 @@ class ace_arsenal_display {
                     sizeEx = QUOTE(7 * GRID_H);
                     shadow = 0;
                     text = "Label";
-                    x = QUOTE(0 * GRID_W);
-                    y = QUOTE(0 * GRID_H);
-                    w = QUOTE(80 * GRID_W);
-                    h = QUOTE(7 * GRID_H);
+                    CTRL_POS_SIZE(0,0,80,7);
                 };
 
                 class ModTitle: RscText {
@@ -80,10 +71,7 @@ class ace_arsenal_display {
                     sizeEx = QUOTE(4 * GRID_H);
                     shadow = 0;
                     text = "Author";
-                    x = QUOTE(0 * GRID_W);
-                    y = QUOTE(7 * GRID_H);
-                    w = QUOTE(80 * GRID_W);
-                    h = QUOTE(4 * GRID_H);
+                    CTRL_POS_SIZE(1,7,78,4);
                 };
             };
         };
@@ -94,38 +82,25 @@ class GVAR(configTitle): RscText {
     sizeEx = QUOTE(5 * GRID_H);
     shadow = 0;
     text = "Label";
-    x = QUOTE(0 * GRID_W);
-    y = QUOTE(0 * GRID_H);
-    w = QUOTE(80 * GRID_W);
-    h = QUOTE(5 * GRID_H);
+    CTRL_POS_SIZE(0,0,80,5);
 };
 
 class GVAR(valueImage): RscPicture {
     text = "";
-    x = QUOTE(0 * GRID_W);
-    y = QUOTE(0 * GRID_H);
-    w = QUOTE(19.5 * GRID_W);
-    h = QUOTE(10 * GRID_H);
     colorBackground[] = {0,0,0,1};
     style = 144;
-    tileH = 0.5128;
+    tileH = 0.5;
     tileW = 1;
+    VALUE_TILE_SIZE_DEFAULT;
 };
 
 class GVAR(valueImageCenterSquare): RscPictureKeepAspect {
     text = "";
-    x = QUOTE(0 * GRID_W);
-    y = QUOTE(0 * GRID_H);
-    w = QUOTE(19.5 * GRID_W);
-    h = QUOTE(10 * GRID_H);
     colorBackground[] = {0,0,0,1};
+    VALUE_TILE_SIZE_DEFAULT;
 };
 
 class GVAR(valueCheckbox): RscCheckBox {
-    x = QUOTE(0 * GRID_W);
-    y = QUOTE(0 * GRID_H);
-    w = QUOTE(19.5 * GRID_W);
-    h = QUOTE(10 * GRID_H);
 	textureChecked = QPATHTOF(data\ui\checked.paa);
 	textureUnchecked = QPATHTOF(data\ui\unchecked.paa);
 	textureFocusedChecked = QPATHTOF(data\ui\checked.paa);
@@ -138,15 +113,13 @@ class GVAR(valueCheckbox): RscCheckBox {
 	textureDisabledUnchecked = QPATHTOF(data\ui\disabled.paa);
 	colorDisabled[] = {0.1, 0.1, 0.1, 0.5};
     colorBackgroundDisabled[] = {0.6, 0.6, 0.6, 0.25};
+    VALUE_TILE_SIZE_DEFAULT;
 };
 
 class GVAR(valueButton): RscButton {
     text = "Label";
     sizeEx = QUOTE(5 * GRID_H);
-    x = QUOTE(0 * GRID_W);
-    y = QUOTE(0 * GRID_H);
-    w = QUOTE(19.5 * GRID_W);
-    h = QUOTE(10 * GRID_H);
+    VALUE_TILE_SIZE_DEFAULT;
 
     colorText[] = {EXACT_MATCH_TEXT_COLOR};
     colorBackground[] = {INVISIBLE_COLOR};
@@ -156,4 +129,17 @@ class GVAR(valueButton): RscButton {
     colorBackgroundActive[] = {ACTIVE_BG_COLOR};
     colorDisabled[] = {DISABLED_TEXT_COLOR};
     colorBackgroundDisabled[] = {INVISIBLE_COLOR};
+};
+
+class GVAR(singleOptionText): RscText {
+    CTRL_POS_SIZE(0,0,58,5);
+    sizeEx = QUOTE(4.8 * GRID_H);
+    shadow = 0;
+};
+
+class GVAR(singleOptionCheckbox): GVAR(valueCheckbox) {
+    colorDisabled[] = {WEAK_MATCH_TEXT_COLOR};
+    colorBackgroundDisabled[] = {WEAK_MATCH_BG_COLOR};
+    textureDisabledChecked = QPATHTOF(data\ui\checked.paa);
+    textureDisabledUnchecked = QPATHTOF(data\ui\checked.paa);
 };

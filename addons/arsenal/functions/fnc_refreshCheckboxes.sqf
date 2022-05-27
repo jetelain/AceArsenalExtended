@@ -14,6 +14,10 @@ private _options = [_config, _model, _modelDefinition, "options"] call EFUNC(gea
     _x params  ["_optionName", "", "", "", "_values", "_alwaysSelectable"];
     private _currentValue = GVAR(currentModelOptions) select _optionIndex;
 
+    if (count _values <= 1) then {
+        continue;
+    };
+
     {
         private _valueIndex = _foreachIndex;
         _x params ["_valueName"];
@@ -23,9 +27,6 @@ private _options = [_config, _model, _modelDefinition, "options"] call EFUNC(gea
         private _previewOptions = +GVAR(currentModelOptions);
         _previewOptions set [_optionIndex, _valueName];
 
-        private _ctrl = _display displayCtrl (_valueIdcBase + 1);
-        private _button = _display displayCtrl (_valueIdcBase + 2);
-
         private _exactMatch = not isNull ([_config, _model, _previewOptions] call EFUNC(gearinfo,findConfig));
 
         // If always selectable is enabled, only grey out the button as long as there is a weak config match (i.e. a superset of perfect) available
@@ -34,6 +35,8 @@ private _options = [_config, _model, _modelDefinition, "options"] call EFUNC(gea
                 not isNull ([_config, _model, _optionIndex, _valueName] call EFUNC(gearinfo,findConfigByValue))
             }
         };
+
+        private _button = _display displayCtrl (_valueIdcBase + 2);
 
         if (_alwaysSelectable) then {
             private _bgColor = [[WEAK_MATCH_BG_COLOR], [INVISIBLE_COLOR]] select _exactMatch;
@@ -45,9 +48,10 @@ private _options = [_config, _model, _modelDefinition, "options"] call EFUNC(gea
         _button ctrlEnable _enabled;
         _button ctrlCommit 0.1;
 
-        _ctrl cbSetChecked (_valueName == _currentValue);
-        _ctrl ctrlEnable _enabled;
-        _ctrl ctrlCommit 0;
+        private _checkBoxCtrl = _display displayCtrl (_valueIdcBase + 1);
+        _checkBoxCtrl cbSetChecked (_valueName == _currentValue);
+        _checkBoxCtrl ctrlEnable _enabled;
+        _checkBoxCtrl ctrlCommit 0;
 
     } forEach _values;
 
@@ -58,8 +62,12 @@ private _textureoptions = [_config, _model, _modelDefinition, "textureoptions"] 
     private _optionIndex = _foreachIndex;
     _x params  ["_optionName", "", "", "", "_values", "", "", "_requires"];
     private _currentValue = [ace_arsenal_center, _model, _optionName] call EFUNC(gearinfo,getTextureOption);
-    private _enabled = true;
 
+    if (count _values <= 1) then {
+        continue;
+    };
+
+    private _enabled = true;
     {
         _x params ["_reqIdx","_reqValue"];
         _enabled = _enabled && ((GVAR(currentModelOptions) select _reqIdx) == _reqValue);
