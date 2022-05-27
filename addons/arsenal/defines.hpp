@@ -1,6 +1,3 @@
-
-
-
 // Pixel grid
 #define pixelScale  0.25
 #define GRID_W (pixelW * pixelGridNoUIScale * pixelScale)
@@ -466,4 +463,3 @@ if (!isNil QGVAR(customRightPanelButtons)) then {\
     _contentPanelCtrl lnbSetPicture [[_newRow, 7], getText (configFile >> "cfgVehicles" >> ((_loadout select 5) select 0) >> "picture")];\
     _contentPanelCtrl lnbSetPicture [[_newRow, 8], getText (configFile >> "cfgWeapons" >> (_loadout select 6) >> "picture")];\
     _contentPanelCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "cfgGlasses" >> (_loadout select 7) >> "picture")];
-	

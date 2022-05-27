@@ -7,17 +7,18 @@ if (isNull _modelDefinition) then {
 };
 
 private _cacheKey = [GVAR(currentId), _classRoot, _model, _kind];
-private _options = GVAR(optionCache) getOrDefault [_cacheKey, []];
+private _cached = GVAR(optionCache) getOrDefault [_cacheKey, []];
+if (count _cached != 0) exitWith { _cached };
 
-if (count _options != 0) exitWith {
-    _options
-};
-
+private _currentFaction = if (not isNull player) then { faction player } else { "" };
+private _skipFactions = _currentFaction in ["", "CIV_F"];
 private _optionsNames = [_modelDefinition, _kind, []] call BIS_fnc_returnConfigEntry;
+private _optionIndex = -1;
 
-{
+private _options = _optionsNames apply {
+    INC(_optionIndex);
 	private _optionName = _x;
-	private _optionIndex = _foreachIndex;
+
 	private _optionDef1 = _modelDefinition >> _optionName;
 	private _optionDef2 = configFile >> "XtdGearModels" >> "Conventional" >> _optionName;
 
@@ -36,7 +37,6 @@ private _optionsNames = [_modelDefinition, _kind, []] call BIS_fnc_returnConfigE
 
 	private _values = _optionValues apply {
 		private _valueName = _x;
-		private _valueIndex = _foreachIndex;
 		private _valueDef1 = _optionDef1 >> _valueName;
 		private _valueDef2 = _optionDef2 >> _valueName;
 		
@@ -50,12 +50,23 @@ private _optionsNames = [_modelDefinition, _kind, []] call BIS_fnc_returnConfigE
 		private _valueDelay  = [_valueDef1, _valueDef2, "changedelay", _optionDelay] call READ_NUMBER;
 		private _itemInGame  = [_valueDef1, _valueDef2, "itemingame", ""] call READ_TEXT;
 
-		[_valueName, _valueLabel, _valueImage, _valueIcon, _valueDesc, _factionFilter, _valueAction, _valueInGame, _itemInGame, _valueDelay]
+		[_valueName, _valueLabel, _valueImage, _valueIcon, _valueDesc, _valueAction, _valueInGame, _itemInGame, _valueDelay]
 	};
 
-	_options pushBack [_optionName, _optionLabel, _optionIcon, _optionInGame, _values, _alwaysSelectable, _optionCenterImage, _requires];
-	
-} forEach _optionsNames;
+	private _filteredValues = if (_skipFactions) then { _values } else {
+	    _values select {
+            _x params ["_valueName"];
+
+            private _valueDef1 = _optionDef1 >> _valueName;
+            private _valueDef2 = _optionDef2 >> _valueName;
+            private _factionFilter =  [_valueDef1, _valueDef2, "faction", []] call READ_ARRAY;
+
+            count _factionFilter == 0 or { _currentFaction in _factionFilter }
+        }
+    };
+
+	[_optionName, _optionLabel, _optionIcon, _optionInGame, _filteredValues, _alwaysSelectable, _optionCenterImage, _requires]
+};
 
 GVAR(optionCache) set [_cacheKey, _options];
 

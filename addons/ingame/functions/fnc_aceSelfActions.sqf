@@ -38,7 +38,7 @@ private _loadout = getUnitLoadout _player;
                     private _itemBack = "";
                     {
                         private _valueIndex = _foreachIndex;
-                        _x params ["_valueName", "", "", "_valueIcon", "", "", "_valueAction", "_valueInGame", "_itemInGame", "_valueDelay"];
+                        _x params ["_valueName", "", "", "_valueIcon", "", "_valueAction", "_valueInGame", "_itemInGame", "_valueDelay"];
                     
                         if ( _valueInGame > 0 ) then {
 
