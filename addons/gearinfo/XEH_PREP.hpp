@@ -1,4 +1,4 @@
-PREP(variations);
+PREP(getVariations);
 PREP(findConfig);
 PREP(findConfigByValue);
 PREP(findConfigName);

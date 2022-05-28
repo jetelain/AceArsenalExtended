@@ -3,7 +3,7 @@ ADDON = false;
 #include "XEH_PREP.hpp"
 ADDON = true;
 
-GVAR(cache) = createHashMap;
+GVAR(variationCache) = createHashMap;
 GVAR(weakMatchesCache) = createHashMap;
 
 #ifdef DEBUG_MODE_FULL

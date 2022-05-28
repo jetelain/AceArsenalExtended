@@ -6,7 +6,7 @@ private _cacheKey = [_classRoot, _model, _optionIndex, _valueName];
 private _getter = { GVAR(weakMatchesCache) get _cacheKey };
 if (not isNil _getter) exitWith _getter;
 
-private _variations = [_classRoot, _model] call FUNC(variations);
+private _variations = [_classRoot, _model] call FUNC(getVariations);
 
 private _firstMatch = configNull;
 
