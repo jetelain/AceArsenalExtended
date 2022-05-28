@@ -18,7 +18,6 @@ private _modelConfigs = [_classRoot, _model] call FUNC(getModelConfigs);
         private _viConfigs = GVAR(virtualItemConfigs) getOrDefault [_cacheKey, []];
         private _configName = configName _config;
         if (not (_configName in _viConfigs)) then {
-            INFO_2("%1 not in %2",_configName,_viConfigs);
             continue
         };
     };
