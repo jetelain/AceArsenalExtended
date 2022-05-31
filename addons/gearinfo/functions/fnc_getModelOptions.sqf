@@ -28,7 +28,7 @@ private _options = _optionsNames apply {
 	private _optionDelay = [_optionDef1, _optionDef2, "changedelay", 2] call READ_NUMBER;
 	private _alwaysSelectable = 1 == ([_optionDef1, _optionDef2, "alwaysSelectable", 0] call READ_NUMBER);
 	private _optionCenterImage = getNumber (_optionDef1 >> "centerImage");
-	private _optionValues = [_classRoot, _model, _optionName, _optionIndex] call FUNC(optionValues);
+	private _optionValues = [_classRoot, _model, _optionName, _kind, _optionIndex] call FUNC(optionValues);
 
 	private _requires = [];
 	if ( isArray (_optionDef1 >> "requires") ) then {
@@ -53,7 +53,20 @@ private _options = _optionsNames apply {
 		[_valueName, _valueLabel, _valueImage, _valueIcon, _valueDesc, _valueAction, _valueInGame, _itemInGame, _valueDelay]
 	};
 
-	private _filteredValues = if (_skipFactions) then { _values } else {
+	private _filteredTextures = if (_kind != "textureoptions") then { _values } else {
+	    _values select {
+            _x params ["_valueName"];
+
+            private _valueDef1 = _optionDef1 >> _valueName;
+            private _valueDef2 = _optionDef2 >> _valueName;
+            private _texture  = [_valueDef1, _valueDef2, "texture", ""] call READ_TEXT;
+            private _textures  = [_valueDef1, _valueDef2, "textures", []] call READ_ARRAY;
+
+            count _textures != 0 or { _texture != "" }
+        }
+    };
+
+	private _filteredValues = if (_skipFactions) then { _filteredTextures } else {
 	    _values select {
             _x params ["_valueName"];
 
