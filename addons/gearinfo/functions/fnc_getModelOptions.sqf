@@ -60,8 +60,10 @@ private _options = _optionsNames apply {
 
             private _texture = [_valueCfgChain, "texture", ""] call READ_TEXT;
             private _textures = [_valueCfgChain, "textures", []] call READ_ARRAY;
+            private _material = [_valueCfgChain, "material", ""] call READ_TEXT;
+            private _materials = [_valueCfgChain, "materials", []] call READ_ARRAY;
 
-            count _textures != 0 or { _texture != "" }
+            count _textures != 0 or { _texture != "" or { count _materials != 0 or { _material != "" } }}
         }
     };
 
