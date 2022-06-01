@@ -21,10 +21,11 @@
 #define READ_ARRAY READ_TYPE(Array)
 
 #define READ_TYPE(ptype) { \
-	params ["_def1", "_def2", "_name", "_default"]; \
-	_def1 = _def1 >> _name; \
-	if ( is##ptype _def1 ) exitWith { get##ptype _def1; }; \
-	_def2 = _def2 >> _name; \
-	if ( is##ptype _def2 ) exitWith { get##ptype _def2; }; \
-	_default \
+	params ["_paths", "_name", "_default"]; \
+	private _result = _default; \
+	{ \
+	    private _attPath = _x >> _name; \
+        if ( is##ptype _attPath ) exitWith { _result = get##ptype _attPath; }; \
+	} forEach _paths; \
+	_result \
 }

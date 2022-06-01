@@ -1,4 +1,5 @@
 PREP(variations);
+PREP(chainedConfigs);
 PREP(findConfig);
 PREP(findConfigByValue);
 PREP(findConfigName);
