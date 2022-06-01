@@ -62,8 +62,10 @@ private _options = _optionsNames apply {
             private _textures = [_valueCfgChain, "textures", []] call READ_ARRAY;
             private _material = [_valueCfgChain, "material", ""] call READ_TEXT;
             private _materials = [_valueCfgChain, "materials", []] call READ_ARRAY;
+            private _all = [_texture, _material] + _textures + _materials;
+            private _existing = _all select { fileExists _x };
 
-            count _textures != 0 or { _texture != "" or { count _materials != 0 or { _material != "" } }}
+            count _existing != 0
         }
     };
 
