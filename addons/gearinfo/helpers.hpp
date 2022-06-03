@@ -1,5 +1,7 @@
 #define CLASS_FILTER(_x) ((getNumber (_x >> 'scope')) == 2)  && ( ! isNumber (_x >> 'scopeArsenal') || getNumber (_x >> 'scopeArsenal') == 2 )
 
+#define DEFAULT_TEXTURES QUOTE(!DEFAULT!)
+
 #define NATO_FACTION "BLU_F", "BLU_T_F", "BLU_W_F"
 #define CTRG_FACTION "BLU_CTRG_F"
 #define NATO_CTRG_COMBINED NATO_FACTION, CTRG_FACTION

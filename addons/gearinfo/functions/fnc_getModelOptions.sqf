@@ -63,14 +63,14 @@ private _options = _optionsNames apply {
             private _material = [_valueCfgChain, "material", ""] call READ_TEXT;
             private _materials = [_valueCfgChain, "materials", []] call READ_ARRAY;
             private _all = [_texture, _material] + _textures + _materials;
-            private _existing = _all select { fileExists _x };
+            private _existing = _all select { fileExists _x or { _x == DEFAULT_TEXTURES or { (_x find "#(") >= 0 } } };
 
             count _existing != 0
         }
     };
 
 	private _filteredValues = if (_skipFactions) then { _filteredTextures } else {
-	    _values select {
+	    _filteredTextures select {
             _x params ["_valueName"];
 
             private _valueCfgChain = _configChain apply { _x >> _valueName } select { not isNull _x };
