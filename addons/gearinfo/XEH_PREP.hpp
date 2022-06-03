@@ -12,7 +12,6 @@ PREP(diag_fullReportExport);
 
 PREP(applyTextureOption);
 PREP(applyTextureOptionOnItem);
-PREP(applyTextureOptionOnItemArray);
 PREP(applyTextureOptions);
 PREP(getTextureOption);
 PREP(getTextureOptions);
