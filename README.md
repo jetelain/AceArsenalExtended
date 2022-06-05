@@ -155,7 +155,7 @@ class XtdGearModels
                 class A
                 {
                     texture = "path\to\texture.paa";
-                    // material = "path\to\material.rvmat"; (if you use material on an option, you MUST set it on all options to avoid undefined behavior)
+                    // material = "path\to\material.rvmat";
                 };
                 // ...
             };
@@ -198,7 +198,7 @@ class XtdGearModels
                 class A
                 {
                     textures[] = { "path\to\texture.paa", "" };
-                    // materials[] = { "path\to\material.rvmat", "" }; (if you use material on an option, you MUST set it on all options to avoid undefined behavior)
+                    // materials[] = { "path\to\material.rvmat", "" };
                 };
                 class B
                 {

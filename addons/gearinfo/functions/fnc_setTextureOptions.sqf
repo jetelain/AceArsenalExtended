@@ -35,6 +35,6 @@ if ( _useInsignia ) then {
 		};
 	};
 } foreach [
-		["CfgWeapons",  _unit,              uniform _unit],
-		["CfgVehicles", unitBackpack _unit, backpack _unit]
-	];
+    ["CfgWeapons", _unit, uniform _unit],
+    ["CfgVehicles", unitBackpack _unit, backpack _unit]
+];
