@@ -11,7 +11,7 @@ private _cached = GVAR(optionCache) getOrDefault [_cacheKey, []];
 if (count _cached != 0) exitWith { _cached };
 
 private _currentFaction = if (not isNull player) then { faction player } else { "" };
-private _skipFactions = _currentFaction in ["", "CIV_F"];
+private _skipFactions = is3DEN or { _currentFaction in ["", "CIV_F"] };
 private _optionsNames = [_modelDefinition, _kind, []] call BIS_fnc_returnConfigEntry;
 private _optionIndex = -1;
 
@@ -69,7 +69,7 @@ private _options = _optionsNames apply {
         }
     };
 
-	private _filteredValues = if (_skipFactions) then { _filteredTextures } else {
+	private _filteredValues = if _skipFactions then { _filteredTextures } else {
 	    _filteredTextures select {
             _x params ["_valueName"];
 
