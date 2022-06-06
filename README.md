@@ -217,6 +217,27 @@ class XtdGearModels
 };
 ```
 
+### Hiding Configs
+
+Texture references will not remove already created configs from the arsenal lists, leading to duplicate references.
+These duplicates can be hidden from the list via the `hidden` attribute. No dependency is necessary.
+This will only be applied if the config exists and this mod is enabled.
+This is only necessary when there isn't a `model` defined. The `model` reference implies `hidden = true`.
+
+```c++
+class XtdGearInfos
+{
+    class CfgWeapons 
+    {
+        class redundant_config
+        {
+            hidden = 1;
+        };
+        // ...
+    };
+};
+```
+
 ### The bluit-in approach
 
 You can builtin configuration for ACE3 Arsenal Extended within your mod, without creating a dependency. You may duplicate all what you need, or use conventional names.

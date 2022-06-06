@@ -4,6 +4,7 @@ PREP(findConfig);
 PREP(findConfigByValue);
 PREP(findConfigName);
 PREP(getConfigOptions);
+PREP(isConfigHidden);
 PREP(getConfigModel);
 PREP(cacheVirtualItems);
 PREP(getModelOptions);

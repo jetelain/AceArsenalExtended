@@ -49,7 +49,10 @@ EGVAR(gearinfo,currentId) = hashValue GVAR(initialVirtualItems);
 				};
 			};
 		} else {
-			_target pushBack _config;
+		    private _hidden = [_classRoot, _config] call EFUNC(gearinfo,isConfigHidden);
+		    if (not _hidden) then {
+		        _target pushBack _config;
+		    };
 		};
 
 	} forEach _source;
