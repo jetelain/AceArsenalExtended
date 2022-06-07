@@ -24,7 +24,10 @@ private _classSelections = [_classSelectionsConfig, "hiddenSelections", []] call
 
 private _hiddenSelection =  [_configChain, "hiddenselection", ""] call READ_TEXT;
 private _hiddenSelections =  [_configChain, "hiddenselections", [_hiddenSelection]] call READ_ARRAY;
-private _hiddenSelectionsIndexes = _hiddenSelections apply { _classSelections find _x };
+private _hiddenSelectionsIndexes = _hiddenSelections apply {
+    private _selName = _x;
+    _classSelections findIf { _x == _selName }
+};
 
 if ( -1 in _hiddenSelectionsIndexes ) exitWith {
 	WARNING_3("Some option hiddenSelections of option was not found in model: Option=%1 Model=%2 Resolved=%3", _hiddenSelections, _classSelections, _hiddenSelectionsIndexes);
