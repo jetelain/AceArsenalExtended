@@ -75,10 +75,22 @@ private _classSelectionsMaterialsSize = count _classSelectionsMaterials;
 			_material = _classSelectionsMaterials select _selectionIndex;
 		};
 	};
-	if (_material != "") then {
-		_target setObjectMaterialGlobal  [_selectionIndex, _material];
+	switch _texture do {
+	    case "": {};
+	    case NONE_TEXTURE: {
+	        _target setObjectTextureGlobal  [_selectionIndex, ""];
+	    };
+	    default {
+	        _target setObjectTextureGlobal  [_selectionIndex, _texture];
+	    };
 	};
-	if (_texture != "") then {
-	    _target setObjectTextureGlobal  [_selectionIndex, _texture];
-	};
+	switch _material do {
+        case "": {};
+        case NONE_TEXTURE: {
+            _target setObjectMaterialGlobal  [_selectionIndex, ""];
+        };
+        default {
+            _target setObjectMaterialGlobal  [_selectionIndex, _material];
+        };
+    };
 } forEach _hiddenSelectionsIndexes;
