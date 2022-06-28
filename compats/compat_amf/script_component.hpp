@@ -2,8 +2,6 @@
 #define SUBPREFIX compats
 #include "\z\aceax\addons\main\script_mod.hpp"
 
-// #define AMF_v8
-
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
 
@@ -16,8 +14,4 @@
 
 #include "\z\aceax\addons\main\script_macros.hpp"
 
-#ifdef AMF_V8
 #define AMFPATCHES(path) QUOTE(\amf_patches\##path)
-#else
-#define AMFPATCHES(path) QUOTE(\z\aceax\compats\amf_patches\##path)
-#endif

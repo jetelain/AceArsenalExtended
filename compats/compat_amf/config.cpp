@@ -6,8 +6,8 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"amf_vests"};
-        author = "AUTHOR";
+        requiredAddons[] = {};
+        author = "GrueArbre";
         VERSION_CONFIG;
     };
 };
@@ -15,7 +15,5 @@ class CfgPatches {
 #include "XtdGearModels.hpp"
 
 #include "CfgWeapons.hpp"
-
-#include "CfgGlasses.hpp"
 
 #include "XtdGearInfos.hpp"

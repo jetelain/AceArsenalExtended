@@ -346,7 +346,6 @@ class XtdGearModels
 		};
 	};
 	
-#ifdef AMF_v8
 	class GlovesColorBase
 	{
 		hiddenselection = "Camo4";
@@ -361,7 +360,6 @@ class XtdGearModels
 			texture = "amf_uniforms\data\usp_gloves_tan_CO.paa";
 		};
 	};
-#endif
 
 	class GogglesBase
 	{
@@ -390,16 +388,11 @@ class XtdGearModels
 			label = "Treillis F3/Ubas";
 			author = "Arma Mod France";
 			options[] = {"camo","sleeves","gloves"};
-#ifdef AMF_v8
 			textureoptions[]={"rank","bloodtype","flag","glovescolor"};
-#endif
+
 			class camo // coventional name
 			{
-#ifdef AMF_v8
 				values[] = {"CE_TAN","CE_OD","DA","SERVAL","TUNDRA"};
-#else
-				values[] = {"CE_TAN","CE_OD","DA","SERVAL"};
-#endif
 				class CE_TAN
 				{
 					label = "CE/TAN";
@@ -420,13 +413,11 @@ class XtdGearModels
 					label = "SERVAL";
 					image = QPATHTOF(data\serval.paa);
 				};
-#ifdef AMF_v8
 				class TUNDRA
 				{
 					label = "TUNDRA";
 					image = QPATHTOF(data\tundra.paa);
 				};
-#endif
 			};
 			class sleeves // coventional name
 			{
@@ -442,11 +433,9 @@ class XtdGearModels
 			class flag : FlagBase {
 				hiddenselection = "drapeau";
 			};
-#ifdef AMF_v8
 			class glovescolor : GlovesColorBase {};
-#endif
 		};
-#ifdef AMF_v8
+
 		class amf_uniform_t4s2
 		{
 			label = "Treillis T4S2";
@@ -484,20 +473,17 @@ class XtdGearModels
 			};
 			class glovescolor : GlovesColorBase {};
 		};
-#endif
+
 		class amf_g3
 		{
 			label = "Crye G3";
 			author = "Arma Mod France";
-#ifdef AMF_v8
+
 			options[] = {"camo", "sleeves"};
 			class camo // coventional name
 			{
-				values[] = {"MTP", "BLK"};
+				values[] = {"MTP", "BLK", "OD", "TAN"};
 			};
-#else
-			options[] = {"sleeves"};
-#endif
 			class sleeves // coventional name
 			{
 				values[] = {"Full", "Half"};
@@ -509,16 +495,10 @@ class XtdGearModels
 			label = "Treillis F3";
 			author = "Arma Mod France";
 			options[] = {"camo","gloves"};
-#ifdef AMF_v8
 			textureoptions[]={"rank","bloodtype","flag","glovescolor"}; //will be added later, need to wait for updated p3ds
-#endif
 			class camo // coventional name
 			{
-#ifdef AMF_v8
 				values[] = {"CE","DA","SERVAL","MTP","TUNDRA"};
-#else
-				values[] = {"CE","DA","SERVAL","MTP"};
-#endif
 				class CE
 				{
 					label = "CE";
@@ -534,13 +514,11 @@ class XtdGearModels
 					label = "SERVAL";
 					image = QPATHTOF(data\serval.paa);
 				};
-#ifdef AMF_v8
 				class TUNDRA
 				{
 					label = "TUNDRA";
 					image = QPATHTOF(data\tundra.paa);
 				};
-#endif
 			};
 			class gloves : GlovesBase { };
 			class rank : RankBase {
@@ -552,9 +530,7 @@ class XtdGearModels
 			class flag : FlagBase {
 				hiddenselection = "drapeau";
 			};
-#ifdef AMF_v8
 			class glovescolor : GlovesColorBase {};
-#endif
 		};
 
 		class amf_felin
@@ -650,7 +626,7 @@ class XtdGearModels
 		{
 			label = "NFM SMB";
 			author = "Arma Mod France";
-			options[] = {"camo","weapon", "loadout", "belt", "rank"};
+			options[] = {"camo","weapon", "loadout", "belt"};
 			class camo
 			{
 				changeingame = 0;
@@ -682,19 +658,13 @@ class XtdGearModels
 					label = CSTRING(BeltYes);
 				};
 			};
-			class rank : RankBase {
-				values[] = {
-					"2CL","1CL","CPL","CCH",
-					"ESO","SGT","SCH","ADJ","ADC","MAJ",
-					"ASP","SLT","LTN","CNE","CMD"};
-			};
 		};
 
 		class amf_smb_tp
 		{
 			label = "NFM SMB (TP)";
 			author = "Arma Mod France";
-			options[] = {"camo","weapon", "loadout", "belt","rank"};
+			options[] = {"camo","weapon"};
 			class camo
 			{
 				values[] = {"TAN", "OD"};
@@ -705,33 +675,24 @@ class XtdGearModels
 				changeingame = 0;
 				values[] = {"FRF2","HK417","SCARH"};
 			};
+		};
+
+		class amf_jpc
+		{
+			label = "CRYE PRECISION JPC";
+			author = "Arma Mod France";
+			options[] = {"camo","loadout"};
+			class camo
+			{
+				values[] = {"TDF", "BLK", "OD", "MTP", "TAN"};
+			};
 			class loadout
 			{
 				label = CSTRING(Loadout);
-				changeingame = 0;
-				values[] = {"TP"};
-			};
-			class belt
-			{
-				label = CSTRING(Belt);
-				changeingame = 0;
-				values[] = {"no","yes"};
-				class no
-				{
-					label = CSTRING(BeltNo);
-				};
-				class yes
-				{
-					label = CSTRING(BeltYes);
-				};
-			};
-			class rank : RankBase {
-				values[] = {
-					"2CL","1CL","CPL","CCH",
-					"ESO","SGT","SCH","ADJ","ADC","MAJ",
-					"ASP","SLT","LTN","CNE","CMD"};
+				values[] = {"L1", "L2", "L3"};
 			};
 		};
+
 
 		class amf_opscore_xp
 		{
@@ -894,6 +855,21 @@ class XtdGearModels
 			};
 		};
 
+		class amf_scar_l
+		{
+			label = "FN SCAR L";
+			author = "Arma Mod France";
+			options[] = {"camo","variant"};
+			class camo
+			{
+				values[] = {"BLK", "TAN"};
+			};
+			class variant
+			{
+				values[] = {"STD", "CQC"};
+			};
+		};
+
 	};
 
 	class CfgGlasses 
@@ -912,7 +888,36 @@ class XtdGearModels
 
 		};
 	};
-
+	class CfgVehicles
+	{
+		class AMF_FELIN
+		{
+			label = "TECPACK Felin 45L";
+			author = "Arma Mod France";
+			options[] = {"camo","loadout"};
+			class camo
+			{
+				values[] = {"OD","TAN"};
+			};			
+			class loadout
+			{
+				label = CSTRING(Loadout);
+				changeingame = 0;
+				values[] = {"STD", "MED","TFAR"};
+			};
+		};		
+		
+		class AMF_rush24
+		{
+			label = "5.11 RUSH24 2.0";
+			author = "Arma Mod France";
+			options[] = {"camo"};
+			class camo
+			{
+				values[] = {"OD","TAN", "BLK", "TDF", "MTP"};
+			};			
+		};
+	};
 
 
 };

@@ -63,20 +63,48 @@
 
 #define PATTERN_CIRAS(name, l, c) PATTERN_VEST(name,amf_plate,l,c)
 #define PATTERN_DCS(name, l, c)   PATTERN_VEST(name,amf_dcs,l,c)
+#define PATTERN_JPC(name, l, c)   PATTERN_VEST(name,amf_jpc,l,c)
 
 #define PATTERN_CAMO(name, m, c) \
 	class name           \
 	{                          \
-			model = #m; \
-			camo = #c;         \
+		model = #m; \
+		camo = #c;         \
 	}; 
 
 #define PATTERN_SCARH(name, l, c) \
 	class name           \
 	{                          \
-			model = "amf_scar_h"; \
-			camo = #c;         \
-			variant = #l;      \
+		model = "amf_scar_h"; \
+		camo = #c;         \
+		variant = #l;      \
+	}; 
+
+#define PATTERN_SCARL(name, x, c) \
+	class name           \
+	{                          \
+		model = "amf_scar_l"; \
+		camo = #c;         \
+		variant = #x;      \
+	}; 
+
+#define PATTERN_SMB(name, m, c, l, w, b) \
+	class name           \
+	{                    \
+		model = #m;  \
+		camo = #c;   \
+		loadout = #l;\
+		weapon = #w; \
+		belt = #b;   \
+	}; 
+
+#define PATTERN_BALACLAVA(name, c, s, g) \
+	class name            \
+	{                          \
+		model = "amf_balaclava"; \
+		camo = #c;         \
+		sordin = #s;       \
+		goggles = #g;      \
 	}; 
 
 class XtdGearInfos
@@ -401,6 +429,22 @@ class XtdGearInfos
 		PATTERN_DCS(amf_DCS_05_BLK,L5,BLK)
 		PATTERN_DCS(amf_DCS_05_MTP,L5,MTP)
 
+		PATTERN_JPC(amf_JPC_01,    L1,TDF)
+		PATTERN_JPC(amf_JPC_01_OD, L1,OD)
+		PATTERN_JPC(amf_JPC_01_TAN,L1,TAN)
+		PATTERN_JPC(amf_JPC_01_BLK,L1,BLK)
+		PATTERN_JPC(amf_JPC_01_MTP,L1,MTP)
+		PATTERN_JPC(amf_JPC_02,    L2,TDF)
+		PATTERN_JPC(amf_JPC_02_OD, L2,OD)
+		PATTERN_JPC(amf_JPC_02_TAN,L2,TAN)
+		PATTERN_JPC(amf_JPC_02_BLK,L2,BLK)
+		PATTERN_JPC(amf_JPC_02_MTP,L2,MTP)
+		PATTERN_JPC(amf_JPC_03,    L3,TDF)
+		PATTERN_JPC(amf_JPC_03_OD, L3,OD)
+		PATTERN_JPC(amf_JPC_03_TAN,L3,TAN)
+		PATTERN_JPC(amf_JPC_03_BLK,L3,BLK)
+		PATTERN_JPC(amf_JPC_03_MTP,L3,MTP)
+
 		PATTERN_CAMO(AMF_SPECTRA,     amf_spectra,OD)
 		PATTERN_CAMO(AMF_SPECTRA_2,   amf_spectra,CE)
 		PATTERN_CAMO(AMF_SPECTRA_2_DA,amf_spectra,DA)
@@ -411,10 +455,12 @@ class XtdGearInfos
 
 		PATTERN_UNIFORM_G3(amf_uniform_04_MTP,MTP,Full)
 		PATTERN_UNIFORM_G3(amf_uniform_05_MTP,MTP,Half)
-#ifdef AMF_v8
 		PATTERN_UNIFORM_G3(amf_uniform_04_BLK,BLK,Full)
 		PATTERN_UNIFORM_G3(amf_uniform_05_BLK,BLK,Half)
-#endif
+		PATTERN_UNIFORM_G3(amf_uniform_04_OD,OD,Full)
+		PATTERN_UNIFORM_G3(amf_uniform_05_OD,OD,Half)
+		PATTERN_UNIFORM_G3(amf_uniform_04_TAN,TAN,Full)
+		PATTERN_UNIFORM_G3(amf_uniform_05_TAN,TAN,Half)
 
 		PATTERN_CIRAS(amf_plate_ca_tan,   none,TAN)
 		PATTERN_CIRAS(amf_plate_ca_green, none,OD)
@@ -425,5 +471,113 @@ class XtdGearInfos
 		PATTERN_SCARH(AMF_SCAR_H_02_F_BLK,STD, BLK)
 		PATTERN_SCARH(AMF_SCAR_H_03_F,    CQC, TAN)
 		PATTERN_SCARH(AMF_SCAR_H_03_F_BLK,CQC, BLK)
+
+		PATTERN_SCARL(AMF_SCAR_L_02_F,    STD, BLK)
+		PATTERN_SCARL(AMF_SCAR_L_02_F_TAN,STD, TAN)
+		PATTERN_SCARL(AMF_SCAR_L_01_F,    CQC, BLK)
+		PATTERN_SCARL(AMF_SCAR_L_01_F_TAN,CQC, TAN)
+
+		PATTERN_SMB(amf_smb_gr,           amf_smb,TAN,LG,HK416,no)
+		PATTERN_SMB(amf_smb_gr_famas,     amf_smb,TAN,LG,FAMAS,no)
+		PATTERN_SMB(amf_smb_gr_famas_grn, amf_smb,OD, LG,FAMAS,no)
+		PATTERN_SMB(amf_smb_gr_grn,       amf_smb,OD, LG,HK416,no)
+		PATTERN_SMB(amf_smb_grb,          amf_smb,TAN,LG,HK416,yes)
+		PATTERN_SMB(amf_smb_grb_famas,    amf_smb,TAN,LG,FAMAS,yes)
+		PATTERN_SMB(amf_smb_grb_famas_grn,amf_smb,OD, LG,FAMAS,yes)
+		PATTERN_SMB(amf_smb_grb_grn,      amf_smb,OD, LG,HK416,yes)
+		PATTERN_SMB(amf_smb_in,           amf_smb,TAN,GV,HK416,no)
+		PATTERN_SMB(amf_smb_in_famas,     amf_smb,TAN,GV,FAMAS,no)
+		PATTERN_SMB(amf_smb_in_famas_grn, amf_smb,OD, GV,FAMAS,no)
+		PATTERN_SMB(amf_smb_in_grn,       amf_smb,OD, GV,HK416,no)
+		PATTERN_SMB(amf_smb_inb,          amf_smb,TAN,GV,HK416,yes)
+		PATTERN_SMB(amf_smb_inb_famas,    amf_smb,TAN,GV,FAMAS,yes)
+		PATTERN_SMB(amf_smb_inb_famas_grn,amf_smb,OD, GV,FAMAS,yes)
+		PATTERN_SMB(amf_smb_inb_grn,      amf_smb,OD, GV,HK416,yes)
+		PATTERN_SMB(amf_smb_me,           amf_smb,TAN,SC2,HK416,no)
+		PATTERN_SMB(amf_smb_me_famas,     amf_smb,TAN,SC2,FAMAS,no)
+		PATTERN_SMB(amf_smb_me_famas_grn, amf_smb,OD, SC2,FAMAS,no)
+		PATTERN_SMB(amf_smb_me_grn,       amf_smb,OD, SC2,HK416,no)
+		PATTERN_SMB(amf_smb_meb,          amf_smb,TAN,SC2,HK416,yes)
+		PATTERN_SMB(amf_smb_meb_famas,    amf_smb,TAN,SC2,FAMAS,yes)
+		PATTERN_SMB(amf_smb_meb_famas_grn,amf_smb,OD, SC2,FAMAS,yes)
+		PATTERN_SMB(amf_smb_meb_grn,      amf_smb,OD, SC2,HK416,yes)
+		PATTERN_SMB(amf_smb_tl,           amf_smb,TAN,CDG,HK416,no)
+		PATTERN_SMB(amf_smb_tl_famas,     amf_smb,TAN,CDG,FAMAS,no)
+		PATTERN_SMB(amf_smb_tl_famas_grn, amf_smb,OD, CDG,FAMAS,no)
+		PATTERN_SMB(amf_smb_tl_grn,       amf_smb,OD, CDG,HK416,no)
+		PATTERN_SMB(amf_smb_tlb,          amf_smb,TAN,CDG,HK416,yes)
+		PATTERN_SMB(amf_smb_tlb_famas,    amf_smb,TAN,CDG,FAMAS,yes)
+		PATTERN_SMB(amf_smb_tlb_famas_grn,amf_smb,OD, CDG,FAMAS,yes)
+		PATTERN_SMB(amf_smb_tlb_grn,      amf_smb,OD, CDG,HK416,yes)
+		PATTERN_SMB(amf_smb_mc,           amf_smb,TAN,AR,HK416,no)
+		PATTERN_SMB(amf_smb_mc_grn,       amf_smb,OD, AR,HK416,no)
+		PATTERN_SMB(amf_smb_mcb,          amf_smb,TAN,AR,HK416,yes)
+		PATTERN_SMB(amf_smb_mcb_grn,      amf_smb,OD, AR,HK416,yes)
+		
+		PATTERN_SMB(amf_smb_tp_frf2,      amf_smb_tp,TAN,TP,FRF2,no)
+		PATTERN_SMB(amf_smb_tp_frf2_grn,  amf_smb_tp,OD, TP,FRF2,no)
+		PATTERN_SMB(amf_smb_tp_hk417,     amf_smb_tp,TAN,TP,HK417,no)
+		PATTERN_SMB(amf_smb_tp_hk417_grn, amf_smb_tp,OD, TP,HK417,no)
+		PATTERN_SMB(amf_smb_tp_scarh,     amf_smb_tp,TAN,TP,SCARH,no)
+		PATTERN_SMB(amf_smb_tp_scarh_grn, amf_smb_tp,OD, TP,SCARH,no)
+
+	};
+
+	
+	class CfgGlasses 
+	{
+		PATTERN_BALACLAVA(amf_balaclava_blk,           BLK,none,none)
+		PATTERN_BALACLAVA(amf_balaclava_goggles_blk,   BLK,none,down)
+		PATTERN_BALACLAVA(amf_balaclava_sordin_blk,    BLK,BLK, none)
+		PATTERN_BALACLAVA(amf_balaclava_sordin_blkod,  BLK,OD,  none)
+		PATTERN_BALACLAVA(amf_balaclava_sordin_blktan, BLK,TAN, none)
+		PATTERN_BALACLAVA(amf_balaclava_sording_blk,   BLK,BLK, down)
+		PATTERN_BALACLAVA(amf_balaclava_sording_blkod, BLK,OD,  down)
+		PATTERN_BALACLAVA(amf_balaclava_sording_blktan,BLK,TAN, down)
+
+		PATTERN_BALACLAVA(amf_balaclava_od,           OD, none,none)
+		PATTERN_BALACLAVA(amf_balaclava_goggles_od,   OD, none,down)
+		PATTERN_BALACLAVA(amf_balaclava_sordin_od,    OD, BLK, none)
+		PATTERN_BALACLAVA(amf_balaclava_sordin_odod,  OD, OD,  none)
+		PATTERN_BALACLAVA(amf_balaclava_sordin_odtan, OD, TAN, none)
+		PATTERN_BALACLAVA(amf_balaclava_sording_od,   OD, BLK, down)
+		PATTERN_BALACLAVA(amf_balaclava_sording_odod, OD, OD,  down)
+		PATTERN_BALACLAVA(amf_balaclava_sording_odtan,OD, TAN, down)
+
+		PATTERN_BALACLAVA(amf_balaclava_tan,           TAN,none,none)
+		PATTERN_BALACLAVA(amf_balaclava_goggles_tan,   TAN,none,down)
+		PATTERN_BALACLAVA(amf_balaclava_sording_tan,   TAN,BLK, down)
+		PATTERN_BALACLAVA(amf_balaclava_sording_tanod, TAN,OD,  down)
+		PATTERN_BALACLAVA(amf_balaclava_sording_tantan,TAN,TAN, down)
+		PATTERN_BALACLAVA(amf_balaclava_sordin_tan,    TAN,BLK, none)
+		PATTERN_BALACLAVA(amf_balaclava_sordin_tanod,  TAN,OD,  none)
+		PATTERN_BALACLAVA(amf_balaclava_sordin_tantan, TAN,TAN, none)
+
+		PATTERN_BALACLAVA(amf_balaclava_ranger,           RGR,none,none)
+		PATTERN_BALACLAVA(amf_balaclava_goggles_ranger,   RGR,none,down)
+		PATTERN_BALACLAVA(amf_balaclava_sording_ranger,   RGR,BLK, down)
+		PATTERN_BALACLAVA(amf_balaclava_sording_rangerod, RGR,OD,  down)
+		PATTERN_BALACLAVA(amf_balaclava_sording_rangertan,RGR,TAN, down)
+		PATTERN_BALACLAVA(amf_balaclava_sordin_ranger,    RGR,BLK, none)
+		PATTERN_BALACLAVA(amf_balaclava_sordin_rangerod,  RGR,OD,  none)
+		PATTERN_BALACLAVA(amf_balaclava_sordin_rangertan, RGR,TAN, none)
+	};
+
+
+	class CfgVehicles
+	{
+		class AMF_FELIN_BACKPACK           { model = "AMF_FELIN"; camo="OD";  loadout="STD"; };
+		class AMF_FELIN_BACKPACK_TAN       { model = "AMF_FELIN"; camo="TAN"; loadout="STD"; };
+		class AMF_FELIN_BACKPACK_MEDIC     { model = "AMF_FELIN"; camo="OD";  loadout="MED"; };
+		class AMF_FELIN_BACKPACK_TAN_MEDIC { model = "AMF_FELIN"; camo="TAN"; loadout="MED"; };
+		class AMF_FELIN_BACKPACK_RDCE      { model = "AMF_FELIN"; camo="OD";  loadout="TFAR"; };
+		class AMF_FELIN_BACKPACK_RDTAN     { model = "AMF_FELIN"; camo="TAN"; loadout="TFAR"; };
+
+		class AMF_rush24_01           { model = "AMF_rush24"; camo="OD";  };
+		class AMF_rush24_01_TAN       { model = "AMF_rush24"; camo="TAN"; };
+		class AMF_rush24_01_BLK       { model = "AMF_rush24"; camo="BLK"; };
+		class AMF_rush24_01_TDF       { model = "AMF_rush24"; camo="TDF"; };
+		class AMF_rush24_01_MTP       { model = "AMF_rush24"; camo="MTP"; };
+
 	};
 };
