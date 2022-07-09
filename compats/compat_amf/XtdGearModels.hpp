@@ -381,6 +381,16 @@ class XtdGearModels
 		};
 	};
 
+	class GogglesOrFaceShieldBase : GogglesBase
+	{
+		values[] = {"none", "down", "FS"};
+		class FS 
+		{
+			label = CSTRING(FaceShield);
+			changeingame = -1;
+		};
+	};
+
 	class CfgWeapons 
 	{
 		class amf_uniform_ubas
@@ -390,7 +400,7 @@ class XtdGearModels
 			options[] = {"camo","sleeves","gloves"};
 			textureoptions[]={"rank","bloodtype","flag","glovescolor"};
 
-			class camo // coventional name
+			class camo // conventional name
 			{
 				values[] = {"CE_TAN","CE_OD","DA","SERVAL","TUNDRA"};
 				class CE_TAN
@@ -604,7 +614,7 @@ class XtdGearModels
 				values[] = {"OD", "BLK", "TAN"};
 			};
 			class sordin : SordinBase {};
-			class goggles : GogglesBase {};
+			class goggles : GogglesOrFaceShieldBase {};
 
 		};
 
@@ -618,7 +628,7 @@ class XtdGearModels
 				values[] = {"OD", "BLK", "TAN"};
 			};
 			class sordin : SordinBase {};
-			class goggles : GogglesBase {};
+			class goggles : GogglesOrFaceShieldBase {};
 
 		};
 
@@ -696,7 +706,7 @@ class XtdGearModels
 
 		class amf_opscore_xp
 		{
-			label = "GENTEX OPSCORE FAST XP";
+			label = "OPSCORE FAST XP";
 			author = "Arma Mod France";
 			options[] = {"camo","sordin","goggles"};
 			class camo
@@ -710,9 +720,20 @@ class XtdGearModels
 
 		};
 
+		class amf_opscore_fs
+		{
+			label = "OPSCORE FAST FS";
+			author = "Arma Mod France";
+			options[] = {"camo"};
+			class camo
+			{
+				values[] = {"OD", "BLK", "TAN", "GRY"};
+			};
+		};
+
 		class amf_opscore_bump
 		{
-			label = "GENTEX OPSCORE BUMP";
+			label = "OPSCORE BUMP";
 			author = "Arma Mod France";
 			options[] = {"camo","sordin","goggles","top"};
 			class camo
@@ -825,7 +846,7 @@ class XtdGearModels
 			options[] = {"camo"};
 			class camo
 			{
-				values[] = {"OD","CE","DA","UN"};
+				values[] = {"OD","CE","DA","UN","UN2","FO"};
 			};
 		};
 
@@ -837,6 +858,16 @@ class XtdGearModels
 			class camo
 			{
 				values[] = {"CE","DA"};
+				class CE
+				{
+					label = "CE";
+					image = QPATHTOF(data\ce.paa);
+				};
+				class DA
+				{
+					label = "DA";
+					image = QPATHTOF(data\da.paa);
+				};
 			};
 		};
 
@@ -870,6 +901,51 @@ class XtdGearModels
 			};
 		};
 
+		class amf_S3
+		{
+			label = "FRAG S3";
+			author = "Arma Mod France";
+			options[] = {"camo"};
+			class camo
+			{
+				values[] = {"CE", "DA"};
+				class CE
+				{
+					label = "CE";
+					image = QPATHTOF(data\ce.paa);
+				};
+				class DA
+				{
+					label = "DA";
+					image = QPATHTOF(data\da.paa);
+				};
+			};
+		};
+
+		
+		class amf_714
+		{
+			label = "HK 417A2";
+			author = "Arma Mod France";
+			options[] = {"camo","size"};
+			class camo
+			{
+				values[] = {"BLK", "TAN"};
+			};
+			class size
+			{
+				label = CSTRING(Size);
+				values[] = {"S16", "S13"};
+				class S16
+				{
+					label = "16""";
+				};
+				class S13
+				{
+					label = "13""";
+				};
+			};
+		};
 	};
 
 	class CfgGlasses 
