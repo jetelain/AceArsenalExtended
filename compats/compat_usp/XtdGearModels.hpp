@@ -43,8 +43,6 @@ class XtdGearModels
 				OR_CAMO(MIX)
 			};
 
-
-
 	class CfgWeapons
 	{
 		class USP_G3C
@@ -82,7 +80,7 @@ class XtdGearModels
 			};
 			class sleeves //: SleevesBase
 			{
-				values[] = {"Full", "Quarter", "Half"};
+				values[] = {"Full", "Quarter", "Half", "Cut"};
 			};
 			class shoes
 			{
@@ -167,30 +165,48 @@ class XtdGearModels
 				FLAG(uk_ref_mc)
 				FLAG(usa_can_blk)
 				FLAG(usa_can_ref_mc)
+
 				FLAG(usa)
-				FLAG(usa_flag2)
+				FLAG(usa_col2_rev)
+				FLAG(usa_col)
+				FLAG(usa_col_rev)
 				FLAG(usa_fog)
 				FLAG(usa_ir_aor2)
+				FLAG(usa_ir_aor2_rev)
+
 				FLAG(usa_ir_blk_abpos)
 				FLAG(usa_ir_blk)
+				FLAG(usa_ir_blk_rev)
 				FLAG(usa_ir_blk_skull2)
 				FLAG(usa_ir_blk_skull)
+				FLAG(usa_ir_blk_skull_rev)
 				FLAG(usa_ir_grn)
+				FLAG(usa_ir_grn_rev)
 				FLAG(usa_ir_mc)
+				FLAG(usa_ir_mc_rev)
 				FLAG(usa_ir_mc_skull)
+				FLAG(usa_ir_mc_skull_rev)
 				FLAG(usa_ir_rgr)
+				FLAG(usa_ir_rgr_rev)
 				FLAG(usa_ir_skull_mc)
 				FLAG(usa_ir_tan)
+				FLAG(usa_ir_tan_rev)
 				FLAG(usa_ref)
+				FLAG(usa_ref_rev)
 				FLAG(usa_tan)
+				FLAG(usa_tan_rev)
 				FLAG(usa_tx_ir_rgr)
 				FLAG(usa_uk_ir_blk2)
 				FLAG(usa_uk_ir_blk)
 				FLAG(usa_uk_ir_mc)
 				FLAG(usa_usaf)
-				FLAG(zea_ir_mc)
-				#define ALL_FLAGS "aus_ir_mc","bos_ir_mc","bra_ir_mc","can_ir_blk","can_ref_gry","cze_ir_mc","fin_ir_rgr","fra_ref","ger_ir_flk","ger_ir_mc","ger_ir_rgr","isr_ir_blk","isr_ir_mc","isr_ir_tan","isr_ref_blk","jap_ir_mc","nld","nld_ir_mc","nld_sub2","nld_sub","nld_tan","nor_ref","pol_ref","pol_ref_sub","rus_ir_mc","rus_ref","swe_ref_rgr","tur_ir_mc","uk","uk_ir_blk","uk_ir_grn","uk_ir_mc","uk_ref_mc","usa_can_blk","usa_can_ref_mc","usa","usa_flag2","usa_fog","usa_ir_aor2","usa_ir_blk_abpos","usa_ir_blk","usa_ir_blk_skull2","usa_ir_blk_skull","usa_ir_grn","usa_ir_mc","usa_ir_mc_skull","usa_ir_rgr","usa_ir_skull_mc","usa_ir_tan","usa_ref","usa_tan","usa_tx_ir_rgr","usa_uk_ir_blk2","usa_uk_ir_blk","usa_uk_ir_mc","usa_usaf","zea_ir_mc"
 
+				FLAG(zea_ir_mc)
+				#define ALL_FLAGS   "aus_ir_mc","bos_ir_mc","bra_ir_mc","can_ir_blk","can_ref_gry","cze_ir_mc","fin_ir_rgr","fra_ref","ger_ir_flk","ger_ir_mc","ger_ir_rgr","isr_ir_blk","isr_ir_mc","isr_ir_tan","isr_ref_blk","jap_ir_mc","nld","nld_ir_mc","nld_sub2","nld_sub","nld_tan","nor_ref","pol_ref","pol_ref_sub","rus_ir_mc","rus_ref","swe_ref_rgr","tur_ir_mc","uk","uk_ir_blk","uk_ir_grn","uk_ir_mc","uk_ref_mc","usa_can_blk","usa_can_ref_mc",\
+				                    "usa","usa_col","usa_fog","usa_ir_aor2","usa_ir_blk_abpos","usa_ir_blk","usa_ir_blk_skull2","usa_ir_blk_skull","usa_ir_grn","usa_ir_mc","usa_ir_mc_skull","usa_ir_rgr","usa_ir_skull_mc","usa_ir_tan","usa_ref","usa_tan","usa_tx_ir_rgr","usa_uk_ir_blk2","usa_uk_ir_blk","usa_uk_ir_mc","usa_usaf","zea_ir_mc"
+				
+				#define ALL_FLAGS_R "aus_ir_mc","bos_ir_mc","bra_ir_mc","can_ir_blk","can_ref_gry","cze_ir_mc","fin_ir_rgr","fra_ref","ger_ir_flk","ger_ir_mc","ger_ir_rgr","isr_ir_blk","isr_ir_mc","isr_ir_tan","isr_ref_blk","jap_ir_mc","nld","nld_ir_mc","nld_sub2","nld_sub","nld_tan","nor_ref","pol_ref","pol_ref_sub","rus_ir_mc","rus_ref","swe_ref_rgr","tur_ir_mc","uk","uk_ir_blk","uk_ir_grn","uk_ir_mc","uk_ref_mc","usa_can_blk","usa_can_ref_mc",\
+				                    "usa_col2_rev","usa_col_rev","usa_fog","usa_ir_aor2_rev","usa_ir_blk_rev","usa_ir_blk_skull_rev","usa_ir_grn_rev","usa_ir_mc_rev","usa_ir_mc_skull_rev","usa_ir_rgr_rev","usa_ir_tan_rev","usa_ref_rev","usa_tan_rev","usa_tx_ir_rgr","usa_uk_ir_blk2","usa_uk_ir_blk","usa_uk_ir_mc","usa_usaf","zea_ir_mc"
 
 				#define MORALE(N) class N { texture = QUOTE(\usp_gear_core\data\id\morale\##N##_co.paa); image = QUOTE(\usp_gear_core\data\id\morale\##N##_co.paa); label=""; description=#N; };
 				MORALE(aim_face)
@@ -653,7 +669,37 @@ class XtdGearModels
 			{
 				label = "Right Shoulder";
 				hiddenselection="_FlagRight";
-				values[] = {"DEFAULT",ALL_FLAGS,ALL_MORALE};
+				values[] = {"DEFAULT",ALL_FLAGS_R,ALL_MORALE};
+			};
+
+		};
+
+
+		class USP_G3F : USP_G3C
+		{
+			label = "Crye G3F";
+			author = "UnderSiege Productions";
+			options[] = {"camo", "gloves", "pants"};
+			textureoptions[] = { "pantscamo", "mxcamo", "orcamo" };
+			class camo
+			{
+				values[] = {"3CD","AOR1","AOR2","BLK","KHK","M81","MC","MCA","MCB","MCD","MCT","NWU","RGR","UCP"};
+			};
+			class pants
+			{
+				label = "Pants";
+				changeingame = 0;
+				values[] = {"Field","Combat"};
+				class Field {
+					label="Field";
+				};
+				class Combat {
+					label="Combat";
+				};
+			};
+			class pantscamo : pantscamo
+			{
+				requires[]={{"pants","Combat"}};
 			};
 
 		};
@@ -755,17 +801,21 @@ class XtdGearModels
 		{
 			label = "Overwhite/Crye G3C";
 			author = "UnderSiege Productions";
-			options[] = {"camo", "kneepads", "gloves"};
+			options[] = {"camo", "top", "kneepads", "gloves"};
 			textureoptions[] = { "mxcamo", "orcamo" };
 			class camo //: CamoBase
 			{
 				values[] = {"BLK","GRY","KHK","RGR","NAV","M81","MC","MCB","MCD","MCT","MCW","AOR1","AOR2","ATT","TSD","TSW"};
 			};
+			class top //: CamoBase
+			{
+				values[] = {"MCA","BLK","GRN","TAN"};
+			};
 			class kneepads
 			{
 				label = "Knee Pads";
 				changeingame = 0;
-				values[] = {"no", "yes"};
+				values[] = {"no", "G3", "G4"};
 			};
 			class gloves
 			{
@@ -778,8 +828,14 @@ class XtdGearModels
 					description = "Mechanix®";
 				};
 			};
-			class mxcamo : usp_mxcamo  {};
-			class orcamo : usp_orcamo  {};
+			class mxcamo : usp_mxcamo  
+			{ 
+				hiddenselection="Camo4"; 
+			};
+			class orcamo : usp_orcamo 
+			{ 
+				hiddenselection="Camo3"; 
+			};
 		};
 
 		class USP_TSHIRT_G3C

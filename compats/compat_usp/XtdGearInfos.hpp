@@ -282,32 +282,52 @@
 	PATTERN_USP_SOFTSHELL_G3C_MC(suffix,k,g) \
     PATTERN_USP_SOFTSHELL_G3C_RGR(suffix,k,g) \
 	
-#define PATTERN_USP_OVERWHITE_G3C(suffix, base, c, k, g) \
+#define PATTERN_USP_OVERWHITE_G3C(suffix,  c, k, g, t) \
 	class suffix                            \
 	{                                             \
 			model = "USP_OVERWHITE_G3C";          \
 			camo = #c;                            \
 			kneepads = #k;                        \
 			gloves = #g;                          \
+			top = #t;                          \
 	};                                            
 
 #define PATTERN_USP_OVERWHITE_G3C_MCA(suffix, k, g) \
-	PATTERN_USP_OVERWHITE_G3C(suffix,         Uniform_Base,BLK, k,g) \
-	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_AOR1,suffix,AOR1,k,g) \
-	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_AOR2,suffix,AOR2,k,g) \
-	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_ATT, suffix,ATT, k,g) \
-	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_GRY, suffix,GRY, k,g) \
-	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_KHK, suffix,KHK, k,g) \
-	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_M81, suffix,M81, k,g) \
-	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_MC,  suffix,MC,  k,g) \
-	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_MCB, suffix,MCB, k,g) \
-	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_MCD, suffix,MCD, k,g) \
-	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_MCT, suffix,MCT, k,g) \
-	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_MCW, suffix,MCW, k,g) \
-	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_NAV, suffix,NAV, k,g) \
-	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_RGR, suffix,RGR, k,g) \
-	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_TSD, suffix,TSD, k,g) \
-	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_TSW, suffix,TSW, k,g)
+	PATTERN_USP_OVERWHITE_G3C(suffix,             BLK, k,g,MCA) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_AOR1,AOR1,k,g,MCA) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_AOR2,AOR2,k,g,MCA) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_ATT, ATT, k,g,MCA) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_GRY, GRY, k,g,MCA) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_KHK, KHK, k,g,MCA) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_M81, M81, k,g,MCA) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_MC,  MC,  k,g,MCA) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_MCB, MCB, k,g,MCA) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_MCD, MCD, k,g,MCA) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_MCT, MCT, k,g,MCA) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_MCW, MCW, k,g,MCA) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_NAV, NAV, k,g,MCA) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_RGR, RGR, k,g,MCA) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_TSD, TSD, k,g,MCA) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCA_TSW, TSW, k,g,MCA)
+
+
+#define PATTERN_USP_OVERWHITE_G3C_OTH(suffix, k,g,t) \
+	PATTERN_USP_OVERWHITE_G3C(suffix,         BLK, k,g,t) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_AOR1,AOR1,k,g,t) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_AOR2,AOR2,k,g,t) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_ATT, ATT, k,g,t) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_GRY, GRY, k,g,t) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_KHK, KHK, k,g,t) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_M81, M81, k,g,t) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MC,  MC,  k,g,t) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCB, MCB, k,g,t) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCD, MCD, k,g,t) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCT, MCT, k,g,t) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_MCW, MCW, k,g,t) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_NAV, NAV, k,g,t) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_RGR, RGR, k,g,t) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_TSD, TSD, k,g,t) \
+	PATTERN_USP_OVERWHITE_G3C(##suffix##_TSW, TSW, k,g,t)
 
 #define PATTERN_USP_TSHIRT_G3C(suffix, base, c, t, k, g, i) \
 	class suffix                            \
@@ -628,6 +648,36 @@ class CfgWeapons
 	PATTERN_USP_G3C(USP_G3C_IST_KP_MX,   down,yes,MX,  Full,   IST)
 	PATTERN_USP_G3C(USP_G3C_IST_KP_OR,   down,yes,OR,  Full,   IST)
 
+
+	PATTERN_USP_G3C(USP_G3C_CS,          down,no, none,Cut,SL)
+	PATTERN_USP_G3C(USP_G3C_CS_CU,       up,  no, none,Cut,SL)
+	PATTERN_USP_G3C(USP_G3C_CS_KP,       down,yes,none,Cut,SL)
+	PATTERN_USP_G3C(USP_G3C_CS_CU_KP,    up,  yes,none,Cut,SL)
+	PATTERN_USP_G3C(USP_G3C_CS_MX,       down,no, MX,  Cut,SL)
+	PATTERN_USP_G3C(USP_G3C_CS_CU_MX,    up,  no, MX,  Cut,SL)
+	PATTERN_USP_G3C(USP_G3C_CS_KP_MX,    down,yes,MX,  Cut,SL)
+	PATTERN_USP_G3C(USP_G3C_CS_CU_KP_MX, up,  yes,MX,  Cut,SL)
+	PATTERN_USP_G3C(USP_G3C_CS_OR,       down,no, OR,  Cut,SL)
+	PATTERN_USP_G3C(USP_G3C_CS_CU_OR,    up,  no, OR,  Cut,SL)
+	PATTERN_USP_G3C(USP_G3C_CS_KP_OR,    down,yes,OR,  Cut,SL)
+	PATTERN_USP_G3C(USP_G3C_CS_CU_KP_OR, up,  yes,OR,  Cut,SL)
+
+	PATTERN_USP_G3C(USP_G3C_CS_VQ,          down,no, none,Cut,VQ)
+	PATTERN_USP_G3C(USP_G3C_CS_CU_VQ,       up,  no, none,Cut,VQ)
+	PATTERN_USP_G3C(USP_G3C_CS_KP_VQ,       down,yes,none,Cut,VQ)
+	PATTERN_USP_G3C(USP_G3C_CS_CU_KP_VQ,    up,  yes,none,Cut,VQ)
+	PATTERN_USP_G3C(USP_G3C_CS_MX_VQ,       down,no, MX,  Cut,VQ)
+	PATTERN_USP_G3C(USP_G3C_CS_CU_MX_VQ,    up,  no, MX,  Cut,VQ)
+	PATTERN_USP_G3C(USP_G3C_CS_KP_MX_VQ,    down,yes,MX,  Cut,VQ)
+	PATTERN_USP_G3C(USP_G3C_CS_CU_KP_MX_VQ, up,  yes,MX,  Cut,VQ)
+	PATTERN_USP_G3C(USP_G3C_CS_OR_VQ,       down,no, OR,  Cut,VQ)
+	PATTERN_USP_G3C(USP_G3C_CS_CU_OR_VQ,    up,  no, OR,  Cut,VQ)
+	PATTERN_USP_G3C(USP_G3C_CS_KP_OR_VQ,    down,yes,OR,  Cut,VQ)
+	PATTERN_USP_G3C(USP_G3C_CS_CU_KP_OR_VQ, up,  yes,OR,  Cut,VQ)
+
+
+
+
 	// USP_PCU_G3
 	// NOTE: USP_PCU_G3C_*_GRY_BLK are broken in USP Mod itself
 	PATTERN_USP_PCU_G3C_ALL(USP_PCU_G3C,      no, none)
@@ -647,11 +697,19 @@ class CfgWeapons
 
 	// USP_OVERWHITE_G3C
 	PATTERN_USP_OVERWHITE_G3C_MCA(USP_OVERWHITE_G3C,      no, none)
-	PATTERN_USP_OVERWHITE_G3C_MCA(USP_OVERWHITE_G3C_KP,   yes,none)
+	PATTERN_USP_OVERWHITE_G3C_MCA(USP_OVERWHITE_G3C_KP,   G3,none)
+	PATTERN_USP_OVERWHITE_G3C_MCA(USP_OVERWHITE_G3C_KP2,  G4,none)
 	PATTERN_USP_OVERWHITE_G3C_MCA(USP_OVERWHITE_G3C_MX,   no, MX)
-	PATTERN_USP_OVERWHITE_G3C_MCA(USP_OVERWHITE_G3C_KP_MX,yes,MX)
+	PATTERN_USP_OVERWHITE_G3C_MCA(USP_OVERWHITE_G3C_KP_MX,G3,MX)
 	PATTERN_USP_OVERWHITE_G3C_MCA(USP_OVERWHITE_G3C_OR,   no, OR)
-	PATTERN_USP_OVERWHITE_G3C_MCA(USP_OVERWHITE_G3C_KP_OR,yes,OR)
+	PATTERN_USP_OVERWHITE_G3C_MCA(USP_OVERWHITE_G3C_KP_OR,G3,OR)
+	PATTERN_USP_OVERWHITE_G3C_OTH(USP_OVERWHITE_G3C_TAN,    no, none,TAN)
+	PATTERN_USP_OVERWHITE_G3C_OTH(USP_OVERWHITE_G3C_KP2_TAN,G4, none,TAN)
+	PATTERN_USP_OVERWHITE_G3C_OTH(USP_OVERWHITE_G3C_GRN,    no, none,GRN)
+	PATTERN_USP_OVERWHITE_G3C_OTH(USP_OVERWHITE_G3C_KP2_GRN,G4, none,GRN)
+	PATTERN_USP_OVERWHITE_G3C_OTH(USP_OVERWHITE_G3C_BLK,    no, none,BLK)
+	PATTERN_USP_OVERWHITE_G3C_OTH(USP_OVERWHITE_G3C_KP2_BLK,G4, none,BLK)
+
 
 	// USP_TSHIRT_G3C / USP_TSHIRT2_G3C
 	PATTERN_USP_TSHIRT_G3C_ALL(USP_TSHIRT_G3C,       no, none,no)
@@ -660,7 +718,7 @@ class CfgWeapons
 	PATTERN_USP_TSHIRT_G3C_ALL(USP_TSHIRT_G3C_KP_MX, yes,MX,no)
 	PATTERN_USP_TSHIRT_G3C_ALL(USP_TSHIRT_G3C_OR,    no, OR,no)
 	PATTERN_USP_TSHIRT_G3C_ALL(USP_TSHIRT_G3C_KP_OR, yes,OR,no)
-	//PATTERN_USP_TSHIRT_G3C_ALL(USP_TSHIRT2_G3C,      no, none,yes) => exists, but private
+	PATTERN_USP_TSHIRT_G3C_ALL(USP_TSHIRT2_G3C,      no, none,yes)
 	PATTERN_USP_TSHIRT_G3C_ALL(USP_TSHIRT2_G3C_KP,   yes,none,yes)
 	PATTERN_USP_TSHIRT_G3C_ALL(USP_TSHIRT2_G3C_MX,   no, MX,yes)
 	PATTERN_USP_TSHIRT_G3C_ALL(USP_TSHIRT2_G3C_KP_MX,yes,MX,yes)
@@ -2130,6 +2188,41 @@ class CfgWeapons
 	PATTERN_OPSCORE_FASTFCV(USP_OPSCORE_FASTMT_FCV_OD_TW,USP_OPSCORE_FASTMT_FCV_TW,none,none,none,TL,CW,OD)
 	PATTERN_OPSCORE_FASTFCV(USP_OPSCORE_FASTMT_FCV_OD_W,USP_OPSCORE_FASTMT_FCV_W,none,none,none,none,CW,OD)
 
+	#define PATTERN_USP_G3F_S(suffix, m, g, p, k) \
+		class suffix                    \
+		{                                             \
+				model = "USP_G3F";                   \
+				camo = #m;                         \
+				gloves = #g;                          \
+				pants = #p;                           \
+				kneepads = #k;                           \
+		};   
+
+	#define PATTERN_USP_G3F(suffix, g, p,k) \
+		PATTERN_USP_G3F_S(##suffix##_3CD, 3CD, g,p,k) \
+		PATTERN_USP_G3F_S(##suffix##_AOR1,AOR1,g,p,k) \
+		PATTERN_USP_G3F_S(##suffix##_AOR2,AOR2,g,p,k) \
+		PATTERN_USP_G3F_S(##suffix##_BLK, BLK, g,p,k) \
+		PATTERN_USP_G3F_S(##suffix##_KHK, KHK, g,p,k) \
+		PATTERN_USP_G3F_S(##suffix##_M81, M81, g,p,k) \
+		PATTERN_USP_G3F_S(##suffix##_MC,  MC,  g,p,k) \
+		PATTERN_USP_G3F_S(##suffix##_MCA, MCA, g,p,k) \
+		PATTERN_USP_G3F_S(##suffix##_MCB, MCB, g,p,k) \
+		PATTERN_USP_G3F_S(##suffix##_MCD, MCD, g,p,k) \
+		PATTERN_USP_G3F_S(##suffix##_MCT, MCT, g,p,k) \
+		PATTERN_USP_G3F_S(##suffix##_NWU, NWU, g,p,k) \
+		PATTERN_USP_G3F_S(##suffix##_RGR, RGR, g,p,k) \
+		PATTERN_USP_G3F_S(##suffix##_UCP, UCP, g,p,k)
+
+	PATTERN_USP_G3F(USP_G3F,          none,Field, no)
+	PATTERN_USP_G3F(USP_G3F_MX,       MX,  Field, no)
+	PATTERN_USP_G3F(USP_G3F_OR,       OR,  Field, no)
+	PATTERN_USP_G3F(USP_G3F_G3C,      none,Combat,no)
+	PATTERN_USP_G3F(USP_G3F_G3C_MX,   MX,  Combat,no)
+	PATTERN_USP_G3F(USP_G3F_G3C_OR,   OR,  Combat,no)
+	PATTERN_USP_G3F(USP_G3F_G3C_KP,   none,Combat,yes)
+	PATTERN_USP_G3F(USP_G3F_G3C_KP_MX,MX,  Combat,yes)
+	PATTERN_USP_G3F(USP_G3F_G3C_KP_OR,OR,  Combat,yes)
 };
 
 };
