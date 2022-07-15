@@ -32,7 +32,7 @@ if ( _selectedModel != "" ) then {
 
 			private _optionIndex = _foreachIndex;
 
-			_x params  ["_optionName", "_optionLabel", "", "", "_values", "", "_optionCenterImage"];
+			_x params  ["_optionName", "_optionLabel", "", "", "_values", "_optionCenterImage"];
 
 			private _configIdcBase = _idcShift + 9980000 + _optionIndex;
 

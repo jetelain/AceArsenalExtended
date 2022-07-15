@@ -11,7 +11,7 @@ private _modelDefition = configFile >> "XtdGearModels" >> _config >> _model;
 private _options = [_config, _model, _modelDefinition, "options"] call EFUNC(gearinfo,getModelOptions);
 {
     private _optionIndex = _foreachIndex;
-    _x params  ["_optionName", "", "", "", "_values", "_alwaysSelectable"];
+    _x params  ["_optionName", "", "", "", "_values", "", "_alwaysSelectable"];
     private _currentValue = GVAR(currentModelOptions) select _optionIndex;
 
     {

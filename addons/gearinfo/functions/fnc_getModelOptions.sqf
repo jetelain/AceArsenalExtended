@@ -54,7 +54,7 @@ private _options = [];
 
 	} forEach _optionValues;
 
-	_options pushBack [_optionName, _optionLabel, _optionIcon, _optionInGame, _values, _alwaysSelectable, _optionCenterImage, _requires];
+	_options pushBack [_optionName, _optionLabel, _optionIcon, _optionInGame, _values, _optionCenterImage, _alwaysSelectable, _requires];
 	
 } forEach _optionsNames;
 
