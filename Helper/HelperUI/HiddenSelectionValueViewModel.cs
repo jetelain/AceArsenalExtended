@@ -9,13 +9,15 @@ namespace HelperUI
 
         public HiddenSelectionValueViewModel(ModelViewModel modelViewModel, HiddenSelectionViewModel parent, DetectedHiddenSelectionValue detected)
         {
+            Metadata = parent.Metadata.GetMetadataFor(detected);
             Parent = parent;
             Detected = detected;
-            valueName = detected.SuggestedName;
+            valueName = Metadata.ValueName ?? detected.SuggestedName;
             var matching = Parent.Parent.Detected.Configs.Where(c => c.GetHiddenSelection(Parent.Name) == detected.Value).ToList();
             CountLabel = $"{matching.Count} configs: {string.Join(", ", matching.Take(5).Select(m => m.ClassName))}{(matching.Count > 5 ? "...":"")}";
         }
 
+        public HiddenSelectionValueMetadata Metadata { get; }
         public HiddenSelectionViewModel Parent { get; }
 
         public DetectedHiddenSelectionValue Detected { get; }
@@ -41,7 +43,8 @@ namespace HelperUI
             get { return valueName; } 
             set 
             { 
-                valueName = value; 
+                valueName = value;
+                Metadata.ValueName = valueName;
                 Parent.Parent.Check(); 
             } 
         }

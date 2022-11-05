@@ -41,6 +41,7 @@ namespace Helper
                     modelInfo.Name = LargestCommonName(model.Select(m => m.ClassName));
                     modelInfo.Configs = configs;
                     modelInfo.P3dModel = configs[0].P3dModel;
+                    modelInfo.ClassRoot = configs[0].ClassRoot;
                     modelInfo.HiddenSelections = configs.SelectMany(c => c.HiddenSelections.Keys).Distinct().Select(name => new DetectedHiddenSelection()
                     {
                         Name = name,
@@ -166,7 +167,7 @@ namespace Helper
             if (string.Equals(Path.GetExtension(file), ".cpp", System.StringComparison.OrdinalIgnoreCase))
             {
                 var dst = Path.GetTempFileName();
-                Process.Start(new ProcessStartInfo(@"E:\Program Files\Steam\steamapps\common\Arma 3 Tools\CfgConvert\CfgConvert.exe", $@"-bin -dst ""{dst}"" ""{file}""")).WaitForExit();
+                Process.Start(new ProcessStartInfo(@"E:\Program Files\Steam\steamapps\common\Arma 3 Tools\CfgConvert\CfgConvert.exe", $@"-bin -dst ""{dst}"" ""{file}""") { WindowStyle = ProcessWindowStyle.Hidden }).WaitForExit();
                 paramFile = StreamHelper.Read<ParamFile>(dst);
                 File.Delete(dst);
             }

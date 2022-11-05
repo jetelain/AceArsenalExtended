@@ -9,6 +9,7 @@ namespace Helper
         public string Name { get; set; }
         public string P3dModel { get; set; }
         public List<DetectedConfigInfo> Configs { get; set; }
-        public List<DetectedHiddenSelection> HiddenSelections { get; internal set; }
+        public List<DetectedHiddenSelection> HiddenSelections { get; set; }
+        public string ClassRoot { get; set; }
     }
 }

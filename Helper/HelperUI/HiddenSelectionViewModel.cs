@@ -15,25 +15,37 @@ namespace HelperUI
 
         public HiddenSelectionViewModel(ModelViewModel modelViewModel, DetectedHiddenSelection detected)
         {
+            Metadata = modelViewModel.Metadata.GetMetadataFor(detected);
             Parent = modelViewModel;
             Detected = detected;
             Count = Parent.Detected.Configs.Count(c => c.HiddenSelections.ContainsKey(detected.Name));
-            optionName = detected.Name;
+            optionName = Metadata.OptionName ?? detected.Name;
+            optionValue = Metadata.OptionValue ?? string.Empty;
             Values = detected.Values.Select(v => new HiddenSelectionValueViewModel(modelViewModel, this, v)).ToList();
-            if (Values.Count == 1)
+
+            if (Metadata.Action != null)
             {
-                action = HiddenSelectionAction.Ignore;
-            }
-            else if (Values.Count == 2)
-            {
-                action = HiddenSelectionAction.MapToAnOptionValue;
-                optionValue = Values.FirstOrDefault(v => v.Detected.Value != string.Empty)?.ValueName ?? "SET";
+                action = HiddenSelectionAction.Values[Metadata.Action.Value];
             }
             else
             {
-                action = HiddenSelectionAction.MapToAnOption;
+                if (Values.Count == 1)
+                {
+                    action = HiddenSelectionAction.Ignore;
+                }
+                else if (Values.Count == 2)
+                {
+                    action = HiddenSelectionAction.MapToAnOptionValue;
+                    optionValue = Values.FirstOrDefault(v => v.Detected.Value != string.Empty)?.ValueName ?? "SET";
+                }
+                else
+                {
+                    action = HiddenSelectionAction.MapToAnOption;
+                }
             }
         }
+
+        public HiddenSelectionMetadata Metadata { get; }
 
         public ModelViewModel Parent { get; }
 
@@ -53,9 +65,17 @@ namespace HelperUI
                 optionName = value;
                 if (action != HiddenSelectionAction.Ignore)
                 {
+                    SetMetadata();
                     Parent.Check();
                 }
             }
+        }
+
+        private void SetMetadata()
+        {
+            Metadata.OptionName = optionName;
+            Metadata.OptionValue = optionValue;
+            Metadata.Action = action.Code;
         }
 
         public string OptionValue
@@ -66,6 +86,7 @@ namespace HelperUI
                 optionValue = value;
                 if (action == HiddenSelectionAction.MapToAnOptionValue)
                 {
+                    SetMetadata();
                     Parent.Check();
                 }
             }
@@ -81,6 +102,7 @@ namespace HelperUI
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ShowValues)));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ShowValuePrompt)));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ShowNamePrompt)));
+                SetMetadata();
                 Parent.Check();
             }
         }

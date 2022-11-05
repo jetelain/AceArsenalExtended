@@ -10,17 +10,24 @@ namespace HelperUI
 {
     public class ModelViewModel : INotifyPropertyChanged
     {
-        public ModelViewModel(DetectedModelInfo m)
+        private readonly MetadataService metadataService;
+
+        public ModelMetadata Metadata { get; }
+
+        internal ModelViewModel(DetectedModelInfo m, MetadataService metadataService)
         {
-            this.Detected = m;
-            this.Count = m.Configs.Count;
-            this.HiddenSelections = m.HiddenSelections.Select(h => new HiddenSelectionViewModel(this, h)).ToList();
-            Check();
+            Detected = m;
+            Count = m.Configs.Count;
+            this.metadataService = metadataService;
+            Metadata = metadataService.GetMetadataFor(m);
+            HiddenSelections = m.HiddenSelections.Select(h => new HiddenSelectionViewModel(this, h)).ToList();
+            Conflicts = ComputeConflicts();
         }
 
         public DetectedModelInfo Detected { get; }
 
         public int Count { get; }
+
 
         public List<HiddenSelectionViewModel> HiddenSelections { get; }
 
@@ -34,15 +41,14 @@ namespace HelperUI
 
         public void Check()
         {
-            if (HiddenSelections == null)
-            {
-                return;
-            }
-            var conflicts = ComputeConflicts();
-            Conflicts = conflicts;
+            Conflicts = ComputeConflicts();
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(StatusOK)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(StatusKO)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(StatusKODetails)));
+            if(Conflicts.Count == 0)
+            {
+                metadataService.Save();
+            }
         }
 
         public List<string> ComputeConflicts()

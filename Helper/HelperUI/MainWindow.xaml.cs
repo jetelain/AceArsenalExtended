@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,6 +25,8 @@ namespace HelperUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly MetadataService metadata = new MetadataService();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -32,13 +36,15 @@ namespace HelperUI
         {
             Task.Factory.StartNew(() =>
             {
-                var rawdata =
-                ModelDetector.Detect(files, info =>
+                var rawdata = ModelDetector.Detect(files, info =>
                 {
                     Dispatcher.BeginInvoke(() => Status.Text = info);
                 });
                 Dispatcher.BeginInvoke(() => Status.Text = "Check data");
-                var data = rawdata.Select(m => new ModelViewModel(m)).ToList();
+
+                metadata.Initialize(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(files[0]) ?? string.Empty, "aceax.json"));
+
+                var data = rawdata.Select(m => new ModelViewModel(m, metadata)).ToList();
                 Dispatcher.BeginInvoke(() => Status.Text = "Done");
                 Dispatcher.BeginInvoke(() => DetectedModelList.ItemsSource = data);
             });
