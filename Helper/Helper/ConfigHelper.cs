@@ -9,7 +9,7 @@ namespace Helper
     {
         public static IEnumerable<T> Get<T>(this IEnumerable<ParamFile> files, string name) where T : ParamEntry
         {
-            return files.Select(f => f.Root).Get<T>(name);
+            return files.Where(f => f.Root != null).Select(f => f.Root).Get<T>(name);
         }
 
         public static IEnumerable<T> Get<T>(this IEnumerable<ParamClass> entries) where T : ParamEntry

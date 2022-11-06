@@ -74,7 +74,7 @@ namespace HelperUI
         {
             var optionsAsDict = Detected.Configs.Select(c => new { Config = c, Options = GetOptions(c) }).ToList();
             var optionsNames = optionsAsDict.SelectMany(c => c.Options.Keys).Distinct().ToList();
-            var optionsAsArray = optionsAsDict.Select(c => new { c.Config, Options = optionsNames.Select(name => GenerateConfig.NormalizeValue(c.Options.TryGetValue(name, out var value) ? value : null)).ToArray() }).ToList();
+            var optionsAsArray = optionsAsDict.Select(c => new { c.Config, Options = optionsNames.Select(name => GenerateConfig.NormalizeValue(name, c.Options.TryGetValue(name, out var value) ? value : null)).ToArray() }).ToList();
             var known = new Dictionary<string[], DetectedConfigInfo>(new StringArrayEqualityComparer());
             var conflicts = new List<string>();
             foreach (var option in optionsAsArray)
@@ -121,7 +121,10 @@ namespace HelperUI
             var options = new Dictionary<string, string?>(StringComparer.OrdinalIgnoreCase);
             foreach (var opt in Options)
             {
-                options[opt.Name] = opt.Value;
+                if (!opt.CanBeIgnored)
+                {
+                    options[opt.Name] = opt.Value;
+                }
             }
             foreach (var selection in HiddenSelections)
             {

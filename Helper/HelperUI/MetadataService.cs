@@ -57,5 +57,7 @@ namespace HelperUI
                 File.WriteAllText(currentFile, JsonSerializer.Serialize(metadata, new JsonSerializerOptions() { WriteIndented = true }));
             }
         }
+
+        public string? CurrentFile => currentFile;
     }
 }

@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BIS.Core.Config;
 using BIS.Core.Streams;
 using BIS.PBO;
@@ -103,7 +101,7 @@ namespace Helper
             return new string[0];
         }
 
-        private static string LargestCommonName(IEnumerable<string> enumerable)
+        internal static string LargestCommonName(IEnumerable<string> enumerable)
         {
             var common = enumerable.OrderBy(n => n.Length).ThenBy(n => n).FirstOrDefault();
             while (!enumerable.All(n => n.StartsWith(common, StringComparison.OrdinalIgnoreCase)))
@@ -168,31 +166,53 @@ namespace Helper
             ParamFile paramFile;
             if (string.Equals(ext, ".cpp", System.StringComparison.OrdinalIgnoreCase))
             {
-                var dst = Path.GetTempFileName();
-                Process.Start(new ProcessStartInfo(@"E:\Program Files\Steam\steamapps\common\Arma 3 Tools\CfgConvert\CfgConvert.exe", $@"-bin -dst ""{dst}"" ""{file}""") { WindowStyle = ProcessWindowStyle.Hidden }).WaitForExit();
-                paramFile = StreamHelper.Read<ParamFile>(dst);
-                File.Delete(dst);
+                paramFile = ParseCpp(file);
             }
             else if (string.Equals(ext, ".pbo", System.StringComparison.OrdinalIgnoreCase))
             {
                 var pbo = new PBO(file);
-                var config = pbo.Files.FirstOrDefault(f => f.FileName == "config.bin");
-                if (config != null)
+                var configBin = pbo.Files.FirstOrDefault(f => f.FileName == "config.bin");
+                if (configBin != null)
                 {
-                    using (var stream = config.OpenRead())
+                    using (var stream = configBin.OpenRead())
                     {
                         paramFile = StreamHelper.Read<ParamFile>(stream);
                     }
                 }
                 else
                 {
-                    paramFile = new ParamFile();
+                    var src = Path.GetTempFileName();
+                    var configCpp = pbo.Files.FirstOrDefault(f => f.FileName == "config.cpp");
+                    if (configCpp != null)
+                    {
+                        using (var streamFile = File.Create(src))
+                        using (var stream = configCpp.OpenRead())
+                        {
+                            stream.CopyTo(streamFile);
+                        }
+                        paramFile = ParseCpp(src);
+                        File.Delete(src);
+                    }
+                    else
+                    {
+                        paramFile = new ParamFile();
+                    }
                 }
             }
             else
             {
                 paramFile = StreamHelper.Read<ParamFile>(file);
             }
+            return paramFile;
+        }
+
+        private static ParamFile ParseCpp(string src)
+        {
+            ParamFile paramFile;
+            var dst = Path.GetTempFileName();
+            Process.Start(new ProcessStartInfo(@"E:\Program Files\Steam\steamapps\common\Arma 3 Tools\CfgConvert\CfgConvert.exe", $@"-bin -dst ""{dst}"" ""{src}""") { WindowStyle = ProcessWindowStyle.Hidden }).WaitForExit();
+            paramFile = StreamHelper.Read<ParamFile>(dst);
+            File.Delete(dst);
             return paramFile;
         }
     }

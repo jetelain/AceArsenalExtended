@@ -1,20 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Helper;
 using Microsoft.Win32;
 
@@ -36,23 +26,32 @@ namespace HelperUI
         {
             Task.Factory.StartNew(() =>
             {
-                var rawdata = ModelDetector.Detect(files, info =>
+                try
                 {
-                    Dispatcher.BeginInvoke(() => Status.Text = info);
-                });
-                Dispatcher.BeginInvoke(() => Status.Text = "Check data");
+                    var rawdata = ModelDetector.Detect(files, SetStatus);
 
-                metadata.Initialize(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(files[0]) ?? string.Empty, "aceax.json"));
+                    SetStatus("Check data");
+                    metadata.Initialize(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(files[0]) ?? string.Empty, "aceax.json"));
+                    var data = new List<ModelViewModel>();
+                    data.AddRange(rawdata.Select(m => new ModelViewModel(m, metadata, data)));
+                    foreach (var model in data)
+                    {
+                        model.InitModelLevelOptions();
+                    }
 
-                var data = new List<ModelViewModel>();
-                data.AddRange(rawdata.Select(m => new ModelViewModel(m, metadata, data)));
-                foreach(var model in data)
-                {
-                    model.InitModelLevelOptions();
+                    SetStatus("Done");
+                    Dispatcher.BeginInvoke(() => DetectedModelList.ItemsSource = data);
                 }
-                Dispatcher.BeginInvoke(() => Status.Text = "Done");
-                Dispatcher.BeginInvoke(() => DetectedModelList.ItemsSource = data);
+                catch(Exception e)
+                {
+                    SetStatus("Error: " + e.Message);
+                }
             });
+        }
+
+        private void SetStatus(string value)
+        {
+            Dispatcher.BeginInvoke(() => Status.Text = value);
         }
 
         private void OpenFile(object sender, RoutedEventArgs e)
@@ -67,10 +66,22 @@ namespace HelperUI
                 Analyze(dlg.FileNames);
             }
         }
-        private void Preview(object sender, RoutedEventArgs e)
+        private void GenerateCSV(object sender, RoutedEventArgs e)
         {
-            var result = GetGenerateData();
-            var output = result.ToString();
+            var folder = System.IO.Path.GetDirectoryName(metadata.CurrentFile);
+            if (!string.IsNullOrEmpty(folder))
+            {
+                var result = GetGenerateData();
+                foreach (var model in result.Models)
+                {
+                    var filename = System.IO.Path.Combine(folder, $"aceax_{model.Name}.csv");
+                    using (var writer = File.CreateText(filename))
+                    {
+                        model.WriteCSV(writer);
+                    }
+                }
+                Process.Start("explorer", $@"""{folder}""");
+            }
         }
 
         private GenerateXtdConfig GetGenerateData()
@@ -78,7 +89,7 @@ namespace HelperUI
             return new GenerateXtdConfig(DetectedModelList.ItemsSource.OfType<ModelViewModel>().Where(m => m.Action != ModelAction.Ignore));
         }
 
-        private void Generate(object sender, RoutedEventArgs e)
+        private void GenerateSingle(object sender, RoutedEventArgs e)
         {
             var dlg = new SaveFileDialog();
             dlg.Title = "Generate to a file";

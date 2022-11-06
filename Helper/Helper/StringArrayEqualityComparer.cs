@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
-namespace HelperUI
+namespace Helper
 {
-    internal class StringArrayEqualityComparer : IEqualityComparer<string[]>
+    public class StringArrayEqualityComparer : IEqualityComparer<string[]>
     {
         public bool Equals(string[]? x, string[]? y)
         {

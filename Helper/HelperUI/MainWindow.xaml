@@ -21,8 +21,8 @@
                 <MenuItem Header="_Open config file..." Command="Open" InputGestureText="Ctrl+O"  />
             </MenuItem>
             <MenuItem Header="_Generate">
-                <!--<MenuItem Header="Preview ACEX Config" Click="Preview" />-->
-                <MenuItem Header="Generate _to a file" Click="Generate" />
+                <MenuItem Header="Generate config _to a file..." Click="GenerateSingle" />
+                <MenuItem Header="Generate _CSV report" Click="GenerateCSV" />
             </MenuItem>
         </Menu>
     
