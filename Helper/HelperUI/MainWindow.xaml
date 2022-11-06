@@ -20,6 +20,10 @@
             <MenuItem Header="_File">
                 <MenuItem Header="_Open config file..." Command="Open" InputGestureText="Ctrl+O"  />
             </MenuItem>
+            <MenuItem Header="_Generate">
+                <!--<MenuItem Header="Preview ACEX Config" Click="Preview" />-->
+                <MenuItem Header="Generate _to a file" Click="Generate" />
+            </MenuItem>
         </Menu>
     
         <TextBlock Name="Status" DockPanel.Dock="Bottom" />
@@ -34,17 +38,35 @@
                             <StackPanel Margin="10" Orientation="Horizontal" >
                                 <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="14pt" />
                                 <TextBlock Text="{Binding CountLabel}" Margin="5 0" VerticalAlignment="Bottom" />
+                                <TextBlock Foreground="Green" Margin="5 0" Visibility="{Binding StatusOK}" VerticalAlignment="Bottom">Everything seems OK</TextBlock>
                             </StackPanel>
 
-                            <StackPanel Margin="10" Orientation="Horizontal" Visibility="{Binding StatusOK}">
-                                <TextBlock Foreground="Green">Everything seems OK</TextBlock>
+                            <StackPanel Margin="5" Orientation="Horizontal" >
+                                <ComboBox 
+                                                    Width="200" 
+                                                    ItemsSource="{x:Static local:ModelAction.Values}"
+                                                    DisplayMemberPath="Label"
+                                                    SelectedValue="{Binding Action}" />
+                                <TextBox Text="{Binding ModelName}" Width="150" Margin="10 0" Visibility="{Binding ShowConfig}" />
                             </StackPanel>
-                            
-                            <StackPanel Margin="10" Orientation="Horizontal" Visibility="{Binding StatusKO}" >
+
+
+                            <ItemsControl ItemsSource="{Binding Options}" Margin="5" Visibility="{Binding ShowConfig}" >
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal" >
+                                            <TextBox Text="{Binding Name}" Width="150" IsEnabled="{Binding IsEditable}" />
+                                            <TextBox Text="{Binding Value}" Width="150" Margin="10 0" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+
+                            <StackPanel Margin="10" Orientation="Horizontal" Visibility="{Binding StatusKO}">
                                 <TextBlock Text="{Binding StatusKODetails}" Foreground="Red" />
                             </StackPanel>
 
-                            <ItemsControl ItemsSource="{Binding HiddenSelections}">
+                            <ItemsControl ItemsSource="{Binding HiddenSelections}" Visibility="{Binding ShowConfig}">
                                 <ItemsControl.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel Margin="10 5" Background="White">

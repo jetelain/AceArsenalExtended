@@ -7,7 +7,7 @@ namespace HelperUI
     {
         private string valueName;
 
-        public HiddenSelectionValueViewModel(ModelViewModel modelViewModel, HiddenSelectionViewModel parent, DetectedHiddenSelectionValue detected)
+        public HiddenSelectionValueViewModel(HiddenSelectionViewModel parent, DetectedHiddenSelectionValue detected)
         {
             Metadata = parent.Metadata.GetMetadataFor(detected);
             Parent = parent;

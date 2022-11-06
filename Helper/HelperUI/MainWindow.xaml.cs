@@ -44,7 +44,12 @@ namespace HelperUI
 
                 metadata.Initialize(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(files[0]) ?? string.Empty, "aceax.json"));
 
-                var data = rawdata.Select(m => new ModelViewModel(m, metadata)).ToList();
+                var data = new List<ModelViewModel>();
+                data.AddRange(rawdata.Select(m => new ModelViewModel(m, metadata, data)));
+                foreach(var model in data)
+                {
+                    model.InitModelLevelOptions();
+                }
                 Dispatcher.BeginInvoke(() => Status.Text = "Done");
                 Dispatcher.BeginInvoke(() => DetectedModelList.ItemsSource = data);
             });
@@ -55,11 +60,38 @@ namespace HelperUI
             var dlg = new OpenFileDialog();
             dlg.Title = "Load config file";
             dlg.DefaultExt = ".cpp";
-            dlg.Filter = "Config lile|*.cpp;*.bin";
+            dlg.Filter = "Config file or PBO|*.cpp;*.bin;*.pbo";
             dlg.Multiselect = true;
             if (dlg.ShowDialog() == true)
             {
                 Analyze(dlg.FileNames);
+            }
+        }
+        private void Preview(object sender, RoutedEventArgs e)
+        {
+            var result = GetGenerateData();
+            var output = result.ToString();
+        }
+
+        private GenerateXtdConfig GetGenerateData()
+        {
+            return new GenerateXtdConfig(DetectedModelList.ItemsSource.OfType<ModelViewModel>().Where(m => m.Action != ModelAction.Ignore));
+        }
+
+        private void Generate(object sender, RoutedEventArgs e)
+        {
+            var dlg = new SaveFileDialog();
+            dlg.Title = "Generate to a file";
+            dlg.FileName = "XtdGear.hpp";
+            dlg.Filter = "Text config file|*.hpp;*.cpp";
+            if (dlg.ShowDialog() == true)
+            {
+                var result = GetGenerateData();
+                using (var writer = File.CreateText(dlg.FileName))
+                {
+                    result.WriteXtdGearModelsTo(writer);
+                    result.WriteXtdGearInfosTo(writer);
+                }
             }
         }
     }

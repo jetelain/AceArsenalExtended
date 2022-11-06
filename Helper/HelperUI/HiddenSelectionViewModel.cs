@@ -21,7 +21,7 @@ namespace HelperUI
             Count = Parent.Detected.Configs.Count(c => c.HiddenSelections.ContainsKey(detected.Name));
             optionName = Metadata.OptionName ?? detected.Name;
             optionValue = Metadata.OptionValue ?? string.Empty;
-            Values = detected.Values.Select(v => new HiddenSelectionValueViewModel(modelViewModel, this, v)).ToList();
+            Values = detected.Values.Select(v => new HiddenSelectionValueViewModel(this, v)).ToList();
 
             if (Metadata.Action != null)
             {

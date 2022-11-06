@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BIS.Core.Config;
 using BIS.Core.Streams;
+using BIS.PBO;
 
 namespace Helper
 {
@@ -163,19 +164,35 @@ namespace Helper
 
         private static ParamFile ReadParamFile(string file)
         {
+            var ext = Path.GetExtension(file);
             ParamFile paramFile;
-            if (string.Equals(Path.GetExtension(file), ".cpp", System.StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(ext, ".cpp", System.StringComparison.OrdinalIgnoreCase))
             {
                 var dst = Path.GetTempFileName();
                 Process.Start(new ProcessStartInfo(@"E:\Program Files\Steam\steamapps\common\Arma 3 Tools\CfgConvert\CfgConvert.exe", $@"-bin -dst ""{dst}"" ""{file}""") { WindowStyle = ProcessWindowStyle.Hidden }).WaitForExit();
                 paramFile = StreamHelper.Read<ParamFile>(dst);
                 File.Delete(dst);
             }
+            else if (string.Equals(ext, ".pbo", System.StringComparison.OrdinalIgnoreCase))
+            {
+                var pbo = new PBO(file);
+                var config = pbo.Files.FirstOrDefault(f => f.FileName == "config.bin");
+                if (config != null)
+                {
+                    using (var stream = config.OpenRead())
+                    {
+                        paramFile = StreamHelper.Read<ParamFile>(stream);
+                    }
+                }
+                else
+                {
+                    paramFile = new ParamFile();
+                }
+            }
             else
             {
                 paramFile = StreamHelper.Read<ParamFile>(file);
             }
-
             return paramFile;
         }
     }

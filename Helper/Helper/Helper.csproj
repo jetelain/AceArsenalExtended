@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\bis-file-formats\BIS.Core\BIS.Core.csproj" />
+    <ProjectReference Include="..\..\..\bis-file-formats\BIS.PBO\BIS.PBO.csproj" />
   </ItemGroup>
 
 </Project>
