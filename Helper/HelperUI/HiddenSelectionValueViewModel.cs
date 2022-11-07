@@ -45,7 +45,7 @@ namespace HelperUI
             { 
                 valueName = value;
                 Metadata.ValueName = valueName;
-                Parent.Parent.Check(); 
+                Parent.Parent.MappedOptionNameOrValueChange(); 
             } 
         }
 

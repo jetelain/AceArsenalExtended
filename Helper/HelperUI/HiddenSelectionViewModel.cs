@@ -66,7 +66,7 @@ namespace HelperUI
                 if (action != HiddenSelectionAction.Ignore)
                 {
                     SetMetadata();
-                    Parent.Check();
+                    Parent.MappedOptionNameOrValueChange();
                 }
             }
         }
@@ -87,7 +87,7 @@ namespace HelperUI
                 if (action == HiddenSelectionAction.MapToAnOptionValue)
                 {
                     SetMetadata();
-                    Parent.Check();
+                    Parent.MappedOptionNameOrValueChange();
                 }
             }
         }
@@ -103,7 +103,7 @@ namespace HelperUI
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ShowValuePrompt)));
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ShowNamePrompt)));
                 SetMetadata();
-                Parent.Check();
+                Parent.MappedOptionNameOrValueChange();
             }
         }
 

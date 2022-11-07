@@ -8,7 +8,6 @@ namespace Helper
     public class GenerateConfig
     {
         private static Dictionary<string,string> ConventionalDefaultValue = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase) {
-            { "gloves", "none" },
             { "kneepads", "no" }
         };
 
@@ -20,7 +19,7 @@ namespace Helper
                 {
                     return defaultValue;
                 }
-                return "DEFAULT";
+                return "none";
             }
             return value;
         }

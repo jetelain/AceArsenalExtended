@@ -82,11 +82,11 @@ namespace Helper
             }
             if (value == null)
             {
-                return "DEFAULT";
+                return "default";
             }
             if (value == string.Empty)
             {
-                return "NONE";
+                return "none";
             }
             return Path.GetFileNameWithoutExtension(value);
         }

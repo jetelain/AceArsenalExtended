@@ -4,6 +4,8 @@ namespace HelperUI
 {
     public class ModelOptionsViewModel : INotifyPropertyChanged
     {
+        public const string NewOptionName = "newOption";
+
         private string name;
         private bool isEditable;
         private string value;
@@ -25,9 +27,13 @@ namespace HelperUI
             } 
             set
             {
-                name = value;
-                Parent.SetMetadata();
+                Parent.GetGroup().RenameOption(name, value);
             }
+        }
+        internal void SetName(string newName)
+        {
+            name = newName;
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Name)));
         }
 
         public string Value
@@ -39,7 +45,7 @@ namespace HelperUI
             set
             {
                 this.value = value;
-                Parent.SetMetadata();
+                Parent.SetMetadataAndSave();
             }
         }
 
@@ -59,11 +65,13 @@ namespace HelperUI
         }
 
 
-        public bool CanBeIgnored => string.IsNullOrEmpty(Name) || (string.IsNullOrEmpty(Value) && Name == "otherOption");
+        public bool CanBeIgnored => string.IsNullOrEmpty(Name) || (string.IsNullOrEmpty(Value) && Name == NewOptionName);
 
         public ModelViewModel Parent { get; }
 
 
         public event PropertyChangedEventHandler? PropertyChanged;
+
+
     }
 }

@@ -17,8 +17,11 @@ namespace HelperUI
     {
         private readonly MetadataService metadata = new MetadataService();
 
+        private RootViewModel rootViewModel;
+
         public MainWindow()
         {
+            DataContext = rootViewModel = new RootViewModel(metadata);
             InitializeComponent();
         }
 
@@ -28,19 +31,11 @@ namespace HelperUI
             {
                 try
                 {
-                    var rawdata = ModelDetector.Detect(files, SetStatus);
+                    var root = rootViewModel = new RootViewModel(metadata);
 
-                    SetStatus("Check data");
-                    metadata.Initialize(System.IO.Path.Combine(System.IO.Path.GetDirectoryName(files[0]) ?? string.Empty, "aceax.json"));
-                    var data = new List<ModelViewModel>();
-                    data.AddRange(rawdata.Select(m => new ModelViewModel(m, metadata, data)));
-                    foreach (var model in data)
-                    {
-                        model.InitModelLevelOptions();
-                    }
+                    root.Load(files, SetStatus);
 
-                    SetStatus("Done");
-                    Dispatcher.BeginInvoke(() => DetectedModelList.ItemsSource = data);
+                    Dispatcher.BeginInvoke(() => DataContext = root);
                 }
                 catch(Exception e)
                 {
@@ -71,7 +66,7 @@ namespace HelperUI
             var folder = System.IO.Path.GetDirectoryName(metadata.CurrentFile);
             if (!string.IsNullOrEmpty(folder))
             {
-                var result = GetGenerateData();
+                var result = rootViewModel.GetGenerateData();
                 foreach (var model in result.Models)
                 {
                     var filename = System.IO.Path.Combine(folder, $"aceax_{model.Name}.csv");
@@ -84,11 +79,6 @@ namespace HelperUI
             }
         }
 
-        private GenerateXtdConfig GetGenerateData()
-        {
-            return new GenerateXtdConfig(DetectedModelList.ItemsSource.OfType<ModelViewModel>().Where(m => m.Action != ModelAction.Ignore));
-        }
-
         private void GenerateSingle(object sender, RoutedEventArgs e)
         {
             var dlg = new SaveFileDialog();
@@ -97,7 +87,7 @@ namespace HelperUI
             dlg.Filter = "Text config file|*.hpp;*.cpp";
             if (dlg.ShowDialog() == true)
             {
-                var result = GetGenerateData();
+                var result = rootViewModel.GetGenerateData();
                 using (var writer = File.CreateText(dlg.FileName))
                 {
                     result.WriteXtdGearModelsTo(writer);

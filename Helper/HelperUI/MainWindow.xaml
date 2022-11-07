@@ -22,6 +22,8 @@
             </MenuItem>
             <MenuItem Header="_Generate">
                 <MenuItem Header="Generate config _to a file..." Click="GenerateSingle" />
+            </MenuItem>
+            <MenuItem Header="{Binding ConflictStatus}">
                 <MenuItem Header="Generate _CSV report" Click="GenerateCSV" />
             </MenuItem>
         </Menu>
@@ -30,7 +32,7 @@
 
 
         <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto">
-            <ItemsControl Name="DetectedModelList">
+            <ItemsControl ItemsSource="{Binding Models}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="10 5" Background="#f0f0f0">
@@ -38,7 +40,11 @@
                             <StackPanel Margin="10" Orientation="Horizontal" >
                                 <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="14pt" />
                                 <TextBlock Text="{Binding CountLabel}" Margin="5 0" VerticalAlignment="Bottom" />
-                                <TextBlock Foreground="Green" Margin="5 0" Visibility="{Binding StatusOK}" VerticalAlignment="Bottom">Everything seems OK</TextBlock>
+                                <TextBlock Foreground="Green" FontWeight="Bold" Margin="5 0" Visibility="{Binding StatusOK}" VerticalAlignment="Bottom">Everything seems OK</TextBlock>
+                                <TextBlock Foreground="Red" FontWeight="Bold" Margin="5 0" Visibility="{Binding StatusKO}" VerticalAlignment="Bottom" Text="{Binding StatusKODetails}" FontSize="12pt" />
+                                <Button Margin="5 0" Visibility="{Binding StatusKO}" VerticalAlignment="Bottom">
+                                    Show conflicts
+                                </Button>
                             </StackPanel>
 
                             <StackPanel Margin="5" Orientation="Horizontal" >
@@ -48,6 +54,7 @@
                                                     DisplayMemberPath="Label"
                                                     SelectedValue="{Binding Action}" />
                                 <TextBox Text="{Binding ModelName}" Width="150" Margin="10 0" Visibility="{Binding ShowConfig}" />
+                                <Button Command="{Binding AddOption}">Add an option</Button>
                             </StackPanel>
 
 
@@ -61,10 +68,6 @@
                                     </DataTemplate>
                                 </ItemsControl.ItemTemplate>
                             </ItemsControl>
-
-                            <StackPanel Margin="10" Orientation="Horizontal" Visibility="{Binding StatusKO}">
-                                <TextBlock Text="{Binding StatusKODetails}" Foreground="Red" />
-                            </StackPanel>
 
                             <ItemsControl ItemsSource="{Binding HiddenSelections}" Visibility="{Binding ShowConfig}">
                                 <ItemsControl.ItemTemplate>

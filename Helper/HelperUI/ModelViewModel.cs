@@ -11,21 +11,21 @@ namespace HelperUI
 {
     public class ModelViewModel : INotifyPropertyChanged, IDetectedModelMapper
     {
-        private readonly MetadataService metadataService;
-        private readonly List<ModelViewModel> models;
+        private readonly RootViewModel root;
 
         private ModelAction action;
         private string modelName;
 
         public ModelMetadata Metadata { get; }
 
-        internal ModelViewModel(DetectedModelInfo m, MetadataService metadataService, List<ModelViewModel> models)
+        public AddOptionCommand AddOption { get; }
+
+        internal ModelViewModel(DetectedModelInfo m, RootViewModel root)
         {
-            this.metadataService = metadataService;
-            this.models = models;
+            this.root = root;
             Detected = m;
             Count = m.Configs.Count;
-            Metadata = metadataService.GetMetadataFor(m);
+            Metadata = root.MetadataService.GetMetadataFor(m);
             HiddenSelections = m.HiddenSelections.Select(h => new HiddenSelectionViewModel(this, h)).ToList();
             Conflicts = ComputeConflicts();
             modelName = Metadata.ModelName ?? Detected.Name;
@@ -38,12 +38,15 @@ namespace HelperUI
             {
                 action = ModelAction.MapToModel;
             }
+
+            AddOption = new AddOptionCommand(this);
         }
 
         public DetectedModelInfo Detected { get; }
 
         public int Count { get; }
 
+        public bool IsGroup { get; set; }
 
         public List<HiddenSelectionViewModel> HiddenSelections { get; }
 
@@ -57,17 +60,18 @@ namespace HelperUI
 
         public List<string> Conflicts { get; set; }
 
-        public void Check()
+        public void MappedOptionNameOrValueChange()
         {
+            GetGroup().UpdateOptions();
+
             Conflicts = ComputeConflicts();
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(StatusOK)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(StatusKO)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(StatusKODetails)));
-            if (Conflicts.Count == 0)
-            {
-                metadataService.Save();
-            }
-            UpdateAllModelLevelOptions();
+
+            root.Update();
+
+            root.MetadataService.Save();
         }
 
         public List<string> ComputeConflicts()
@@ -102,9 +106,9 @@ namespace HelperUI
 
         public Visibility StatusKO => Conflicts.Count > 0 ? Visibility.Visible : Visibility.Collapsed;
 
-        public string StatusKODetails => $"{Conflicts.Count} conflict(s):\r\n{string.Join("\r\n", Conflicts.Take(5))}{(Conflicts.Count > 5?"\r\n(Display limited to 5 conflicts)":"")}";
+        public string StatusKODetails => $"{Conflicts.Count} conflict(s)";
 
-
+        /*:\r\n{string.Join("\r\n", Conflicts.Take(5))}{(Conflicts.Count > 5?"\r\n(Display limited to 5 conflicts)":"")}*/
 
         private Dictionary<string,string?> GetOptions(DetectedConfigInfo config)
         {
@@ -140,97 +144,90 @@ namespace HelperUI
             {
                 this.action = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ShowConfig)));
-                SetMetadata();
+                SetMetadataAndSave();
             }
         }
 
         public Visibility ShowConfig => action != ModelAction.Ignore ? Visibility.Visible : Visibility.Collapsed;
 
-        public void SetMetadata()
+        public void SetMetadataAndSave()
         {
-            UpdateAllModelLevelOptions();
+            GetGroup().UpdateOptions();
 
+            SetMetadataOnly();
+
+            root.Update();
+
+            root.MetadataService.Save();
+        }
+
+        public void SetMetadataOnly()
+        {
             Metadata.Action = action.Code;
             Metadata.ModelName = modelName;
             Metadata.GapOptions = Options.Where(o => !o.IsEditable).ToDictionary(o => o.Name, o => o.Value, StringComparer.OrdinalIgnoreCase);
             Metadata.ExplicitOptions = Options.Where(o => o.IsEditable && !o.CanBeIgnored).ToDictionary(o => o.Name, o => o.Value, StringComparer.OrdinalIgnoreCase);
-            metadataService.Save();
         }
 
-        public void UpdateAllModelLevelOptions()
+        internal ModelGroup GetGroup()
         {
-            var withSameName = GetWithSameName();
-            foreach (var model in withSameName)
-            {
-                model.ComputeModelLevelOptions(withSameName, false);
-            }
+            return new ModelGroup(root, ModelName);
         }
 
-        public void InitModelLevelOptions()
-        {
-            ComputeModelLevelOptions(GetWithSameName(), true);
-        }
-
-        private List<ModelViewModel> GetWithSameName()
-        {
-            return models.Where(m => m.Action != ModelAction.Ignore && string.Equals(m.ModelName, ModelName)).ToList();
-        }
-
-        public IEnumerable<string> GetOptionNames()
+        public IEnumerable<string> GetMappedOptionNames()
         {
             return HiddenSelections.Where(h => h.Action != HiddenSelectionAction.Ignore).Select(h => h.OptionName).Distinct(StringComparer.OrdinalIgnoreCase);
         }
 
         public IEnumerable<string> GetAllOptionNames()
         {
-            return GetOptionNames().Concat(Options.Where(o => !string.IsNullOrEmpty(o.Name)).Select(o => o.Name));
+            return GetMappedOptionNames().Concat(Options.Where(o => !string.IsNullOrEmpty(o.Name)).Select(o => o.Name));
         }
 
-        public void ComputeModelLevelOptions(List<ModelViewModel> withSameName, bool isInitial)
+        public IEnumerable<string> GetInitialOptionNames()
         {
-            if (withSameName.Count > 1)
-            {
-                var thisOptions    = GetOptionNames().ToList();
-                var allBaseOptions = withSameName.SelectMany(o => o.GetOptionNames()).Distinct(StringComparer.OrdinalIgnoreCase).ToList();
-                var allOptions     = withSameName.SelectMany(o => o.GetAllOptionNames()).Distinct(StringComparer.OrdinalIgnoreCase).ToList();
-                var missingOptions = allOptions.Where(o => !thisOptions.Contains(o, StringComparer.OrdinalIgnoreCase)).ToList();
+            return GetMappedOptionNames().Concat(Metadata.ExplicitOptions.Keys);
+        }
 
-                foreach(var missingOption in missingOptions)
-                {
-                    var vm = Options.FirstOrDefault(m => string.Equals(m.Name, missingOption, StringComparison.OrdinalIgnoreCase));
-                    if (vm == null)
-                    {
-                        Options.Add(vm = new ModelOptionsViewModel(this, missingOption, true, 
-                            Metadata.GapOptions.TryGetValue(missingOption, out var value) || Metadata.ExplicitOptions.TryGetValue(missingOption, out value) ? value : string.Empty));
-                    }
-                    vm.IsAutomatic = true;
-                    vm.IsEditable = !allBaseOptions.Contains(missingOption, StringComparer.OrdinalIgnoreCase);
-                }
-
-                var cleanup = Options.Where(o => o.IsAutomatic ? !missingOptions.Contains(o.Name, StringComparer.OrdinalIgnoreCase) : o.CanBeIgnored).ToList();
-                foreach(var other in cleanup)
-                {
-                    Options.Remove(other);
-                }
-                if (Options.Count == 0)
-                {
-                    if (isInitial && Metadata.ExplicitOptions.Count > 0)
-                    {
-                        foreach (var pair in Metadata.ExplicitOptions)
-                        {
-                            Options.Add(new ModelOptionsViewModel(this, pair.Key, false, pair.Value));
-                        }
-                    }
-                    else
-                    {
-                        Options.Add(new ModelOptionsViewModel(this, "otherOption", false, string.Empty));
-                    }
-                }
-            }
-            else if (Options.Count > 0)
+        public void ComputeModelLevelOptions(List<string> allOptions, List<string> mappedOptions)
+        {
+            if ( !IsGroup)
             {
-                Options.Clear();
+                IsGroup = true;
+                AddOption.Changed();
             }
+
+            var mapped    = GetMappedOptionNames().ToList();
+            var notMapped = allOptions.Where(o => !mapped.Contains(o, StringComparer.OrdinalIgnoreCase)).ToList();
+
+            foreach(var missingOption in notMapped)
+            {
+                var vm = Options.FirstOrDefault(m => string.Equals(m.Name, missingOption, StringComparison.OrdinalIgnoreCase));
+                if (vm == null)
+                {
+                    Options.Add(vm = new ModelOptionsViewModel(this, missingOption, true, 
+                        Metadata.GapOptions.TryGetValue(missingOption, out var value) || Metadata.ExplicitOptions.TryGetValue(missingOption, out value) ? value : string.Empty));
+                }
+                vm.IsAutomatic = true;
+                vm.IsEditable = !mappedOptions.Contains(missingOption, StringComparer.OrdinalIgnoreCase);
+            }
+
+            var cleanup = Options.Where(o => o.IsAutomatic && !notMapped.Contains(o.Name, StringComparer.OrdinalIgnoreCase)).ToList();
+            foreach(var other in cleanup)
+            {
+                Options.Remove(other);
+            }
+
+        }
+
+        internal void ResetModelLevelOptions()
+        {
+            if (IsGroup)
+            {
+                IsGroup = false;
+                AddOption.Changed();
+            }
+            Options.Clear();
         }
 
         public string ModelName
@@ -241,7 +238,7 @@ namespace HelperUI
                 modelName = value;
                 if (action != ModelAction.Ignore)
                 {
-                    SetMetadata();
+                    SetMetadataAndSave();
                 }
             }
         }
