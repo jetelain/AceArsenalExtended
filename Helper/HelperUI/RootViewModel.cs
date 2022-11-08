@@ -51,7 +51,7 @@ namespace HelperUI
 
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(StatusOK)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(StatusKO)));
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(StatusKO)));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(StatusKODetails)));
         }
 
         public Visibility StatusOK => ConflictCount == 0 ? Visibility.Visible : Visibility.Collapsed;

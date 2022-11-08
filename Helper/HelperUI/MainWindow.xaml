@@ -27,10 +27,10 @@
                 <MenuItem.Header>
                     <StackPanel Orientation="Horizontal" Margin="0">
                         <TextBlock Margin="0" VerticalAlignment="Center">Conflicts</TextBlock>
-                        <Border CornerRadius="5" Background="Green" Margin="5 0 0 0" VerticalAlignment="Center" Padding="5 2" Visibility="{Binding StatusOK}">
+                        <Border CornerRadius="5" Background="DarkGreen" Margin="5 0 0 0" VerticalAlignment="Center" Padding="5 2" Visibility="{Binding StatusOK}">
                             <TextBlock  Foreground="White">None</TextBlock>
                         </Border>
-                        <Border CornerRadius="5" Background="Red" Margin="5 0 0 0" VerticalAlignment="Center" Padding="5 2" Visibility="{Binding StatusKO}">
+                        <Border CornerRadius="5" Background="DarkRed" Margin="5 0 0 0" VerticalAlignment="Center" Padding="5 2" Visibility="{Binding StatusKO}">
                             <TextBlock Text="{Binding StatusKODetails}" Foreground="White" />
                         </Border>
                     </StackPanel>
