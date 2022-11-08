@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 using Helper;
+using Helper.Detector;
+using Helper.Metadata;
 
 namespace HelperUI
 {
@@ -200,24 +202,26 @@ namespace HelperUI
             var mapped    = GetMappedOptionNames().ToList();
             var notMapped = allOptions.Where(o => !mapped.Contains(o, StringComparer.OrdinalIgnoreCase)).ToList();
 
-            foreach(var missingOption in notMapped)
-            {
-                var vm = Options.FirstOrDefault(m => string.Equals(m.Name, missingOption, StringComparison.OrdinalIgnoreCase));
-                if (vm == null)
-                {
-                    Options.Add(vm = new ModelOptionsViewModel(this, missingOption, true, 
-                        Metadata.GapOptions.TryGetValue(missingOption, out var value) || Metadata.ExplicitOptions.TryGetValue(missingOption, out value) ? value : string.Empty));
-                }
-                vm.IsAutomatic = true;
-                vm.IsEditable = !mappedOptions.Contains(missingOption, StringComparer.OrdinalIgnoreCase);
-            }
-
-            var cleanup = Options.Where(o => o.IsAutomatic && !notMapped.Contains(o.Name, StringComparer.OrdinalIgnoreCase)).ToList();
-            foreach(var other in cleanup)
+            var cleanup = Options.Where(o => o.IsMissingMapped && !notMapped.Contains(o.Name, StringComparer.OrdinalIgnoreCase)).ToList();
+            foreach (var other in cleanup)
             {
                 Options.Remove(other);
             }
 
+            foreach (var missingOption in notMapped)
+            {
+                var isMissingMapped = mappedOptions.Contains(missingOption, StringComparer.OrdinalIgnoreCase);
+                var vm = Options.FirstOrDefault(m => string.Equals(m.Name, missingOption, StringComparison.OrdinalIgnoreCase));
+                if (vm == null)
+                {
+                    Options.Add(vm = new ModelOptionsViewModel(this, missingOption, isMissingMapped,
+                        Metadata.GapOptions.TryGetValue(missingOption, out var value) || Metadata.ExplicitOptions.TryGetValue(missingOption, out value) ? value : string.Empty));
+                }
+                else
+                {
+                    vm.IsMissingMapped = isMissingMapped;
+                }
+            }
         }
 
         internal void ResetModelLevelOptions()

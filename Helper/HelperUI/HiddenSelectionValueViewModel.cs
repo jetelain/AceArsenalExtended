@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Helper;
+using Helper.Metadata;
 
 namespace HelperUI
 {
@@ -9,11 +10,12 @@ namespace HelperUI
 
         public HiddenSelectionValueViewModel(HiddenSelectionViewModel parent, DetectedHiddenSelectionValue detected)
         {
-            Metadata = parent.Metadata.GetMetadataFor(detected);
             Parent = parent;
             Detected = detected;
-            valueName = Metadata.ValueName ?? detected.SuggestedName;
+
             var matching = Parent.Parent.Detected.Configs.Where(c => c.GetHiddenSelection(Parent.Name) == detected.Value).ToList();
+            Metadata = parent.Metadata.GetMetadataFor(detected, matching);
+            valueName = Metadata.ValueName ?? detected.SuggestedName;
             CountLabel = $"{matching.Count} configs: {string.Join(", ", matching.Take(5).Select(m => m.ClassName))}{(matching.Count > 5 ? "...":"")}";
         }
 

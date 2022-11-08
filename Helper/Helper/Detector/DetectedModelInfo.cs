@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
+using Helper.Detector;
 
 namespace Helper
 {

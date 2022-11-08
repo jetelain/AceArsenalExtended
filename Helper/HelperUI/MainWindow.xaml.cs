@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using Helper;
+using Helper.Metadata;
 using Microsoft.Win32;
 
 namespace HelperUI

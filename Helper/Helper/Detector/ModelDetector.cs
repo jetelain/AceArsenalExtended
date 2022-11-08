@@ -6,6 +6,7 @@ using System.Linq;
 using BIS.Core.Config;
 using BIS.Core.Streams;
 using BIS.PBO;
+using Helper.Detector;
 
 namespace Helper
 {

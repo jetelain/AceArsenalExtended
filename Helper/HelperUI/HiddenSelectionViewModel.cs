@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using Helper;
+using Helper.Detector;
+using Helper.Metadata;
 
 namespace HelperUI
 {

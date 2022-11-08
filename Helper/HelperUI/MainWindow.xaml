@@ -17,13 +17,24 @@
     
     <DockPanel>
         <Menu DockPanel.Dock="Top">
-            <MenuItem Header="_File">
+            <MenuItem Header="_File" VerticalAlignment="Center" Padding="10 2">
                 <MenuItem Header="_Open config file..." Command="Open" InputGestureText="Ctrl+O"  />
             </MenuItem>
-            <MenuItem Header="_Generate">
+            <MenuItem Header="_Generate" VerticalAlignment="Center" Padding="10 2">
                 <MenuItem Header="Generate config _to a file..." Click="GenerateSingle" />
             </MenuItem>
-            <MenuItem Header="{Binding ConflictStatus}">
+            <MenuItem VerticalAlignment="Center" Padding="10 0 5 0">
+                <MenuItem.Header>
+                    <StackPanel Orientation="Horizontal" Margin="0">
+                        <TextBlock Margin="0" VerticalAlignment="Center">Conflicts</TextBlock>
+                        <Border CornerRadius="5" Background="Green" Margin="5 0 0 0" VerticalAlignment="Center" Padding="5 2" Visibility="{Binding StatusOK}">
+                            <TextBlock  Foreground="White">None</TextBlock>
+                        </Border>
+                        <Border CornerRadius="5" Background="Red" Margin="5 0 0 0" VerticalAlignment="Center" Padding="5 2" Visibility="{Binding StatusKO}">
+                            <TextBlock Text="{Binding StatusKODetails}" Foreground="White" />
+                        </Border>
+                    </StackPanel>
+                </MenuItem.Header>
                 <MenuItem Header="Generate _CSV report" Click="GenerateCSV" />
             </MenuItem>
         </Menu>

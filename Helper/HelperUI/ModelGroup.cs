@@ -83,7 +83,7 @@ namespace HelperUI
 
             foreach (var model in models)
             {
-                model.ComputeModelLevelOptions(allOptions, mappedOptions);
+                model.ComputeModelLevelOptions(mappedOptions, mappedOptions);
             }
         }
     }

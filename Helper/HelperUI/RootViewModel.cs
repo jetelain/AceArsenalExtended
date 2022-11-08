@@ -5,7 +5,10 @@ using System.Linq;
 using System.Printing;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using Helper;
+using Helper.Generator;
+using Helper.Metadata;
 
 namespace HelperUI
 {
@@ -46,10 +49,16 @@ namespace HelperUI
         {
             ConflictCount = GetGenerateData().Models.Sum(m => m.ConflictCount);
 
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ConflictStatus)));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(StatusOK)));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(StatusKO)));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(StatusKO)));
         }
 
-        public string ConflictStatus => ConflictCount == 0 ? "Everything seems OK" : $"{ConflictCount} conflict(s) detected";
+        public Visibility StatusOK => ConflictCount == 0 ? Visibility.Visible : Visibility.Collapsed;
+
+        public Visibility StatusKO => ConflictCount > 0 ? Visibility.Visible : Visibility.Collapsed;
+
+        public string StatusKODetails => $"{ConflictCount} conflict(s)";
 
         public int ConflictCount { get; private set; }
 

@@ -7,14 +7,13 @@ namespace HelperUI
         public const string NewOptionName = "newOption";
 
         private string name;
-        private bool isEditable;
+        private bool isMissingMapped;
         private string value;
 
-        public ModelOptionsViewModel(ModelViewModel parent, string name, bool isAutomatic, string value)
+        public ModelOptionsViewModel(ModelViewModel parent, string name, bool isMissingMapped, string value)
         {
             this.name = name;
-            this.IsAutomatic = isAutomatic;
-            this.isEditable = !isAutomatic;
+            this.isMissingMapped = isMissingMapped;
             this.value = value;
             Parent = parent;
         }
@@ -49,21 +48,26 @@ namespace HelperUI
             }
         }
 
-        public bool IsAutomatic { get; set; }
-
-        public bool IsEditable
+        public bool IsMissingMapped 
         {
-            get { return isEditable; }
+            get
+            {
+                return isMissingMapped;
+            } 
             set
             {
-                if (isEditable != value)
+                if (isMissingMapped != value)
                 {
-                    isEditable = value;
+                    isMissingMapped = value;
                     PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsEditable)));
                 }
             }
         }
 
+        public bool IsEditable
+        {
+            get { return !isMissingMapped; }
+        }
 
         public bool CanBeIgnored => string.IsNullOrEmpty(Name) || (string.IsNullOrEmpty(Value) && Name == NewOptionName);
 

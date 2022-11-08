@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using Helper;
+﻿using System.Collections.Generic;
 
-namespace HelperUI
+namespace Helper.Metadata
 {
     public class ModelMetadata
     {
@@ -16,7 +14,7 @@ namespace HelperUI
         public Dictionary<string, string> GapOptions { get; set; } = new Dictionary<string, string>();
         public Dictionary<string, string> ExplicitOptions { get; set; } = new Dictionary<string, string>();
 
-        internal HiddenSelectionMetadata GetMetadataFor(DetectedHiddenSelection detected)
+        public HiddenSelectionMetadata GetMetadataFor(DetectedHiddenSelection detected)
         {
             if (!HiddenSelections.TryGetValue(detected.Name, out var hiddenSelectionMetadata))
             {

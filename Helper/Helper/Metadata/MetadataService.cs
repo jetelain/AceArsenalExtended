@@ -2,17 +2,16 @@
 using System.IO;
 using System.Linq;
 using System.Text.Json;
-using Helper;
 
-namespace HelperUI
+namespace Helper.Metadata
 {
-    internal class MetadataService
+    public class MetadataService
     {
         private string? currentFile;
 
         private MetadataRoot? metadata;
 
-        internal ModelMetadata GetMetadataFor(DetectedModelInfo detectedConfigInfo)
+        public ModelMetadata GetMetadataFor(DetectedModelInfo detectedConfigInfo)
         {
             if (metadata == null)
             {
@@ -37,7 +36,7 @@ namespace HelperUI
             return model;
         }
 
-        internal void Initialize(string aceaxMetadataFile)
+        public void Initialize(string aceaxMetadataFile)
         {
             currentFile = aceaxMetadataFile;
             if (File.Exists(currentFile))
@@ -50,7 +49,7 @@ namespace HelperUI
             }
         }
 
-        internal void Save()
+        public void Save()
         {
             if (!string.IsNullOrEmpty(currentFile))
             {

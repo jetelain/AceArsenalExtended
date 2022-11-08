@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Windows.Documents;
 
-namespace HelperUI
+namespace Helper.Metadata
 {
     public class MetadataRoot
     {

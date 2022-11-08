@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-namespace Helper
+namespace Helper.Generator
 {
     public class GenerateXtdConfig
     {
@@ -16,12 +16,12 @@ namespace Helper
         public void WriteXtdGearModelsTo(TextWriter writer, string indent = "")
         {
             writer.WriteLine($"{indent}class XtdGearModels {{");
-            foreach(var group in Models.GroupBy(m => m.ClassRoot).OrderBy(m => m.Key))
+            foreach (var group in Models.GroupBy(m => m.ClassRoot).OrderBy(m => m.Key))
             {
                 writer.WriteLine($"{indent}  class {group.Key} {{");
-                foreach(var model in group.OrderBy(g => g.Name))
+                foreach (var model in group.OrderBy(g => g.Name))
                 {
-                    model.WriteGearModelTo(writer, indent+ "    ");
+                    model.WriteGearModelTo(writer, indent + "    ");
                 }
                 writer.WriteLine($"{indent}  }};");
             }
