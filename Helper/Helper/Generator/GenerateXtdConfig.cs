@@ -100,7 +100,7 @@ namespace Helper.Generator
         {
             using (var writer = File.CreateText(rootConfig))
             {
-                var name = "aceax_" + ModelDetector.LargestCommonName(Models.Select(m => m.PackageName)) + "_compat";
+                var name = "aceax_" + NameHelper.LargestCommonStart(Models.Select(m => m.PackageName)) + "_compat";
                 writer.WriteLine(@"class CfgPatches {");
                 writer.WriteLine(@$"  class {name} {{");
                 writer.WriteLine(@"    units[] = {};");

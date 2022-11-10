@@ -36,7 +36,6 @@ namespace Helper
         {
             return entry.Entries.OfType<T>();
         }
-        // config.SelectMany(c => c.Entries.OfType<ParamValue>().Where(e => string.Equals(e.Name, "worldName", StringComparison.OrdinalIgnoreCase))).FirstOrDefault();
 
         public static T Get<T>(this ParamClass entry, string name, IEnumerable<ParamClass> cfgClassRoot) where T : ParamEntry
         {

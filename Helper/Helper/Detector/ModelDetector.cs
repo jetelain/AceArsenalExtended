@@ -42,12 +42,12 @@ namespace Helper
                 if (configs.Count > 1)
                 {
                     var modelInfo = new DetectedModelInfo();
-                    modelInfo.Name = LargestCommonName(model.Select(m => m.ClassName));
+                    modelInfo.Name = NameHelper.LargestCommon(model.Select(m => m.ClassName));
                     modelInfo.Configs = configs;
                     modelInfo.P3dModel = configs[0].P3dModel;
                     modelInfo.ClassRoot = configs[0].ClassRoot;
                     modelInfo.FileNames = configs.Select(c => c.FileName).Distinct().ToList();
-                    modelInfo.PackageName = LargestCommonName(modelInfo.FileNames.Select(Path.GetFileNameWithoutExtension));
+                    modelInfo.PackageName = NameHelper.LargestCommonStart(modelInfo.FileNames.Select(Path.GetFileNameWithoutExtension));
                     modelInfo.HiddenSelections = configs.SelectMany(c => c.HiddenSelections.Keys).Distinct().OrderBy(h => h).Select(name => new DetectedHiddenSelection()
                     {
                         Name = name,
@@ -67,7 +67,7 @@ namespace Helper
         {
             var impacted = configs.Where(c => c.GetHiddenSelection(hiddenSelection) == value);
             var names = impacted
-                .Select(c => c.ClassName.Substring(baseConfigName.Length).TrimStart('_').Split('_'))
+                .Select(c => c.ClassName.Replace(baseConfigName, "", StringComparison.OrdinalIgnoreCase).Trim('_').Split('_'))
                 .ToList();
             var common = names[0].Where(n => names.Skip(1).All(o => o.Contains(n, StringComparer.OrdinalIgnoreCase))).ToList();
             if (common.Count == 1)
@@ -106,16 +106,6 @@ namespace Helper
                 return displayName.Substring(i + 1).TrimEnd(')').Split('/').ToArray();
             }
             return new string[0];
-        }
-
-        internal static string LargestCommonName(IEnumerable<string> enumerable)
-        {
-            var common = enumerable.OrderBy(n => n.Length).ThenBy(n => n).FirstOrDefault();
-            while (!enumerable.All(n => n.StartsWith(common, StringComparison.OrdinalIgnoreCase)))
-            {
-                common = common.Substring(0, common.Length - 1);
-            }
-            return common.TrimEnd('_');
         }
 
         private static void Scan(List<DetectedConfigInfo> allConfigs, List<ParamClass> cfgClassRoot, IEnumerable<ParamClass> classes, string classRoot, List<ParamClass> cfgVehicles, string fileName)

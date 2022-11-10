@@ -12,13 +12,13 @@ namespace Helper
         public GenerateModel(List<IDetectedModelMapper> withSameName)
         {
             Name = withSameName[0].ModelName;
-            Label = ModelDetector.LargestCommonName(withSameName.SelectMany(m => m.Detected.Configs).Select(m => m.DisplayName)).Trim(' ', '(');
+            Label = NameHelper.LargestCommon(withSameName.SelectMany(m => m.Detected.Configs).Select(m => m.DisplayName)).Trim(' ', '(');
             if (string.IsNullOrEmpty(Label))
             {
                 Label = Name;
             }
             ClassRoot = withSameName[0].Detected.ClassRoot;
-            PackageName = ModelDetector.LargestCommonName(withSameName.Select(m => m.Detected.PackageName));
+            PackageName = NameHelper.LargestCommonStart(withSameName.Select(m => m.Detected.PackageName));
             FileNames = withSameName.SelectMany(m => m.Detected.FileNames).Distinct().ToList();
 
             var optionNames = withSameName.SelectMany(o => o.GetAllOptionNames()).Distinct(StringComparer.OrdinalIgnoreCase).ToList();
