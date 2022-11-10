@@ -42,10 +42,10 @@ namespace Helper
                     modelInfo.Configs = configs;
                     modelInfo.P3dModel = configs[0].P3dModel;
                     modelInfo.ClassRoot = configs[0].ClassRoot;
-                    modelInfo.HiddenSelections = configs.SelectMany(c => c.HiddenSelections.Keys).Distinct().Select(name => new DetectedHiddenSelection()
+                    modelInfo.HiddenSelections = configs.SelectMany(c => c.HiddenSelections.Keys).Distinct().OrderBy(h => h).Select(name => new DetectedHiddenSelection()
                     {
                         Name = name,
-                        Values = configs.Select(c => c.GetHiddenSelection(name)).Distinct().Select(value => new DetectedHiddenSelectionValue()
+                        Values = configs.Select(c => c.GetHiddenSelection(name)).Distinct().OrderBy(h => h).Select(value => new DetectedHiddenSelectionValue()
                         {
                             Value = value,
                             SuggestedName = SuggestName(modelInfo.Name, configs, name, value)

@@ -12,6 +12,8 @@ namespace Helper.Metadata
 
         public string? OptionValue { get; set; }
 
+        public int? Priority { get; set; }
+
         public List<HiddenSelectionValueMetadata> Values { get; set; } = new List<HiddenSelectionValueMetadata>();
 
         public HiddenSelectionValueMetadata GetMetadataFor(DetectedHiddenSelectionValue detected, List<DetectedConfigInfo> matching)

@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 using Helper;
 using Helper.Metadata;
 using Microsoft.Win32;
@@ -28,6 +29,9 @@ namespace HelperUI
 
         private void Analyze(string[] files)
         {
+            Viewer.Visibility = Visibility.Collapsed;
+            Status.Visibility = Visibility.Visible;
+
             Task.Factory.StartNew(() =>
             {
                 try
@@ -36,7 +40,12 @@ namespace HelperUI
 
                     root.Load(files, SetStatus);
 
-                    Dispatcher.BeginInvoke(() => DataContext = root);
+                    Dispatcher.BeginInvoke(() =>
+                    {
+                        DataContext = root;
+                        Viewer.Visibility = Visibility.Visible;
+                        Status.Visibility = Visibility.Collapsed;
+                    });
                 }
                 catch(Exception e)
                 {
@@ -95,6 +104,32 @@ namespace HelperUI
                     result.WriteXtdGearInfosTo(writer);
                 }
             }
+        }
+
+        private void ShowModelWithConflicts(object sender, RoutedEventArgs e)
+        {
+            var model = (sender as MenuItem)?.DataContext as GenerateModel;
+            if (model != null)
+            {
+                var firstdef = rootViewModel.Models.FirstOrDefault(m => m.ModelName == model.Name && m.Detected.ClassRoot == model.ClassRoot);
+                var container = Models.ItemContainerGenerator.ContainerFromItem(firstdef) as FrameworkElement;
+                if (container != null)
+                {
+                    container.BringIntoView();
+                }
+                new ConfigList(model).Show();
+            }
+        }
+
+        private void Quit(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            base.OnClosed(e);
+            Application.Current.Shutdown();
         }
     }
 }

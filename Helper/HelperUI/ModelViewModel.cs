@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Windows;
+using System.Windows.Input;
 using Helper;
 using Helper.Detector;
 using Helper.Metadata;
@@ -22,6 +23,8 @@ namespace HelperUI
 
         public AddOptionCommand AddOption { get; }
 
+        public ICommand ShowConfigs { get; }
+
         internal ModelViewModel(DetectedModelInfo m, RootViewModel root)
         {
             this.root = root;
@@ -34,7 +37,7 @@ namespace HelperUI
 
             if (Metadata.Action != null)
             {
-                action = ModelAction.Values[Metadata.Action.Value];
+                action = ModelAction.Values.FirstOrDefault(a => a.Code == Metadata.Action.Value) ?? ModelAction.MapToModel;
             }
             else
             {
@@ -42,6 +45,7 @@ namespace HelperUI
             }
 
             AddOption = new AddOptionCommand(this);
+            ShowConfigs = new ShowConfigCommand(this);
         }
 
         public DetectedModelInfo Detected { get; }
@@ -87,14 +91,7 @@ namespace HelperUI
             {
                 if (known.TryGetValue(option.Options, out var conflict))
                 {
-                    var sb = new StringBuilder($"{option.Config.ClassName} with {conflict.ClassName}");
-
-                    for (int i = 0; i < optionsNames.Count; i++)
-                    {
-                        sb.Append($"\r\n  {optionsNames[i]}={option.Options[i]}");
-                    }
-
-                    conflicts.Add(sb.ToString());
+                    conflicts.Add($"{option.Config.ClassName} with {conflict.ClassName}");
                 }
                 else
                 {
@@ -115,7 +112,7 @@ namespace HelperUI
         private Dictionary<string,string?> GetOptions(DetectedConfigInfo config)
         {
             var options = new Dictionary<string,string?>(StringComparer.OrdinalIgnoreCase);
-            foreach(var selection in HiddenSelections)
+            foreach(var selection in HiddenSelections.OrderBy(h => h.Priority).ThenBy(h => h.Name))
             {
                 selection.AddToOptionValue(config, options);
             }
@@ -132,7 +129,7 @@ namespace HelperUI
                     options[opt.Name] = opt.Value;
                 }
             }
-            foreach (var selection in HiddenSelections)
+            foreach (var selection in HiddenSelections.OrderBy(h => h.Priority).ThenBy(h => h.Name))
             {
                 selection.AddToOptionValue(config, options);
             }

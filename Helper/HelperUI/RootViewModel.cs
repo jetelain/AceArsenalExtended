@@ -47,11 +47,15 @@ namespace HelperUI
 
         public void Update()
         {
-            ConflictCount = GetGenerateData().Models.Sum(m => m.ConflictCount);
+            var models = GetGenerateData().Models;
+
+            ConflictCount = models.Sum(m => m.ConflictCount);
+            ModelsWithConflicts = models.Where(m => m.ConflictCount > 0).ToList();
 
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(StatusOK)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(StatusKO)));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(StatusKODetails)));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ModelsWithConflicts)));
         }
 
         public Visibility StatusOK => ConflictCount == 0 ? Visibility.Visible : Visibility.Collapsed;
@@ -61,6 +65,7 @@ namespace HelperUI
         public string StatusKODetails => $"{ConflictCount} conflict(s)";
 
         public int ConflictCount { get; private set; }
+        public List<GenerateModel> ModelsWithConflicts { get; set; }
 
         public GenerateXtdConfig GetGenerateData()
         {

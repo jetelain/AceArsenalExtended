@@ -19,11 +19,13 @@
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_File" VerticalAlignment="Center" Padding="10 2">
                 <MenuItem Header="_Open config file..." Command="Open" InputGestureText="Ctrl+O"  />
-            </MenuItem>
-            <MenuItem Header="_Generate" VerticalAlignment="Center" Padding="10 2">
+                <Separator />
                 <MenuItem Header="Generate config _to a file..." Click="GenerateSingle" />
+                <MenuItem Header="Generate _CSV report" Click="GenerateCSV" />
+                <Separator />
+                <MenuItem Header="_Exit" Click="Quit" InputGestureText="Alt+F4"  />
             </MenuItem>
-            <MenuItem VerticalAlignment="Center" Padding="10 0 5 0">
+            <MenuItem VerticalAlignment="Center" Padding="10 0 5 0" ItemsSource="{Binding ModelsWithConflicts}">
                 <MenuItem.Header>
                     <StackPanel Orientation="Horizontal" Margin="0">
                         <TextBlock Margin="0" VerticalAlignment="Center">Conflicts</TextBlock>
@@ -35,15 +37,23 @@
                         </Border>
                     </StackPanel>
                 </MenuItem.Header>
-                <MenuItem Header="Generate _CSV report" Click="GenerateCSV" />
+                <MenuItem.ItemContainerStyle>
+                    <Style TargetType="MenuItem">
+                        <EventSetter Event="Click" Handler="ShowModelWithConflicts" />
+                        <Setter Property="Header" Value="{Binding Name}"/>
+                    </Style>
+                </MenuItem.ItemContainerStyle>
             </MenuItem>
         </Menu>
-    
-        <TextBlock Name="Status" DockPanel.Dock="Bottom" />
 
 
-        <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto">
-            <ItemsControl ItemsSource="{Binding Models}">
+
+        <TextBlock Name="Status" DockPanel.Dock="Top" Visibility="Visible" TextAlignment="Center" Padding="50">Open a config file to start</TextBlock>
+
+
+
+        <ScrollViewer Name="Viewer" Visibility="Collapsed" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto">
+            <ItemsControl ItemsSource="{Binding Models}" Name="Models">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="10 5" Background="#f0f0f0">
@@ -53,8 +63,8 @@
                                 <TextBlock Text="{Binding CountLabel}" Margin="5 0" VerticalAlignment="Bottom" />
                                 <TextBlock Foreground="Green" FontWeight="Bold" Margin="5 0" Visibility="{Binding StatusOK}" VerticalAlignment="Bottom">Everything seems OK</TextBlock>
                                 <TextBlock Foreground="Red" FontWeight="Bold" Margin="5 0" Visibility="{Binding StatusKO}" VerticalAlignment="Bottom" Text="{Binding StatusKODetails}" FontSize="12pt" />
-                                <Button Margin="5 0" Visibility="{Binding StatusKO}" VerticalAlignment="Bottom">
-                                    Show conflicts
+                                <Button Margin="5 0" VerticalAlignment="Bottom" Command="{Binding ShowConfigs}">
+                                    Show configs
                                 </Button>
                             </StackPanel>
 
@@ -99,13 +109,18 @@
                                                     SelectedValue="{Binding Action}" />
                                                 <TextBox Text="{Binding OptionName}" Width="150" Margin="10 0" Visibility="{Binding ShowNamePrompt}" />
                                                 <TextBox Text="{Binding OptionValue}" Width="150" Margin="10 0" Visibility="{Binding ShowValuePrompt}" />
+
+                                                <TextBlock Margin="10 0" Visibility="{Binding ShowPriority}">Priority:</TextBlock>
+                                                <TextBox Text="{Binding Priority}" Width="50" Margin="5 0" Visibility="{Binding ShowPriority}" />
+
+                                                <TextBlock Text="{Binding CountOptionLabel}" Margin="10 0" Visibility="{Binding ShowValuePrompt}" />
                                             </StackPanel>
 
                                             <ItemsControl ItemsSource="{Binding Values}" Margin="25 5" Visibility="{Binding ShowValues}" >
                                                 <ItemsControl.ItemTemplate>
                                                     <DataTemplate>
                                                         <StackPanel Orientation="Horizontal" >
-                                                            <TextBlock Text="{Binding ValueLabel}" Width="250" />
+                                                            <TextBlock Text="{Binding ValueLabel}" Width="300" />
                                                             <TextBox Text="{Binding ValueName}" Width="150" Margin="10 0" />
                                                             <TextBlock Text="{Binding CountLabel}" Margin="10 0" />
                                                         </StackPanel>

@@ -14,6 +14,7 @@ namespace HelperUI
         private HiddenSelectionAction action;
         private string optionValue;
         private string optionName;
+        private int priority;
 
         public HiddenSelectionViewModel(ModelViewModel modelViewModel, DetectedHiddenSelection detected)
         {
@@ -24,21 +25,18 @@ namespace HelperUI
             optionName = Metadata.OptionName ?? detected.Name;
             optionValue = Metadata.OptionValue ?? string.Empty;
             Values = detected.Values.Select(v => new HiddenSelectionValueViewModel(this, v)).ToList();
+            priority = Metadata.Priority ?? 0;
 
             if (Metadata.Action != null)
             {
-                action = HiddenSelectionAction.Values[Metadata.Action.Value];
+                var actionCode = Metadata.Action.Value;
+                action = HiddenSelectionAction.Values.FirstOrDefault(m => m.Code == actionCode) ?? HiddenSelectionAction.MapToAnOption;
             }
             else
             {
                 if (Values.Count == 1)
                 {
                     action = HiddenSelectionAction.Ignore;
-                }
-                else if (Values.Count == 2)
-                {
-                    action = HiddenSelectionAction.MapToAnOptionValue;
-                    optionValue = Values.FirstOrDefault(v => v.Detected.Value != string.Empty)?.ValueName ?? "SET";
                 }
                 else
                 {
@@ -57,6 +55,8 @@ namespace HelperUI
 
         public string CountLabel => $"{Count} configs with explicit value";
 
+        public string CountOptionLabel => Values.FirstOrDefault(v => v.Detected.Value != string.Empty)?.CountLabel ?? string.Empty;
+
         public string Name => Detected.Name;
 
         public string OptionName
@@ -65,6 +65,24 @@ namespace HelperUI
             set
             {
                 optionName = value;
+                if (action != HiddenSelectionAction.Ignore)
+                {
+                    SetMetadata();
+                    Parent.MappedOptionNameOrValueChange();
+                    foreach(var other in Parent.HiddenSelections)
+                    {
+                        other.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ShowPriority)));
+                    }
+                }
+            }
+        }
+
+        public int Priority
+        {
+            get { return priority; }
+            set
+            {
+                priority = value;
                 if (action != HiddenSelectionAction.Ignore)
                 {
                     SetMetadata();
@@ -78,6 +96,7 @@ namespace HelperUI
             Metadata.OptionName = optionName;
             Metadata.OptionValue = optionValue;
             Metadata.Action = action.Code;
+            Metadata.Priority = priority;
         }
 
         public string OptionValue
@@ -115,23 +134,32 @@ namespace HelperUI
 
         public Visibility ShowValues => action == HiddenSelectionAction.MapToAnOption ? Visibility.Visible : Visibility.Collapsed;
 
+        public Visibility ShowPriority => Parent.HiddenSelections.Any(o => o != this && o.OptionName == OptionName) ? Visibility.Visible : Visibility.Collapsed;
+
         public event PropertyChangedEventHandler? PropertyChanged;
 
         public void AddToOptionValue(DetectedConfigInfo info, Dictionary<string,string?> values)
         {
             if (action != HiddenSelectionAction.Ignore)
             {
-                var value = info.GetHiddenSelection(Detected.Name);
+                var texture = info.GetHiddenSelection(Detected.Name);
                 if (action == HiddenSelectionAction.MapToAnOptionValue)
                 {
-                    if (value != string.Empty)
+                    if (texture != string.Empty)
                     {
-                        values[OptionName] = OptionValue;
+                        if (OptionValue.StartsWith("+="))
+                        {
+                            values[OptionName] = (values.TryGetValue(OptionName, out var evalue) ? evalue : string.Empty) + OptionValue.Substring(2);
+                        }
+                        else
+                        {
+                            values[OptionName] = OptionValue;
+                        }
                     }
                 }
                 else if (action == HiddenSelectionAction.MapToAnOption)
                 {
-                    var optionValue = Values.FirstOrDefault(v => v.Detected.Value == value)?.ValueName;
+                    var optionValue = Values.FirstOrDefault(v => v.Detected.Value == texture)?.ValueName;
                     if (optionValue != string.Empty)
                     {
                         values[OptionName] = optionValue;
