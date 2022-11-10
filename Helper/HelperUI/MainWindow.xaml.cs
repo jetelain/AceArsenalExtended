@@ -31,6 +31,7 @@ namespace HelperUI
         {
             Viewer.Visibility = Visibility.Collapsed;
             Status.Visibility = Visibility.Visible;
+            Title = $"ACE Arsenal Extended Config Helper - " + String.Join(", ", files.Select(f => Path.GetFileNameWithoutExtension(f)));
 
             Task.Factory.StartNew(() =>
             {
@@ -45,6 +46,7 @@ namespace HelperUI
                         DataContext = root;
                         Viewer.Visibility = Visibility.Visible;
                         Status.Visibility = Visibility.Collapsed;
+                        
                     });
                 }
                 catch(Exception e)
@@ -73,17 +75,25 @@ namespace HelperUI
         }
         private void GenerateCSV(object sender, RoutedEventArgs e)
         {
-            var result = rootViewModel.GetGenerateData();
-            var folder = Path.GetDirectoryName(result.Models.SelectMany(f => f.FileNames).First()) ?? string.Empty;
-            foreach (var model in result.Models)
+            try
             {
-                var filename = System.IO.Path.Combine(folder, $"aceax_{model.Name}.csv");
-                using (var writer = File.CreateText(filename))
+                var result = rootViewModel.GetGenerateData();
+                var folder = Path.GetDirectoryName(result.Models.SelectMany(f => f.FileNames).First()) ?? string.Empty;
+                foreach (var model in result.Models)
                 {
-                    model.WriteCSV(writer);
+                    var filename = System.IO.Path.Combine(folder, $"aceax_{model.Name}.csv");
+                    using (var writer = File.CreateText(filename))
+                    {
+                        model.WriteCSV(writer);
+                    }
                 }
+                Process.Start("explorer", $@"""{folder}""");
             }
-            Process.Start("explorer", $@"""{folder}""");
+            catch(Exception err)
+            {
+                MessageBox.Show(this, err.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
         }
 
         private void GenerateSingle(object sender, RoutedEventArgs e)
@@ -94,8 +104,17 @@ namespace HelperUI
             dlg.Filter = "Text config file|*.hpp;*.cpp";
             if (dlg.ShowDialog() == true)
             {
-                var result = rootViewModel.GetGenerateData();
-                result.WriteToSingleFile(dlg.FileName);
+                try
+                {
+                    var result = rootViewModel.GetGenerateData();
+                    result.WriteToSingleFile(dlg.FileName);
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(this, err.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                MessageBox.Show(this, "File saved.");
             }
         }
         private void GenerateDirectory(object sender, RoutedEventArgs e)
@@ -106,8 +125,18 @@ namespace HelperUI
             dlg.Filter = "Text config file|*.cpp";
             if (dlg.ShowDialog() == true)
             {
-                var result = rootViewModel.GetGenerateData();
-                result.WriteToDirectory(Path.GetDirectoryName(dlg.FileName));
+                try
+                {
+                    var result = rootViewModel.GetGenerateData();
+                    var folder = Path.GetDirectoryName(dlg.FileName);
+                    result.WriteToDirectory(folder);
+                    Process.Start("explorer", $@"""{folder}""");
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(this, err.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
             }
         }
 

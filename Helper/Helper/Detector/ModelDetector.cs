@@ -126,6 +126,7 @@ namespace Helper
                 if (scope == 2)
                 {
                     var infos = new DetectedConfigInfo();
+                    infos.Definition = entry.ToString();
                     infos.ClassName = entry.Name;
                     infos.FileName = fileName;
                     infos.ClassRoot = classRoot;

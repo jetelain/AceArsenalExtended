@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Printing;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using Helper;
 using Helper.Generator;
@@ -65,7 +62,8 @@ namespace HelperUI
         public string StatusKODetails => $"{ConflictCount} conflict(s)";
 
         public int ConflictCount { get; private set; }
-        public List<GenerateModel> ModelsWithConflicts { get; set; }
+
+        public List<GenerateModel> ModelsWithConflicts { get; set; } = new List<GenerateModel>();
 
         public GenerateXtdConfig GetGenerateData()
         {

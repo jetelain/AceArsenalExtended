@@ -12,6 +12,7 @@ namespace Helper.Detector
         public Dictionary<string, string> HiddenSelections { get; set; }
         public string DisplayName { get; set; }
         public string FileName { get; set; }
+        public string Definition { get; internal set; }
 
         public string GetHiddenSelection(string name) => HiddenSelections.TryGetValue(name, out var v) ? v : null;
     }

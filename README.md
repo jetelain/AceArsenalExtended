@@ -25,6 +25,8 @@ This property is an array of key-value pairs `[["model_option","value"], ...]`, 
 
 ## For mod creators
 
+Lost in configuration making ? You may try the [Config Helper Application](Helper/README.md) to generate configuration.
+
 ### Modelisation
 
 - The root object is "Model".

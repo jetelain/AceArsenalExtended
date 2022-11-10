@@ -9,7 +9,7 @@ namespace Helper.Generator
     {
         public GenerateXtdConfig(IEnumerable<IDetectedModelMapper> all)
         {
-            Models = all.GroupBy(m => m.ModelName.ToLowerInvariant()).Select(m => new GenerateModel(m.ToList())).ToList();
+            Models = all.GroupBy(m => new { ModelName = m.ModelName.ToLowerInvariant(), m.Detected.ClassRoot }).Select(m => new GenerateModel(m.ToList())).ToList();
         }
 
         public List<GenerateModel> Models { get; }

@@ -26,7 +26,14 @@ namespace HelperUI
         {
             InitializeComponent();
 
+            Grid.SelectionChanged += Grid_SelectionChanged;
+
             Update(generateModel);
+        }
+
+        private void Grid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Definition.Text = ((Grid.SelectedItem as dynamic)?.Config as DetectedConfigInfo)?.Definition ?? string.Empty;
         }
 
         public void Update(GenerateModel generateModel)
@@ -54,7 +61,13 @@ namespace HelperUI
                 Grid.Columns.RemoveAt(Grid.Columns.Count - 1);
             }
             Title = $"{generateModel.Name} ({generateModel.Label})";
-            Grid.ItemsSource = generateModel.Configs.Select(c => new { Config = c.Config, Options = c.Options.Select(o => o.Value).ToList(), Conflict = c.ConflictWith?.ClassName }).ToList();
+
+            Grid.ItemsSource = generateModel.Configs.Select(c => new { 
+                Config = c.Config, 
+                Options = c.Options.Select(o => o.Value).ToList(), 
+                Conflict = c.ConflictWith?.ClassName 
+            }).ToList();
         }
+
     }
 }
