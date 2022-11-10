@@ -147,14 +147,7 @@ namespace HelperUI
                 {
                     if (texture != string.Empty)
                     {
-                        if (OptionValue.StartsWith("+="))
-                        {
-                            values[OptionName] = (values.TryGetValue(OptionName, out var evalue) ? evalue : string.Empty) + OptionValue.Substring(2);
-                        }
-                        else
-                        {
-                            values[OptionName] = OptionValue;
-                        }
+                        SetOption(values, OptionValue);
                     }
                 }
                 else if (action == HiddenSelectionAction.MapToAnOption)
@@ -162,11 +155,22 @@ namespace HelperUI
                     var optionValue = Values.FirstOrDefault(v => v.Detected.Value == texture)?.ValueName;
                     if (optionValue != string.Empty)
                     {
-                        values[OptionName] = optionValue;
+                        SetOption(values, optionValue);
                     }
                 }
             }
         }
 
+        private void SetOption(Dictionary<string, string?> values, string? optionValue)
+        {
+            if (optionValue != null && optionValue.StartsWith("+="))
+            {
+                values[OptionName] = (values.TryGetValue(OptionName, out var evalue) ? evalue : string.Empty) + optionValue.Substring(2);
+            }
+            else
+            {
+                values[OptionName] = optionValue;
+            }
+        }
     }
 }
