@@ -17,8 +17,8 @@ If the mod PBO are not obfuscated, you will be able to directly use PBO files of
 Otherwise, you will have to extract the configuration file hidden in the PBO. 
   - You can use my [PBO Explorer tool](https://github.com/jetelain/PboExplorer),
     1. Look at `config.cpp` to identify data file (For example, `#include ...xà*ùџ.ogg..` means config is hidden in `xà*ùџ.ogg`, some invalid caracters may appears in the name, but they have to be ignored)
-	2. Extract the file found in `config.cpp` (`xà*ùџ.ogg` according to previous example) to `name_of_the_pbo.cpp` to a dedicated directory
-  - You also dump configuration in-game using a script.
+    2. Extract the file you found in `config.cpp` (`xà*ùџ.ogg` according to previous example) to `name_of_the_pbo.cpp` into a dedicated directory
+  - You can also dump configuration in-game using a script.
 
 
 ## Step 2 : Launch tool and load configuration files
@@ -33,20 +33,33 @@ Current version automatic mapping is based on USP conventions and may generate c
 
 ## Step 3 : Map configuration
 
+### Preview result
+
+You can click on button "Show configs" to preview options values per arsenal entry.
+
+![Preview example](preview.png)
+
 ### Map to an option
 
 Choose "Map to an option", to map a texture slot/hiddenselection to an option.
 The first input field gives the option name. Then an input field for each texture is available to set the option value.
 
-![Model](maptooption.png)
+![Map to option example](maptooption.png)
 
+The same option name can used by multiple texture slot/hiddenselection. 
+A priority input field will help you to choose in wich order values are processed.
+If value overlaps due to combinaisons, you can use the `+=` syntax. 
+
+![Append example](maptooption_append.png)
 
 ### Map to an option value
 
 Choose "Map to an option value", to map a texture slot/hiddenselection to an option value when it's not empty.
 If the texture slot/hiddenselection have non empty value, the option will be set to the second input field.
 
-![Model](maptooptionvalue.png)
+![Map to option value example](maptooptionvalue.png)
+
+You can also here use the `+=` syntax.
 
 ### Ignore
 
@@ -54,11 +67,6 @@ Some texture slots/hiddenselections might not be relevant. It can be ignored wit
 
 Some texture values might also not be relevant, clear the value field to ignore it.
 
-### Preview result
-
-You can click on button "Show configs" to preview options values per arsenal entry.
-
-![Model](preview.png)
 
 ### Multiple 3D models to a single ACEAX model
 
