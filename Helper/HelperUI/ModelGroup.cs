@@ -74,7 +74,10 @@ namespace HelperUI
         {
             if (!IsGroup)
             {
-                models[0].ResetModelLevelOptions();
+                if (models.Count > 0)
+                {
+                    models[0].ResetModelLevelOptions();
+                }
                 return;
             }
 
