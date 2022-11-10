@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using BIS.Core.Config;
-using BIS.Core.Streams;
-using BIS.PBO;
 using Helper.Detector;
 
 namespace Helper
@@ -15,20 +12,27 @@ namespace Helper
         public static List<DetectedModelInfo> Detect(string[] configFiles, Action<string> progress)
         {
             progress("Load config files");
-            var paramFiles = configFiles.Select(ReadParamFile).ToList();
-            var cfgVehicles = paramFiles.Get<ParamClass>("CfgVehicles").ToList();
-            var cfgWeapons = paramFiles.Get<ParamClass>("CfgWeapons").ToList();
-            var cfgGlasses = paramFiles.Get<ParamClass>("CfgGlasses").ToList();
+            var paramFiles = configFiles.Select(f => new { Param = ConfigHelper.ReadParamFile(f), FileName = f}).ToList();
+
+            var mergedCfgVehicles = paramFiles.Select(f => f.Param).Get<ParamClass>("CfgVehicles").ToList();
+            var mergedCfgWeapons = paramFiles.Select(f => f.Param).Get<ParamClass>("CfgWeapons").ToList();
+            var mergedCfgGlasses = paramFiles.Select(f => f.Param).Get<ParamClass>("CfgGlasses").ToList();
 
             var allConfigs = new List<DetectedConfigInfo>();
-            progress("Scan CfgWeapons");
-            Scan(allConfigs, cfgWeapons, cfgWeapons.Get<ParamClass>(), "CfgWeapons", cfgVehicles);
 
-            progress("Scan CfgGlasses");
-            Scan(allConfigs, cfgGlasses, cfgGlasses.Get<ParamClass>(), "CfgGlasses", cfgVehicles);
+            foreach (var file in paramFiles)
+            {
+                var pack = Path.GetFileNameWithoutExtension(file.FileName);
 
-            progress("Scan CfgVehicles");
-            Scan(allConfigs, cfgVehicles, cfgVehicles.Get<ParamClass>().Where(c => c.Inherits("Bag_Base", cfgVehicles)), "CfgVehicles", cfgVehicles);
+                progress($"{pack}: Scan CfgWeapons");
+                Scan(allConfigs, mergedCfgWeapons, file.Param.Root.Get<ParamClass>("CfgWeapons").Get<ParamClass>(), "CfgWeapons", mergedCfgVehicles, file.FileName);
+
+                progress($"{pack}: Scan CfgGlasses");
+                Scan(allConfigs, mergedCfgGlasses, file.Param.Root.Get<ParamClass>("CfgGlasses").Get<ParamClass>(), "CfgGlasses", mergedCfgVehicles, file.FileName);
+
+                progress($"{pack}: Scan CfgVehicles");
+                Scan(allConfigs, mergedCfgVehicles, file.Param.Root.Get<ParamClass>("CfgVehicles").Get<ParamClass>().Where(c => c.Inherits("Bag_Base", mergedCfgVehicles)), "CfgVehicles", mergedCfgVehicles, file.FileName);
+            }
 
             progress("Aggregate data");
             var allModels = new List<DetectedModelInfo>();
@@ -42,6 +46,8 @@ namespace Helper
                     modelInfo.Configs = configs;
                     modelInfo.P3dModel = configs[0].P3dModel;
                     modelInfo.ClassRoot = configs[0].ClassRoot;
+                    modelInfo.FileNames = configs.Select(c => c.FileName).Distinct().ToList();
+                    modelInfo.PackageName = LargestCommonName(modelInfo.FileNames.Select(Path.GetFileNameWithoutExtension));
                     modelInfo.HiddenSelections = configs.SelectMany(c => c.HiddenSelections.Keys).Distinct().OrderBy(h => h).Select(name => new DetectedHiddenSelection()
                     {
                         Name = name,
@@ -112,7 +118,7 @@ namespace Helper
             return common.TrimEnd('_');
         }
 
-        private static void Scan(List<DetectedConfigInfo> allConfigs, List<ParamClass> cfgClassRoot, IEnumerable<ParamClass> classes, string classRoot, List<ParamClass> cfgVehicles)
+        private static void Scan(List<DetectedConfigInfo> allConfigs, List<ParamClass> cfgClassRoot, IEnumerable<ParamClass> classes, string classRoot, List<ParamClass> cfgVehicles, string fileName)
         {
             foreach (var entry in classes)
             {
@@ -121,6 +127,7 @@ namespace Helper
                 {
                     var infos = new DetectedConfigInfo();
                     infos.ClassName = entry.Name;
+                    infos.FileName = fileName;
                     infos.ClassRoot = classRoot;
                     infos.DisplayName = entry.GetValue<string>("displayName", cfgClassRoot);
                     infos.P3dModel = entry.GetValue<string>("model", cfgClassRoot);
@@ -161,60 +168,5 @@ namespace Helper
             }
         }
 
-        private static ParamFile ReadParamFile(string file)
-        {
-            var ext = Path.GetExtension(file);
-            ParamFile paramFile;
-            if (string.Equals(ext, ".cpp", System.StringComparison.OrdinalIgnoreCase))
-            {
-                paramFile = ParseCpp(file);
-            }
-            else if (string.Equals(ext, ".pbo", System.StringComparison.OrdinalIgnoreCase))
-            {
-                var pbo = new PBO(file);
-                var configBin = pbo.Files.FirstOrDefault(f => f.FileName == "config.bin");
-                if (configBin != null)
-                {
-                    using (var stream = configBin.OpenRead())
-                    {
-                        paramFile = StreamHelper.Read<ParamFile>(stream);
-                    }
-                }
-                else
-                {
-                    var src = Path.GetTempFileName();
-                    var configCpp = pbo.Files.FirstOrDefault(f => f.FileName == "config.cpp");
-                    if (configCpp != null)
-                    {
-                        using (var streamFile = File.Create(src))
-                        using (var stream = configCpp.OpenRead())
-                        {
-                            stream.CopyTo(streamFile);
-                        }
-                        paramFile = ParseCpp(src);
-                        File.Delete(src);
-                    }
-                    else
-                    {
-                        paramFile = new ParamFile();
-                    }
-                }
-            }
-            else
-            {
-                paramFile = StreamHelper.Read<ParamFile>(file);
-            }
-            return paramFile;
-        }
-
-        private static ParamFile ParseCpp(string src)
-        {
-            ParamFile paramFile;
-            var dst = Path.GetTempFileName();
-            Process.Start(new ProcessStartInfo(@"E:\Program Files\Steam\steamapps\common\Arma 3 Tools\CfgConvert\CfgConvert.exe", $@"-bin -dst ""{dst}"" ""{src}""") { WindowStyle = ProcessWindowStyle.Hidden }).WaitForExit();
-            paramFile = StreamHelper.Read<ParamFile>(dst);
-            File.Delete(dst);
-            return paramFile;
-        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using BIS.Core.Config;
 
 namespace Helper
 {
@@ -17,6 +18,8 @@ namespace Helper
                 Label = Name;
             }
             ClassRoot = withSameName[0].Detected.ClassRoot;
+            PackageName = ModelDetector.LargestCommonName(withSameName.Select(m => m.Detected.PackageName));
+            FileNames = withSameName.SelectMany(m => m.Detected.FileNames).Distinct().ToList();
 
             var optionNames = withSameName.SelectMany(o => o.GetAllOptionNames()).Distinct(StringComparer.OrdinalIgnoreCase).ToList();
             optionNames.Sort();
@@ -56,18 +59,44 @@ namespace Helper
         public string Name { get; }
         public string Label { get; set; }
         public string ClassRoot { get; }
+        public string PackageName { get; }
+        public List<string> FileNames { get; }
         public List<GenerateOption> Options { get; } = new List<GenerateOption>();
         public List<GenerateConfig> Configs { get; } = new List<GenerateConfig>();
         public int ConflictCount { get; }
 
-        public void WriteGearModelTo(TextWriter writer, string indent = "")
+        public void WriteGearModelTo(TextWriter writer, string indent = "", ParamClass incremental = null)
         {
-            writer.WriteLine($"{indent}class {Name} {{");
-            writer.WriteLine($@"{indent}  label = ""{Label}"";");
-            writer.WriteLine($@"{indent}  options[] = {{ ""{string.Join("\", \"", Options.Select(o => o.Name))}"" }};");
+            writer.WriteLine($"{indent}class {Name}");
+            writer.WriteLine($"{indent}{{");
+            writer.WriteLine($@"{indent}    options[] = {{ ""{string.Join("\", \"", Options.Select(o => o.Name))}"" }}; // Always computed, do not edit");
+            if (incremental != null)
+            {
+                foreach (var item in incremental.Entries.OfType<ParamValue>().Cast<ParamEntry>().Concat(incremental.Entries.OfType<ParamArray>()))
+                {
+                    if (item.Name != "options")
+                    {
+                        writer.WriteLine(item.ToString((indent.Length / 4) + 1));
+                    }
+                }
+            }
+            else
+            {
+                writer.WriteLine($@"{indent}    label = ""{Label}"";");
+            }
             foreach (var opt in Options)
             {
-                opt.WriteTo(writer, indent + "  ");
+                opt.WriteTo(writer, indent + "    ", incremental?.Get<ParamClass>(opt.Name)?.FirstOrDefault());
+            }
+            if (incremental != null)
+            {
+                foreach (var item in incremental.Entries.OfType<ParamClass>())
+                {
+                    if (!Options.Any(o => o.Name == item.Name))
+                    {
+                        writer.WriteLine(item.ToString((indent.Length / 4) + 1));
+                    }
+                }
             }
             writer.WriteLine($"{indent}}};");
         }

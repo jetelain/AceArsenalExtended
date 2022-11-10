@@ -11,6 +11,7 @@ namespace Helper.Detector
         public string P3dModel { get; set; }
         public Dictionary<string, string> HiddenSelections { get; set; }
         public string DisplayName { get; set; }
+        public string FileName { get; set; }
 
         public string GetHiddenSelection(string name) => HiddenSelections.TryGetValue(name, out var v) ? v : null;
     }

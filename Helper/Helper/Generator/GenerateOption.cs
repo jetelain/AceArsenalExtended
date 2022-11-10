@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Threading.Tasks.Dataflow;
+using BIS.Core.Config;
 
 namespace Helper
 {
@@ -24,14 +26,26 @@ namespace Helper
 
         public List<string> Values { get; }
 
-        public void WriteTo(TextWriter writer, string indent = "")
+        public void WriteTo(TextWriter writer, string indent = "", ParamClass incremental = null)
         {
-            writer.WriteLine($"{indent}class {Name} {{");
-            if (!IsConventional.Contains(Name))
+            writer.WriteLine($"{indent}class {Name}");
+            writer.WriteLine($"{indent}{{");
+            if (!IsConventional.Contains(Name) && incremental == null)
             {
-                writer.WriteLine($@"{indent}  label = ""{Name}"";");
+                writer.WriteLine($@"{indent}    label = ""{Name}"";");
             }
-            writer.WriteLine($@"{indent}  values[] = {{ ""{string.Join("\", \"", Values)}"" }};");
+            writer.WriteLine($@"{indent}    values[] = {{ ""{string.Join("\", \"", Values)}"" }}; // Always computed, do not edit");
+            if (incremental != null)
+            {
+                // in incremental mode, take everything except values
+                foreach(var item in incremental.Entries)
+                {
+                    if(item.Name != "values")
+                    {
+                        writer.WriteLine(item.ToString((indent.Length / 4) + 1));
+                    }
+                }
+            }
             writer.WriteLine($"{indent}}};");
         }
 

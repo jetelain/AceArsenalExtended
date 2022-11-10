@@ -10,7 +10,7 @@
         <DataGrid.Columns>
             <DataGridTextColumn Header="Label" Binding="{Binding Config.DisplayName}" IsReadOnly="True" />
             <DataGridTextColumn Header="Class" Binding="{Binding Config.ClassName}" IsReadOnly="True" />
-            <DataGridTextColumn Header="Conflict" Binding="{Binding Conflict}" IsReadOnly="True" />
+            <DataGridTextColumn Header="Conflict" Binding="{Binding Conflict}" IsReadOnly="True" Foreground="Red" />
         </DataGrid.Columns>
         
     </DataGrid>

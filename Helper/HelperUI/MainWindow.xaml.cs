@@ -73,20 +73,17 @@ namespace HelperUI
         }
         private void GenerateCSV(object sender, RoutedEventArgs e)
         {
-            var folder = System.IO.Path.GetDirectoryName(metadata.CurrentFile);
-            if (!string.IsNullOrEmpty(folder))
+            var result = rootViewModel.GetGenerateData();
+            var folder = Path.GetDirectoryName(result.Models.SelectMany(f => f.FileNames).First()) ?? string.Empty;
+            foreach (var model in result.Models)
             {
-                var result = rootViewModel.GetGenerateData();
-                foreach (var model in result.Models)
+                var filename = System.IO.Path.Combine(folder, $"aceax_{model.Name}.csv");
+                using (var writer = File.CreateText(filename))
                 {
-                    var filename = System.IO.Path.Combine(folder, $"aceax_{model.Name}.csv");
-                    using (var writer = File.CreateText(filename))
-                    {
-                        model.WriteCSV(writer);
-                    }
+                    model.WriteCSV(writer);
                 }
-                Process.Start("explorer", $@"""{folder}""");
             }
+            Process.Start("explorer", $@"""{folder}""");
         }
 
         private void GenerateSingle(object sender, RoutedEventArgs e)
@@ -98,11 +95,19 @@ namespace HelperUI
             if (dlg.ShowDialog() == true)
             {
                 var result = rootViewModel.GetGenerateData();
-                using (var writer = File.CreateText(dlg.FileName))
-                {
-                    result.WriteXtdGearModelsTo(writer);
-                    result.WriteXtdGearInfosTo(writer);
-                }
+                result.WriteToSingleFile(dlg.FileName);
+            }
+        }
+        private void GenerateDirectory(object sender, RoutedEventArgs e)
+        {
+            var dlg = new SaveFileDialog();
+            dlg.Title = "Generate to a directory";
+            dlg.FileName = "config.cpp";
+            dlg.Filter = "Text config file|*.cpp";
+            if (dlg.ShowDialog() == true)
+            {
+                var result = rootViewModel.GetGenerateData();
+                result.WriteToDirectory(Path.GetDirectoryName(dlg.FileName));
             }
         }
 
@@ -123,7 +128,7 @@ namespace HelperUI
 
         private void Quit(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         protected override void OnClosed(EventArgs e)

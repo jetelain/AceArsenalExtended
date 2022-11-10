@@ -12,5 +12,7 @@ namespace Helper
         public List<DetectedConfigInfo> Configs { get; set; }
         public List<DetectedHiddenSelection> HiddenSelections { get; set; }
         public string ClassRoot { get; set; }
+        public List<string> FileNames { get; set; }
+        public string PackageName { get; set; }
     }
 }

@@ -20,7 +20,8 @@
             <MenuItem Header="_File" VerticalAlignment="Center" Padding="10 2">
                 <MenuItem Header="_Open config file..." Command="Open" InputGestureText="Ctrl+O"  />
                 <Separator />
-                <MenuItem Header="Generate config _to a file..." Click="GenerateSingle" />
+                <MenuItem Header="Generate config to a _file..." Click="GenerateSingle" />
+                <MenuItem Header="Generate config to a _directory..." Click="GenerateDirectory" />
                 <MenuItem Header="Generate _CSV report" Click="GenerateCSV" />
                 <Separator />
                 <MenuItem Header="_Exit" Click="Quit" InputGestureText="Alt+F4"  />
