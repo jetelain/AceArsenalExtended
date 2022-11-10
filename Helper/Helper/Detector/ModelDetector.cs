@@ -135,6 +135,7 @@ namespace Helper
                     var hiddenSelections = entry.GetArray<string>("hiddenSelections", cfgClassRoot);
                     var hiddenSelectionsTextures = entry.GetArray<string>("hiddenSelectionsTextures", cfgClassRoot);
                     var itemInfo = entry.Get<ParamClass>("ItemInfo", cfgClassRoot);
+                    string modelOff = null;
                     if (itemInfo != null)
                     {
                         var uniformClass = itemInfo.GetValue<string>("uniformClass", cfgClassRoot);
@@ -146,8 +147,10 @@ namespace Helper
                                 infos.P3dModel = vehicle.GetValue<string>("model", cfgVehicles) ?? infos.P3dModel;
                                 hiddenSelections = vehicle.GetArray<string>("hiddenSelections", cfgVehicles) ?? hiddenSelections;
                                 hiddenSelectionsTextures = vehicle.GetArray<string>("hiddenSelectionsTextures", cfgVehicles) ?? hiddenSelectionsTextures;
+
                             }
                         }
+                        modelOff = itemInfo.GetValue<string>("modelOff", Enumerable.Empty<ParamClass>());
                     }
                     if (!string.IsNullOrEmpty(infos.P3dModel))
                     {
@@ -162,6 +165,10 @@ namespace Helper
                                 })
                                 .Where(p => p.Value != null)
                                 .ToDictionary(p => p.Name, p => p.Value);
+                        }
+                        if ( !string.IsNullOrEmpty(modelOff))
+                        {
+                            infos.HiddenSelections["nvg_off"] = modelOff;
                         }
                         allConfigs.Add(infos);
                     }
