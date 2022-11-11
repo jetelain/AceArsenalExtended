@@ -27,7 +27,7 @@ namespace Helper
             {
                 foreach (var config in dmodel.Detected.Configs)
                 {
-                    Configs.Add(new GenerateConfig(config, optionNames, dmodel.GetAllOptions(config)));
+                    Configs.Add(new GenerateConfig(this, config, optionNames, dmodel.GetAllOptions(config)));  ;
                 }
             }
             for (int i = 0; i < optionNames.Count; ++i)

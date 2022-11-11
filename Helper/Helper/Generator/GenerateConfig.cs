@@ -25,11 +25,14 @@ namespace Helper
             return value;
         }
 
-        public GenerateConfig(DetectedConfigInfo config, List<string> optionNames, Dictionary<string, string?> dictionary)
+        public GenerateConfig(GenerateModel model, DetectedConfigInfo config, List<string> optionNames, Dictionary<string, string?> dictionary)
         {
+            Model = model;
             Config = config;
             Options = optionNames.Select(name => new KeyValuePair<string, string>(name, NormalizeValue(name, dictionary.TryGetValue(name, out var value) ? value : null))).ToList();
         }
+
+        public GenerateModel Model { get; }
 
         public DetectedConfigInfo Config { get; }
 
@@ -47,6 +50,7 @@ namespace Helper
                 writer.WriteLine($"{indent}Conflict with {ConflictWith.ClassName}");
             }
             writer.WriteLine($"{indent}class {Config.ClassName} {{");
+            writer.WriteLine($@"{indent}  model = ""{Model.Name}"";");
             foreach (var opt in Options)
             {
                 writer.WriteLine($@"{indent}  {opt.Key} = ""{opt.Value}"";");
