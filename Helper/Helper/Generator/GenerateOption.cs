@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks.Dataflow;
 using BIS.Core.Config;
 
@@ -30,9 +31,13 @@ namespace Helper
         {
             writer.WriteLine($"{indent}class {Name}");
             writer.WriteLine($"{indent}{{");
-            if (!IsConventional.Contains(Name) && incremental == null)
+            if (!IsConventional.Contains(Name) && (incremental == null || !incremental.Entries.Any(e => string.Equals(e.Name, "label", StringComparison.OrdinalIgnoreCase))))
             {
                 writer.WriteLine($@"{indent}    label = ""{Name}"";");
+            }
+            if (incremental == null || !incremental.Entries.Any(e => string.Equals(e.Name,"alwaysSelectable",StringComparison.OrdinalIgnoreCase)))
+            {
+                writer.WriteLine($@"{indent}    alwaysSelectable = 1;");
             }
             writer.WriteLine($@"{indent}    values[] = {{ ""{string.Join("\", \"", Values)}"" }}; // Always computed, do not edit");
             if (incremental != null)
