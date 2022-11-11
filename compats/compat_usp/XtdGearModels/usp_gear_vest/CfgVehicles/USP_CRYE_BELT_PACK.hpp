@@ -5,6 +5,6 @@ class USP_CRYE_BELT_PACK
     class camo
     {
         alwaysSelectable = 1;
-        values[] = { "MC", "RGR", "XXX" }; // Always computed, do not edit
+        values[] = { "CBR", "MC", "RGR" }; // Always computed, do not edit
     };
 };

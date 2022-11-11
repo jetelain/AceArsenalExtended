@@ -16136,7 +16136,7 @@
           "Values": [
             {
               "Value": "usp_gear_vest\\data\\tex\\belt_co.paa",
-              "ValueName": "XXX",
+              "ValueName": "CBR",
               "FirstConfigClassName": "USP_CRYE_BELT_PACK"
             },
             {

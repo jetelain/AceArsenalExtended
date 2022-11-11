@@ -1,6 +1,6 @@
 class USP_CRYE_BELT_PACK {
   model = "USP_CRYE_BELT_PACK";
-  camo = "XXX";
+  camo = "CBR";
 };
 class USP_CRYE_BELT_PACK_MC {
   model = "USP_CRYE_BELT_PACK";
