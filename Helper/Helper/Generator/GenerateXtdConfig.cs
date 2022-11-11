@@ -40,7 +40,7 @@ namespace Helper.Generator
             {
                 writer.WriteLine($"class XtdGearModels {{");
 
-                writer.WriteLine(@"    #include""XtdGearModels_Common.hpp""");
+                writer.WriteLine(@"    #include ""XtdGearModels_Common.hpp""");
 
                 var common = Path.Combine(directory, "XtdGearModels_Common.hpp");
                 if (!File.Exists(common))
