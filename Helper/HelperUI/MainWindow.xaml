@@ -1,0 +1,143 @@
+﻿<Window x:Class="HelperUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelperUI"
+        mc:Ignorable="d"
+        Title="ACE Arsenal Extended Config Helper" Height="450" Width="800">
+
+    <Window.CommandBindings>
+        <CommandBinding Command="Open" Executed="OpenFile" />
+    </Window.CommandBindings>
+    
+    <Window.InputBindings>
+        <KeyBinding Key="O" Modifiers="Control" Command="Open"/>
+    </Window.InputBindings>
+    
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File" VerticalAlignment="Center" Padding="10 2">
+                <MenuItem Header="_Open config file..." Command="Open" InputGestureText="Ctrl+O"  />
+                <Separator />
+                <MenuItem Header="Generate config to a _file..." Click="GenerateSingle" />
+                <MenuItem Header="Generate config to a _directory..." Click="GenerateDirectory" />
+                <MenuItem Header="Generate _CSV report" Click="GenerateCSV" />
+                <Separator />
+                <MenuItem Header="_Exit" Click="Quit" InputGestureText="Alt+F4"  />
+            </MenuItem>
+            <MenuItem VerticalAlignment="Center" Padding="10 0 5 0" ItemsSource="{Binding ModelsWithConflicts}">
+                <MenuItem.Header>
+                    <StackPanel Orientation="Horizontal" Margin="0">
+                        <TextBlock Margin="0" VerticalAlignment="Center">Conflicts</TextBlock>
+                        <Border CornerRadius="5" Background="DarkGreen" Margin="5 0 0 0" VerticalAlignment="Center" Padding="5 2" Visibility="{Binding StatusOK}">
+                            <TextBlock  Foreground="White">None</TextBlock>
+                        </Border>
+                        <Border CornerRadius="5" Background="DarkRed" Margin="5 0 0 0" VerticalAlignment="Center" Padding="5 2" Visibility="{Binding StatusKO}">
+                            <TextBlock Text="{Binding StatusKODetails}" Foreground="White" />
+                        </Border>
+                    </StackPanel>
+                </MenuItem.Header>
+                <MenuItem.ItemContainerStyle>
+                    <Style TargetType="MenuItem">
+                        <EventSetter Event="Click" Handler="ShowModelWithConflicts" />
+                        <Setter Property="Header" Value="{Binding Name}"/>
+                    </Style>
+                </MenuItem.ItemContainerStyle>
+            </MenuItem>
+        </Menu>
+
+
+
+        <TextBlock Name="Status" DockPanel.Dock="Top" Visibility="Visible" TextAlignment="Center" Padding="50">Open a config file to start</TextBlock>
+
+
+
+        <ScrollViewer Name="Viewer" Visibility="Collapsed" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto">
+            <ItemsControl ItemsSource="{Binding Models}" Name="Models">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="10 5" Background="#f0f0f0">
+
+                            <StackPanel Margin="10" Orientation="Horizontal" >
+                                <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="14pt" />
+                                <TextBlock Text="{Binding CountLabel}" Margin="5 0" VerticalAlignment="Bottom" />
+                                <TextBlock Foreground="Green" FontWeight="Bold" Margin="5 0" Visibility="{Binding StatusOK}" VerticalAlignment="Bottom">Everything seems OK</TextBlock>
+                                <TextBlock Foreground="Red" FontWeight="Bold" Margin="5 0" Visibility="{Binding StatusKO}" VerticalAlignment="Bottom" Text="{Binding StatusKODetails}" FontSize="12pt" />
+                                <Button Margin="5 0" VerticalAlignment="Bottom" Command="{Binding ShowConfigs}">
+                                    Show configs
+                                </Button>
+                            </StackPanel>
+
+                            <StackPanel Margin="5" Orientation="Horizontal" >
+                                <ComboBox 
+                                                    Width="200" 
+                                                    ItemsSource="{x:Static local:ModelAction.Values}"
+                                                    DisplayMemberPath="Label"
+                                                    SelectedValue="{Binding Action}" />
+                                <TextBox Text="{Binding ModelName}" Width="150" Margin="10 0" Visibility="{Binding ShowConfig}" />
+                                <Button Command="{Binding AddOption}">Add an option</Button>
+                            </StackPanel>
+
+
+                            <ItemsControl ItemsSource="{Binding Options}" Margin="5" Visibility="{Binding ShowConfig}" >
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal" >
+                                            <TextBox Text="{Binding Name}" Width="150" IsEnabled="{Binding IsEditable}" />
+                                            <TextBox Text="{Binding Value}" Width="150" Margin="10 0" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+
+                            <ItemsControl ItemsSource="{Binding HiddenSelections}" Visibility="{Binding ShowConfig}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Margin="10 5" Background="White">
+
+                                            <StackPanel Margin="5" Orientation="Horizontal" >
+                                                <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="10pt" />
+                                                <TextBlock Text="{Binding CountLabel}" Margin="5 0" VerticalAlignment="Bottom" />
+                                            </StackPanel>
+
+
+                                            <StackPanel Margin="5" Orientation="Horizontal" >
+                                                <ComboBox 
+                                                    Width="200" 
+                                                    ItemsSource="{x:Static local:HiddenSelectionAction.Values}"
+                                                    DisplayMemberPath="Label"
+                                                    SelectedValue="{Binding Action}" />
+                                                <TextBox Text="{Binding OptionName}" Width="150" Margin="10 0" Visibility="{Binding ShowNamePrompt}" />
+                                                <TextBox Text="{Binding OptionValue}" Width="150" Margin="10 0" Visibility="{Binding ShowValuePrompt}" />
+
+                                                <TextBlock Margin="10 0" Visibility="{Binding ShowPriority}">Priority:</TextBlock>
+                                                <TextBox Text="{Binding Priority}" Width="50" Margin="5 0" Visibility="{Binding ShowPriority}" />
+
+                                                <TextBlock Text="{Binding CountOptionLabel}" Margin="10 0" Visibility="{Binding ShowValuePrompt}" />
+                                            </StackPanel>
+
+                                            <ItemsControl ItemsSource="{Binding Values}" Margin="25 5" Visibility="{Binding ShowValues}" >
+                                                <ItemsControl.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <StackPanel Orientation="Horizontal" >
+                                                            <TextBlock Text="{Binding ValueLabel}" Width="300" />
+                                                            <TextBox Text="{Binding ValueName}" Width="150" Margin="10 0" />
+                                                            <TextBlock Text="{Binding CountLabel}" Margin="10 0" />
+                                                        </StackPanel>
+                                                    </DataTemplate>
+                                                </ItemsControl.ItemTemplate>
+                                            </ItemsControl>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+    </DockPanel>
+</Window>

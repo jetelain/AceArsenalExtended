@@ -1,0 +1,28 @@
+﻿<Window x:Class="HelperUI.ConfigList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HelperUI"
+        mc:Ignorable="d"
+        Title="ConfigList" Height="450" Width="800">
+
+    <DockPanel>
+
+        <Expander IsExpanded="False" DockPanel.Dock="Bottom">
+            <Expander.Header>
+                Selected config definition
+            </Expander.Header>
+            <TextBox x:Name="Definition" AcceptsReturn="True" IsReadOnly="True" FontFamily="Consolas" />
+        </Expander>
+
+
+        <DataGrid AutoGenerateColumns="False" x:Name="Grid">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Label" Binding="{Binding Config.DisplayName}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Class" Binding="{Binding Config.ClassName}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Conflict" Binding="{Binding Conflict}" IsReadOnly="True" Foreground="Red" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</Window>
