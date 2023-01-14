@@ -36,7 +36,7 @@ namespace Helper
 
             progress("Aggregate data");
             var allModels = new List<DetectedModelInfo>();
-            foreach (var model in allConfigs.GroupBy(m => m.P3dModel))
+            foreach (var model in allConfigs.GroupBy(m => m.P3dModel, StringComparer.OrdinalIgnoreCase))
             {
                 var configs = model.ToList();
                 if (configs.Count > 1)
@@ -113,7 +113,7 @@ namespace Helper
             foreach (var entry in classes)
             {
                 var scope = entry.GetValue<int>("scope", cfgClassRoot);
-                if (scope == 2)
+                if (scope == 2 && (classRoot != "CfgWeapons" || !entry.Get<ParamClass>("LinkedItems").Any()))
                 {
                     var infos = new DetectedConfigInfo();
                     infos.Definition = entry.ToString();
@@ -128,6 +128,12 @@ namespace Helper
                     string modelOff = null;
                     if (itemInfo != null)
                     {
+                        var uniformModel = itemInfo.GetValue<string>("uniformModel", cfgClassRoot);
+                        if (!string.IsNullOrEmpty(uniformModel))
+                        {
+                            infos.P3dModel = uniformModel;
+                        }
+
                         var uniformClass = itemInfo.GetValue<string>("uniformClass", cfgClassRoot);
                         if (uniformClass != null)
                         {

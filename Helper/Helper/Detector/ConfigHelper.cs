@@ -29,11 +29,19 @@ namespace Helper
 
         public static IEnumerable<T> Get<T>(this ParamClass entry, string name) where T : ParamEntry
         {
+            if (entry == null)
+            {
+                return Enumerable.Empty<T>();
+            }
             return entry.Entries.OfType<T>().Where(e => string.Equals(e.Name, name, StringComparison.OrdinalIgnoreCase));
         }
 
         public static IEnumerable<T> Get<T>(this ParamClass entry) where T : ParamEntry
         {
+            if (entry == null)
+            {
+                return Enumerable.Empty<T>();
+            }
             return entry.Entries.OfType<T>();
         }
 
