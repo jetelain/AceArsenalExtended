@@ -1,14 +1,17 @@
 class USP_CRYE_NCPC
 {
-	label = "Crye NCPC";
-	author = "UnderSiege Productions";
-	options[] = {"camo", "loadout"};
-	class camo
-	{
-		values[] = {"CBR","AOR1","AOR2","TGS","KTH","KTTY","M81"};
-	};
-	class loadout
-	{
-		values[] = {"none","ASLT","FAST"};
-	};
+    options[] = { "camo", "loadout" }; // Always computed, do not edit
+    label="Crye NCPC";
+    author="UnderSiege Productions";
+    class camo
+    {
+        alwaysSelectable = 1;
+        values[] = { "AOR1", "AOR2", "KTH", "KTTY", "M81", "MC", "TGS" }; // Always computed, do not edit
+    };
+    class loadout
+    {
+        label = "loadout";
+        alwaysSelectable = 1;
+        values[] = { "ASLT", "FAST", "none" }; // Always computed, do not edit
+    };
 };
