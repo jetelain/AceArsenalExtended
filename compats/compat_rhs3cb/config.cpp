@@ -1,5 +1,5 @@
 class CfgPatches {
-  class aceax_rhssaf_c_gear_compat {
+  class aceax_rhs&3cb_compat {
     units[] = {};
     weapons[] = {};
     requiredVersion = "1.0";

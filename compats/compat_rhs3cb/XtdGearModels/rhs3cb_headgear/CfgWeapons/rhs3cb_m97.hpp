@@ -14,6 +14,6 @@ class rhs3cb_m97
     };
     class veil
     {
-        values[] = { "None", "VEIL"}; // Always computed, do not edit
+        values[] = { "None", "Veil"}; // Always computed, do not edit
     };
 };

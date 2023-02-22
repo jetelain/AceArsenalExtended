@@ -4,7 +4,7 @@ class rhs3cb_m10
     label="M10";
     class camo
     {
-        values[] = { "DIGI-DES", "DIGI", "DIGI-ALT", "DIGI-SUM" }; // Always computed, do not edit
+        values[] = { "DIGI", "DIGI/DES",  "DIGI/SUM", "DIGI/SUM 2", "TTsKO/MTN", "TTsKO/OXBLD", "TTsKO/URB" }; // Always computed, do not edit
         alwaysSelectable=1;
     };
 };
