@@ -1,5 +1,5 @@
 class CfgPatches {
-  class aceax_ace&bi_compat {
+  class aceax_acebi_compat {
     units[] = {};
     weapons[] = {};
     requiredVersion = "1.0";

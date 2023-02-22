@@ -1,12 +1,12 @@
 class V_RebreatherIA {
-  model = "ace&bi_rebreather";
+  model = "acebi_rebreather";
   faction = "AAF";
 };
 class V_RebreatherIR {
-  model = "ace&bi_rebreather";
+  model = "acebi_rebreather";
   faction = "CSAT";
 };
 class V_RebreatherB {
-  model = "ace&bi_rebreather";
+  model = "acebi_rebreather";
   faction = "NATO";
 };
