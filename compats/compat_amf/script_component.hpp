@@ -14,4 +14,5 @@
 
 #include "\z\aceax\addons\main\script_macros.hpp"
 
-#define AMFPATCHES(path) QUOTE(\amf_patches\##path)
+//#define AMFPATCHES(path) QUOTE(\amf_patches\##path)
+#define AMFPATCHES(path) QUOTE(\z\aceax\compats\amf_patches\##path)
