@@ -8,7 +8,7 @@ class srifle_DMR_03_multicam_F {
 };
 class srifle_DMR_03_khaki_F {
   model = "acebi_sig556";
-  camo = "GRN";
+  camo = "KHKG";
 };
 class srifle_DMR_03_tan_F {
   model = "acebi_sig556";

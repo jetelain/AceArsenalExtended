@@ -8,5 +8,5 @@ class arifle_MX_GL_Black_F {
 };
 class arifle_MX_GL_khk_F {
   model = "acebi_mx_3gl";
-  camo = "GRN";
+  camo = "KHKG";
 };

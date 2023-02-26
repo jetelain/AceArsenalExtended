@@ -4,9 +4,9 @@ class arifle_AK12_F {
 };
 class arifle_AK12_arid_F {
   model = "acebi_ak15";
-  camo = "Arid";
+  camo = "BISPNZA";
 };
 class arifle_AK12_lush_F {
   model = "acebi_ak15";
-  camo = "Lush";
+  camo = "BISPNZL";
 };

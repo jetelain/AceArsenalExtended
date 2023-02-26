@@ -4,5 +4,5 @@ class V_PlateCarrierIAGL_dgtl {
 };
 class V_PlateCarrierIAGL_oli {
   model = "acebi_ga_carrier_gl";
-  symbol = "OLI";
+  camo = "OLI";
 };

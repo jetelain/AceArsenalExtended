@@ -1,6 +1,7 @@
 class XtdGearModels {
+    #include "XtdGearModels_Common.hpp"
     class CfgGlasses {
-        //Facewear
+        // Facewear
         #include "XtdGearModels\acebi_facewear\CfgGlasses\acebi_apr_csat.hpp"
         #include "XtdGearModels\acebi_facewear\CfgGlasses\acebi_balaclava.hpp"
         #include "XtdGearModels\acebi_facewear\CfgGlasses\acebi_bandana.hpp"
@@ -17,7 +18,7 @@ class XtdGearModels {
         #include "XtdGearModels\acebi_facewear\CfgGlasses\acebi_tactical_glasses.hpp"
     };
     class CfgVehicles {
-        //Backpacks
+        // Backpacks
         #include "XtdGearModels\acebi_backpack\CfgVehicles\acebi_assaultpack.hpp"
         #include "XtdGearModels\acebi_backpack\CfgVehicles\acebi_bergen.hpp"
         #include "XtdGearModels\acebi_backpack\CfgVehicles\acebi_carryall.hpp"
@@ -31,7 +32,7 @@ class XtdGearModels {
         #include "XtdGearModels\acebi_backpack\CfgVehicles\acebi_tacpack.hpp"
         #include "XtdGearModels\acebi_backpack\CfgVehicles\acebi_viper_harness.hpp"
         #include "XtdGearModels\acebi_backpack\CfgVehicles\acebi_viper_harness_lite.hpp"
-        //Dismantled Weapons
+        // Dismantled Weapons
         #include "XtdGearModels\acebi_emplaced\CfgVehicles\acebi_auto_gmg.hpp"
         #include "XtdGearModels\acebi_emplaced\CfgVehicles\acebi_auto_hmg.hpp"
         #include "XtdGearModels\acebi_emplaced\CfgVehicles\acebi_m2_hmg.hpp"
@@ -49,7 +50,7 @@ class XtdGearModels {
         #include "XtdGearModels\acebi_emplaced\CfgVehicles\acebi_remote_desig.hpp"
         #include "XtdGearModels\acebi_emplaced\CfgVehicles\acebi_titan_aa.hpp"
         #include "XtdGearModels\acebi_emplaced\CfgVehicles\acebi_titan_at.hpp"
-        //Dismantled Drones
+        // Dismantled Drones
         #include "XtdGearModels\acebi_drone\CfgVehicles\acebi_al6.hpp"
         #include "XtdGearModels\acebi_drone\CfgVehicles\acebi_al6_medical.hpp"
         #include "XtdGearModels\acebi_drone\CfgVehicles\acebi_ar2.hpp"
@@ -57,7 +58,7 @@ class XtdGearModels {
         #include "XtdGearModels\acebi_drone\CfgVehicles\acebi_ed1e.hpp"
     };
     class CfgWeapons {
-        //Headgear
+        // Headgear
         #include "XtdGearModels\acebi_headgear\CfgWeapons\acebi_adv_mod_helm.hpp"
         #include "XtdGearModels\acebi_headgear\CfgWeapons\acebi_assassin_helm.hpp"
         #include "XtdGearModels\acebi_headgear\CfgWeapons\acebi_avenger_helm.hpp"
@@ -90,7 +91,40 @@ class XtdGearModels {
         #include "XtdGearModels\acebi_headgear\CfgWeapons\acebi_stealth_combat_helm.hpp"
         #include "XtdGearModels\acebi_headgear\CfgWeapons\acebi_straw_hat.hpp"
         #include "XtdGearModels\acebi_headgear\CfgWeapons\acebi_viper_helm.hpp"
-        //Vests
+        // Uniform
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_aidworker_clothes.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_bandit_clothes.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_casual_clothes.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_common_clothes.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_constr_cover.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_ctrg_combat_uniform.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_ctrg_stealth_uniform.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_deserter_clothes.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_driver_cover.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_fatigues_aaf.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_fatigues_csat.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_fatigues_ldf.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_fatigues_nato.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_formal_suit.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_ghillie_full.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_ghillie_suit.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_granit.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_guerilla_apparel.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_guerilla_outfit.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_heli_cover.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_looter_clothes.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_officer_csat.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_parade_uniform.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_paramil_garb.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_pilot_cover.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_sci_outfit_form.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_sci_outfit_inform.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_sports_clothes.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_summer_clothes.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_viper_suit.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_vrsuit.hpp"
+        #include "XtdGearModels\acebi_uniform\CfgWeapons\acebi_wetsuit.hpp"
+        // Vests
         #include "XtdGearModels\acebi_vest\CfgWeapons\acebi_carrier_gl.hpp"
         #include "XtdGearModels\acebi_vest\CfgWeapons\acebi_carrier_lite.hpp"
         #include "XtdGearModels\acebi_vest\CfgWeapons\acebi_carrier_rig.hpp"
@@ -114,7 +148,7 @@ class XtdGearModels {
         #include "XtdGearModels\acebi_vest\CfgWeapons\acebi_tac_chest_rig.hpp"
         #include "XtdGearModels\acebi_vest\CfgWeapons\acebi_tacvest.hpp"
         #include "XtdGearModels\acebi_vest\CfgWeapons\acebi_tacvest_police.hpp"
-        //Weapons: Primaries
+        // Weapons: Primaries
         #include "XtdGearModels\acebi_weapon\CfgWeapons\acebi_ak15.hpp"
         #include "XtdGearModels\acebi_weapon\CfgWeapons\acebi_ak15_gl.hpp"
         #include "XtdGearModels\acebi_weapon\CfgWeapons\acebi_ak15k.hpp"
@@ -154,17 +188,17 @@ class XtdGearModels {
         #include "XtdGearModels\acebi_weapon\CfgWeapons\acebi_sig556.hpp"
         #include "XtdGearModels\acebi_weapon\CfgWeapons\acebi_stoner99.hpp"
         #include "XtdGearModels\acebi_weapon\CfgWeapons\acebi_type115.hpp"
-        //Weapons: Secondaries
+        // Weapons: Secondaries
         #include "XtdGearModels\acebi_weapon\CfgWeapons\acebi_fnx45.hpp"
         #include "XtdGearModels\acebi_weapon\CfgWeapons\acebi_p99.hpp"
-        //Weapons: Launchers
+        // Weapons: Launchers
         #include "XtdGearModels\acebi_weapon\CfgWeapons\acebi_maaws_0.hpp"
         #include "XtdGearModels\acebi_weapon\CfgWeapons\acebi_maaws_1.hpp"
         #include "XtdGearModels\acebi_weapon\CfgWeapons\acebi_metis.hpp"
         #include "XtdGearModels\acebi_weapon\CfgWeapons\acebi_rpg32.hpp"
         #include "XtdGearModels\acebi_weapon\CfgWeapons\acebi_titan_aa.hpp"
         #include "XtdGearModels\acebi_weapon\CfgWeapons\acebi_titan_at.hpp"
-        //NVGs
+        // NVGs
         #include "XtdGearModels\acebi_nvg\CfgWeapons\acebi_compact_nvg.hpp"
         #include "XtdGearModels\acebi_nvg\CfgWeapons\acebi_envg.hpp"
         #include "XtdGearModels\acebi_nvg\CfgWeapons\acebi_nvg_gen1.hpp"
@@ -172,7 +206,7 @@ class XtdGearModels {
         #include "XtdGearModels\acebi_nvg\CfgWeapons\acebi_nvg_gen3.hpp"
         #include "XtdGearModels\acebi_nvg\CfgWeapons\acebi_nvg_gen4.hpp"
         #include "XtdGearModels\acebi_nvg\CfgWeapons\acebi_nvg_wide.hpp"
-        //Binoculars
+        // Binoculars
         #include "XtdGearModels\acebi_bino\CfgWeapons\acebi_las_desig.hpp"
     };
 };

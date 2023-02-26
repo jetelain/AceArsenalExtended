@@ -4,7 +4,7 @@ class acebi_hk416a5_14_5
     label="HK416A5 14.5in.";
     class camo
     {
-        values[] = { "BLK", "GRN", "SND" }; // Always computed, do not acebi
+        values[] = { "BLK", "KHKG", "SND" }; // Always computed, do not acebi
         alwaysSelectable=1;
     };
 };

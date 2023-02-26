@@ -4,7 +4,7 @@ class acebi_mx
     label="MX";
     class camo
     {
-        values[] = { "SND", "BLK", "GRN" }; // Always computed, do not acebi
+        values[] = { "SND", "BLK", "KHKG" }; // Always computed, do not acebi
         alwaysSelectable=1;
     };
 };

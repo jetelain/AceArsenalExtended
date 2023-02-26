@@ -4,7 +4,7 @@ class acebi_sig556
     label="SIG 556";
     class camo
     {
-        values[] = { "BLK", "MTP", "GRN", "SND", "M81" }; // Always computed, do not acebi
+        values[] = { "BLK", "MTP", "KHKG", "SND", "M81" }; // Always computed, do not acebi
         alwaysSelectable=1;
     };
 };

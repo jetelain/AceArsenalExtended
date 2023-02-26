@@ -4,7 +4,7 @@ class acebi_rpk
     label="RPK";
     class camo
     {
-        values[] = { "BLK", "Arid", "Lush" }; // Always computed, do not acebi
+        values[] = { "BLK", "BISPNZA", "BISPNZL" }; // Always computed, do not acebi
         alwaysSelectable=1;
     };
 };

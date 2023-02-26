@@ -4,7 +4,7 @@ class arifle_SPAR_03_blk_F {
 };
 class arifle_SPAR_03_khk_F {
   model = "acebi_hk417a2_20";
-  camo = "GRN";
+  camo = "KHKG";
 };
 class arifle_SPAR_03_snd_F {
   model = "acebi_hk417a2_20";
