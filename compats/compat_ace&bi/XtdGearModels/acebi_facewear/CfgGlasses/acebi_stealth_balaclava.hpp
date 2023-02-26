@@ -4,7 +4,7 @@ class acebi_stealth_balaclava
     label="Stealth Balaclava";
     class camo
     {
-        values[] = { "BLK", "Tropic" };
+        values[] = { "BLK", "CTRG_TROP" };
         alwaysSelectable=1;
     };
     class goggles

@@ -1,6 +1,6 @@
 class H_HelmetB_light {
   model = "acebi_light_combat_helm";
-  camo = "MTP";
+  camo = "BIHELM_STD";
 };
 class H_HelmetB_light_black {
   model = "acebi_light_combat_helm";
@@ -8,11 +8,11 @@ class H_HelmetB_light_black {
 };
 class H_HelmetB_light_desert {
   model = "acebi_light_combat_helm";
-  camo = "DES";
+  camo = "BIHELM_DES";
 };
 class H_HelmetB_light_grass {
   model = "acebi_light_combat_helm";
-  camo = "GRS";
+  camo = "BIHELM_GRS";
 };
 class H_HelmetB_light_sand {
   model = "acebi_light_combat_helm";
@@ -20,7 +20,7 @@ class H_HelmetB_light_sand {
 };
 class H_HelmetB_light_snakeskin {
   model = "acebi_light_combat_helm";
-  camo = "SNK";
+  camo = "BIHELM_SNK";
 };
 class H_HelmetB_light_tna_F {
   model = "acebi_light_combat_helm";

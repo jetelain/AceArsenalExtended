@@ -4,7 +4,7 @@ class acebi_noreen
     label="Noreen ULR";
     class camo
     {
-        values[] = { "BLK", "SND", "GRN" }; // Always computed, do not acebi
+        values[] = { "BLK", "SND", "CTRG_ARID" }; // Always computed, do not acebi
         alwaysSelectable=1;
     };
 };

@@ -4,7 +4,7 @@ class acebi_ak15
     label="AK-15";
     class camo
     {
-        values[] = { "BLK", "BISPNZA", "BISPNZL" }; // Always computed, do not acebi
+        values[] = { "BLK", "BISPNZ_A", "BISPNZ_L" }; // Always computed, do not acebi
         alwaysSelectable=1;
     };
 };

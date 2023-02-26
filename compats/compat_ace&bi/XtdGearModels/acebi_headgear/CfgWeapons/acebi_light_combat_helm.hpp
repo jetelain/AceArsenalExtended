@@ -4,7 +4,7 @@ class acebi_light_combat_helm
     label="Li. Combat Helm";
     class camo
     {
-        values[] = { "MTP", "BLK", "DES", "GRS", "SND", "SNK", "Tropic", "M81" }; // Always computed, do not acebi
+        values[] = { "BIHELM_STD", "BLK", "BIHELM_DES", "BIHELM_GRS", "SND", "BIHELM_SNK", "Tropic", "M81" }; // Always computed, do not acebi
         alwaysSelectable=1;
     };
 };

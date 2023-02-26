@@ -4,7 +4,7 @@ class srifle_DMR_02_F {
 };
 class srifle_DMR_02_camo_F {
   model = "acebi_noreen";
-  camo = "GRN";
+  camo = "CTRG_ARID";
 };
 class srifle_DMR_02_sniper_F {
   model = "acebi_noreen";

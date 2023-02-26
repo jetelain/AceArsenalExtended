@@ -1,5 +1,3 @@
-#include "script_component.hpp"
-
 class CfgPatches {
   class aceax_acebi_compat {
     units[] = {};
@@ -9,5 +7,7 @@ class CfgPatches {
     author = "Pet Mudstone";
   };
 };
+
 #include "XtdGearModels.hpp"
+
 #include "XtdGearInfos.hpp"

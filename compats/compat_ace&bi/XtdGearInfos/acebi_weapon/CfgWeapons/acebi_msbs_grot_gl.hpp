@@ -12,5 +12,5 @@ class arifle_MSBS65_GL_camo_F {
 };
 class arifle_MSBS65_GL_sand_F {
   model = "acebi_msbs_grot_gl";
-  camo = "SND";
+  camo = "TAN";
 };

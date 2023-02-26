@@ -4,7 +4,7 @@ class acebi_msbs_grot_gl
     label="MSBS Grot GL";
     class camo
     {
-        values[] = { "BLK", "OLI", "EAF", "SND" }; // Always computed, do not acebi
+        values[] = { "BLK", "OLI", "EAF", "TAN" }; // Always computed, do not acebi
         alwaysSelectable=1;
     };
 };
