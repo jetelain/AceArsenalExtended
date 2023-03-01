@@ -4,7 +4,7 @@ class acebi_carryall
     label="Carryall Backpack";
     class camo
     {
-        values[] = { "EAF", "GRN", "HEX", "GHEX", "THEX", "UHEX", "KHK", "MTP", "OLI", "M81" }; // Always computed, do not acebi
+        values[] = { "BLK", "EAF", "GRN", "HEX", "GHEX", "THEX", "UHEX", "KHK", "MTP", "OLI", "M81" }; // Always computed, do not acebi
         alwaysSelectable=1;
     };
 };

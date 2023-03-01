@@ -1,3 +1,7 @@
+class B_Carryall_blk {
+  model = "acebi_carryall";
+  camo = "BLK";
+};
 class B_Carryall_cbr {
   model = "acebi_carryall";
   camo = "CBR";
