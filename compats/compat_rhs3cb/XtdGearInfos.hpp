@@ -31,8 +31,8 @@
         #include "XtdGearInfos\rhs3cb_headgear\CfgWeapons\rhs3cb_patrolcap.hpp"
         #include "XtdGearInfos\rhs3cb_headgear\CfgWeapons\rhs3cb_protech_sf.hpp"
         #include "XtdGearInfos\rhs3cb_headgear\CfgWeapons\rhs3cb_utilitycap.hpp"
-        #include "XtdGearInfos\rhs3cb_headgear\rhs3cb_ach.hpp"
-        #include "XtdGearInfos\rhs3cb_headgear\rhs3cb_mich2000.hpp"
+        #include "XtdGearInfos\rhs3cb_headgear\CfgWeapons\rhs3cb_ach.hpp"
+        #include "XtdGearInfos\rhs3cb_headgear\CfgWeapons\rhs3cb_mich2000.hpp"
 
         //Uniforms
         #include "XtdGearInfos\rhs3cb_uniform\CfgWeapons\rhs3cb_6sh122.hpp"
