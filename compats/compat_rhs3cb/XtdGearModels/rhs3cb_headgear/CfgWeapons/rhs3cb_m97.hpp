@@ -9,11 +9,14 @@ class rhs3cb_m97
     };
     class goggles
     {
+        label = "Goggles";
         values[] = { "None", "Covered", "Uncovered" }; // Always computed, do not edit
         alwaysSelectable=1;
     };
     class veil
     {
-        values[] = { "None", "Veil"}; // Always computed, do not edit
+        label = "Veil"
+        values[] = { "No", "Yes"}; // Always computed, do not edit
+        alwaysSelectable=1;
     };
 };

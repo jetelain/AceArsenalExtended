@@ -1,16 +1,16 @@
-class rhsusf_goggles_black {
+class rhs_googles_black {
   model = "rhs3cb_goggles";
-  color = "BLK";
+  camo = "BLK";
 };
-class rhsusf_goggles_clear {
+class rhs_googles_clear {
   model = "rhs3cb_goggles";
-  color = "CLR";
+  camo = "CLR";
 };
-class rhsusf_goggles_orange {
+class rhs_googles_orange {
   model = "rhs3cb_goggles";
-  color = "ORG";
+  camo = "ORG";
 };
-class rhsusf_goggles_yellow {
+class rhs_googles_yellow {
   model = "rhs3cb_goggles";
-  color = "YLW";
+  camo = "YLW";
 };

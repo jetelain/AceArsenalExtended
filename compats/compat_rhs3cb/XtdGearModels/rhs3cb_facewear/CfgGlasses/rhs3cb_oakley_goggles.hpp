@@ -1,8 +1,8 @@
 class rhs3cb_oakley_goggles
 {
-    options[] = { "color" }; // Always computed, do not edit
+    options[] = { "camo" }; // Always computed, do not edit
     label="SI Ballistic 2.0";
-    class color
+    class camo
     {
         values[] = { "BLK", "CLR", "YLW" }; // Always computed, do not edit
         alwaysSelectable=1;

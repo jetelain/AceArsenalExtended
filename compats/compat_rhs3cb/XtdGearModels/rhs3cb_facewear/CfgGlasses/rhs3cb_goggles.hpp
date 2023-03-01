@@ -1,10 +1,10 @@
 class rhs3cb_goggles
 {
-    options[] = { "color" }; // Always computed, do not edit
-    label="Ballistic Glasses [RHSUSF]";
-    class color
+    options[] = { "camo" };
+    label="Ballistic Glasses";
+    class camo
     {
-        values[] = { "BLK", "CLR", "ORG", "YLW" }; // Always computed, do not edit
+        values[] = { "BLK", "CLR", "ORG", "YLW" };
         alwaysSelectable=1;
     };
 };

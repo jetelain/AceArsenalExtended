@@ -6,6 +6,7 @@ class XtdGearModels {
         #include "XtdGearModels\rhs3cb_facewear\CfgGlasses\rhs3cb_oakley_goggles.hpp"
         #include "XtdGearModels\rhs3cb_facewear\CfgGlasses\rhs3cb_shemagh.hpp"
     };
+
     class CfgVehicles {
         //Backpacks
         #include "XtdGearModels\rhs3cb_backpack\CfgVehicles\rhs3cb_alicepack.hpp"
@@ -14,6 +15,7 @@ class XtdGearModels {
         #include "XtdGearModels\rhs3cb_backpack\CfgVehicles\rhs3cb_kitbag.hpp"
         #include "XtdGearModels\rhs3cb_backpack\CfgVehicles\rhs3cb_sposn_tortila.hpp"
     };
+
     class CfgWeapons {
         //Headgear
         #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_bandana.hpp"
@@ -21,6 +23,18 @@ class XtdGearModels {
         #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_booniehat.hpp"
         #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_m59_85.hpp"
         #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_m97.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_acvc.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_bowman.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_fast_ballistic.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_fast_maritime.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_hgu56p.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_lwh.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_patrolcap.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_protech_sf.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_utilitycap.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\rhs3cb_ach.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\rhs3cb_mich2000.hpp"
+
         //Uniforms
         #include "XtdGearModels\rhs3cb_uniform\CfgWeapons\rhs3cb_6sh122.hpp"
         #include "XtdGearModels\rhs3cb_uniform\CfgWeapons\rhs3cb_acu.hpp"
@@ -38,6 +52,7 @@ class XtdGearModels {
         #include "XtdGearModels\rhs3cb_uniform\CfgWeapons\rhs3cb_m88_vdv.hpp"
         #include "XtdGearModels\rhs3cb_uniform\CfgWeapons\rhs3cb_m93.hpp"
         #include "XtdGearModels\rhs3cb_uniform\CfgWeapons\rhs3cb_vkpo.hpp"
+
         //Vests
         #include "XtdGearModels\rhs3cb_vest\CfgWeapons\rhs3cb_6b23.hpp"
         #include "XtdGearModels\rhs3cb_vest\CfgWeapons\rhs3cb_iotv.hpp"
