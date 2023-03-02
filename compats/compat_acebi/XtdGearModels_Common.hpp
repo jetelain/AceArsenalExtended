@@ -38,22 +38,22 @@ class CamoBase
 	class BIHELM_STD // There is no better way to describe it really
 	{
 		label = "Standard";
-		image = "ACEandBI\data\camo\bihelm_std.paa";
+		image = "z\aceax\compats\ACEandBI\data\camo\bihelm_std.paa";
 	};
 	class BIHELM_DES
 	{
 		label = "Desert";
-		image = "ACEandBI\data\camo\bihelm_des.paa";
+		image = "z\aceax\compats\ACEandBI\data\camo\bihelm_des.paa";
 	};
 	class BIHELM_GRS
 	{
 		label = "Grass";
-		image = "ACEandBI\data\camo\bihelm_grs.paa";
+		image = "z\aceax\compats\ACEandBI\data\camo\bihelm_grs.paa";
 	};
 	class BIHELM_SNK
 	{
 		label = "Snakeskin";
-		image = "ACEandBI\data\camo\bihelm_snk.paa";
+		image = "z\aceax\compats\ACEandBI\data\camo\bihelm_snk.paa";
 	};
 
 	// CTRG camos.
@@ -61,31 +61,31 @@ class CamoBase
 	{
 		label = "Arid Daz.";
 		description = "CTRG Arid Dazzle";
-		image = "ACEandBI\data\camo\ctrg_arid.paa";
+		image = "z\aceax\compats\ACEandBI\data\camo\ctrg_arid.paa";
 	};
 	class CTRG_URB
 	{
 		label = "Urb. Daz.";
 		description = "CTRG Urban Dazzle";
-		image = "ACEandBI\data\camo\ctrg_urb.paa";
+		image = "z\aceax\compats\ACEandBI\data\camo\ctrg_urb.paa";
 	};
 	class CTRG_TROP
 	{
 		label = "Trop. Daz.";
 		description = "CTRG Tropic Dazzle";
-		image = "ACEandBI\data\camo\ctrg_trop.paa";
+		image = "z\aceax\compats\ACEandBI\data\camo\ctrg_trop.paa";
 	};
 
 	// Spetsnaz camos.
 	class BISPNZ_A // Camo used on Arid AK-15s
 	{
 		label = "Arid";
-		image = "ACEandBI\data\camo\bihelm_spnz_a.paa";
+		image = "z\aceax\compats\ACEandBI\data\camo\bihelm_spnz_a.paa";
 	};
 	class BISPNZ_L // Camo used on Lush AK-15s
 	{
 		label = "Lush";
-		image = "ACEandBI\data\camo\bihelm_spnz_l.paa";
+		image = "z\aceax\compats\ACEandBI\data\camo\bihelm_spnz_l.paa";
 	};
 	class THEX // Taiga hex.
 	{
