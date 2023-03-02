@@ -34,6 +34,15 @@ class XtdGearModels {
         #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_utilitycap.hpp"
         #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_ach.hpp"
         #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_mich2000.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_6b7_1m.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_6b26.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_6b27m.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_6b28.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_6b47.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_6b47_alt.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_6m2_head.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_altyn.hpp"
+        #include "XtdGearModels\rhs3cb_headgear\CfgWeapons\rhs3cb_beanie.hpp"
 
         //Uniforms
         #include "XtdGearModels\rhs3cb_uniform\CfgWeapons\rhs3cb_6sh122.hpp"
