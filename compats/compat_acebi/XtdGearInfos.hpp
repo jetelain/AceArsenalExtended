@@ -1,4 +1,4 @@
-﻿class XtdGearInfos {
+class XtdGearInfos {
     class CfgGlasses {
         // Facewear
         #include "XtdGearInfos\acebi_facewear\CfgGlasses\acebi_apr_csat.hpp"

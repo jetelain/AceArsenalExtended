@@ -4,7 +4,7 @@ class acebi_casual_clothes
     label="Casual Clothes";
     class design
     {
-        label = "Graphic Design"
+        label = "Graphic Design";
         values[] = { "Abstract", "Art of War", "Blue", "Drones", "Exhibition", "Green", "Navy", "Robogeddon", "WalRob" };
         alwaysSelectable=1;
         class WalRob
