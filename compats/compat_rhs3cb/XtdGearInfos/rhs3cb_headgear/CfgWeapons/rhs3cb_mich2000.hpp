@@ -1,4 +1,4 @@
-﻿// Bare
+// Bare
 class rhsusf_mich_bare {
   model = "rhs3cb_mich2000";
   camo = "GRN";

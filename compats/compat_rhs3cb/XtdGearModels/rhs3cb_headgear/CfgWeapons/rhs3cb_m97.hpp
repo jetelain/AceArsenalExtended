@@ -15,7 +15,7 @@ class rhs3cb_m97
     };
     class veil
     {
-        label = "Veil"
+        label = "Veil";
         values[] = { "No", "Yes"}; // Always computed, do not edit
         alwaysSelectable=1;
     };

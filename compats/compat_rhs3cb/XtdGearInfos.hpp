@@ -1,4 +1,4 @@
-﻿class XtdGearInfos {
+class XtdGearInfos {
     class CfgGlasses {
         //Facewear
         #include "XtdGearInfos\rhs3cb_facewear\CfgGlasses\rhs3cb_goggles.hpp"
