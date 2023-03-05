@@ -189,7 +189,7 @@ class AMF_RankBaseHV
 	centerImage = 1;
 	values[] = {
 		"2CL","1CL","CPL","CCH","CC1",
-		"SGT","SCH","SCHBM2","ADJ","MAJ",
+		"SGT","SCH","SCHBM2","ADJ","ADC","MAJ",
 		"ASP","SLT","LTN","CNE","CDT","LCL","COL"};
 	class RankBase
 	{
@@ -222,7 +222,7 @@ class AMF_RankBaseHV
 	RANK_TERRE(SCH,SCH01,"Sergent-chef")
 	RANK_TERRE(SCHBM2,SCH02,"Sergent-chef BM2")
 	RANK_TERRE(ADJ,ADJ,"Adjudant")
-	/*RANK_TERRE(ADC,1ER,"Adjudant-chef")*/
+	RANK_TERRE(ADC,ADC,"Adjudant-chef")
 	RANK_TERRE(MAJ,MAJ,"Major")
 	RANK_TERRE(ASP,ASP,"Aspirant")
 	RANK_TERRE(SLT,SLT,"Sous-lieutenant")
