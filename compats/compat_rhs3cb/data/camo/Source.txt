@@ -1,0 +1,5 @@
+mdu02.png gotten from rhssaf_t_vest_m99.pbo
+mdu10, mdu10_des, and mdu10_sum gotten from rhssaf_t_uniform_m10.pbo
+serb_wdl.png gotten from rhssaf_t_vest_m99.pbo
+oakleaf.png gotten from rhssaf_t_uniform_m93.pbo
+oakleaf_sum.png from rhssaf_t_uniform_m93.pbo

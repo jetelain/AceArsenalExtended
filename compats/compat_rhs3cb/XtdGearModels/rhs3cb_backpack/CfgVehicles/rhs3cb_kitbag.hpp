@@ -4,7 +4,7 @@ class rhs3cb_kitbag
     label="Kitbag [RHS3CB]";
     class camo
     {
-        values[] = { "DIGI", "MDU02", "SMB" }; // Always computed, do not edit
+        values[] = { "MDU02", "MDU10", "SMB" }; // Always computed, do not edit
         alwaysSelectable=1;
     };
 };

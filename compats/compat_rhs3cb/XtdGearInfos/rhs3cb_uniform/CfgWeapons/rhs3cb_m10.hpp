@@ -1,18 +1,18 @@
 class rhssaf_uniform_m10_digital {
   model = "rhs3cb_m10";
-  camo = "DIGI";
+  camo = "MDU10";
 };
 class rhssaf_uniform_m10_digital_desert {
   model = "rhs3cb_m10";
-  camo = "DIGI/DES";
+  camo = "MDU10_DES";
 };
 class rhssaf_uniform_m10_digital_summer {
   model = "rhs3cb_m10";
-  camo = "DIGI/SUM";
+  camo = "MDU10_SUM";
 };
 class rhssaf_uniform_m10_digital_tan_boots {
   model = "rhs3cb_m10";
-  camo = "DIGI/SUM 2";
+  camo = "MDU10_SUM_2";
 };
 class rhsgref_uniform_para_ttsko_mountain {
   model = "rhs3cb_m10";

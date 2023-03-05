@@ -1,10 +1,10 @@
 class rhs3cb_m88_vdv
 {
-    options[] = { "camo" }; // Always computed, do not edit
+    options[] = { "camo" };
     label="M88 VDV";
     class camo
     {
-        values[] = { "AFGKA", "TTsKO", "TTsKO Air.", "VSR", "VSR 2" }; // Always computed, do not edit
+        values[] = { "AFGKA", "TTsKO", "TTsKO Air.", "VSR", "VSR 2" };
         alwaysSelectable=1;
     };
 };

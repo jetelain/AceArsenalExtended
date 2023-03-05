@@ -1,20 +1,20 @@
 class rhs3cb_m88
 {
-    options[] = { "camo", "coat", "boots" }; // Always computed, do not edit
+    options[] = { "camo", "coat", "boots" };
     label="M88";
     class camo
     {
-        values[] = { "AFGKA", "GRY", "KLMK", "MD TTsKO BLU", "MD TTsKO CLD", "MD TTsKO DST", "MD TTsKO HOT", "SPNZ", "TTsKO", "TTsKO 2", "VSR", "VSR 2", "VSR 3", "WDL" }; // Always computed, do not edit
+        values[] = { "AFGKA", "GRY", "KLMK", "MD TTsKO BLU", "MD TTsKO CLD", "MD TTsKO DST", "MD TTsKO HOT", "SPNZ", "TTsKO", "TTsKO 2", "VSR", "VSR 2", "VSR 3", "WDL" };
         alwaysSelectable=1;
     };
     class coat
     {
-        values[] = { "None", "Winter" }; // Always computed, do not edit
+        values[] = { "None", "Winter" };
         alwaysSelectable=1;
     };
     class boots
     {
-        values[] = { "Standard", "Sapogi" }; // Always computed, do not edit
+        values[] = { "Standard", "Sapogi" };
         alwaysSelectable=1;
     };
 };

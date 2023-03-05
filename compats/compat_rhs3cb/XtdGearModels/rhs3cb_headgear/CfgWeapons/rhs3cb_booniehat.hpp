@@ -1,10 +1,10 @@
 class rhs3cb_booniehat
 {
     options[] = { "camo" }; // Always computed, do not edit
-    label="Booniehat (Serbian)";
+    label="Booniehat";
     class camo
     {
-        values[] = { "DIGI", "MDU02", "WDL" }; // Always computed, do not edit
+        values[] = { "ALP", "EMR-S", "FLRA", "M81", "MRPT-D", "MRPT-WD", "MDU02", "MDU10", "OEF_CP", "UCP", "WDL_SAF" }; // Always computed, do not edit
         alwaysSelectable=1;
     };
 };

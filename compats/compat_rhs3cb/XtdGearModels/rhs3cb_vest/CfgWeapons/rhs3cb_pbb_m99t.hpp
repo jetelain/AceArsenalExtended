@@ -4,7 +4,7 @@ class rhs3cb_pbb_m99t
     label="PBB M-99T";
     class camo
     {
-        values[] = { "DIGI", "MDU02", "WDL" }; // Always computed, do not edit
+        values[] = { "MDU02", "MDU10", "WDL_SAF" }; // Always computed, do not edit
         alwaysSelectable=1;
     };
     class loadout

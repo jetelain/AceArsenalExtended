@@ -4,7 +4,7 @@ class rhs3cb_otv
     label="OTV";
     class camo
     {
-        values[] = { "DIGI", "KHAKI", "MDU02" }; // Always computed, do not edit
+        values[] = { "KHK", "MDU02", "MDU10" }; // Always computed, do not edit
         alwaysSelectable=1;
     };
 };

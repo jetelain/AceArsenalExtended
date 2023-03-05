@@ -4,7 +4,7 @@ class rhs3cb_pbb_m12
     label="PBB M-12";
     class camo
     {
-        values[] = { "DIGI", "DIGI/DES" }; // Always computed, do not edit
+        values[] = { "MDU10", "MDU10_DES" }; // Always computed, do not edit
         alwaysSelectable=1;
     };
     class loadout

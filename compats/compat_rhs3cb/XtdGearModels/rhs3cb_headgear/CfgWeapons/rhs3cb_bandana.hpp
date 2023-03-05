@@ -4,7 +4,7 @@ class rhs3cb_bandana
     label="Bandana";
     class camo
     {
-        values[] = { "DIGI", "DIGI/DES", "MDU02", "OAK", "SMB"}; // Always computed, do not edit
+        values[] = { "MDU02", "MDU10", "MDU10_DES", "OAK_SAF", "SMB"}; // Always computed, do not edit
         alwaysSelectable=1;
     };
 };

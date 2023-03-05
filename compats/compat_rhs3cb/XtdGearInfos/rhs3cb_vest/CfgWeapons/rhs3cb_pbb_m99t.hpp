@@ -1,21 +1,21 @@
 class rhssaf_vest_md99_digital {
   model = "rhs3cb_pbb_m99t";
-  camo = "DIGI";
+  camo = "MDU10";
   loadout = "None";
 };
 class rhssaf_vest_md99_digital_radio {
   model = "rhs3cb_pbb_m99t";
-  camo = "DIGI";
+  camo = "MDU10";
   loadout = "Radio";
 };
 class rhssaf_vest_md99_digital_rifleman {
   model = "rhs3cb_pbb_m99t";
-  camo = "DIGI";
+  camo = "MDU10";
   loadout = "Rifleman";
 };
 class rhssaf_vest_md99_digital_rifleman_radio {
   model = "rhs3cb_pbb_m99t";
-  camo = "DIGI";
+  camo = "MDU10";
   loadout = "Rifl./Radio";
 };
 class rhssaf_vest_md99_md2camo {
@@ -40,21 +40,21 @@ class rhssaf_vest_md99_md2camo_rifleman_radio {
 };
 class rhssaf_vest_md99_woodland {
   model = "rhs3cb_pbb_m99t";
-  camo = "WDL";
+  camo = "WDL_SAF";
   loadout = "None";
 };
 class rhssaf_vest_md99_woodland_radio {
   model = "rhs3cb_pbb_m99t";
-  camo = "WDL";
+  camo = "WDL_SAF";
   loadout = "Radio";
 };
 class rhssaf_vest_md99_woodland_rifleman {
   model = "rhs3cb_pbb_m99t";
-  camo = "WDL";
+  camo = "WDL_SAF";
   loadout = "Rifleman";
 };
 class rhssaf_vest_md99_woodland_rifleman_radio {
   model = "rhs3cb_pbb_m99t";
-  camo = "WDL";
+  camo = "WDL_SAF";
   loadout = "Rifl./Radio";
 };
