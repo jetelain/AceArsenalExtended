@@ -5,7 +5,6 @@ class XtdGearModels
 		label = CSTRING(Camo);
 		icon = QPATHTOF(data\ui\camo.paa);
 		changeingame = 0;
-		values[] = {};
 	    class WHT
 		{
 			label = CSTRING(White);
@@ -141,7 +140,6 @@ class XtdGearModels
 		label = CSTRING(Sleeves);
 		icon = QPATHTOF(data\ui\sleeves.paa);
 		changeingame = 1;
-		values[] = {};
 		class Full
 		{
 			label = CSTRING(SleevesFull);
@@ -170,7 +168,6 @@ class XtdGearModels
 	class Faction
     {
         label = CSTRING(Faction);
-        values[] = {};
         alwaysSelectable = 1;
         FACTION_OPTION(NATO,NATO_CTRG_COMBINED);
         FACTION_OPTION(CTRG,CTRG_FACTION);
@@ -201,10 +198,6 @@ class XtdGearModels
 			label = "CBRN Suit";
 			author = "Bohemia Interactive";
 			options[] = {"camo"};
-			class camo : CamoBase
-			{
-				values[] = {"WHT", "BLU", "M81", "MTP", "Tropic", "AAF", "EAF"};
-			};
 		};
 	};
 

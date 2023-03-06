@@ -37,7 +37,7 @@ private _models  = "isArray (_x >> 'options')" configClasses (configFile >> "Xtd
 	private _modelDef = _x;
 	private _optionNames = getArray (_x >> "options");
 	private _configMap = createHashMap;
-	private _modelValidOptions = _optionNames apply { getArray(_modelDef >> _x >> "values") };
+	private _modelValidOptions = _optionNames apply { [_classRoot, _model, _x] call FUNC(getOptionValues) };
 
 	{
 		_x params ["_config","_optionsValues"],

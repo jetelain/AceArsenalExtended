@@ -2,21 +2,21 @@
 
 params ["_classRoot", "_model", ["_modelDefinition", configNull], ["_kind", "options"]];
 
-// XXX: Add cache ?
-
-if ( isNull _modelDefinition ) then {
+if (isNull _modelDefinition) then {
 	_modelDefinition = configFile >> "XtdGearModels" >> _classRoot >> _model;
 };
 
-private _st = diag_tickTime;
+private _cacheKey = [_classRoot, _model, _kind];
+private _cached = GVAR(optionCache) getOrDefault [_cacheKey, []];
+if (count _cached != 0) exitWith { _cached };
 
-private _optionsNames = getArray ( _modelDefinition >> _kind );
-
-private _options = [];
+private _optionsNames = [_modelDefinition, _kind, []] call BIS_fnc_returnConfigEntry;
+private _optionIndex = -1;
 
 {
+private _options = _optionsNames apply {
+    INC(_optionIndex);
 	private _optionName = _x;
-	private _optionIndex = _foreachIndex;
 	private _optionDef1 = _modelDefinition >> _optionName;
 	private _optionDef2 = configFile >> "XtdGearModels" >> "Conventional" >> _optionName;
 
@@ -25,16 +25,15 @@ private _options = [];
 	private _optionInGame = [_optionDef1, _optionDef2, "changeingame", 0] call READ_NUMBER;
 	private _optionDelay = [_optionDef1, _optionDef2, "changedelay", 2] call READ_NUMBER;
 	private _alwaysSelectable = 1 == ([_optionDef1, _optionDef2, "alwaysSelectable", 0] call READ_NUMBER);
-	private _values = [];
 	private _optionCenterImage = getNumber (_optionDef1 >> "centerImage");
-	private _optionValues = getArray (_optionDef1 >> "values");
+	private _optionValues = [_classRoot, _model, _optionName, _optionIndex] call FUNC(getOptionValues);
 
 	private _requires = [];
 	if ( isArray (_optionDef1 >> "requires") ) then {
 		_requires = (getArray (_optionDef1 >> "requires")) apply { [ (getArray ( _modelDefinition >> "options" )) find (_x select 0), _x select 1 ] };
 	};
 
-	{
+	private _values = _optionValues apply {
 		private _valueName = _x;
 		private _valueIndex = _foreachIndex;
 		private _valueDef1 = _optionDef1 >> _valueName;
@@ -50,12 +49,13 @@ private _options = [];
 		private _valueDelay  = [_valueDef1, _valueDef2, "changedelay", _optionDelay] call READ_NUMBER;
 		private _itemInGame  = [_valueDef1, _valueDef2, "itemingame", ""] call READ_TEXT;
 
-		_values pushBack [_valueName, _valueLabel, _valueImage, _valueIcon, _valueDesc, _factionFilter, _valueAction, _valueInGame, _itemInGame, _valueDelay];
-
-	} forEach _optionValues;
+		[_valueName, _valueLabel, _valueImage, _valueIcon, _valueDesc, _factionFilter, _valueAction, _valueInGame, _itemInGame, _valueDelay]
+	};
 
 	_options pushBack [_optionName, _optionLabel, _optionIcon, _optionInGame, _values, _optionCenterImage, _alwaysSelectable, _requires];
 	
-} forEach _optionsNames;
+};
+
+GVAR(optionCache) set [_cacheKey, _options];
 
 _options
