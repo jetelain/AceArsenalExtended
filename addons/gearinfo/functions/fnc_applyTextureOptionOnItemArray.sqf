@@ -2,6 +2,8 @@
 
 params ["_classRoot", "_target", "_config", "_value", "_optionDefintion"];
 
+if ( _value == "" ) exitWith {}; // value is mandatory
+
 private _classHiddenSelections = [];
 if ( _classRoot == "CfgWeapons" ) then {
 	private _uniformClass = getText (configFile >> _classRoot >> _config >> "ItemInfo" >> "uniformClass");
