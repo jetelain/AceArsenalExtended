@@ -23,6 +23,7 @@ class RscCheckBox;
 class RscPicture;
 class RscButton;
 class RscPictureKeepAspect;
+class RscEdit;
 
 class ace_arsenal_display {
 
@@ -119,6 +120,14 @@ class GVAR(valueImageCenterSquare): RscPictureKeepAspect {
     w = QUOTE(19.5 * GRID_W);
     h = QUOTE(10 * GRID_H);
     colorBackground[] = {0,0,0,1};
+};
+
+class GVAR(textBox): RscEdit {
+    text = "";
+    x = QUOTE(0 * GRID_W);
+    y = QUOTE(0 * GRID_H);
+    w = QUOTE(80 * GRID_W);
+    h = QUOTE(8 * GRID_H);
 };
 
 class GVAR(valueCheckbox): RscCheckBox {

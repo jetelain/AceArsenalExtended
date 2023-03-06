@@ -216,6 +216,30 @@ class XtdGearModels
 };
 ```
 
+A texture option can be mapped to a [text to texture](https://community.bistudio.com/wiki/Procedural_Textures#Text), it allows player to choose a custom text for texture.
+It can be usefull for name or call sign. Specify a `texttexture` with procedural texture value with a `%1` for user-input.
+
+```c++
+class XtdGearModels
+{
+    class CfgWeapons 
+    {
+        class my_model
+        {
+            // ...
+            textureOptions = { "name" };
+            class name
+            {
+                label = "Name";
+                hiddenselection = "selectionName";
+                texttexture = "#(rgb,512,512,3)text(1,1,""PuristaBold"",0.8,""#00000000"",""#101010"",""%1"")";
+                // textmaterial = "path\to\material.rvmat";
+            };
+        };
+    };
+};
+```
+
 ### The bluit-in approach
 
 You can builtin configuration for ACE3 Arsenal Extended within your mod, without creating a dependency. You may duplicate all what you need, or use conventional names.

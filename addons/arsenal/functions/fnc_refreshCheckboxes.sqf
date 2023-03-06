@@ -56,7 +56,7 @@ private _options = [_config, _model, _modelDefinition, "options"] call EFUNC(gea
 private _textureoptions = [_config, _model, _modelDefinition, "textureoptions"] call EFUNC(gearinfo,getModelOptions);
 {
     private _optionIndex = _foreachIndex;
-    _x params  ["_optionName", "", "", "", "_values", "", "", "_requires"];
+    _x params  ["_optionName", "", "", "", "_values", "", "", "_requires", "_isTextTexture"];
     private _currentValue = [ace_arsenal_center, _model, _optionName] call EFUNC(gearinfo,getTextureOption);
     private _enabled = true;
 
@@ -65,15 +65,20 @@ private _textureoptions = [_config, _model, _modelDefinition, "textureoptions"] 
         _enabled = _enabled && ((GVAR(currentModelOptions) select _reqIdx) == _reqValue);
     } forEach _requires;
 
-    private _posX = 0;
-    {
-        private _valueIndex = _foreachIndex;
-        _x params ["_valueName"];
-        private _valueIdcBase = 9940000 + (_optionIndex * 1000) + (_valueIndex * 4);
-        private _ctrl = _display displayCtrl (_valueIdcBase + 1);
-        _ctrl cbSetChecked (_valueName == _currentValue);
-        _ctrl ctrlEnable _enabled;
-        _ctrl ctrlCommit 0;
-    } forEach _values;
+    if ( _isTextTexture ) then {
+        private _textIdc = 9940000 + (_optionIndex * 1000);
+        private _ctrl = _display displayCtrl _textIdc;
+        _ctrl ctrlSetText _currentValue;
+    } else {
+        {
+            private _valueIndex = _foreachIndex;
+            _x params ["_valueName"];
+            private _valueIdcBase = 9940000 + (_optionIndex * 1000) + (_valueIndex * 4);
+            private _ctrl = _display displayCtrl (_valueIdcBase + 1);
+            _ctrl cbSetChecked (_valueName == _currentValue);
+            _ctrl ctrlEnable _enabled;
+            _ctrl ctrlCommit 0;
+        } forEach _values;
+    };
 
 } forEach _textureoptions;

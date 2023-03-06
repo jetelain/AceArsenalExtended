@@ -4,8 +4,6 @@ params ["_unit", "_classRoot", "_target", "_config", "_targetModel", "_textureOp
 
 if ( _config == "" ) exitWith {};
 
-if ( _value == "" ) exitWith {}; // value is mandatory
-
 private _model = [_classRoot, _config] call FUNC(getConfigModel);
 if ( _model != _targetModel ) exitWith {};
 
@@ -32,6 +30,17 @@ if ( isText _hiddenselection ) then {
 };
 
 if ( _hiddenSelectionIndex == -1 ) exitWith {};
+
+private _texttexture = _optionDefintion >> "texttexture";
+if ( isText _texttexture ) exitWith {
+	private _texture = format [getText _texttexture, _value];
+	_target setObjectTextureGlobal  [_hiddenSelectionIndex, _texture];
+	if ( isText (_optionDefintion >> "textmaterial") ) then {
+		_target setObjectMaterialGlobal [_hiddenSelectionIndex, getText (_optionDefintion >> "textmaterial")];
+	};
+};
+
+if ( _value == "" ) exitWith {}; // value is mandatory
 
 private _texture = getText (_optionDefintion >> _value >> "texture");
 private _material = "";
