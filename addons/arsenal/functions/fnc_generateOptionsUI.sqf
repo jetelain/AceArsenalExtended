@@ -3,6 +3,8 @@
 
 params ["_display", "_classRoot", "_selectedModel"];
 
+private _allowedItems = (GVAR(itemsPerModel) select (["CfgWeapons","CfgVehicles","CfgGlasses"] find _classRoot)) getOrDefault [_selectedModel, []];
+
 private _configControl = _display displayCtrl 9990000;
 private _listControl = _display displayCtrl IDC_leftTabContent;
 
@@ -26,8 +28,7 @@ if ( _selectedModel != "" ) then {
 	{
 		private _kind = _x;
 		private _idcShift = _foreachIndex * 40000; 
-
-		private _options = [_classRoot, _selectedModel, _modelDefinition, _kind] call EFUNC(gearinfo,getModelOptions);
+		private _options = [_classRoot, _selectedModel, _modelDefinition, _kind, _allowedItems] call EFUNC(gearinfo,getModelOptions);
 		{
 
 			private _optionIndex = _foreachIndex;

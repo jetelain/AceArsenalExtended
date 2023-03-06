@@ -7,8 +7,10 @@ private _config = GVAR(currentConfig);
 
 if ( _model == "" ) exitWith {};
 
+private _allowedItems = (GVAR(itemsPerModel) select (["CfgWeapons","CfgVehicles","CfgGlasses"] find _config)) getOrDefault [_model, []];
+
 private _modelDefition = configFile >> "XtdGearModels" >> _config >> _model;
-private _options = [_config, _model, _modelDefinition, "options"] call EFUNC(gearinfo,getModelOptions);
+private _options = [_config, _model, _modelDefinition, "options", _allowedItems] call EFUNC(gearinfo,getModelOptions);
 {
     private _optionIndex = _foreachIndex;
     _x params  ["_optionName", "", "", "", "_values", "", "_alwaysSelectable"];
