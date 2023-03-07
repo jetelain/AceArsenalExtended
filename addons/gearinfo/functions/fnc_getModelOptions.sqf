@@ -1,8 +1,5 @@
 #include "script_component.hpp"
-
-params ["_classRoot", "_model", ["_modelDefinition", configNull], ["_kind", "options"]];
-
-// XXX: Add cache ?
+params ["_classRoot", "_model", ["_modelDefinition", configNull], ["_kind", "options"], ["_allowedItems", [], [[]], []]];
 
 if ( isNull _modelDefinition ) then {
 	_modelDefinition = configFile >> "XtdGearModels" >> _classRoot >> _model;
@@ -13,6 +10,11 @@ private _st = diag_tickTime;
 private _optionsNames = getArray ( _modelDefinition >> _kind );
 
 private _options = [];
+
+private _allowedItemsValues = [];
+if ( _kind == "options" ) then {
+	_allowedItemsValues = _allowedItems apply { [_classRoot, _x, _model, _optionsNames] call EFUNC(gearinfo,getConfigOptions) };
+};
 
 {
 	private _optionName = _x;
@@ -37,6 +39,12 @@ private _options = [];
 		_isTextTexture = true;
 	} else {
 		private _optionValues = getArray (_optionDef1 >> "values");
+
+		if ( count _allowedItems != 0 && _optionInGame <= 0 && _kind == "options" ) then {
+			// Restrict to allowedItems
+			_optionValues = _optionValues arrayIntersect (_allowedItemsValues apply { _x select _optionIndex });
+		};
+
 		{
 			private _valueName = _x;
 			private _valueIndex = _foreachIndex;

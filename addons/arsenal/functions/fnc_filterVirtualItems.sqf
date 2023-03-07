@@ -18,6 +18,8 @@ GVAR(filteredVirtualItems) =
 
 GVAR(filteredVirtualItems) append (GVAR(initialVirtualItems) select [10, count GVAR(initialVirtualItems) - 10]);
 
+GVAR(itemsPerModel) = [createHashMap, createHashMap, createHashMap];
+
 {
 	_x params ["", "_virt", "_virtSub", "_cur", "_classRoot", "_label"];
 	
@@ -30,6 +32,7 @@ GVAR(filteredVirtualItems) append (GVAR(initialVirtualItems) select [10, count G
 	private _currentConfig = ace_arsenal_currentItems select _cur;
 	private _currentModel = [_classRoot, _currentConfig] call EFUNC(gearinfo,getConfigModel);
 
+	private _itemsPerModel = GVAR(itemsPerModel) select (["CfgWeapons","CfgVehicles","CfgGlasses"] find _classRoot);
 	private _done = createHashMap;
 
 	{
@@ -45,12 +48,11 @@ GVAR(filteredVirtualItems) append (GVAR(initialVirtualItems) select [10, count G
 					_target pushBack _config;
 				};
 			};
+			(_itemsPerModel getOrDefault [_model, [], true]) pushBack _config;
 		} else {
 			_target pushBack _config;
 		};
 
 	} forEach _source;
-
-	INFO_3("%1: %2 => %3", _label, count _source, count _target);
 
 } forEach GVAR(meta);
