@@ -22,16 +22,19 @@ class CamoBase
 	class HEX // CSAT standard hex camo.
 	{
 		label = "Hex";
+		image = "z\aceax\addons\gearinfo\data\camo\csat.paa";
 	};
 	class GHEX // CSAT tropical hex camo.
 	{
-		label = "G. Hex";
+		label = "Grn. Hex";
 		description = "Green Hex";
+		image = "z\aceax\addons\gearinfo\data\camo\csat_tna.paa";
 	};
 	class UHEX // CSAT urban hex camo.
 	{
-		label = "U. Hex";
+		label = "Urb. Hex";
 		description = "Urban Hex";
+		image = "z\aceax\addons\gearinfo\data\camo\csat_ou.paa";
 	};
 
 	// NATO helmet camos.
@@ -87,9 +90,10 @@ class CamoBase
 		label = "Lush";
 		image = "z\aceax\compats\ACEandBI\data\camo\bihelm_spnz_l.paa";
 	};
-	class THEX // Taiga hex.
+	class THEX // Taiga camo. Looks like CSAT hex so named as such.
 	{
-		label = "T. Hex";
+		label = "Tai. Hex";
 		description = "Taiga Hex";
+		image = "z\aceax\compats\ACEandBI\data\camo\rus_taiga.paa";
 	};
 };
