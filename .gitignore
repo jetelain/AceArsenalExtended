@@ -361,3 +361,5 @@ keys/*
 /compats/compat_amf/data/*.p3d
 /compats/compat_amf/data/patchs/*
 .test/
+*.zip
+*.exe
