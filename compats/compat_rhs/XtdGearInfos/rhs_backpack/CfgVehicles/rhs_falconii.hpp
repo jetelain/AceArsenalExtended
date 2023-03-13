@@ -1,6 +1,6 @@
 class rhsusf_falconii_coy {
   model = "rhs_falconii";
-  camo = "COY";
+  camo = "CBR";
 };
 class rhsusf_falconii_mc {
   model = "rhs_falconii";

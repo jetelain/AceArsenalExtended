@@ -4,8 +4,14 @@ class rhs_fieldcap
     label="Fieldcap";
     class camo
     {
-        values[] = { "FLRA", "EMR-S", "EMR 2", "IZLM", "MTNLES", "KHK", "TTsKO_DIG", "TTsKO_FRS", "TTsKO_MTN", "TTsKO_URB", "VSR" };
+        values[] = { "FLRA", "EMR_S", "EMR_2", "Izlom", "MTNLES", "KHK", "TTsKO_CDF_DIGI", "TTsKO_CDF_FRS", "TTsKO_CDF_MTN", "TTsKO_CDF_URB", "VSR" };
         alwaysSelectable=1;
+        class EMR_2
+	{
+		label = "EMR-Sum 2";
+        description = "EMR-Summer";
+		image = "z\aceax\compats\RHS\data\camo\emr_cap.paa";
+	};
     };
     class helmet
     {

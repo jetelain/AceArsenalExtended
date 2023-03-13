@@ -1,6 +1,6 @@
 class rhsusf_iotv_ocp {
   model = "rhs_iotv";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "None";
 };
 class rhsusf_iotv_ucp {
@@ -10,7 +10,7 @@ class rhsusf_iotv_ucp {
 };
 class rhsusf_iotv_ocp_Grenadier {
   model = "rhs_iotv";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "Grenadier";
 };
 class rhsusf_iotv_ucp_Grenadier {
@@ -20,7 +20,7 @@ class rhsusf_iotv_ucp_Grenadier {
 };
 class rhsusf_iotv_ocp_Medic {
   model = "rhs_iotv";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "Medic";
 };
 class rhsusf_iotv_ucp_Medic {
@@ -30,7 +30,7 @@ class rhsusf_iotv_ucp_Medic {
 };
 class rhsusf_iotv_ocp_Repair {
   model = "rhs_iotv";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "Repair";
 };
 class rhsusf_iotv_ucp_Repair {
@@ -40,7 +40,7 @@ class rhsusf_iotv_ucp_Repair {
 };
 class rhsusf_iotv_ocp_Rifleman {
   model = "rhs_iotv";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "Rifleman";
 };
 class rhsusf_iotv_ucp_Rifleman {
@@ -50,7 +50,7 @@ class rhsusf_iotv_ucp_Rifleman {
 };
 class rhsusf_iotv_ocp_SAW {
   model = "rhs_iotv";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "SAW";
 };
 class rhsusf_iotv_ucp_SAW {
@@ -60,7 +60,7 @@ class rhsusf_iotv_ucp_SAW {
 };
 class rhsusf_iotv_ocp_Squadleader {
   model = "rhs_iotv";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "Squad Lead.";
 };
 class rhsusf_iotv_ucp_Squadleader {
@@ -70,7 +70,7 @@ class rhsusf_iotv_ucp_Squadleader {
 };
 class rhsusf_iotv_ocp_Teamleader {
   model = "rhs_iotv";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "Team Lead.";
 };
 class rhsusf_iotv_ucp_Teamleader {

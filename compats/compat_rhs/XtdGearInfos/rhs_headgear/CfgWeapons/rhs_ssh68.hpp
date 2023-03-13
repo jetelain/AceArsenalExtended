@@ -10,22 +10,22 @@ class rhsgref_ssh68_emr {
 
 class rhsgref_ssh68_ttsko_digi {
   model = "rhs_ssh68";
-  camo = "TTsKO_DIG";
+  camo = "TTsKO_CDF_DIGI";
 };
 
 class rhsgref_ssh68_ttsko_forest {
   model = "rhs_ssh68";
-  camo = "TTsKO_FRS";
+  camo = "TTsKO_CDF_FRS";
 };
 
 class rhsgref_ssh68_ttsko_mountain {
   model = "rhs_ssh68";
-  camo = "TTsKO_MTN";
+  camo = "TTsKO_CDF_MTN";
 };
 
 class rhsgref_ssh68_ttsko_dark {
   model = "rhs_ssh68";
-  camo = "TTsKO_URB";
+  camo = "TTsKO_CDF_URB";
 };
 
 class rhsgref_ssh68_un {

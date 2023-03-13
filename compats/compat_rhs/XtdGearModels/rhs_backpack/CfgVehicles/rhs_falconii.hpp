@@ -4,7 +4,7 @@ class rhs_falconii
     label="Falcon-II";
     class camo
     {
-        values[] = { "COY", "MC", "RGR" }; // Always computed, do not edit
+        values[] = { "CBR", "MC", "RGR" }; // Always computed, do not edit
         alwaysSelectable=1;
     };
 };

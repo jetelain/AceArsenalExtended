@@ -4,7 +4,7 @@ class rhs_FROG
     label="FROG";
     class camo
     {
-        values[] = { "MRPT-D", "MRPT-WD"}; // Always computed, do not edit
+        values[] = { "MRPT_D", "MRPT_WD"}; // Always computed, do not edit
         alwaysSelectable=1;
     };
 };

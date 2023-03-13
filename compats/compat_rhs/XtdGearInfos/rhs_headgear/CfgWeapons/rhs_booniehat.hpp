@@ -1,7 +1,7 @@
 // RHSAFRF
 class rhs_Booniehat_digi {
   model = "rhs_booniehat";
-  camo = "EMR-S";
+  camo = "EMR_S";
 };
 
 class rhs_Booniehat_flora {
@@ -39,12 +39,12 @@ class rhs_Booniehat_m81 {
 
 class rhs_booniehat2_marpatd {
   model = "rhs_booniehat";
-  camo = "MRPT-D";
+  camo = "MRPT_D";
 };
 
 class rhs_booniehat2_marpatwd {
   model = "rhs_booniehat";
-  camo = "MRPT-WD";
+  camo = "MRPT_WD";
 };
 
 class rhs_Booniehat_ocp {

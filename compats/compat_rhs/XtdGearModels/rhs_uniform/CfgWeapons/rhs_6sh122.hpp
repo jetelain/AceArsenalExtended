@@ -6,6 +6,19 @@ class rhs_6sh122
     {
         values[] = { "Fall", "Spring" }; // Always computed, do not edit
         alwaysSelectable=1;
+
+        class Fall
+	    {
+            label = "Fall";
+            image = "z\aceax\compats\RHS\data\camo\6sh122_fall.paa";
+        };
+
+        class Spring
+	    {
+            label = "Spring";
+            image = "z\aceax\compats\RHS\data\camo\6sh122_spring.paa";
+        };
+        
     };
     class gloves
     {

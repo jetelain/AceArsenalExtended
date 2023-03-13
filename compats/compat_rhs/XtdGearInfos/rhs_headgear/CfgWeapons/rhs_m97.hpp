@@ -119,19 +119,19 @@ class rhssaf_helmet_m97_veil_oakleaf {
 // Olive
 class rhssaf_helmet_m97_olive_nocamo {
   model = "rhs_m97";
-  camo = "OLV";
+  camo = "OLI";
   goggles = "None";
   veil = "No";
 };
 class rhssaf_helmet_m97_olive_nocamo_black_ess {
   model = "rhs_m97";
-  camo = "OLV";
+  camo = "OLI";
   goggles = "Covered";
   veil = "No";
 };
 class rhssaf_helmet_m97_olive_nocamo_black_ess_bare {
   model = "rhs_m97";
-  camo = "OLV";
+  camo = "OLI";
   goggles = "Uncovered";
   veil = "No";
 };

@@ -4,7 +4,7 @@ class rhs_m97
     label="M97";
     class camo
     {
-        values[] = { "BLK", "UN", "MDU02", "MDU10", "OAK_SAF", "OLV", "M81" }; // Always computed, do not edit
+        values[] = { "BLK", "UN", "MDU02", "MDU10", "OAK_SAF", "OLI", "M81" }; // Always computed, do not edit
         alwaysSelectable=1;
     };
     class goggles

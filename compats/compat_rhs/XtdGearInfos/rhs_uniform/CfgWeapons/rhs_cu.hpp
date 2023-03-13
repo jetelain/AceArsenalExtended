@@ -26,7 +26,7 @@ class rhs_uniform_cu_ocp_82nd {
 class rhs_uniform_cu_ucp {
   model = "rhs_cu";
   camo = "UCP";
-  unit = "User";
+  unit = "User-Defined";
 };
 class rhs_uniform_cu_ucp_101st {
   model = "rhs_cu";

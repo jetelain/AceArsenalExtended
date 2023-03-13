@@ -4,7 +4,7 @@ class rhs_6b26
     label="6B26";
     class camo
     {
-        values[] = { "GRN", "FLRA", "EMR-S" };
+        values[] = { "GRN", "FLRA", "EMR_S" };
         alwaysSelectable=1;
     };
 

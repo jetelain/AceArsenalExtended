@@ -4,7 +4,7 @@ class rhs_spcs
     label="SPCS";
     class camo
     {
-        values[] = { "OEF-CP", "UCP" }; // Always computed, do not edit
+        values[] = { "OEF_CP", "UCP" }; // Always computed, do not edit
         alwaysSelectable=1;
     };
     class loadout

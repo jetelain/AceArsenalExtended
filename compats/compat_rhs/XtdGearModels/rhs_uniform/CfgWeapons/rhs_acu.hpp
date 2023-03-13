@@ -4,7 +4,7 @@ class rhs_acu
     label="Army Combat Uniform";
     class camo
     {
-        values[] = { "OCP", "OEF-CP", "UCP", "UCP-D" }; // Always computed, do not edit
+        values[] = { "OCP", "OEF_CP", "UCP", "UCP_D" }; // Always computed, do not edit
         alwaysSelectable=1;
     };
     class irflag

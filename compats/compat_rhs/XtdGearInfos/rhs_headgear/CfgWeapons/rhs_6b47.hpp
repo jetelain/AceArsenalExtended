@@ -10,7 +10,7 @@ class rhs_6b47_bare {
 // EMR-Summer. They're not labeled (EMR) but they look like EMR so.
 class rhs_6b47 {
   model = "rhs_6b47";
-  camo = "EMR-S";
+  camo = "EMR_S";
   goggles = "None";
   headset = "None";
   balaclava = "No";
@@ -18,7 +18,7 @@ class rhs_6b47 {
 
 class rhs_6b47_6m2_1 {
   model = "rhs_6b47";
-  camo = "EMR-S";
+  camo = "EMR_S";
   goggles = "None";
   headset = "6M2-1";
   balaclava = "No";
@@ -26,7 +26,7 @@ class rhs_6b47_6m2_1 {
 
 class rhs_6b47_6m2 {
   model = "rhs_6b47";
-  camo = "EMR-S";
+  camo = "EMR_S";
   goggles = "None";
   headset = "6M2";
   balaclava = "No";
@@ -34,7 +34,7 @@ class rhs_6b47_6m2 {
 
 class rhs_6b47_bala {
   model = "rhs_6b47";
-  camo = "EMR-S";
+  camo = "EMR_S";
   goggles = "None";
   headset = "None";
   balaclava = "Yes";
@@ -42,7 +42,7 @@ class rhs_6b47_bala {
 
 class rhs_6b47_ess {
   model = "rhs_6b47";
-  camo = "EMR-S";
+  camo = "EMR_S";
   goggles = "ESS";
   headset = "None";
   balaclava = "No";
@@ -50,7 +50,7 @@ class rhs_6b47_ess {
 
 class rhs_6b47_ess_bala {
   model = "rhs_6b47";
-  camo = "EMR-S";
+  camo = "EMR_S";
   goggles = "ESS";
   headset = "None";
   balaclava = "Yes";

@@ -4,7 +4,7 @@ class rhs_booniehat
     label="Booniehat";
     class camo
     {
-        values[] = { "ALP", "EMR-S", "FLRA", "M81", "MRPT-D", "MRPT-WD", "MDU02", "MDU10", "OEF_CP", "UCP", "WDL_SAF" }; // Always computed, do not edit
+        values[] = { "ALP", "EMR_S", "FLRA", "M81", "MRPT_D", "MRPT_WD", "MDU02", "MDU10", "OEF_CP", "UCP", "WDL_SAF" }; // Always computed, do not edit
         alwaysSelectable=1;
     };
 };

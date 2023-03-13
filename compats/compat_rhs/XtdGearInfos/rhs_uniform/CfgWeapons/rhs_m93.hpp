@@ -1,90 +1,106 @@
 class rhsgref_uniform_3color_desert {
   model = "rhs_m93";
-  camo = "3C-DES";
-  pants = "Matching";
+  camo = "DCP";
+  pantscamo = "match";
 };
+
 class rhsgref_uniform_alpenflage {
   model = "rhs_m93";
   camo = "ALP";
-  pants = "Matching";
+  pantscamo = "match";
 };
+
 class rhsgref_uniform_altis_lizard {
   model = "rhs_m93";
-  camo = "ALT-LIZ";
-  pants = "Matching";
+  camo = "LIZ_ATS";
+  pantscamo = "match";
 };
 class rhsgref_uniform_altis_lizard_olive {
   model = "rhs_m93";
-  camo = "ALT-LIZ";
-  pants = "OLV";
+  camo = "LIZ_ATS";
+  pantscamo = "OLI";
 };
+
 class rhsgref_uniform_dpm {
   model = "rhs_m93";
   camo = "DPM";
-  pants = "Matching";
+  pantscamo = "match";
 };
+
 class rhsgref_uniform_dpm_olive {
   model = "rhs_m93";
   camo = "DPM";
-  pants = "OLV";
+  pantscamo = "OLI";
 };
+
 class rhsgref_uniform_ERDL {
   model = "rhs_m93";
-  camo = "ERDL";
-  pants = "ERDL";
+  camo = "ERDL_GRN";
+  pantscamo = "match";
 };
+
 class rhsgref_uniform_flecktarn {
   model = "rhs_m93";
-  camo = "Matching";
-  pants = "OLV";
+  camo = "FLCK";
+  pantscamo = "OLI";
 };
+
 class rhsgref_uniform_flecktarn_full {
   model = "rhs_m93";
   camo = "FLCK";
-  pants = "Matching";
+  pantscamo = "match";
 };
+
 class rhssaf_uniform_m93_oakleaf {
   model = "rhs_m93";
   camo = "OAK_SAF";
-  pants = "Matching";
+  pantscamo = "match";
 };
+
 class rhssaf_uniform_m93_oakleaf_summer {
   model = "rhs_m93";
   camo = "OAK_SAF_SUM";
-  pants = "Matching";
+  pantscamo = "match";
 };
+
 class rhsgref_uniform_og107 {
   model = "rhs_m93";
-  camo = "OG-107";
-  pants = "Matching";
+  camo = "OG107";
+  pantscamo = "match";
 };
+
 class rhsgref_uniform_og107_erdl {
   model = "rhs_m93";
-  camo = "OG-107";
-  pants = "ERDL";
+  camo = "OG107";
+  pantscamo = "ERDL_GRN";
 };
+
 class rhsgref_uniform_olive {
   model = "rhs_m93";
-  camo = "OLV";
-  pants = "OLV";
+  camo = "OLI";
+  pantscamo = "match";
 };
+
 class rhsgref_uniform_tigerstripe {
   model = "rhs_m93";
-  camo = "TIG-STR";
-  pants = "Matching";
+  camo = "TSW";
+  pantscamo = "match";
 };
+
 class rhsgref_uniform_reed {
   model = "rhs_m93";
-  camo = "URB-RD";
-  pants = "Matching";
+  camo = "URB_RD";
+  pantscamo = "match";
 };
+
 class rhsgref_uniform_woodland {
   model = "rhs_m93";
-  camo = "WDL";
-  pants = "Matching";
+  camo = "M81";
+  pantscamo = "match";
 };
+
 class rhsgref_uniform_woodland_olive {
   model = "rhs_m93";
-  camo = "WDL";
-  pants = "OLV";
+  camo = "M81";
+  pantscamo = "OLI";
 };

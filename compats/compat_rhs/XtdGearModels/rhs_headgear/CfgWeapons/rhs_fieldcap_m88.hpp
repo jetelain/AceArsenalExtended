@@ -4,8 +4,13 @@ class rhs_fieldcap_m88
     label="Fieldcap M88";
     class camo
     {
-        values[] = { "AFGKA", "GRY", "KLMK", "TTsKO BLU", "TTsKO CLD", "TTsKO DST", "TTsKO HOT", "TTsKO VDV", "TTsKO", "TTsKO 2", "VSR", "VSR 2", "WDL" };
+        values[] = { "AFGKA", "GRY", "KLMK", "M81", "TTsKO_AIR", "TTsKO", "TTsKO 2", "TTsKO_MLDV_BLUE", "TTsKO_MLDV_COLD", "TTsKO_MLDV_DESAT", "TTsKO_MLDV_HOT", "VSR", "VSR_2" };
         alwaysSelectable=1;
+        class VSR_2
+	    {
+            label = "VSR 2";
+            image = "z\aceax\compats\RHS\data\camo\vsr_cap.paa";
+	    };
     };
     class facing
     {

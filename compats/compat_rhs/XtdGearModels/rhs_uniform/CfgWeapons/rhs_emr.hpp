@@ -4,7 +4,7 @@ class rhs_emr
     label="EMR";
     class camo
     {
-        values[] = { "EMR-S", "EMR-D" }; // Always computed, do not edit
+        values[] = { "EMR_S", "EMR_D" }; // Always computed, do not edit
         alwaysSelectable=1;
     };
     class unit

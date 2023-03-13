@@ -4,7 +4,7 @@ class rhs_eagleaiii
     label="Eagle A-III";
     class camo
     {
-        values[] = { "COY", "OEF-CP", "UCP" }; // Always computed, do not edit
+        values[] = { "CBR", "OEF_CP", "UCP" }; // Always computed, do not edit
         alwaysSelectable=1;
     };
 };

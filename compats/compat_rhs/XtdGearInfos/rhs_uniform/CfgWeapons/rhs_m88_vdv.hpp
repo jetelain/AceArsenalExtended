@@ -4,17 +4,17 @@ class rhs_uniform_afghanka_para {
 };
 class rhs_uniform_afghanka_para_ttsko {
   model = "rhs_m88_vdv";
-  camo = "TTsKO";
+  camo = "TTsKO_AIR";
 };
 class rhs_uniform_afghanka_para_ttsko_2 {
   model = "rhs_m88_vdv";
-  camo = "TTsKO Air.";
+  camo = "TTsKO";
 };
 class rhs_uniform_afghanka_para_vsr {
   model = "rhs_m88_vdv";
-  camo = "VSR";
+  camo = "VSR_VDV";
 };
 class rhs_uniform_afghanka_para_vsr_2 {
   model = "rhs_m88_vdv";
-  camo = "VSR 2";
+  camo = "VSR_VDV_2";
 };

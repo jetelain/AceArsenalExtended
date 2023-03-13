@@ -16,5 +16,5 @@ class rhsgref_ttsko_alicepack {
 };
 class rhsgref_wdl_alicepack {
   model = "rhs_alicepack";
-  camo = "WDL";
+  camo = "M81";
 };

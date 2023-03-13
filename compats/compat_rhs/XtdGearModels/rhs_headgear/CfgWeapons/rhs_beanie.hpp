@@ -9,7 +9,7 @@ class rhs_beanie
         class FloraBean // This is a flora pattern unique to this beanie.
         {
             label = "Flora";
-            //image
+            image = "z\aceax\compats\RHS\data\camo\flora_beanie.paa";
         };
     };
 };

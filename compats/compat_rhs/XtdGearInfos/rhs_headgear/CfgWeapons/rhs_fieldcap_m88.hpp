@@ -37,16 +37,16 @@ class rhs_fieldcap_m88_klmk_back {
   facing = "Back";
 };
 
-// Moldovan TTsKO Blue
+// Moldovan TTsKO_MLDV_BLUEe
 class rhs_fieldcap_m88_moldovan_ttsko_blue {
   model = "rhs_fieldcap_m88";
-  camo = "TTsKO BLU";
+  camo = "TTsKO_MLDV_BLUE";
   facing = "Front";
 };
 
 class rhs_fieldcap_m88_moldovan_ttsko_blue_back {
   model = "rhs_fieldcap_m88";
-  camo = "TTsKO BLU";
+  camo = "TTsKO_MLDV_BLUE";
   facing = "Back";
 };
 
@@ -66,26 +66,26 @@ class rhs_fieldcap_m88_moldovan_ttsko_cold_back {
 // Moldovan TTsKO Desat
 class rhs_fieldcap_m88_moldovan_ttsko_desat {
   model = "rhs_fieldcap_m88";
-  camo = "TTsKO DST";
+  camo = "TTsKO_MLDV_DESAT";
   facing = "Front";
 };
 
 class rhs_fieldcap_m88_moldovan_ttsko_desat_back {
   model = "rhs_fieldcap_m88";
-  camo = "TTsKO DST";
+  camo = "TTsKO_MLDV_DESAT";
   facing = "Back";
 };
 
-// Moldovan TTsKO Hot
+// Moldovan TTsKO_MLDV_HOT
 class rhs_fieldcap_m88_moldovan_ttsko_hot {
   model = "rhs_fieldcap_m88";
-  camo = "TTsKO HOT";
+  camo = "TTsKO_MLDV_HOT";
   facing = "Front";
 };
 
 class rhs_fieldcap_m88_moldovan_ttsko_hot_back {
   model = "rhs_fieldcap_m88";
-  camo = "TTsKO HOT";
+  camo = "TTsKO_MLDV_HOT";
   facing = "Back";
 };
 
@@ -105,26 +105,26 @@ class rhs_fieldcap_m88_ttsko_back {
 // TTsKO Alt
 class rhs_fieldcap_m88_ttsko_alt {
   model = "rhs_fieldcap_m88";
-  camo = "TTsKO 2";
+  camo = "TTsKO_ALT";
   facing = "Front";
 };
 
 class rhs_fieldcap_m88_ttsko_alt_back {
   model = "rhs_fieldcap_m88";
-  camo = "TTsKO 2";
+  camo = "TTsKO_ALT";
   facing = "Back";
 };
 
-// TTsKO VDV
+// TTsKO_AIR
 class rhs_fieldcap_m88_ttsko_vdv {
   model = "rhs_fieldcap_m88";
-  camo = "TTsKO VDV";
+  camo = "TTsKO_AIR";
   facing = "Front";
 };
 
 class rhs_fieldcap_m88_ttsko_vdv_back {
   model = "rhs_fieldcap_m88";
-  camo = "TTsKO VDV";
+  camo = "TTsKO_AIR";
   facing = "Back";
 };
 
@@ -144,13 +144,13 @@ class rhs_fieldcap_m88_vsr_back {
 // VSR 2
 class rhs_fieldcap_m88_vsr_2 {
   model = "rhs_fieldcap_m88";
-  camo = "VSR 2";
+  camo = "VSR_2";
   facing = "Front";
 };
 
 class rhs_fieldcap_m88_vsr_2_back {
   model = "rhs_fieldcap_m88";
-  camo = "VSR 2";
+  camo = "VSR_2";
   facing = "Back";
 };
 

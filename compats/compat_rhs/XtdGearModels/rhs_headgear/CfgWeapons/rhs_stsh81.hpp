@@ -4,7 +4,7 @@ class rhs_stsh81
     label="STSh-81";
     class camo
     {
-        values[] = { "GRN", "Butan" };
+        values[] = { "GRN", "TTsKO" };
         alwaysSelectable=1;
     };
 };

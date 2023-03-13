@@ -14,13 +14,13 @@ class rhs_rd54_vest {
 // EMR-Summer
 class rhs_rd54_emr1 {
   model = "rhs_rd54";
-  camo = "EMR-S";
+  camo = "EMR_S";
   vestfit = "No";
 };
 
 class rhs_rd54_vest_emr1 {
   model = "rhs_rd54";
-  camo = "EMR-S";
+  camo = "EMR_S";
   vestfit = "Yes";
 };
 
@@ -37,15 +37,15 @@ class rhs_rd54_vest_flora2 {
   vestfit = "Yes";
 };
 
-// Flora Alt (A desaturated version)
+// Flora 2 (A desaturated version)
 class rhs_rd54_flora1 {
   model = "rhs_rd54";
-  camo = "FLRA 2";
+  camo = "FLRA_2";
   vestfit = "No";
 };
 
 class rhs_rd54_vest_flora1 {
   model = "rhs_rd54";
-  camo = "FLRA 2";
+  camo = "FLRA_2";
   vestfit = "Yes";
 };

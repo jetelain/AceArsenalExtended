@@ -1,6 +1,6 @@
 class rhsusf_spcs_ocp {
   model = "rhs_spcs";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "None";
 };
 class rhsusf_spcs_ucp {
@@ -10,7 +10,7 @@ class rhsusf_spcs_ucp {
 };
 class rhsusf_spcs_ocp_crewman {
   model = "rhs_spcs";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "Crewman";
 };
 class rhsusf_spcs_ucp_crewman {
@@ -20,7 +20,7 @@ class rhsusf_spcs_ucp_crewman {
 };
 class rhsusf_spcs_ocp_grenadier {
   model = "rhs_spcs";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "Grenadier";
 };
 class rhsusf_spcs_ucp_grenadier {
@@ -30,7 +30,7 @@ class rhsusf_spcs_ucp_grenadier {
 };
 class rhsusf_spcs_ocp_machinegunner {
   model = "rhs_spcs";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "Machinegunner";
 };
 class rhsusf_spcs_ucp_machinegunner {
@@ -40,7 +40,7 @@ class rhsusf_spcs_ucp_machinegunner {
 };
 class rhsusf_spcs_ocp_medic {
   model = "rhs_spcs";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "Medic";
 };
 class rhsusf_spcs_ucp_medic {
@@ -50,7 +50,7 @@ class rhsusf_spcs_ucp_medic {
 };
 class rhsusf_spcs_ocp_rifleman {
   model = "rhs_spcs";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "Rifleman";
 };
 class rhsusf_spcs_ucp_rifleman {
@@ -60,7 +60,7 @@ class rhsusf_spcs_ucp_rifleman {
 };
 class rhsusf_spcs_ocp_rifleman_alt {
   model = "rhs_spcs";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "Rifleman Alt";
 };
 class rhsusf_spcs_ucp_rifleman_alt {
@@ -70,7 +70,7 @@ class rhsusf_spcs_ucp_rifleman_alt {
 };
 class rhsusf_spcs_ocp_saw {
   model = "rhs_spcs";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "SAW";
 };
 class rhsusf_spcs_ucp_saw {
@@ -80,7 +80,7 @@ class rhsusf_spcs_ucp_saw {
 };
 class rhsusf_spcs_ocp_sniper {
   model = "rhs_spcs";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "Sniper";
 };
 class rhsusf_spcs_ucp_sniper {
@@ -90,7 +90,7 @@ class rhsusf_spcs_ucp_sniper {
 };
 class rhsusf_spcs_ocp_squadleader {
   model = "rhs_spcs";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "Squad Lead.";
 };
 class rhsusf_spcs_ucp_squadleader {
@@ -100,7 +100,7 @@ class rhsusf_spcs_ucp_squadleader {
 };
 class rhsusf_spcs_ocp_teamleader {
   model = "rhs_spcs";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "Team Lead.";
 };
 class rhsusf_spcs_ucp_teamleader {
@@ -110,7 +110,7 @@ class rhsusf_spcs_ucp_teamleader {
 };
 class rhsusf_spcs_ocp_teamleader_alt {
   model = "rhs_spcs";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   loadout = "Team Lead. Alt";
 };
 class rhsusf_spcs_ucp_teamleader_alt {

@@ -5,5 +5,5 @@ class rhs_stsh81 {
 
 class rhs_stsh81_butan {
   model = "rhs_stsh81";
-  camo = "Butan";
+  camo = "TTsKO";
 };

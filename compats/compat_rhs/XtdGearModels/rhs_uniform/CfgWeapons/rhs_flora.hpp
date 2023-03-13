@@ -4,8 +4,15 @@ class rhs_flora
     label="Flora";
     class camo
     {
-        values[] = { "Std.", "Alt.", "Mtn." }; // Always computed, do not edit
+        values[] = { "FLRA", "FLRA_ALT", "FLRA_MTN" }; // Always computed, do not edit
         alwaysSelectable=1;
+        
+        class FLRA_ALT
+        {
+            label = "Flora Alt.";
+            description = "Flora Alternate";
+            image = "z\aceax\compats\RHS\data\camo\flora_alt.paa";
+        };
     };
     class unit
     {

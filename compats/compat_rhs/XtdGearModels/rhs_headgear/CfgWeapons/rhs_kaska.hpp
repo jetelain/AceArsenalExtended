@@ -4,7 +4,7 @@ class rhs_kaska
     label="Kaska K93";
     class camo
     {
-        values[] = { "TTsKO_DIG", "TTsKO_FRS", "TTsKO_MTN", "TTsKO_URB" };
+        values[] = { "TTsKO_CDF_DIGI", "TTsKO_CDF_FRS", "TTsKO_CDF_MTN", "TTsKO_CDF_URB" };
         alwaysSelectable=1;
     };
 };

@@ -4,7 +4,7 @@ class rhs_utilitycap
     label="Utility Cap";
     class camo
     {
-        values[] = { "MRPT-D", "MRPT-WD"};
+        values[] = { "MRPT_D", "MRPT_WD"};
         alwaysSelectable=1;
     };
 };

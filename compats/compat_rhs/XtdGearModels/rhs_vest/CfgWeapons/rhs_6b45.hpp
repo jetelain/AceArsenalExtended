@@ -4,7 +4,7 @@ class rhs_6b45
     label="6B45";
     class camo
     {
-        values[] = { "EMR-S", "DSTPNK" };
+        values[] = { "EMR_S", "DESPNK" };
     };
     class loadout
     {

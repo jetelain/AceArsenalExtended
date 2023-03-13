@@ -4,13 +4,33 @@ class rhs_ach
     label="ACH";
     class camo
     {
-        values[] = { "GRN", "Desert", "Semi-Arid", "TAN", "Woodland", "DCU", "DCU_ERL", "M81", "OEF-CP", "UCP" };
+        values[] = { "GRN", "Desert", "SemiArid", "TAN", "Woodland", "DCP", "DCP_ERL", "M81", "OEF_CP", "UCP" };
         alwaysSelectable=1;
-        class M1942
+
+        class DCP_ERL
+	    {
+            label = "DCP (Early)";
+            description = "Desert Camouflage Pattern; AKA 3-Color Desert or Coffee Stain Camouflage";
+            image = "z\aceax\compats\RHS\data\camo\dcp_early.paa";
+	    };
+        
+        class Desert
+	    {
+            label = "Desert";
+            image = "z\aceax\compats\RHS\data\camo\des_ach.paa";
+	    };
+
+        class SemiArid
         {
-            description = "M1942 Frog Skin";
-            //image = "";
+            label = "Semi-Arid";
+            image = "z\aceax\compats\RHS\data\camo\semi_arid.paa";
         };
+
+        class Woodland
+	    {
+            label = "Woodland";
+            image = "z\aceax\compats\RHS\data\camo\wdl_ach.paa";
+	    };
     };
 
     class goggles

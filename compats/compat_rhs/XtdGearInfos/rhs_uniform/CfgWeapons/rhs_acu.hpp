@@ -5,7 +5,7 @@ class rhs_uniform_acu_ocp {
 };
 class rhs_uniform_acu_oefcp {
   model = "rhs_acu";
-  camo = "OEF-CP";
+  camo = "OEF_CP";
   irflag = "No";
 };
 class rhs_uniform_acu_ucp {
@@ -20,6 +20,6 @@ class rhs_uniform_acu_ucp2 {
 };
 class rhs_uniform_acu_ucpd {
   model = "rhs_acu";
-  camo = "UCP-D";
+  camo = "UCP_D";
   irflag = "No";
 };

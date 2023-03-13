@@ -4,7 +4,7 @@ class rhs_gorka_1
     label="Gorka 1";
     class camo
     {
-        values[] = { "AFGKA", "BRZKA", "FLCK" }; // Always computed, do not edit
+        values[] = { "AFGKA", "Spetsodezhda", "FLCK" }; // Always computed, do not edit
         alwaysSelectable=1;
     };
 };

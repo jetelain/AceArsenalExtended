@@ -4,8 +4,14 @@ class rhs_mich2000
     label="MICH 2000";
     class camo
     {
-        values[] = { "GRN", "Semi-Arid", "TAN", "MRPT-D", "MRPT-WD" };
+        values[] = { "GRN", "SemiArid", "TAN", "MRPT_D", "MRPT_WD" };
         alwaysSelectable=1;
+
+        class SemiArid
+        {
+            label = "Semi-Arid";
+            image = "z\aceax\compats\RHS\data\camo\semi_arid.paa";
+        };
     };
     class rail
     {

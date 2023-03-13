@@ -4,7 +4,7 @@ class rhs_lwh
     label="LWH";
     class camo
     {
-        values[] = { "M1942", "MRPT-D", "MRPT-WD"};
+        values[] = { "M1942", "MRPT_D", "MRPT_WD"};
         alwaysSelectable=1;
         class M1942
         {

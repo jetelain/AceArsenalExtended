@@ -18,31 +18,31 @@ class rhs_uniform_afghanka_klmk {
 };
 class rhs_uniform_afghanka_moldovan_ttsko_blue {
   model = "rhs_m88";
-  camo = "MD TTsKO BLU";
+  camo = "TTsKO_MLDV_BLUE";
   coat = "None";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_moldovan_ttsko_cold {
   model = "rhs_m88";
-  camo = "MD TTsKO CLD";
+  camo = "TTsKO_MLDV_COLD";
   coat = "None";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_moldovan_ttsko_desat {
   model = "rhs_m88";
-  camo = "MD TTsKO DST";
+  camo = "TTsKO_MLDV_DESAT";
   coat = "None";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_moldovan_ttsko_hot {
   model = "rhs_m88";
-  camo = "MD TTsKO HOT";
+  camo = "TTsKO_MLDV_HOT";
   coat = "None";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_spetsodezhda {
   model = "rhs_m88";
-  camo = "SPNZ";
+  camo = "Spetsodezhda";
   coat = "None";
   boots = "Standard";
 };
@@ -54,31 +54,31 @@ class rhs_uniform_afghanka_ttsko {
 };
 class rhs_uniform_afghanka_ttsko_2 {
   model = "rhs_m88";
-  camo = "TTsKO 2";
+  camo = "TTsKO_ALT";
   coat = "None";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_vsr_1 {
   model = "rhs_m88";
-  camo = "VSR";
+  camo = "VSR_2";
   coat = "None";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_vsr_2 {
   model = "rhs_m88";
-  camo = "VSR 2";
+  camo = "VSR";
   coat = "None";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_vsr_3 {
   model = "rhs_m88";
-  camo = "VSR 3";
+  camo = "VSR_3";
   coat = "None";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_wdl {
   model = "rhs_m88";
-  camo = "WDL";
+  camo = "M81";
   coat = "None";
   boots = "Standard";
 };
@@ -92,25 +92,25 @@ class rhs_uniform_afghanka_boots {
 };
 class rhs_uniform_afghanka_boots_moldovan_ttsko_cold {
   model = "rhs_m88";
-  camo = "MD TTsKO CLD";
+  camo = "TTsKO_MLDV_COLD";
   coat = "None";
   boots = "Sapogi";
 };
 class rhs_uniform_afghanka_boots_moldovan_ttsko_desat {
   model = "rhs_m88";
-  camo = "MD TTsKO DST";
+  camo = "TTsKO_MLDV_DESAT";
   coat = "None";
   boots = "Sapogi";
 };
 class rhs_uniform_afghanka_boots_moldovan_ttsko_hot {
   model = "rhs_m88";
-  camo = "MD TTsKO HOT";
+  camo = "TTsKO_MLDV_HOT";
   coat = "None";
   boots = "Sapogi";
 };
 class rhs_uniform_afghanka_boots_spetsodezhda {
   model = "rhs_m88";
-  camo = "SPNZ";
+  camo = "Spetsodezhda";
   coat = "None";
   boots = "Sapogi";
 };
@@ -130,13 +130,13 @@ class rhs_uniform_afghanka_winter {
 };
 class rhs_uniform_afghanka_winter_moldovan_ttsko {
   model = "rhs_m88";
-  camo = "MD TTsKO CLD";
+  camo = "TTsKO_MLDV_COLD";
   coat = "Winter";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_winter_spetsodezhda {
   model = "rhs_m88";
-  camo = "SPNZ";
+  camo = "Spetsodezhda";
   coat = "Winter";
   boots = "Standard";
 };
@@ -148,19 +148,19 @@ class rhs_uniform_afghanka_winter_ttsko {
 };
 class rhs_uniform_afghanka_winter_vsr {
   model = "rhs_m88";
-  camo = "VSR";
+  camo = "VSR_2";
   coat = "Winter";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_winter_vsr_2 {
   model = "rhs_m88";
-  camo = "VSR 2";
+  camo = "VSR";
   coat = "Winter";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_winter_vsr_3 {
   model = "rhs_m88";
-  camo = "VSR 3";
+  camo = "VSR_3";
   coat = "Winter";
   boots = "Standard";
 };
@@ -174,13 +174,13 @@ class rhs_uniform_afghanka_winter_boots {
 };
 class rhs_uniform_afghanka_winter_boots_moldovan_ttsko {
   model = "rhs_m88";
-  camo = "MD TTsKO CLD";
+  camo = "TTsKO_MLDV_COLD";
   coat = "Winter";
   boots = "Sapogi";
 };
 class rhs_uniform_afghanka_winter_boots_spetsodezhda {
   model = "rhs_m88";
-  camo = "SPNZ";
+  camo = "Spetsodezhda";
   coat = "Winter";
   boots = "Sapogi";
 };
@@ -192,13 +192,13 @@ class rhs_uniform_afghanka_winter_boots_ttsko {
 };
 class rhs_uniform_afghanka_winter_boots_vsr {
   model = "rhs_m88";
-  camo = "VSR";
+  camo = "VSR_2";
   coat = "Winter";
   boots = "Sapogi";
 };
 class rhs_uniform_afghanka_winter_boots_vsr_2 {
   model = "rhs_m88";
-  camo = "VSR 2";
+  camo = "VSR";
   coat = "Winter";
   boots = "Sapogi";
 };

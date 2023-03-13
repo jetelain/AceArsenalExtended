@@ -12,25 +12,25 @@ class rhs_fieldcap_helm {
 
 class rhs_fieldcap_digi {
   model = "rhs_fieldcap";
-  camo = "EMR-S";
+  camo = "EMR_S";
   helmet = "None";
 };
 
 class rhs_fieldcap_helm_digi {
   model = "rhs_fieldcap";
-  camo = "EMR-S";
+  camo = "EMR_S";
   helmet = "6B27M";
 };
 
 class rhs_fieldcap_digi2 {
   model = "rhs_fieldcap";
-  camo = "EMR 2"; // It's EMR-Summer again but an alternate version.
+  camo = "EMR_2"; // It's EMR-Summer again but an alternate version.
   helmet = "None";
 };
 
 class rhs_fieldcap_izlom {
   model = "rhs_fieldcap";
-  camo = "IZLM";
+  camo = "Izlom";
   helmet = "None";
 };
 
@@ -61,24 +61,24 @@ class rhs_fieldcap_vsr {
 // TTsKO options from RHSGREF
 class rhsgref_fieldcap_ttsko_digi {
   model = "rhs_fieldcap";
-  camo = "TTsKO_DIG";
+  camo = "TTsKO_CDF_DIGI";
   helmet = "None";
 };
 
 class rhsgref_fieldcap_ttsko_forest {
   model = "rhs_fieldcap";
-  camo = "TTsKO_FRS";
+  camo = "TTsKO_CDF_FRS";
   helmet = "None";
 };
 
 class rhsgref_fieldcap_ttsko_mountain {
   model = "rhs_fieldcap";
-  camo = "TTsKO_MTN";
+  camo = "TTsKO_CDF_MTN";
   helmet = "None";
 };
 
 class rhsgref_fieldcap_ttsko_urban {
   model = "rhs_fieldcap";
-  camo = "TTsKO_URB";
+  camo = "TTsKO_CDF_URB";
   helmet = "None";
 };

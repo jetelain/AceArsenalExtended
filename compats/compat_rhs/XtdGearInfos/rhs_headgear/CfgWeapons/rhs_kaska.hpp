@@ -1,19 +1,19 @@
 class rhsgref_6b27m_ttsko_digi {
   model = "rhs_kaska";
-  camo = "TTsKO_DIG";
+  camo = "TTsKO_CDF_DIGI";
 };
 
 class rhsgref_6b27m_ttsko_forest {
   model = "rhs_kaska";
-  camo = "TTsKO_FRS";
+  camo = "TTsKO_CDF_FRS";
 };
 
 class rhsgref_6b27m_ttsko_mountain {
   model = "rhs_kaska";
-  camo = "TTsKO_MTN";
+  camo = "TTsKO_CDF_MTN";
 };
 
 class rhsgref_6b27m_ttsko_urban {
   model = "rhs_kaska";
-  camo = "TTsKO_URB";
+  camo = "TTsKO_CDF_URB";
 };

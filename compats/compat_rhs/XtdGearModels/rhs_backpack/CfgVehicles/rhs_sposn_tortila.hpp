@@ -4,7 +4,14 @@ class rhs_sposn_tortila
     label="SPOSN Tortila";
     class camo
     {
-        values[] = { "BLK", "EMR-S", "GRY", "KHK", "OLV", "SPCT-SKWO" }; // Always computed, do not edit
+        values[] = { "BLK", "EMR_S", "GRY", "KHK", "OLI", "SPCT_SKWO" }; // Always computed, do not edit
         alwaysSelectable=1;
+
+        class SPCT_SKWO
+        {
+            label = "Spct-SKWO";
+            description = "Spectre-SKWO";
+            image = "z\aceax\compats\RHS\data\camo\spct_skwo.paa";
+        };
     };
 };

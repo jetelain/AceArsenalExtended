@@ -4,7 +4,7 @@ class rhs_patrolcap
     label="Patrol Cap";
     class camo
     {
-        values[] = { "OEF-CP", "UCP"};
+        values[] = { "OEF_CP", "UCP"};
         alwaysSelectable=1;
     };
 };

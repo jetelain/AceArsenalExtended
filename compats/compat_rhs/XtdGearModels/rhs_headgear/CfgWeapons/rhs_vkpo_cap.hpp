@@ -4,7 +4,18 @@ class rhs_vkpo_cap
     label="VKPO Field Cap";
     class camo
     {
-        values[] = { "VKPO 1", "VKPO 2" };
+        values[] = { "STD", "ALT" };
         alwaysSelectable=1;
+        class STD
+	    {
+            label = "Standard";
+            image = "z\aceax\compats\RHS\data\camo\vkpo.paa";
+        };
+
+        class ALT
+	    {
+            label = "Alternate";
+            image = "z\aceax\compats\RHS\data\camo\vkpo_alt.paa";
+        };
     };
 };

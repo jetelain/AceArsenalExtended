@@ -80,77 +80,77 @@ class rhsusf_mich_bare_norotos_headset {
 // Semi-Arid
 class rhsusf_mich_bare_semi {
   model = "rhs_mich2000";
-  camo = "Semi-Arid";
+  camo = "SemiArid";
   rail = "None";
   nvgmount = "Rhino";
   headset = "No";
 };
 class rhsusf_mich_bare_alt_semi {
   model = "rhs_mich2000";
-  camo = "Semi-Arid";
+  camo = "SemiArid";
   rail = "None";
   nvgmount = "Rhino";
   headset = "Ear Prot.";
 };
 class rhsusf_mich_bare_semi_headset {
   model = "rhs_mich2000";
-  camo = "Semi-Arid";
+  camo = "SemiArid";
   rail = "None";
   nvgmount = "Rhino";
   headset = "Stan.";
 };
 class rhsusf_mich_bare_norotos_semi {
   model = "rhs_mich2000";
-  camo = "Semi-Arid";
+  camo = "SemiArid";
   rail = "None";
   nvgmount = "Norotos";
   headset = "None";
 };
 class rhsusf_mich_bare_norotos_alt_semi {
   model = "rhs_mich2000";
-  camo = "Semi-Arid";
+  camo = "SemiArid";
   rail = "None";
   nvgmount = "Norotos";
   headset = "Ear Prot.";
 };
 class rhsusf_mich_bare_norotos_alt_semi_headset { // "alt_headset" is practically the same as just "headset" until we hit the MARPAT helmets.
   model = "rhs_mich2000";
-  camo = "Semi-Arid";
+  camo = "SemiArid";
   rail = "None";
   nvgmount = "Norotos";
   headset = "Stan.";
 };
 class rhsusf_mich_bare_norotos_arc_semi {
   model = "rhs_mich2000";
-  camo = "Semi-Arid";
+  camo = "SemiArid";
   rail = "ARC";
   nvgmount = "Norotos";
   headset = "None";
 };
 class rhsusf_mich_bare_norotos_arc_alt_semi {
   model = "rhs_mich2000";
-  camo = "Semi-Arid";
+  camo = "SemiArid";
   rail = "ARC";
   nvgmount = "Norotos";
   headset = "Ear Prot.";
 };
 class rhsusf_mich_bare_norotos_arc_alt_semi_headset { // ditto
   model = "rhs_mich2000";
-  camo = "Semi-Arid";
+  camo = "SemiArid";
   rail = "ARC";
   nvgmount = "Norotos";
   headset = "Stan.";
 };
 class rhsusf_mich_bare_norotos_arc_semi_headset {
   model = "rhs_mich2000";
-  camo = "Semi-Arid";
+  camo = "SemiArid";
   rail = "ARC";
   nvgmount = "Norotos";
   headset = "Stan.";
 };
 class rhsusf_mich_bare_norotos_semi_headset {
   model = "rhs_mich2000";
-  camo = "Semi-Arid";
+  camo = "SemiArid";
   rail = "None";
   nvgmount = "Norotos";
   headset = "Stan.";
@@ -231,7 +231,7 @@ class rhsusf_mich_bare_norotos_tan_headset {
 // MARPAT-D
 class rhsusf_mich_helmet_marpatd {
   model = "rhs_mich2000";
-  camo = "MRPT-D";
+  camo = "MRPT_D";
   rail = "None";
   nvgmount = "Rhino";
   headset = "No";
@@ -239,7 +239,7 @@ class rhsusf_mich_helmet_marpatd {
 };
 class rhsusf_mich_helmet_marpatd_alt {
   model = "rhs_mich2000";
-  camo = "MRPT-D";
+  camo = "MRPT_D";
   rail = "None";
   nvgmount = "Rhino";
   headset = "No";
@@ -247,7 +247,7 @@ class rhsusf_mich_helmet_marpatd_alt {
 };
 class rhsusf_mich_helmet_marpatd_alt_headset {
   model = "rhs_mich2000";
-  camo = "MRPT-D";
+  camo = "MRPT_D";
   rail = "None";
   nvgmount = "Rhino";
   headset = "Stan.";
@@ -255,7 +255,7 @@ class rhsusf_mich_helmet_marpatd_alt_headset {
 };
 class rhsusf_mich_helmet_marpatd_headset {
   model = "rhs_mich2000";
-  camo = "MRPT-D";
+  camo = "MRPT_D";
   rail = "None";
   nvgmount = "Rhino";
   headset = "Stan.";
@@ -263,7 +263,7 @@ class rhsusf_mich_helmet_marpatd_headset {
 };
 class rhsusf_mich_helmet_marpatd_norotos {
   model = "rhs_mich2000";
-  camo = "MRPT-D";
+  camo = "MRPT_D";
   rail = "None";
   nvgmount = "Norotos";
   headset = "No";
@@ -271,7 +271,7 @@ class rhsusf_mich_helmet_marpatd_norotos {
 };
 class rhsusf_mich_helmet_marpatd_norotos_arc {
   model = "rhs_mich2000";
-  camo = "MRPT-D";
+  camo = "MRPT_D";
   rail = "ARC";
   nvgmount = "Norotos";
   headset = "No";
@@ -279,7 +279,7 @@ class rhsusf_mich_helmet_marpatd_norotos_arc {
 };
 class rhsusf_mich_helmet_marpatd_norotos_arc_headset {
   model = "rhs_mich2000";
-  camo = "MRPT-D";
+  camo = "MRPT_D";
   rail = "ARC";
   nvgmount = "Norotos";
   headset = "Stan.";
@@ -287,7 +287,7 @@ class rhsusf_mich_helmet_marpatd_norotos_arc_headset {
 };
 class rhsusf_mich_helmet_marpatd_norotos_headset {
   model = "rhs_mich2000";
-  camo = "MRPT-D";
+  camo = "MRPT_D";
   rail = "None";
   nvgmount = "Norotos";
   headset = "Stan.";
@@ -297,7 +297,7 @@ class rhsusf_mich_helmet_marpatd_norotos_headset {
 // MARPAT-WD
 class rhsusf_mich_helmet_marpatwd {
   model = "rhs_mich2000";
-  camo = "MRPT-WD";
+  camo = "MRPT_WD";
   rail = "None";
   nvgmount = "Rhino";
   headset = "No";
@@ -305,7 +305,7 @@ class rhsusf_mich_helmet_marpatwd {
 };
 class rhsusf_mich_helmet_marpatwd_alt {
   model = "rhs_mich2000";
-  camo = "MRPT-WD";
+  camo = "MRPT_WD";
   rail = "None";
   nvgmount = "Rhino";
   headset = "No";
@@ -313,7 +313,7 @@ class rhsusf_mich_helmet_marpatwd_alt {
 };
 class rhsusf_mich_helmet_marpatwd_alt_headset {
   model = "rhs_mich2000";
-  camo = "MRPT-WD";
+  camo = "MRPT_WD";
   rail = "None";
   nvgmount = "Rhino";
   headset = "Stan.";
@@ -321,7 +321,7 @@ class rhsusf_mich_helmet_marpatwd_alt_headset {
 };
 class rhsusf_mich_helmet_marpatwd_headset {
   model = "rhs_mich2000";
-  camo = "MRPT-WD";
+  camo = "MRPT_WD";
   rail = "None";
   nvgmount = "Rhino";
   headset = "Stan.";
@@ -329,7 +329,7 @@ class rhsusf_mich_helmet_marpatwd_headset {
 };
 class rhsusf_mich_helmet_marpatwd_norotos {
   model = "rhs_mich2000";
-  camo = "MRPT-WD";
+  camo = "MRPT_WD";
   rail = "None";
   nvgmount = "Norotos";
   headset = "No";
@@ -337,7 +337,7 @@ class rhsusf_mich_helmet_marpatwd_norotos {
 };
 class rhsusf_mich_helmet_marpatwd_norotos_arc {
   model = "rhs_mich2000";
-  camo = "MRPT-WD";
+  camo = "MRPT_WD";
   rail = "ARC";
   nvgmount = "Norotos";
   headset = "No";
@@ -345,7 +345,7 @@ class rhsusf_mich_helmet_marpatwd_norotos_arc {
 };
 class rhsusf_mich_helmet_marpatwd_norotos_arc_headset {
   model = "rhs_mich2000";
-  camo = "MRPT-WD";
+  camo = "MRPT_WD";
   rail = "ARC";
   nvgmount = "Norotos";
   headset = "Stan.";
@@ -353,7 +353,7 @@ class rhsusf_mich_helmet_marpatwd_norotos_arc_headset {
 };
 class rhsusf_mich_helmet_marpatwd_norotos_headset {
   model = "rhs_mich2000";
-  camo = "MRPT-WD";
+  camo = "MRPT_WD";
   rail = "None";
   nvgmount = "Norotos";
   headset = "Stan.";

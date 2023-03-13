@@ -6,6 +6,12 @@ class rhs_gorka_r
     {
         values[] = { "GRN", "YLW" }; // Always computed, do not edit
         alwaysSelectable=1;
+
+        class YLW
+        {
+            label = "Yellow";
+            image="#(rgb,8,8,3)color(0.64,0.58,0.37,1)";
+        };
     };
     class gloves
     {

@@ -4,11 +4,23 @@ class rhs_vkpo
     label="VKPO";
     class camo
     {
-        values[] = { "Std.", "Alt." }; // Always computed, do not edit
+        values[] = { "STD", "ALT" }; // Always computed, do not edit
         alwaysSelectable=1;
+        class STD
+	    {
+            label = "Standard";
+            image = "z\aceax\compats\RHS\data\camo\vkpo.paa";
+        };
+
+        class ALT
+	    {
+            label = "Alternate";
+            image = "z\aceax\compats\RHS\data\camo\vkpo_alt.paa";
+        };
     };
     class gloves
     {
+        label = "Gloves";
         values[] = { "No", "Yes" }; // Always computed, do not edit
         alwaysSelectable=1;
     };

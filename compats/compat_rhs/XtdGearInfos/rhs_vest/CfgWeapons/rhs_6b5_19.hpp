@@ -32,31 +32,31 @@ class rhs_6b5_sniper_khaki {
 // Berezka
 class rhs_6b5_spetsodezhda {
   model = "rhs_6b5_19";
-  camo = "BRZKA";
+  camo = "Spetsodezhda";
   loadout = "None";
 };
 
 class rhs_6b5_rifleman_spetsodezhda {
   model = "rhs_6b5_19";
-  camo = "BRZKA";
+  camo = "Spetsodezhda";
   loadout = "6sh46";
 };
 
 class rhs_6b5_medic_spetsodezhda {
   model = "rhs_6b5_19";
-  camo = "BRZKA";
+  camo = "Spetsodezhda";
   loadout = "medic";
 };
 
 class rhs_6b5_officer_spetsodezhda {
   model = "rhs_6b5_19";
-  camo = "BRZKA";
+  camo = "Spetsodezhda";
   loadout = "off";
 };
 
 class rhs_6b5_sniper_spetsodezhda {
   model = "rhs_6b5_19";
-  camo = "BRZKA";
+  camo = "Spetsodezhda";
   loadout = "sniper";
 };
 

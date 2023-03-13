@@ -4,8 +4,13 @@ class rhs_6sh92
     label="6Sh92";
     class camo
     {
-        values[] = { "EMR-S", "FLRA", "VSR" };
+        values[] = { "EMR_S", "FLRA", "VSR" };
         alwaysSelectable=1;
+
+        class VSR // Has a very distinct color from other VSR camos!
+	    {
+            image = "z\aceax\compats\RHS\data\camo\vsr_6sh92.paa";
+	    };
     };
     class loadout
     {

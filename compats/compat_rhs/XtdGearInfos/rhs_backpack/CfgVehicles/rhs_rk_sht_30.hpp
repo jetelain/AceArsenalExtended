@@ -1,13 +1,13 @@
 // EMR-Summer
 class rhs_rk_sht_30_emr {
   model = "rhs_rk_sht_30";
-  camo = "EMR-S";
+  camo = "EMR_S";
   loadout = "None";
 };
 
 class rhs_rk_sht_30_emr_engineer_empty {
   model = "rhs_rk_sht_30";
-  camo = "EMR-S";
+  camo = "EMR_S";
   loadout = "Engineer";
 };
 

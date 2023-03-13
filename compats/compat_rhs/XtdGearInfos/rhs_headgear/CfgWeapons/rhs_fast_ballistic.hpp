@@ -121,19 +121,19 @@ class rhsusf_opscore_mc_cover_pelt_cam {
 // Multicam Paint
 class rhsusf_opscore_mc {
   model = "rhs_fast_ballistic";
-  camo = "MC-Paint";
+  camo = "MCPaint";
   headset = "No";
   accessory = "None";
 };
 class rhsusf_opscore_mc_pelt {
   model = "rhs_fast_ballistic";
-  camo = "MC-Paint";
+  camo = "MCPaint";
   headset = "Yes";
   accessory = "None";
 };
 class rhsusf_opscore_mc_pelt_nsw {
   model = "rhs_fast_ballistic";
-  camo = "MC-Paint";
+  camo = "MCPaint";
   headset = "Yes";
   accessory = "NSW";
 };

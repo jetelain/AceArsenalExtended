@@ -4,7 +4,7 @@ class rhs_alicepack
     label="ALICE Pack";
     class camo
     {
-        values[] = { "MDU02", "OD", "SMB", "TTsKO", "WDL" }; // Always computed, do not edit
+        values[] = { "MDU02", "OD", "SMB", "TTsKO", "M81" }; // Always computed, do not edit
         alwaysSelectable=1;
     };
 };

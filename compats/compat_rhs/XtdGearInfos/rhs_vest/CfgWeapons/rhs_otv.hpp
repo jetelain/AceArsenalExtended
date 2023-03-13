@@ -1,6 +1,6 @@
 class rhsgref_otv_digi {
   model = "rhs_otv";
-  camo = "MDU10";
+  camo = "TTsKO_CDF_DIGI";
 };
 class rhsgref_otv_khaki {
   model = "rhs_otv";

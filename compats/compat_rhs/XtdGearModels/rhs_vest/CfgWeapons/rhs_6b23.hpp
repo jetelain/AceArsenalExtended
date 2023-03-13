@@ -4,8 +4,15 @@ class rhs_6b23
     label="6B23";
     class camo
     {
-        values[] = { "KHK", "EMR-S", "FLR", "FLR + EMR-S", "MTN-LS", "OD", "TTsKO/DIGI", "TTsKO/FRS", "TTsKO/MTN" }; // Always computed, do not edit
+        values[] = { "KHK", "EMR_S", "FLRA", "FLRA_EMR", "MTNLES", "OLI", "TTsKO_CDF_DIGI", "TTsKO_CDF_FRS", "TTsKO_CDF_MTN" }; // Always computed, do not edit
         alwaysSelectable=1;
+
+        class FLRA_EMR
+	    {
+            label = "Flora & EMR-S";
+            description = "Flora and EMR-Summer";
+            image = "z\aceax\compats\RHS\data\camo\flora_and_emr.paa";
+	    };
     };
     class loadout
     {
