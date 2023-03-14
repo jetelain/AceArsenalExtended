@@ -4,6 +4,7 @@ class rhs_lifchik
     label="Lifchik Rig";
     class loadout
     {
+        label = "Loadout";
         values[] = { "stan", "light", "off", "vog" };
         alwaysSelectable=1;
         class stan

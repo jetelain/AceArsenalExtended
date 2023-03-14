@@ -22,7 +22,7 @@ class rhs_m88
     class coat
     {
         label = "Coat";
-        values[] = { "None", "Winter" };
+        values[] = { "Standard", "Winter" };
         alwaysSelectable=1;
     };
     class boots

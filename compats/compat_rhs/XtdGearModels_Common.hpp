@@ -419,3 +419,45 @@ class CamoBase
 		image = "z\aceax\compats\RHS\data\camo\svd_flora.paa";
 	};
 };
+
+class rhs_attachsys // This is what kind of optic attachments a gun can accept, roughly.
+{
+	label = "Attachment System";
+	changeingame = 0;
+	values[] = {};
+
+	class none
+	{
+		label = "None";
+	};
+
+	class picatinny
+	{
+		label = "Picatinny";
+		description = "Picatinny Rail";
+	};
+
+	class ris
+	{
+		label = "RIS";
+		description = "Rail Integration System";
+	};
+
+	class warsaw
+	{
+		label = "Warsaw";
+		description = "Warsaw Pact Rail";
+	};
+
+	class zenit
+	{
+		label = "Zenitco";
+		description = "Zenitco Railed Handguard";
+	};
+
+	class zenit_pica
+	{
+		label = "Zenit/Pica";
+		description = "Zenitco Railed Handguard and Picatinny Rail";
+	};
+};

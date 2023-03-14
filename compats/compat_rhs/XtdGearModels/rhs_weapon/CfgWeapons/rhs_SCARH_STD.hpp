@@ -1,4 +1,4 @@
-class rhs_SCARH_STD
+class rhs_scarh_std
 {
     options[] = { "camo" }; // Always computed, do not edit
     label="SCAR-H (STD)";

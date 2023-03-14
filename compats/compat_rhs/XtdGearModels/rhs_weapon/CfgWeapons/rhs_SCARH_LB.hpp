@@ -1,4 +1,4 @@
-class rhs_SCARH_LB
+class rhs_scarh_lb
 {
     options[] = { "camo" }; // Always computed, do not edit
     label="SCAR-H (LB)";

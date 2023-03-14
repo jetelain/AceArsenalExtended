@@ -1,85 +1,85 @@
 class rhs_uniform_afghanka {
   model = "rhs_m88";
   camo = "AFGKA";
-  coat = "None";
+  coat = "Standard";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_grey {
   model = "rhs_m88";
   camo = "GRY";
-  coat = "None";
+  coat = "Standard";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_klmk {
   model = "rhs_m88";
   camo = "KLMK";
-  coat = "None";
+  coat = "Standard";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_moldovan_ttsko_blue {
   model = "rhs_m88";
   camo = "TTsKO_MLDV_BLUE";
-  coat = "None";
+  coat = "Standard";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_moldovan_ttsko_cold {
   model = "rhs_m88";
   camo = "TTsKO_MLDV_COLD";
-  coat = "None";
+  coat = "Standard";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_moldovan_ttsko_desat {
   model = "rhs_m88";
   camo = "TTsKO_MLDV_DESAT";
-  coat = "None";
+  coat = "Standard";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_moldovan_ttsko_hot {
   model = "rhs_m88";
   camo = "TTsKO_MLDV_HOT";
-  coat = "None";
+  coat = "Standard";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_spetsodezhda {
   model = "rhs_m88";
   camo = "Spetsodezhda";
-  coat = "None";
+  coat = "Standard";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_ttsko {
   model = "rhs_m88";
   camo = "TTsKO";
-  coat = "None";
+  coat = "Standard";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_ttsko_2 {
   model = "rhs_m88";
   camo = "TTsKO_ALT";
-  coat = "None";
+  coat = "Standard";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_vsr_1 {
   model = "rhs_m88";
   camo = "VSR_2";
-  coat = "None";
+  coat = "Standard";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_vsr_2 {
   model = "rhs_m88";
   camo = "VSR";
-  coat = "None";
+  coat = "Standard";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_vsr_3 {
   model = "rhs_m88";
   camo = "VSR_3";
-  coat = "None";
+  coat = "Standard";
   boots = "Standard";
 };
 class rhs_uniform_afghanka_wdl {
   model = "rhs_m88";
   camo = "M81";
-  coat = "None";
+  coat = "Standard";
   boots = "Standard";
 };
 
@@ -87,37 +87,37 @@ class rhs_uniform_afghanka_wdl {
 class rhs_uniform_afghanka_boots {
   model = "rhs_m88";
   camo = "AFGKA";
-  coat = "None";
+  coat = "Standard";
   boots = "Sapogi";
 };
 class rhs_uniform_afghanka_boots_moldovan_ttsko_cold {
   model = "rhs_m88";
   camo = "TTsKO_MLDV_COLD";
-  coat = "None";
+  coat = "Standard";
   boots = "Sapogi";
 };
 class rhs_uniform_afghanka_boots_moldovan_ttsko_desat {
   model = "rhs_m88";
   camo = "TTsKO_MLDV_DESAT";
-  coat = "None";
+  coat = "Standard";
   boots = "Sapogi";
 };
 class rhs_uniform_afghanka_boots_moldovan_ttsko_hot {
   model = "rhs_m88";
   camo = "TTsKO_MLDV_HOT";
-  coat = "None";
+  coat = "Standard";
   boots = "Sapogi";
 };
 class rhs_uniform_afghanka_boots_spetsodezhda {
   model = "rhs_m88";
   camo = "Spetsodezhda";
-  coat = "None";
+  coat = "Standard";
   boots = "Sapogi";
 };
 class rhs_uniform_afghanka_boots_ttsko {
   model = "rhs_m88";
   camo = "TTsKO";
-  coat = "None";
+  coat = "Standard";
   boots = "Sapogi";
 };
 

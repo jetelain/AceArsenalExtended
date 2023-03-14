@@ -1,4 +1,4 @@
-class rhs_SCARH_CQC
+class rhs_scarh_cqc
 {
     options[] = { "camo" }; // Always computed, do not edit
     label="SCAR-H (CQC)";
