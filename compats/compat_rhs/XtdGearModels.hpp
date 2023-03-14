@@ -180,5 +180,8 @@ class XtdGearModels {
         #include "XtdGearModels\rhs_weapon\CfgWeapons\rhs_smaw.hpp"
 
         // Binoculars
+        #include "XtdGearModels\rhs_binoculars\CfgWeapons\rhs_lerca1200.hpp"
+        #include "XtdGearModels\rhs_binoculars\CfgWeapons\rhs_m24_bino.hpp"
+        #include "XtdGearModels\rhs_binoculars\CfgWeapons\rhs_tr8.hpp"
     };
 };
