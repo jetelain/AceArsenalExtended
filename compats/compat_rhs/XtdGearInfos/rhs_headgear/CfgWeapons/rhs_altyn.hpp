@@ -1,7 +1,7 @@
 class rhs_altyn_novisor {
   model = "rhs_altyn";
   visor = "None";
-  balaclava = "Yes";
+  balaclava = "No";
   goggles = "None";
 };
 
