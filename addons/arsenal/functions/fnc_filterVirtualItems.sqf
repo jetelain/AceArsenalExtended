@@ -5,7 +5,7 @@ GVAR(initialVirtualItems) = ace_arsenal_virtualItems;
 GVAR(filteredVirtualItems) = 
 [
 	[[],[],[]], // WEAPONS [PrimaryWeapon, SecondaryWeapon, Handgun]
-	(GVAR(initialVirtualItems) select 1),  // ATTACHEMENTS
+	(GVAR(initialVirtualItems) select 1),  // ATTACHMENTS
 	(GVAR(initialVirtualItems) select 2),  // ITEMS_ALL
 	[], // HEADGEAR 
 	[], // UNIFORM
@@ -18,7 +18,7 @@ GVAR(filteredVirtualItems) =
 
 GVAR(filteredVirtualItems) append (GVAR(initialVirtualItems) select [10, count GVAR(initialVirtualItems) - 10]);
 
-GVAR(itemsPerModel) = [createHashMap, createHashMap, createHashMap];
+GVAR(itemsPerModel) = +GVAR(itemsPerModelHidden);
 
 {
 	_x params ["", "_virt", "_virtSub", "_cur", "_classRoot", "_label"];
