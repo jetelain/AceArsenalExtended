@@ -14,17 +14,18 @@
 		"extra": ["grade", "sang", "drapeau", "insignia", "clan"],
 		"author": "GRONOOB & AMF",
 		"itemModel": "A3\\Characters_F\\Common\\Suitpacks\\suitpack_universal_F.p3d",
+		"picture":"[ui]\\amf_uniform_01_{camo}.paa",
 		"variations": [
 			{ 
 				"id": "camo",
 				"values" : [
-					{"id": "CE", "label":"CE",        "set":{"camo1": "[tex]\\AMF_UBAS_CO.paa",        "camo2": "[tex]\\AMF_PANT_CO.paa"},        "itemSet": { "camo": "[tex]\\amf_Folded_CE_CO.paa" }, "picture":"[ui]\\ubas_ce_tan.paa"},
-					{"id": "OD", "label":"CE/OD",     "set":{"camo1": "[tex]\\AMF_UBAS_OD_CO.paa",     "camo2": "[tex]\\AMF_PANT_CO.paa"},        "itemSet": { "camo": "[tex]\\amf_Folded_CE_CO.paa" }, "picture":"[ui]\\ubas_ce_od.paa"},
-					{"id": "DA", "label":"DA",        "set":{"camo1": "[tex]\\AMF_UBAS_DA_CO.paa",     "camo2": "[tex]\\AMF_PANT_DA_CO.paa"},     "itemSet": { "camo": "[tex]\\amf_Folded_DA_CO.paa" }, "picture":"[ui]\\ubas_da.paa"},
-					{"id": "SE", "label":"SERVAL",    "set":{"camo1": "[tex]\\AMF_UBAS_CO.paa",        "camo2": "[tex]\\AMF_PANT_DA_CO.paa"},     "itemSet": { "camo": "[tex]\\amf_Folded_SE_CO.paa" }, "picture":"[ui]\\ubas_se.paa"},
-					{"id": "BM", "label":"BME",       "set":{"camo1": "[tex]\\AMF_UBAS_BME_CO.paa",    "camo2": "[tex]\\AMF_PANT_BME_CO.paa"},    "itemSet": { "camo": "[tex]\\amf_Folded_BM_CO.paa" }, "picture":"[ui]\\ubas_ce_tan.paa"},
-					{"id": "TU", "label":"TUNDRA",    "set":{"camo1": "[tex]\\AMF_UBAS_TUNDRA_CO.paa", "camo2": "[tex]\\AMF_PANT_TUNDRA_CO.paa"}, "itemSet": { "camo": "[tex]\\amf_Folded_TU_CO.paa" }, "picture":"[ui]\\ubas_ce_tan.paa"},
-					{"id": "TC", "label":"TUNDRA/CE", "set":{"camo1": "[tex]\\AMF_UBAS_CO.paa",        "camo2": "[tex]\\AMF_PANT_TUNDRA_CO.paa"}, "itemSet": { "camo": "[tex]\\amf_Folded_TC_CO.paa" }, "picture":"[ui]\\ubas_ce_tan.paa"}
+					{"id": "CE", "label":"CE",        "set":{"camo1": "[tex]\\AMF_UBAS_CO.paa",        "camo2": "[tex]\\AMF_PANT_CO.paa"},        "itemSet": { "camo": "[tex]\\amf_Folded_CE_CO.paa" }},
+					{"id": "OD", "label":"CE/OD",     "set":{"camo1": "[tex]\\AMF_UBAS_OD_CO.paa",     "camo2": "[tex]\\AMF_PANT_CO.paa"},        "itemSet": { "camo": "[tex]\\amf_Folded_CE_CO.paa" }},
+					{"id": "DA", "label":"DA",        "set":{"camo1": "[tex]\\AMF_UBAS_DA_CO.paa",     "camo2": "[tex]\\AMF_PANT_DA_CO.paa"},     "itemSet": { "camo": "[tex]\\amf_Folded_DA_CO.paa" }},
+					{"id": "SE", "label":"SERVAL",    "set":{"camo1": "[tex]\\AMF_UBAS_CO.paa",        "camo2": "[tex]\\AMF_PANT_DA_CO.paa"},     "itemSet": { "camo": "[tex]\\amf_Folded_SE_CO.paa" }},
+					{"id": "BM", "label":"BME",       "set":{"camo1": "[tex]\\AMF_UBAS_BME_CO.paa",    "camo2": "[tex]\\AMF_PANT_BME_CO.paa"},    "itemSet": { "camo": "[tex]\\amf_Folded_BM_CO.paa" }},
+					{"id": "TU", "label":"TUNDRA",    "set":{"camo1": "[tex]\\AMF_UBAS_TUNDRA_CO.paa", "camo2": "[tex]\\AMF_PANT_TUNDRA_CO.paa"}, "itemSet": { "camo": "[tex]\\amf_Folded_TU_CO.paa" }},
+					{"id": "TC", "label":"TUNDRA/CE", "set":{"camo1": "[tex]\\AMF_UBAS_CO.paa",        "camo2": "[tex]\\AMF_PANT_TUNDRA_CO.paa"}, "itemSet": { "camo": "[tex]\\amf_Folded_TC_CO.paa" }}
 				]
 			},
 			{ 
@@ -46,7 +47,8 @@
 		"weapon": "amf_uniform_01_NG_{camo}_{shoes}",
 		"set": {},
 		"sameAs": "amf_uniforms\\amf_uniform_01.p3d",
-		"xtdSet": { "gloves": "none", "sleeves": "Full" }
+		"xtdSet": { "gloves": "none", "sleeves": "Full" },
+		"picture":"[ui]\\amf_uniform_01_NG_{camo}.paa"
 	},
 	{
 		"model": "amf_uniforms\\amf_uniform_01_RE.p3d",
@@ -55,7 +57,8 @@
 		"weapon": "amf_uniform_01_RE_{camo}_{shoes}",
 		"set": {"camo4": "[tex]\\usp_gloves_CO.paa"},
 		"sameAs": "amf_uniforms\\amf_uniform_01.p3d",
-		"xtdSet": { "gloves": "MX", "sleeves": "Half" }
+		"xtdSet": { "gloves": "MX", "sleeves": "Half" },
+		"picture":"[ui]\\amf_uniform_01_RE_{camo}.paa"
 	},
 	{
 		"model": "amf_uniforms\\amf_uniform_01_RENG.p3d",
@@ -64,7 +67,8 @@
 		"weapon": "amf_uniform_01_RE_NG_{camo}_{shoes}",
 		"set": {},
 		"sameAs": "amf_uniforms\\amf_uniform_01.p3d",
-		"xtdSet": { "gloves": "none", "sleeves": "Half" }
+		"xtdSet": { "gloves": "none", "sleeves": "Half" },
+		"picture":"[ui]\\amf_uniform_01_RE_NG_{camo}.paa"
 	},
 	
 
@@ -78,16 +82,17 @@
 		"extra": ["grade", "sang", "drapeau", "name", "insignia", "clan"],
 		"author": "GRONOOB & AMF",
 		"itemModel": "A3\\Characters_F\\Common\\Suitpacks\\suitpack_universal_F.p3d",
+		"picture":"[ui]\\amf_uniform_02_{camo}.paa",
 		"variations": [
 			{ 
 				"id": "camo",
 				"values" : [
-					{"id": "CE", "label":"CE",        "set":{"camo1": "[tex]\\AMF_VEST_CO.paa",        "camo2": "[tex]\\AMF_PANT_CO.paa"},        "itemSet": { "camo": "[tex]\\amf_Folded_CE_CO.paa" }, "picture":"[ui]\\amf_treillis_f3_ce.paa"},
-					{"id": "DA", "label":"DA",        "set":{"camo1": "[tex]\\AMF_VEST_DA_CO.paa",     "camo2": "[tex]\\AMF_PANT_DA_CO.paa"},     "itemSet": { "camo": "[tex]\\amf_Folded_DA_CO.paa" }, "picture":"[ui]\\amf_treillis_f3_daguet.paa"},
-					{"id": "SE", "label":"SERVAL",    "set":{"camo1": "[tex]\\AMF_VEST_CO.paa",        "camo2": "[tex]\\AMF_PANT_DA_CO.paa"},     "itemSet": { "camo": "[tex]\\amf_Folded_SE_CO.paa" }, "picture":"[ui]\\amf_treillis_f3_serval.paa"},
-					{"id": "BM", "label":"BME",       "set":{"camo1": "[tex]\\AMF_VEST_BME_CO.paa",    "camo2": "[tex]\\AMF_PANT_BME_CO.paa"},    "itemSet": { "camo": "[tex]\\amf_Folded_BM_CO.paa" }, "picture":"[ui]\\amf_treillis_f3_ce.paa"},
-					{"id": "TU", "label":"TUNDRA",    "set":{"camo1": "[tex]\\AMF_VEST_TUNDRA_CO.paa", "camo2": "[tex]\\AMF_PANT_TUNDRA_CO.paa"}, "itemSet": { "camo": "[tex]\\amf_Folded_TU_CO.paa" }, "picture":"[ui]\\amf_treillis_f3_ce.paa"},
-					{"id": "TC", "label":"TUNDRA/CE", "set":{"camo1": "[tex]\\AMF_VEST_CO.paa",        "camo2": "[tex]\\AMF_PANT_TUNDRA_CO.paa"}, "itemSet": { "camo": "[tex]\\amf_Folded_TC_CO.paa" }, "picture":"[ui]\\amf_treillis_f3_ce.paa"}
+					{"id": "CE", "label":"CE",        "set":{"camo1": "[tex]\\AMF_VEST_CO.paa",        "camo2": "[tex]\\AMF_PANT_CO.paa"},        "itemSet": { "camo": "[tex]\\amf_Folded_CE_CO.paa" }},
+					{"id": "DA", "label":"DA",        "set":{"camo1": "[tex]\\AMF_VEST_DA_CO.paa",     "camo2": "[tex]\\AMF_PANT_DA_CO.paa"},     "itemSet": { "camo": "[tex]\\amf_Folded_DA_CO.paa" }},
+					{"id": "SE", "label":"SERVAL",    "set":{"camo1": "[tex]\\AMF_VEST_CO.paa",        "camo2": "[tex]\\AMF_PANT_DA_CO.paa"},     "itemSet": { "camo": "[tex]\\amf_Folded_SE_CO.paa" }},
+					{"id": "BM", "label":"BME",       "set":{"camo1": "[tex]\\AMF_VEST_BME_CO.paa",    "camo2": "[tex]\\AMF_PANT_BME_CO.paa"},    "itemSet": { "camo": "[tex]\\amf_Folded_BM_CO.paa" }},
+					{"id": "TU", "label":"TUNDRA",    "set":{"camo1": "[tex]\\AMF_VEST_TUNDRA_CO.paa", "camo2": "[tex]\\AMF_PANT_TUNDRA_CO.paa"}, "itemSet": { "camo": "[tex]\\amf_Folded_TU_CO.paa" }},
+					{"id": "TC", "label":"TUNDRA/CE", "set":{"camo1": "[tex]\\AMF_VEST_CO.paa",        "camo2": "[tex]\\AMF_PANT_TUNDRA_CO.paa"}, "itemSet": { "camo": "[tex]\\amf_Folded_TC_CO.paa" }}
 				]
 			},
 			{ 
@@ -109,7 +114,8 @@
 		"weapon": "amf_uniform_02_NG_{camo}_{shoes}",
 		"set": {},
 		"sameAs": "amf_uniforms\\amf_uniform_02.p3d",
-		"xtdSet": { "gloves": "none" }
+		"xtdSet": { "gloves": "none" },
+		"picture": "[ui]\\amf_uniform_02_NG_{camo}.paa"
 	},
 	
 
@@ -123,13 +129,14 @@
 		"extra": ["grade", "sang", "drapeau", "insignia", "clan"],
 		"author": "JUAN/LYY AMAO/KROGAR & AMF",
 		"itemModel": "A3\\Characters_F\\Common\\Suitpacks\\suitpack_universal_F.p3d",
+		"picture":"[ui]\\amf_uniform_03_{camo}.paa",
 		"variations": [
 			{ 
 				"id": "camo",
 				"values" : [
-					{"id": "CE", "label":"CE",        "set":{"camo1": "[tex]\\amf_vest_felin_CO.paa",    "camo2": "[tex]\\AMF_PANT_CO.paa"},    "itemSet": { "camo": "[tex]\\amf_Folded_CE_CO.paa" }, "picture":"[ui]\\amf_treillis_f3_ce.paa"},
-					{"id": "DA", "label":"DA",        "set":{"camo1": "[tex]\\amf_vest_felin_DA_CO.paa", "camo2": "[tex]\\AMF_PANT_DA_CO.paa"}, "itemSet": { "camo": "[tex]\\amf_Folded_DA_CO.paa" }, "picture":"[ui]\\amf_treillis_f3_daguet.paa"},
-					{"id": "SE", "label":"SERVAL",    "set":{"camo1": "[tex]\\amf_vest_felin_CO.paa",    "camo2": "[tex]\\AMF_PANT_DA_CO.paa"}, "itemSet": { "camo": "[tex]\\amf_Folded_SE_CO.paa" }, "picture":"[ui]\\amf_treillis_f3_serval.paa"}
+					{"id": "CE", "label":"CE",        "set":{"camo1": "[tex]\\amf_vest_felin_CO.paa",    "camo2": "[tex]\\AMF_PANT_CO.paa"},    "itemSet": { "camo": "[tex]\\amf_Folded_CE_CO.paa" }},
+					{"id": "DA", "label":"DA",        "set":{"camo1": "[tex]\\amf_vest_felin_DA_CO.paa", "camo2": "[tex]\\AMF_PANT_DA_CO.paa"}, "itemSet": { "camo": "[tex]\\amf_Folded_DA_CO.paa" }},
+					{"id": "SE", "label":"SERVAL",    "set":{"camo1": "[tex]\\amf_vest_felin_CO.paa",    "camo2": "[tex]\\AMF_PANT_DA_CO.paa"}, "itemSet": { "camo": "[tex]\\amf_Folded_SE_CO.paa" }}
 				]
 			},
 			{ 
@@ -151,7 +158,8 @@
 		"weapon": "amf_uniform_03_NG_{camo}_{shoes}",
 		"set": {},
 		"sameAs": "amf_uniforms\\amf_uniform_03.p3d",
-		"xtdSet": { "gloves": "none" }
+		"xtdSet": { "gloves": "none" },
+		"picture": "[ui]\\amf_uniform_03_NG_{camo}.paa"
 	}
 ],
 

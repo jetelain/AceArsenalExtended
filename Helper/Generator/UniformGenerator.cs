@@ -70,7 +70,7 @@ namespace Generator
             var vehicle = ApplyPattern(uniform, uniform.vehicle, state, v => v.id);
             var weapon = ApplyPattern(uniform, uniform.weapon, state, v => v.id);
 
-            var picture = state.Values.FirstOrDefault(v => v.picture != null)?.picture ?? uniform.picture;
+            var picture = state.Values.FirstOrDefault(v => v.picture != null)?.picture ?? ApplyPattern(uniform, uniform.picture, state, v => v.id);
 
             WeaponNames.Add(weapon);
 
