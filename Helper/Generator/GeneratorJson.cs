@@ -20,12 +20,15 @@ namespace Generator
         public string sameAs { get; set; }
         public string xtdModel { get; set; }
         public Dictionary<string, string> xtdSet { get; set; }
+        public string itemModel { get; set; }
+        public Dictionary<string, string> itemSet { get; set; }
     }
 
     public class GeneratorJson
     {
         public List<Uniform> uniforms { get; set; }
         public Dictionary<string, string> legacy { get; set; }
+        public Dictionary<string, string> paths { get; set; }
     }
 
 
@@ -36,6 +39,7 @@ namespace Generator
         public string label { get; set; }
         public string picture { get; set; }
         public Dictionary<string,string> set { get; set; }
+        public Dictionary<string, string> itemSet { get; set; }
     }
 
     public class Variation
