@@ -145,6 +145,23 @@ class XtdGearInfos {
         #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_l85a2.hpp"
         #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_l115a3.hpp"
         #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_l129a1.hpp"
+        #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_rpk.hpp"
+        #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_rpk_74.hpp"
+        #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_rpk_74m.hpp"
+        #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_romat.hpp"
+        #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_r11_rsass.hpp"
+        #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_pp_1901_vityaz.hpp"
+        #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_m16a1_m203.hpp"
+        #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_m107.hpp"
+        #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_m110.hpp"
+        #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_m1014.hpp"
+        #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_m1014_entry.hpp"
+        #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_m3a1.hpp"
+        #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_m4_sbr.hpp"
+        #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_m16a4.hpp"
+        #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_m21_sws.hpp"
+        #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_m27_iar.hpp"
+        #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_m2010.hpp"
 
         // Weapons : Secondaries
 

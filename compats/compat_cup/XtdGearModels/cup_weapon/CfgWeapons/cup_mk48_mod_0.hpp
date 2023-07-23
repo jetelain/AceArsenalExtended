@@ -10,11 +10,13 @@ class cup_mk48_mod_0
         class des
         {
             label = "Desert";
+            image = "z\aceax\compats\CUP\data\camo\cup_mk48_des.paa";
         };
 
         class wood
         {
             label = "Woodland";
+            image = "z\aceax\compats\CUP\data\camo\cup_mk48_wdl.paa";
         };
     };
 

@@ -7,6 +7,12 @@ class CamoBase
 		image = "#(rgb,8,8,3)color(0.56,0.48,0.38,1)";
 	};
 
+	class CUP_URB_HEX
+	{
+		label = "Urban Hex";
+		image = "z\aceax\compats\CUP\data\camo\cup_urb_hex.paa";
+	};
+
 	class AK_WOOD
 	{
 		label = "Wood";
