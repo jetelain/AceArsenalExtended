@@ -1,10 +1,10 @@
 class USP_IHPS
 {
-    options[] = { "armor", "camo", "comm", "cover", "flag", "mandible", "visor" }; // Always computed, do not edit
+    options[] = { "camo", "comms", "cover", "flag", "mandible", "visor", "armor" }; // Always computed, do not edit
     label = "[USP] IHPS";
     class armor
     {
-        label = "armor";
+        label = "Armor";
         alwaysSelectable = 1;
         values[] = { "none", "yes" }; // Always computed, do not edit
     };
@@ -13,33 +13,33 @@ class USP_IHPS
         alwaysSelectable = 1;
         values[] = { "BLK", "GRN", "GRY", "TAN" }; // Always computed, do not edit
     };
-    class comm
+    class comms
     {
-        label = "comm";
+        label = "Communication";
         alwaysSelectable = 1;
-        values[] = { "CT3", "none" }; // Always computed, do not edit
+        values[] = { "none", "CT3" }; // Always computed, do not edit
     };
     class cover
     {
-        label = "cover";
+        label = "Cover";
         alwaysSelectable = 1;
-        values[] = { "BLK", "GRN", "GRY", "MC", "MCA", "none", "OCP", "TAN" }; // Always computed, do not edit
+        values[] = { "none", "BLK", "GRN", "GRY", "MC", "MCA", "OCP", "TAN" }; // Always computed, do not edit
     };
     class flag
     {
-        label = "flag";
+        label = "Flag";
         alwaysSelectable = 1;
         values[] = { "none", "USA" }; // Always computed, do not edit
     };
     class mandible
     {
-        label = "mandible";
+        label = "Mandible";
         alwaysSelectable = 1;
         values[] = { "none", "yes" }; // Always computed, do not edit
     };
     class visor
     {
-        label = "visor";
+        label = "Visor";
         alwaysSelectable = 1;
         values[] = { "none", "yes" }; // Always computed, do not edit
     };
