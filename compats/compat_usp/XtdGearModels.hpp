@@ -78,5 +78,6 @@ class XtdGearModels {
          #include "XtdGearModels\usp_gear_vest\CfgWeapons\USP_VEST_PLATEFRAME.hpp"
          #include "XtdGearModels\usp_gear_vest\CfgWeapons\USP_VEST_STRANDHOGG.hpp"
          #include "XtdGearModels\usp_gear_vest\CfgWeapons\USP_VEST_STRANDHOGG2.hpp"
+         #include "XtdGearModels\usp_gear_ihps\CfgWeapons\USP_IHPS.hpp"
     };
 };
