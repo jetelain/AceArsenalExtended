@@ -15,7 +15,7 @@ class cup_m3a1
 
         class SND
         {
-            label = "SND";
+            label = "Sand";
             image = "#(rgb,8,8,3)color(0.40,0.30,0.15,1)";
         };
     };

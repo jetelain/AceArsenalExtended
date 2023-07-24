@@ -11,6 +11,12 @@ class CUP_arifle_AK74M_GL_top_rail {
   attachsys = "picatinny";
 };
 
+class CUP_arifle_AK74M_GL_railed {
+  model = "cup_ak_74m_gp25";
+  camo = "AK_BLK";
+  attachsys = "zenit_pica";
+};
+
 // Desert
 class CUP_arifle_AK74M_GL_desert {
   model = "cup_ak_74m_gp25";
@@ -24,6 +30,12 @@ class CUP_arifle_AK74M_GL_top_rail_desert {
   attachsys = "picatinny";
 };
 
+class CUP_arifle_AK74M_GL_railed_desert {
+  model = "cup_ak_74m_gp25";
+  camo = "des";
+  attachsys = "zenit_pica";
+};
+
 // Woodland
 class CUP_arifle_AK74M_GL_camo {
   model = "cup_ak_74m_gp25";
@@ -35,4 +47,10 @@ class CUP_arifle_AK74M_GL_top_rail_camo {
   model = "cup_ak_74m_gp25";
   camo = "wood";
   attachsys = "picatinny";
+};
+
+class CUP_arifle_AK74M_GL_railed_camo {
+  model = "cup_ak_74m_gp25";
+  camo = "wood";
+  attachsys = "zenit_pica";
 };

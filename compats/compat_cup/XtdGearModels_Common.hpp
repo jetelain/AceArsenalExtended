@@ -104,6 +104,30 @@ class CamoBase
 		label = "Woodland";
 		image = "#(rgb,8,8,3)color(0.36,0.37,0.30,1)";
 	};
+
+	class CUP_SAVZ_58_COMP
+	{
+		label = "Composite";
+		image = "z\aceax\compats\CUP\data\camo\cup_savz_58_comp.paa";
+	};
+
+	class CUP_SAVZ_58_DES
+	{
+		label = "Desert";
+		image = "#(rgb,8,8,3)color(0.66,0.58,0.43,1)";
+	};
+
+	class CUP_SAVZ_58_WDL
+	{
+		label = "Woodland";
+		image = "#(rgb,8,8,3)color(0.42,0.42,0.31,1)";
+	};
+
+	class CUP_SAVZ_58_WOOD
+	{
+		label = "Wood";
+		image = "z\aceax\compats\CUP\data\camo\cup_savz_58_wood.paa";
+	};
 };
 
 class cup_attachsys // This is what kind of attachments a gun can accept, roughly.

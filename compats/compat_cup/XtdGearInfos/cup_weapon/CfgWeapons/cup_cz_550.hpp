@@ -5,5 +5,5 @@ class CUP_srifle_CZ550 {
 
 class CUP_srifle_CZ550_rail {
   model = "cup_cz_550";
-  attachsys = "integral";
+  attachsys = "picatinny";
 };

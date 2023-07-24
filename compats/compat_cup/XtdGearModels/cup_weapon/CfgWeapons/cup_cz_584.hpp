@@ -6,11 +6,7 @@ class cup_cz_584
     class attachsys : cup_attachsys
     {
         label = "Optic";
-        values[] = { "integral", "picatinny" };
+        values[] = { "none", "picatinny" };
         alwaysSelectable=1;
-        class integral
-        {
-            label = "Integral Scope";
-        };
     };
 };

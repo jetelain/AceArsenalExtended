@@ -1,7 +1,7 @@
 class cup_pp_1901_vityaz
 {
     options[] = { "optic", "grip" };
-    label = "PP-19-01_vityaz";
+    label = "PP-19-01 Vityaz";
 
     class optic : cup_attachsys
     {

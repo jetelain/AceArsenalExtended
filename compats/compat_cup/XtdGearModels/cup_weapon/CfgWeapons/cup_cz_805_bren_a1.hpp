@@ -5,7 +5,7 @@ class cup_cz_805_bren_a1_g1
 
     class camo
     {
-        values[] = { "GRN", "BLK", "CYT" };
+        values[] = { "GRY", "BLK", "CBR" };
         alwaysSelectable=1;
     };
 };

@@ -1,9 +1,9 @@
-class CUP_srifle_CZ584 {
+class CUP_sgun_CZ584 {
   model = "cup_cz_584";
-  attachsys = "integral";
+  attachsys = "none";
 };
 
-class CUP_srifle_CZ584_rail {
+class CUP_sgun_CZ584_RIS {
   model = "cup_cz_584";
-  attachsys = "integral";
+  attachsys = "picatinny";
 };
