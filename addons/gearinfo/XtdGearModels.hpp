@@ -26,6 +26,26 @@ class XtdGearModels
 			image = QPATHTOF(data\camo\blu.paa);
 		};
 
+		class CYT
+		{
+			label = "Coyote";
+			image="#(rgb,8,8,3)color(0.85,0.77,0.65,1)";
+		};
+
+		class CBR
+		{
+			label = "CBR";
+			description = "Coyote Brown";
+			image="#(rgb,8,8,3)color(0.55,0.38,0.25,1)";
+		};
+
+		class FDE
+		{
+			label = "FDE";
+			description = "Flat Dark Earth";
+			image = "#(rgb,8,8,3)color(0.56,0.48,0.38,1)";
+		};
+
 		class GRN
 		{
 			label = CSTRING(Green);
@@ -90,6 +110,12 @@ class XtdGearModels
 			image = QPATHTOF(data\camo\6cdp.paa);
 		};
 
+		class ALP
+		{
+			label = "Alpenflage";
+			image = QPATHTOF(data\camo\alp.paa);
+		};
+
 		class AOR1
 		{
 			label = "AOR1";
@@ -113,6 +139,19 @@ class XtdGearModels
 			label = "DCP";
 			description = "Desert Camouflage Pattern";
 			image = QPATHTOF(data\camo\dcp.paa);
+		};
+
+		class DPM
+		{
+			label = "DPM";
+			description = "Disruptive Pattern Material";
+			image = QPATHTOF(data\camo\dpm.paa);
+		};
+
+		class FLCK
+		{
+			label = "Flecktarn";
+			image = QPATHTOF(data\camo\flck.paa);
 		};
 
 		class EMR_SUM

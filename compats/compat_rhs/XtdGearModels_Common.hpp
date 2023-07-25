@@ -107,24 +107,6 @@ class CamoBase
 	};
 
 	// GREF camos
-	class ALP
-	{
-		label = "Alpenflage";
-		image = "z\aceax\compats\RHS\data\camo\alp.paa";
-	};
-
-	class DPM
-	{
-		label = "DPM";
-		description = "Disruptive Pattern Material";
-		image = "z\aceax\compats\RHS\data\camo\dpm.paa";
-	};
-
-	class FLCK
-	{
-		label = "Flecktarn";
-		image = "z\aceax\compats\RHS\data\camo\flck.paa";
-	};
 
 	class LIZ_ATS
 	{
@@ -238,27 +220,14 @@ class CamoBase
 	};
 
 	// USAF camos
-	class CYT
+	class FOLGRN
 	{
-		label = "Coyote";
-		image="#(rgb,8,8,3)color(0.85,0.77,0.65,1)";
-	};
-
-	class CBR
-	{
-		label = "CBR";
-		description = "Coyote Brown";
-		image="#(rgb,8,8,3)color(0.55,0.38,0.25,1)";
-	};
-
-	class FOLGRN // For the Ops-Core FAST
-	{
-		label = "Foli. Green";
+		label = "FOLGRN";
 		description = "Foliage Green";
-		image="#(rgb,8,8,3)color(0.51,0.54,0.42,1)";
+		image = "#(rgb,8,8,3)color(0.51,0.54,0.42,1)";
 	};
 
-	
+
 	class URBTAN // For the Ops-Core FAST
 	{
 		label = "Urb. Tan";
