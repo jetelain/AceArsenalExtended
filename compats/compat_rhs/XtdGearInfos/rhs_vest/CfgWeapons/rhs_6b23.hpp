@@ -99,128 +99,128 @@ class rhs_6b23_vydra_3m {
 //EMR-Summer
 class rhs_6b23_digi {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "None";
 	collar = "Standard";
 };
 class rhs_6b23_6sh116 {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "6Sh116";
 	collar = "Standard";
 };
 class rhs_6b23_6sh116_vog {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "6Sh116/VOG";
 	collar = "Standard";
 };
 class rhs_6b23_digi_6sh92 {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "6Sh92";
 	collar = "Standard";
 };
 class rhs_6b23_digi_6sh92_headset {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "6Sh92/Hdst.";
 	collar = "Standard";
 };
 class rhs_6b23_digi_6sh92_headset_mapcase {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "6Sh92/Hdst./Map";
 	collar = "Standard";
 };
 class rhs_6b23_digi_6sh92_radio {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "6Sh92/Radio";
 	collar = "Standard";
 };
 class rhs_6b23_digi_6sh92_vog {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "6Sh92/VOG";
 	collar = "Standard";
 };
 class rhs_6b23_digi_6sh92_vog_headset {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "6Sh92/VOG/Hdst.";
 	collar = "Standard";
 };
 class rhs_6b23_digi_crewofficer {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "Off.";
 	collar = "Standard";
 };
 class rhs_6b23_digi_crew {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "NCO/Crew";
 	collar = "Standard";
 };
 class rhs_6b23_digi_engineer {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "Engi.";
 	collar = "Standard";
 };
 class rhs_6b23_digi_medic {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "Medic";
 	collar = "Standard";
 };
 class rhs_6b23_digi_rifleman {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "Rifl.";
 	collar = "Standard";
 };
 class rhs_6b23_digi_sniper {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "Snip.";
 	collar = "Standard";
 };
 class rhs_6b23_digi_vydra_3m {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "Vydra-3M";
 	collar = "Standard";
 };
 //Special Spetsnaz variants
 class rhs_6b23_digi_6sh92_spetsnaz2 {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "6Sh92";
 	collar = "Spetsnaz";
 };
 class rhs_6b23_digi_6sh92_headset_spetsnaz {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "6Sh92/Hdst.";
 	collar = "Spetsnaz";
 };
 class rhs_6b23_digi_6sh92_Spetsnaz {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "6Sh92/Radio";
 	collar = "Spetsnaz";
 };
 class rhs_6b23_digi_6sh92_Vog_Spetsnaz {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "6Sh92/VOG/Radio";
 	collar = "Spetsnaz";
 };
 class rhs_6b23_digi_6sh92_Vog_Radio_Spetsnaz {
   model = "rhs_6b23";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   loadout = "6Sh92/VOG/Radio"; //This is the only item that has this combination.
 	collar = "Spetsnaz";
 };

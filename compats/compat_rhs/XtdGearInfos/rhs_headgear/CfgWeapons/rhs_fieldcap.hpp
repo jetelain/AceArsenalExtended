@@ -12,13 +12,13 @@ class rhs_fieldcap_helm {
 
 class rhs_fieldcap_digi {
   model = "rhs_fieldcap";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   helmet = "None";
 };
 
 class rhs_fieldcap_helm_digi {
   model = "rhs_fieldcap";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   helmet = "6B27M";
 };
 
@@ -54,7 +54,7 @@ class rhs_fieldcap_khk {
 
 class rhs_fieldcap_vsr {
   model = "rhs_fieldcap";
-  camo = "VSR";
+  camo = "VSR_93";
   helmet = "None";
 };
 

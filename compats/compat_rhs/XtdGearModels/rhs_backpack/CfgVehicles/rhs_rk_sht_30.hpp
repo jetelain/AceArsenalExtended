@@ -4,7 +4,7 @@ class rhs_rk_sht_30
     label="RK-ShT-30";
     class camo
     {
-        values[] = { "EMR_S", "OLI" }; // Always computed, do not edit
+        values[] = { "EMR_SUM", "OLI" }; // Always computed, do not edit
         alwaysSelectable=1;
     };
     class loadout

@@ -35,7 +35,7 @@ class rhsgref_uniform_dpm_olive {
 
 class rhsgref_uniform_ERDL {
   model = "rhs_m93";
-  camo = "ERDL_GRN";
+  camo = "ERDL_L";
   pantscamo = "match";
 };
 
@@ -72,7 +72,7 @@ class rhsgref_uniform_og107 {
 class rhsgref_uniform_og107_erdl {
   model = "rhs_m93";
   camo = "OG107";
-  pantscamo = "ERDL_GRN";
+  pantscamo = "ERDL_L";
 };
 
 class rhsgref_uniform_olive {

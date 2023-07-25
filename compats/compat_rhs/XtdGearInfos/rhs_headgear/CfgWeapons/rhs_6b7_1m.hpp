@@ -37,35 +37,35 @@ class rhs_6b7_1m_ess_bala {
 // EMR-Summer
 class rhs_6b7_1m_emr {
   model = "rhs_6b7_1m";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   goggles = "None";
   balaclava = "None";
 };
 
 class rhs_6b7_1m_bala1_emr {
   model = "rhs_6b7_1m";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   goggles = "None";
   balaclava = "Slit";
 };
 
 class rhs_6b7_1m_bala2_emr {
   model = "rhs_6b7_1m";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   goggles = "None";
   balaclava = "Two-Hole";
 };
 
 class rhs_6b7_1m_emr_ess {
   model = "rhs_6b7_1m";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   goggles = "ESS";
   balaclava = "None";
 };
 
 class rhs_6b7_1m_emr_ess_bala {
   model = "rhs_6b7_1m";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   goggles = "ESS";
   balaclava = "Slit";
 };

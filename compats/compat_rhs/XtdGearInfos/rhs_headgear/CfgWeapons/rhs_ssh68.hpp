@@ -5,7 +5,7 @@ class rhs_ssh68_2 {
 
 class rhsgref_ssh68_emr {
   model = "rhs_ssh68";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
 };
 
 class rhsgref_ssh68_ttsko_digi {
@@ -35,5 +35,5 @@ class rhsgref_ssh68_un {
 
 class rhsgref_ssh68_vsr {
   model = "rhs_ssh68";
-  camo = "VSR";
+  camo = "VSR_93";
 };

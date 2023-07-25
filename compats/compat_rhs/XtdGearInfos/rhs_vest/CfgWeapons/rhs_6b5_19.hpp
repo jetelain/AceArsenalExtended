@@ -125,30 +125,30 @@ class rhs_6b5_sniper_ttsko {
 // VSR
 class rhs_6b5_vsr {
   model = "rhs_6b5_19";
-  camo = "VSR";
+  camo = "VSR_93";
   loadout = "None";
 };
 
 class rhs_6b5_rifleman_vsr {
   model = "rhs_6b5_19";
-  camo = "VSR";
+  camo = "VSR_93";
   loadout = "6sh46";
 };
 
 class rhs_6b5_medic_vsr {
   model = "rhs_6b5_19";
-  camo = "VSR";
+  camo = "VSR_93";
   loadout = "medic";
 };
 
 class rhs_6b5_officer_vsr {
   model = "rhs_6b5_19";
-  camo = "VSR";
+  camo = "VSR_93";
   loadout = "off";
 };
 
 class rhs_6b5_sniper_vsr {
   model = "rhs_6b5_19";
-  camo = "VSR";
+  camo = "VSR_93";
   loadout = "sniper";
 };

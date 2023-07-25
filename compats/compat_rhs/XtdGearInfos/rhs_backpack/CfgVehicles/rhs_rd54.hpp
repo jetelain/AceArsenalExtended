@@ -14,13 +14,13 @@ class rhs_rd54_vest {
 // EMR-Summer
 class rhs_rd54_emr1 {
   model = "rhs_rd54";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   vestfit = "No";
 };
 
 class rhs_rd54_vest_emr1 {
   model = "rhs_rd54";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   vestfit = "Yes";
 };
 

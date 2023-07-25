@@ -4,7 +4,7 @@ class rhs_pasgt
     label="PASGT";
     class camo
     {
-        values[] = { "DCP", "LIZ_ATS", "ERDL_BRN", "FLCK", "OLI", "Press", "UN", "M81" };
+        values[] = { "DCP", "LIZ_ATS", "ERDL_L", "FLCK", "OLI", "Press", "UN", "M81" };
         alwaysSelectable=1;
         class Press
         {

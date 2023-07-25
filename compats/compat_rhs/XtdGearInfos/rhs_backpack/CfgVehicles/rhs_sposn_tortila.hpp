@@ -5,7 +5,7 @@ class rhs_tortila_black {
 
 class rhs_tortila_emr {
   model = "rhs_sposn_tortila";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
 };
 
 class rhs_tortila_grey {

@@ -4,14 +4,8 @@ class rhs_m1_helm
     label="M1";
     class camo
     {
-        values[] = { "6CDP", "ERDL_BRN", "Liner", "Mitchell", "OG107", "Painted" };
+        values[] = { "6CDP", "ERDL_H", "Liner", "Mitchell", "OG107", "Painted" };
         alwaysSelectable=1;
-        class 6DCP
-        {
-            label = "6DCP";
-            description = "Six-Color Desert Camouflage, also known as Chocolate Chip Camouflage";
-            image = "z\aceax\compats\RHS\data\camo\6cdp.paa";
-        };
         class Liner
         {
             label = "Liner";

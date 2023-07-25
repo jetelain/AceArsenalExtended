@@ -4,7 +4,7 @@ class rhs_m93
     label="M93";
     class camo
     {
-        values[] = { "ALP", "LIZ_ATS", "DCP", "DPM", "ERDL_GRN", "FLCK", "M81", "OAK_SAF", "OAK_SAF_SUM", "OG107", "OLI", "TSW", "URB_RD" };
+        values[] = { "ALP", "LIZ_ATS", "DCP", "DPM", "ERDL_L", "FLCK", "M81", "OAK_SAF", "OAK_SAF_SUM", "OG107", "OLI", "TSW", "URB_RD" };
         alwaysSelectable=1;
         class URB_RD
 	    {
@@ -14,7 +14,7 @@ class rhs_m93
     };
     class pantscamo
     {
-        values[] = { "match", "ERDL_GRN", "OLI" };
+        values[] = { "match", "ERDL_L", "OLI" };
         alwaysSelectable=1;
         class match
 	    {

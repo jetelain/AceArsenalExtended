@@ -4,7 +4,7 @@ class rhs_6b23
     label="6B23";
     class camo
     {
-        values[] = { "KHK", "EMR_S", "FLRA", "FLRA_EMR", "MTNLES", "OLI", "TTsKO_CDF_DIGI", "TTsKO_CDF_FRS", "TTsKO_CDF_MTN" }; // Always computed, do not edit
+        values[] = { "KHK", "EMR_SUM", "FLRA", "FLRA_EMR", "MTNLES", "OLI", "TTsKO_CDF_DIGI", "TTsKO_CDF_FRS", "TTsKO_CDF_MTN" }; // Always computed, do not edit
         alwaysSelectable=1;
 
         class FLRA_EMR

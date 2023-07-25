@@ -1,7 +1,7 @@
 // RHSAFRF
 class rhs_Booniehat_digi {
   model = "rhs_booniehat";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
 };
 
 class rhs_Booniehat_flora {

@@ -131,13 +131,13 @@ class rhs_fieldcap_m88_ttsko_vdv_back {
 // VSR
 class rhs_fieldcap_m88_vsr {
   model = "rhs_fieldcap_m88";
-  camo = "VSR";
+  camo = "VSR_93";
   facing = "Front";
 };
 
 class rhs_fieldcap_m88_vsr_back {
   model = "rhs_fieldcap_m88";
-  camo = "VSR";
+  camo = "VSR_93";
   facing = "Back";
 };
 

@@ -4,7 +4,7 @@ class rhs_sposn_tortila
     label="SPOSN Tortila";
     class camo
     {
-        values[] = { "BLK", "EMR_S", "GRY", "KHK", "OLI", "SPCT_SKWO" }; // Always computed, do not edit
+        values[] = { "BLK", "EMR_SUM", "GRY", "KHK", "OLI", "SPCT_SKWO" }; // Always computed, do not edit
         alwaysSelectable=1;
 
         class SPCT_SKWO

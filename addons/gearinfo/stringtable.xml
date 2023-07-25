@@ -21,6 +21,10 @@
             <English>Blue</English>
             <French>Bleu</French>
         </Key>
+        <Key ID="STR_ACEAX_GearInfo_Green">
+            <English>Green</English>
+            <French>Vert</French>
+        </Key>
         <Key ID="STR_ACEAX_GearInfo_Grey">
             <English>Grey</English>
             <French>Gris</French>
@@ -32,6 +36,14 @@
         <Key ID="STR_ACEAX_GearInfo_Navy">
             <English>Navy</English>
             <French>Marine</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_Olive">
+            <English>Olive</English>
+            <French>Olive</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_Tan">
+            <English>Tan</English>
+            <French>Fauve</French>
         </Key>
         <Key ID="STR_ACEAX_GearInfo_Sleeves">
             <English>Sleeves</English>
