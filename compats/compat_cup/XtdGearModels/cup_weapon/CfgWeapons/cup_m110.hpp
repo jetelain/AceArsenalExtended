@@ -10,7 +10,7 @@ class cup_m110
         class WDL
         {
             label = "Woodland";
-            image = "z\aceax\compats\CUP\data\camo\cup_m110_wdl.paa";
+            image = QPATHTOF(data\camo\cup_m110_wdl.paa);
         };
     };
 

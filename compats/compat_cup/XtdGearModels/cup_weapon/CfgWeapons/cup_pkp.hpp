@@ -10,13 +10,13 @@ class cup_pkp
         class DES
         {
             label = "Desert";
-            image = "z\aceax\compats\CUP\data\camo\cup_pkp_des.paa";
+            image = QPATHTOF(data\camo\cup_pkp_des.paa);
         };
 
         class WDL
         {
             label = "Woodland";
-            image = "z\aceax\compats\CUP\data\camo\cup_pkp_wdl.paa";
+            image = QPATHTOF(data\camo\cup_pkp_wdl.paa);
         };
     };
 

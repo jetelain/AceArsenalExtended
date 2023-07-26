@@ -1,10 +1,14 @@
+#include "script_component.hpp"
+
 class CfgPatches {
-  class aceax_cup_compat {
+  class ADDON {
+    name = QUOTE(COMPONENT);
     units[] = {};
     weapons[] = {};
-    requiredVersion = "1.0";
-    requiredAddons[] = {"aceax_gearinfo"};
+    requiredVersion = REQUIRED_VERSION;
+    requiredAddons[] = {};
     author = "Pet Mudstone";
+    VERSION_CONFIG;
   };
 };
 

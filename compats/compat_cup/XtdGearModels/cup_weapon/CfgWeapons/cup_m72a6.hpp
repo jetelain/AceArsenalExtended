@@ -10,13 +10,13 @@ class cup_m72a6
         class plain
         {
             label = "Plain";
-            image = "z\aceax\compats\CUP\data\camo\cup_m72a6_plain.paa";
+            image = QPATHTOF(data\camo\cup_m72a6_plain.paa);
         };
 
         class grafitti
         {
             label = "Grafitti";
-            image = "z\aceax\compats\CUP\data\camo\cup_m72a6_grafitti.paa";
+            image = QPATHTOF(data\camo\cup_m72a6_grafitti.paa);
         };
     };
 };

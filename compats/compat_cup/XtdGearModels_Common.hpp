@@ -10,7 +10,7 @@ class CamoBase
 	class CUP_URB_HEX
 	{
 		label = "Urban Hex";
-		image = "z\aceax\compats\CUP\data\camo\cup_urb_hex.paa";
+		image = QPATHTOF(data\camo\cup_urb_hex.paa);
 	};
 
 	class AK_WOOD
@@ -30,73 +30,73 @@ class CamoBase
 	class CUP_ACR_SNW
 	{
 		label = "Snow";
-		image = "z\aceax\compats\CUP\data\camo\cup_acr_snw.paa";
+		image = QPATHTOF(data\camo\cup_acr_snw.paa);
 	};
 
 	class CUP_ACR_WDL
 	{
 		label = "Woodland";
-		image = "z\aceax\compats\CUP\data\camo\cup_acr_wdl.paa";
+		image = QPATHTOF(data\camo\cup_acr_wdl.paa);
 	};
 
 	class CUP_ACR_TAN
 	{
 		label = "Tan";
-		image = "z\aceax\compats\CUP\data\camo\cup_acr_tan.paa";
+		image = QPATHTOF(data\camo\cup_acr_tan.paa);
 	};
 
 	class CUP_FAL_DES
 	{
 		label = "Desert";
-		image = "z\aceax\compats\CUP\data\camo\cup_fal_des.paa";
+		image = QPATHTOF(data\camo\cup_fal_des.paa);
 	};
 
 	class CUP_FAL_RHD
 	{
 		label = "Rhodesian";
-		image = "z\aceax\compats\CUP\data\camo\cup_fal_rhd.paa";
+		image = QPATHTOF(data\camo\cup_fal_rhd.paa);
 	};
 
 	class CUP_FAL_SND
 	{
 		label = "Sand";
-		image = "z\aceax\compats\CUP\data\camo\cup_fal_snd.paa";
+		image = QPATHTOF(data\camo\cup_fal_snd.paa);
 	};
 
 	class CUP_FAL_WDL
 	{
 		label = "Woodland";
-		image = "z\aceax\compats\CUP\data\camo\cup_fal_wdl.paa";
+		image = QPATHTOF(data\camo\cup_fal_wdl.paa);
 	};
 		
 	class CUP_G36_DES
 	{
 		label = "Desert";
-		image = "z\aceax\compats\CUP\data\camo\cup_g36_des.paa";
+		image = QPATHTOF(data\camo\cup_g36_des.paa);
 	};
 
 	class CUP_G36_HEX
 	{
 		label = "Hex";
-		image = "z\aceax\compats\CUP\data\camo\cup_g36_hex.paa";
+		image = QPATHTOF(data\camo\cup_g36_hex.paa);
 	};
 
 	class CUP_G36_WDL
 	{
 		label = "Woodland";
-		image = "z\aceax\compats\CUP\data\camo\cup_g36_wdl.paa";
+		image = QPATHTOF(data\camo\cup_g36_wdl.paa);
 	};
 
 	class CUP_HK416_DES
 	{
 		label = "Desert";
-		image = "z\aceax\compats\CUP\data\camo\cup_hk416_des.paa";
+		image = QPATHTOF(data\camo\cup_hk416_des.paa);
 	};
 
 	class CUP_HK416_WDL
 	{
 		label = "Woodland";
-		image = "z\aceax\compats\CUP\data\camo\cup_hk416_wdl.paa";
+		image = QPATHTOF(data\camo\cup_hk416_wdl.paa);
 	};
 
 	class CUP_SCAR_WDL
@@ -108,7 +108,7 @@ class CamoBase
 	class CUP_SAVZ_58_COMP
 	{
 		label = "Composite";
-		image = "z\aceax\compats\CUP\data\camo\cup_savz_58_comp.paa";
+		image = QPATHTOF(data\camo\cup_savz_58_comp.paa);
 	};
 
 	class CUP_SAVZ_58_DES
@@ -126,7 +126,7 @@ class CamoBase
 	class CUP_SAVZ_58_WOOD
 	{
 		label = "Wood";
-		image = "z\aceax\compats\CUP\data\camo\cup_savz_58_wood.paa";
+		image = QPATHTOF(data\camo\cup_savz_58_wood.paa);
 	};
 };
 

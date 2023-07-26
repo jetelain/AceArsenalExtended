@@ -23,20 +23,20 @@ class cup_r11_rsass
         class WNTR
         {
             label = "Winter";
-            image = "z\aceax\compats\CUP\data\camo\cup_rsass_wtr.paa";
+            image = QPATHTOF(data\camo\cup_rsass_wtr.paa);
         };
 
         class WDL
         {
             label = "Woodland";
-            image = "z\aceax\compats\CUP\data\camo\cup_rsass_wdl.paa";
+            image = QPATHTOF(data\camo\cup_rsass_wdl.paa);
         };
 
         class WDLNET
         {
             label = "Wood Net";
             description = "Woodland Net";
-            image = "z\aceax\compats\CUP\data\camo\cup_rsass_wdlnet.paa";
+            image = QPATHTOF(data\camo\cup_rsass_wdlnet.paa);
         };
     };
 };

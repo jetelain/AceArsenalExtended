@@ -10,13 +10,13 @@ class cup_mp7a1_sec  // Secondary version of the Sa vz. 61
         class DES
         {
             label = "Desert";
-            image = "z\aceax\compats\CUP\data\camo\cup_mp7_des.paa";
+            image = QPATHTOF(data\camo\cup_mp7_des.paa);
         };
 
         class WDL
         {
             label = "Woodland";
-            image = "z\aceax\compats\CUP\data\camo\cup_mp7_wdl.paa";
+            image = QPATHTOF(data\camo\cup_mp7_wdl.paa);
         };
     };
 };

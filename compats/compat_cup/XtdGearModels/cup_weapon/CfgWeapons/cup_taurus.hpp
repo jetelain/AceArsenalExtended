@@ -10,13 +10,13 @@ class cup_taurus
         class steel
         {
             label = "Steel";
-            image = "z\aceax\compats\CUP\data\camo\cup_taurus_steel.paa";
+            image = QPATHTOF(data\camo\cup_taurus_steel.paa);
         };
 
         class gold
         {
             label = "Steel";
-            image = "z\aceax\compats\CUP\data\camo\cup_taurus_gold.paa";
+            image = QPATHTOF(data\camo\cup_taurus_gold.paa);
         };
     };
 };
