@@ -1,6 +1,6 @@
 class rhsgref_uniform_vsr {
   model = "rhs_m88_cdf";
-  camo = "VSR_93";
+  camo = "VSR";
 };
 
 class rhsgref_uniform_ttsko_forest {

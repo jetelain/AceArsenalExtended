@@ -75,36 +75,36 @@ class rhs_6b13_EMR_crewofficer {
 // VSR
 class rhs_6b13 {
   model = "rhs_6b13";
-  camo = "VSR_93";
+  camo = "VSR";
   loadout = "None";
 };
 
 class rhs_6b13_6sh92 {
   model = "rhs_6b13";
-  camo = "VSR_93";
+  camo = "VSR";
   loadout = "6sh92";
 };
 
 class rhs_6b13_6sh92_headset_mapcase {
   model = "rhs_6b13";
-  camo = "VSR_93";
+  camo = "VSR";
   loadout = "6sh92_headset_map";
 };
 
 class rhs_6b13_6sh92_radio {
   model = "rhs_6b13";
-  camo = "VSR_93";
+  camo = "VSR";
   loadout = "6sh92_radio";
 };
 
 class rhs_6b13_6sh92_vog {
   model = "rhs_6b13";
-  camo = "VSR_93";
+  camo = "VSR";
   loadout = "6sh92_vog";
 };
 
 class rhs_6b13_crewofficer {
   model = "rhs_6b13";
-  camo = "VSR_93";
+  camo = "VSR";
   loadout = "crew_off";
 };

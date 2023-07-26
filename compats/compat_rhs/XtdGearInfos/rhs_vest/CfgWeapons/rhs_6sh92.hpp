@@ -63,30 +63,30 @@ class rhs_6sh92_digi_vog_headset {
 // VSR
 class rhs_6sh92_vsr {
   model = "rhs_6sh92";
-  camo = "VSR_93";
+  camo = "VSR";
   loadout = "None";
 };
 
 class rhs_6sh92_vsr_headset {
   model = "rhs_6sh92";
-  camo = "VSR_93";
+  camo = "VSR";
   loadout = "headset";
 };
 
 class rhs_6sh92_vsr_radio {
   model = "rhs_6sh92";
-  camo = "VSR_93";
+  camo = "VSR";
   loadout = "radio";
 };
 
 class rhs_6sh92_vsr_vog {
   model = "rhs_6sh92";
-  camo = "VSR_93";
+  camo = "VSR";
   loadout = "vog";
 };
 
 class rhs_6sh92_vsr_vog_headset {
   model = "rhs_6sh92";
-  camo = "VSR_93";
+  camo = "VSR";
   loadout = "vog_headset";
 };

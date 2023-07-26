@@ -182,6 +182,12 @@ class XtdGearModels
 			image = QPATHTOF(data\camo\erdl_lowland.paa);
 		};
 
+		class FLRA // Also known as VSR-98.
+		{
+			label = "Flora";
+			image = QPATHTOF(data\camo\flora.paa);
+		};
+
 		class M81
 		{
 			label = "M81";
@@ -295,6 +301,12 @@ class XtdGearModels
 			label = "TSW";
 			description = "Tiger Stripe Woodland";
 			image = QPATHTOF(data\camo\tsw.paa);
+		};
+
+		class VSR // VSR-93 to be exact.
+		{
+			label = "VSR";
+			image = QPATHTOF(data\camo\vsr.paa);
 		};
 	};
 

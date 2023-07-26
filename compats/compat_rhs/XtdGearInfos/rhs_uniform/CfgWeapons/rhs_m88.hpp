@@ -66,7 +66,7 @@ class rhs_uniform_afghanka_vsr_1 {
 };
 class rhs_uniform_afghanka_vsr_2 {
   model = "rhs_m88";
-  camo = "VSR_93";
+  camo = "VSR";
   coat = "Standard";
   boots = "Standard";
 };
@@ -154,7 +154,7 @@ class rhs_uniform_afghanka_winter_vsr {
 };
 class rhs_uniform_afghanka_winter_vsr_2 {
   model = "rhs_m88";
-  camo = "VSR_93";
+  camo = "VSR";
   coat = "Winter";
   boots = "Standard";
 };
@@ -198,7 +198,7 @@ class rhs_uniform_afghanka_winter_boots_vsr {
 };
 class rhs_uniform_afghanka_winter_boots_vsr_2 {
   model = "rhs_m88";
-  camo = "VSR_93";
+  camo = "VSR";
   coat = "Winter";
   boots = "Sapogi";
 };

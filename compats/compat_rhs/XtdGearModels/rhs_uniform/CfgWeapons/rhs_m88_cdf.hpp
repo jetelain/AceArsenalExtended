@@ -4,7 +4,7 @@ class rhs_m88_cdf
     label="M88 [CDF]";
     class camo
     {
-        values[] = { "TTsKO_CDF_FRS", "TTsKO_CDF_MTN", "TTsKO_CDF_URB", "VSR_93" };
+        values[] = { "TTsKO_CDF_FRS", "TTsKO_CDF_MTN", "TTsKO_CDF_URB", "VSR" };
         alwaysSelectable=1;
     };
 };

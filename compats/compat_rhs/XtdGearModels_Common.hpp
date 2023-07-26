@@ -14,12 +14,6 @@ class CamoBase
 		image="#(rgb,8,8,3)color(0.76,0.62,0.52,1)";
 	};
 
-	class FLRA
-	{
-		label = "Flora";
-		image = "z\aceax\compats\RHS\data\camo\flora.paa";
-	};
-
 	class FLRA_MTN
 	{
 		label = "Flora Mtn.";
@@ -98,12 +92,6 @@ class CamoBase
 		label = "TTsKO Hot";
 		description = "Moldovan TTsKO Hot";
 		image = "z\aceax\compats\RHS\data\camo\ttsko_mldv_hot.paa";
-	};
-
-	class VSR_93
-	{
-		label = "VSR-93";
-		image = "z\aceax\compats\RHS\data\camo\vsr.paa";
 	};
 
 	// GREF camos

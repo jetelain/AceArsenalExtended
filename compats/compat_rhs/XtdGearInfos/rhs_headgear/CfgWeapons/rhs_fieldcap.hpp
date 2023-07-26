@@ -54,7 +54,7 @@ class rhs_fieldcap_khk {
 
 class rhs_fieldcap_vsr {
   model = "rhs_fieldcap";
-  camo = "VSR_93";
+  camo = "VSR";
   helmet = "None";
 };
 

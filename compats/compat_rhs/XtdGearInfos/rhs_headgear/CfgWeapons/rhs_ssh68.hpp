@@ -35,5 +35,5 @@ class rhsgref_ssh68_un {
 
 class rhsgref_ssh68_vsr {
   model = "rhs_ssh68";
-  camo = "VSR_93";
+  camo = "VSR";
 };
