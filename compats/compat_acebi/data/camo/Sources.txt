@@ -1,0 +1,7 @@
+bihelm_helm texture obtained from vanilla's characters_f.pbo
+
+bihelm_des, bihelm_grs, and bihelm_des textures obtained from vanilla's characters_f_epa.pbo
+	
+ctrg_arid and ctrg_trop, and ctrg_urb come from Apex characters_f_exp.pbo
+
+rus_taiga comes from Officer_RUtaiga_CO.paa in characters_f_aegis.pbo from Arma 3 Aegis.
