@@ -267,7 +267,7 @@ class XtdGearModels
 		class OEF_CP : MC // OEF-CP is literally just MultiCam again.
 		{
 			label = "OEF-CP";
-			description = "Operation Enduring Freedom Camoflage Pattern";
+			description = "Operation Enduring Freedom Camouflage Pattern";
 		};
 
 		class UCP
@@ -277,13 +277,13 @@ class XtdGearModels
 			image = QPATHTOF(data\camo\ucp.paa);
 		};
 
-		class AAF // AAF Digtital Green
+		class AAF // BI's AAF Digital Green
 		{
 			label = "AAF";
 			image = QPATHTOF(data\camo\aaf.paa);
 		};
 
-		class EAF // LDF Fractal Camo
+		class EAF // BI's LDF Fractal
 		{
 			label = "EAF";
 			image = QPATHTOF(data\camo\eaf.paa);
