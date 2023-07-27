@@ -10,19 +10,19 @@ class cup_m4a1_14_5
         class DES
         {
             label = "Desert";
-            image = QPATHTOF(data\camo\cup_m4a1_alt_des.paa);
+            image = QPATHTOF(data\camo\weapons\cup_m4a1_alt_des.paa);
         };
 
         class WNTR
         {
             label = "Winter";
-            image = QPATHTOF(data\camo\cup_m4a1_alt_wntr.paa);
+            image = QPATHTOF(data\camo\weapons\cup_m4a1_alt_wntr.paa);
         };
 
         class WDL
         {
             label = "Woodland";
-            image = QPATHTOF(data\camo\cup_m4a1_alt_wdl.paa);
+            image = QPATHTOF(data\camo\weapons\cup_m4a1_alt_wdl.paa);
         };
     };
 

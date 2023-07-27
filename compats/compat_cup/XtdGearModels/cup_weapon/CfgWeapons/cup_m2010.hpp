@@ -22,7 +22,7 @@ class cup_m2010
         class WDL
         {
             label = "Woodland";
-            image = QPATHTOF(data\camo\cup_l129a1_wdl.paa); // Camo pattern is identical to L129A1s, so reusing here.
+            image = QPATHTOF(data\camo\weapons\cup_l129a1_wdl.paa); // Camo pattern is identical to L129A1s, so reusing here.
         };
     };
 };

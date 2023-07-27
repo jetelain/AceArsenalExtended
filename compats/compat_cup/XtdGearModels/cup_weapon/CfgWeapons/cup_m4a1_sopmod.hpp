@@ -10,13 +10,13 @@ class cup_m4a1_sopmod
         class WNTR
         {
             label = "Winter";
-            image = QPATHTOF(data\camo\cup_m4a1_sopmod_wntr.paa);
+            image = QPATHTOF(data\camo\weapons\cup_m4a1_sopmod_wntr.paa);
         };
 
         class WDL
         {
             label = "Woodland";
-            image = QPATHTOF(data\camo\cup_l129a1_wdl.paa); // Camo pattern is identical to L129A1s, so reusing here.
+            image = QPATHTOF(data\camo\weapons\cup_l129a1_wdl.paa); // Camo pattern is identical to L129A1s, so reusing here.
         };
     };
 

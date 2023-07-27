@@ -14,6 +14,7 @@ class XtdGearModels {
         //Headgear
 
         //Uniforms
+        #include "XtdGearModels\cup_uniform\CfgWeapons\cup_bdu.hpp"
 
         //Vests
 

@@ -7,10 +7,37 @@ class CamoBase
 		image = "#(rgb,8,8,3)color(0.56,0.48,0.38,1)";
 	};
 
+	class CEU // I think it's Camouflage Central-Europe (CCE) but I can't be sure.
+	{
+		label = "CEU";
+		image = QPATHTOF(data\camo\ceu.paa);
+	};
+
+	class DDPM
+	{
+		label = "DDPM";
+		description = "Desert Disruptive Pattern Material";
+		image = QPATHTOF(data\camo\ddpm.paa);
+	};
+
+	class CUP_URB // Looks like a Greyscale M81.
+	{
+		label = "Urban";
+		image = QPATHTOF(data\camo\urb.paa);
+	};
+
+	class TPAT
+	{
+		label = "T-Pattern";
+		image = QPATHTOF(data\camo\tpat.paa);
+	};
+
+	// Weapon Only camo
+
 	class CUP_URB_HEX
 	{
 		label = "Urban Hex";
-		image = QPATHTOF(data\camo\cup_urb_hex.paa);
+		image = QPATHTOF(data\camo\weapons\cup_urb_hex.paa);
 	};
 
 	class AK_WOOD
@@ -30,73 +57,73 @@ class CamoBase
 	class CUP_ACR_SNW
 	{
 		label = "Snow";
-		image = QPATHTOF(data\camo\cup_acr_snw.paa);
+		image = QPATHTOF(data\camo\weapons\cup_acr_snw.paa);
 	};
 
 	class CUP_ACR_WDL
 	{
 		label = "Woodland";
-		image = QPATHTOF(data\camo\cup_acr_wdl.paa);
+		image = QPATHTOF(data\camo\weapons\cup_acr_wdl.paa);
 	};
 
 	class CUP_ACR_TAN
 	{
 		label = "Tan";
-		image = QPATHTOF(data\camo\cup_acr_tan.paa);
+		image = QPATHTOF(data\camo\weapons\cup_acr_tan.paa);
 	};
 
 	class CUP_FAL_DES
 	{
 		label = "Desert";
-		image = QPATHTOF(data\camo\cup_fal_des.paa);
+		image = QPATHTOF(data\camo\weapons\cup_fal_des.paa);
 	};
 
 	class CUP_FAL_RHD
 	{
 		label = "Rhodesian";
-		image = QPATHTOF(data\camo\cup_fal_rhd.paa);
+		image = QPATHTOF(data\camo\weapons\cup_fal_rhd.paa);
 	};
 
 	class CUP_FAL_SND
 	{
 		label = "Sand";
-		image = QPATHTOF(data\camo\cup_fal_snd.paa);
+		image = QPATHTOF(data\camo\weapons\cup_fal_snd.paa);
 	};
 
 	class CUP_FAL_WDL
 	{
 		label = "Woodland";
-		image = QPATHTOF(data\camo\cup_fal_wdl.paa);
+		image = QPATHTOF(data\camo\weapons\cup_fal_wdl.paa);
 	};
 		
 	class CUP_G36_DES
 	{
 		label = "Desert";
-		image = QPATHTOF(data\camo\cup_g36_des.paa);
+		image = QPATHTOF(data\camo\weapons\cup_g36_des.paa);
 	};
 
 	class CUP_G36_HEX
 	{
 		label = "Hex";
-		image = QPATHTOF(data\camo\cup_g36_hex.paa);
+		image = QPATHTOF(data\camo\weapons\cup_g36_hex.paa);
 	};
 
 	class CUP_G36_WDL
 	{
 		label = "Woodland";
-		image = QPATHTOF(data\camo\cup_g36_wdl.paa);
+		image = QPATHTOF(data\camo\weapons\cup_g36_wdl.paa);
 	};
 
 	class CUP_HK416_DES
 	{
 		label = "Desert";
-		image = QPATHTOF(data\camo\cup_hk416_des.paa);
+		image = QPATHTOF(data\camo\weapons\cup_hk416_des.paa);
 	};
 
 	class CUP_HK416_WDL
 	{
 		label = "Woodland";
-		image = QPATHTOF(data\camo\cup_hk416_wdl.paa);
+		image = QPATHTOF(data\camo\weapons\cup_hk416_wdl.paa);
 	};
 
 	class CUP_SCAR_WDL
@@ -108,7 +135,7 @@ class CamoBase
 	class CUP_SAVZ_58_COMP
 	{
 		label = "Composite";
-		image = QPATHTOF(data\camo\cup_savz_58_comp.paa);
+		image = QPATHTOF(data\camo\weapons\cup_savz_58_comp.paa);
 	};
 
 	class CUP_SAVZ_58_DES
@@ -126,7 +153,7 @@ class CamoBase
 	class CUP_SAVZ_58_WOOD
 	{
 		label = "Wood";
-		image = QPATHTOF(data\camo\cup_savz_58_wood.paa);
+		image = QPATHTOF(data\camo\weapons\cup_savz_58_wood.paa);
 	};
 };
 

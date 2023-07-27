@@ -10,13 +10,13 @@ class cup_m24
         class DES
         {
             label = "Desert";
-            image = QPATHTOF(data\camo\cup_m24_des.paa);
+            image = QPATHTOF(data\camo\weapons\cup_m24_des.paa);
         };
 
         class TEMP
         {
             label = "Temperate";
-            image = QPATHTOF(data\camo\cup_m24_temp.paa);
+            image = QPATHTOF(data\camo\weapons\cup_m24_temp.paa);
         };
     };
 };

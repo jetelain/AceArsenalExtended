@@ -13,6 +13,7 @@ class XtdGearInfos {
         //Headgear
 
         //Uniforms
+        #include "XtdGearInfos\cup_uniform\CfgWeapons\cup_bdu.hpp"
 
         //Vests
 

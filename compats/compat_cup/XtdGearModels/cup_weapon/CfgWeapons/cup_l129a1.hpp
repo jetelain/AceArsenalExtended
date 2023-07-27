@@ -10,7 +10,7 @@ class cup_l129a1
         class WDL
         {
             label = "Woodland";
-            image = QPATHTOF(data\camo\cup_l129a1_wdl.paa);
+            image = QPATHTOF(data\camo\weapons\cup_l129a1_wdl.paa);
         };
     };
 
