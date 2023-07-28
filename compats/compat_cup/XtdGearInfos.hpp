@@ -18,6 +18,12 @@ class XtdGearInfos {
         //Vests
 
         //NVG
+        #include "XtdGearInfos\cup_nvg\CfgWeapons\cup_hmnvs.hpp"
+        #include "XtdGearInfos\cup_nvg\CfgWeapons\cup_gpnvg.hpp"
+        #include "XtdGearInfos\cup_nvg\CfgWeapons\cup_pvs14.hpp"
+        #include "XtdGearInfos\cup_nvg\CfgWeapons\cup_pvs-15.hpp"
+        #include "XtdGearInfos\cup_nvg\CfgWeapons\cup_pvs-7.hpp"
+        #include "XtdGearInfos\cup_nvg\CfgWeapons\cup_1pn138.hpp"
 
         // Weapons : Primaries
         #include "XtdGearInfos\cup_weapon\CfgWeapons\cup_acr_68.hpp"
