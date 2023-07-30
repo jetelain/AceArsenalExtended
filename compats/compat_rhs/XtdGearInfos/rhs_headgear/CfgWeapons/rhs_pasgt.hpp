@@ -18,13 +18,13 @@ class rhsgref_helmet_pasgt_altis_lizard {
 
 class rhsgref_helmet_pasgt_erdl {
   model = "rhs_pasgt";
-  camo = "ERDL";
+  camo = "ERDL_L";
   nvg = "none";
 };
 
 class rhsgref_helmet_pasgt_erdl_rhino {
   model = "rhs_pasgt";
-  camo = "ERDL";
+  camo = "ERDL_L";
   nvg = "rhino";
 };
 

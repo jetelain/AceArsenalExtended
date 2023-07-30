@@ -4,7 +4,7 @@ class rhs_fieldcap
     label="Fieldcap";
     class camo
     {
-        values[] = { "FLRA", "EMR_S", "EMR_2", "Izlom", "MTNLES", "KHK", "TTsKO_CDF_DIGI", "TTsKO_CDF_FRS", "TTsKO_CDF_MTN", "TTsKO_CDF_URB", "VSR" };
+        values[] = { "FLRA", "EMR_SUM", "EMR_2", "Izlom", "MTNLES", "KHK", "TTsKO_CDF_DIGI", "TTsKO_CDF_FRS", "TTsKO_CDF_MTN", "TTsKO_CDF_URB", "VSR" };
         alwaysSelectable=1;
         class EMR_2
 	{

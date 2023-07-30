@@ -4,7 +4,7 @@ class rhs_6b13
     label="6B13";
     class camo
     {
-        values[] = { "EMR_S", "FLRA", "VSR" };
+        values[] = { "EMR_SUM", "FLRA", "VSR" };
         alwaysSelectable=1;
     };
     class loadout

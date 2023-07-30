@@ -4,7 +4,7 @@ class rhs_6sh92
     label="6Sh92";
     class camo
     {
-        values[] = { "EMR_S", "FLRA", "VSR" };
+        values[] = { "EMR_SUM", "FLRA", "VSR" };
         alwaysSelectable=1;
 
         class VSR // Has a very distinct color from other VSR camos!

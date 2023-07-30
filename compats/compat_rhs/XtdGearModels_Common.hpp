@@ -1,18 +1,5 @@
 class CamoBase
 {
-	// Generic colors.
-	class GRN
-	{
-		label = "Green";
-		image="#(rgb,8,8,3)color(0.34,0.4,0.26,1)";
-	};
-
-	class OLI
-	{
-		label = "Olive";
-		image="#(rgb,8,8,3)color(0.43,0.48,0.28,1)";
-	};
-
 	// AFRF camos.
 	class AFGKA
 	{
@@ -27,30 +14,10 @@ class CamoBase
 		image="#(rgb,8,8,3)color(0.76,0.62,0.52,1)";
 	};
 
-	class EMR_S
-	{
-		label = "EMR-Sum";
-		description = "EMR-Summer";
-		image = "z\aceax\compats\RHS\data\camo\emr_sum.paa";
-	};
-
-	class EMR_D
-	{
-		label = "EMR-Des";
-		description = "EMR-Desert";
-		image = "z\aceax\compats\RHS\data\camo\emr_des.paa";
-	};
-
-	class FLRA
-	{
-		label = "Flora";
-		image = "z\aceax\compats\RHS\data\camo\flora.paa";
-	};
-
 	class FLRA_MTN
 	{
 		label = "Flora Mtn.";
-		description = "Flora Mountain";
+		description = "VSR-98 Flora Mountain";
 		image = "z\aceax\compats\RHS\data\camo\flora_mtn.paa";
 	};
 
@@ -127,63 +94,18 @@ class CamoBase
 		image = "z\aceax\compats\RHS\data\camo\ttsko_mldv_hot.paa";
 	};
 
-	class VSR
-	{
-		label = "VSR";
-		image = "z\aceax\compats\RHS\data\camo\vsr.paa";
-	};
-
 	// GREF camos
-	class ALP
-	{
-		label = "Alpenflage";
-		image = "z\aceax\compats\RHS\data\camo\alp.paa";
-	};
-
-	class DCP
-	{
-		label = "DCP";
-		description = "Desert Camouflage Pattern; AKA 3-Color Desert or Coffee Stain Camouflage";
-		image = "z\aceax\compats\RHS\data\camo\dcp.paa";
-	};
-
-	class DPM
-	{
-		label = "DPM";
-		description = "Disruptive Pattern Material";
-		image = "z\aceax\compats\RHS\data\camo\dpm.paa";
-	};
-
-	class ERDL_BRN
-	{
-		label = "ERDL-BRN";
-		description = "ERDL "Highland" Brown";
-		image = "z\aceax\compats\RHS\data\camo\erdl_brn.paa";
-	};
-
-	class ERDL_GRN
-	{
-		label = "ERDL-GRN";
-		description = "ERDL "Lowland" Green";
-		image = "z\aceax\compats\RHS\data\camo\erdl_grn.paa";
-	};
-
-	class FLCK
-	{
-		label = "Flecktarn";
-		image = "z\aceax\compats\RHS\data\camo\flck.paa";
-	};
 
 	class LIZ_ATS
 	{
-		label = "Altis Liz.";
+		label = "Altis Liz";
 		description = "Altis Lizard";
 		image = "z\aceax\compats\RHS\data\camo\liz_ats.paa";
 	};
 
 	class LIZ_TNA
 	{
-		label = "Tanoa Liz.";
+		label = "Tanoa Liz";
 		description = "Tanoa Lizard";
 		image = "z\aceax\compats\RHS\data\camo\liz_tna.paa";
 	};
@@ -286,27 +208,14 @@ class CamoBase
 	};
 
 	// USAF camos
-	class CYT
+	class FOLGRN
 	{
-		label = "Coyote";
-		image="#(rgb,8,8,3)color(0.85,0.77,0.65,1)";
-	};
-
-	class CBR
-	{
-		label = "CBR";
-		description = "Coyote Brown";
-		image="#(rgb,8,8,3)color(0.55,0.38,0.25,1)";
-	};
-
-	class FOLGRN // For the Ops-Core FAST
-	{
-		label = "Foli. Green";
+		label = "FOLGRN";
 		description = "Foliage Green";
-		image="#(rgb,8,8,3)color(0.51,0.54,0.42,1)";
+		image = "#(rgb,8,8,3)color(0.51,0.54,0.42,1)";
 	};
 
-	
+
 	class URBTAN // For the Ops-Core FAST
 	{
 		label = "Urb. Tan";
@@ -318,41 +227,6 @@ class CamoBase
 	{
 		description = "M1942 Frog Skin";
 		image = "z\aceax\compats\RHS\data\camo\m1942.paa";
-	};
-
-	class MRPT_D
-	{
-		label = "MARPAT-D";
-		description = "Marine Pattern Desert";
-		image = "z\aceax\compats\RHS\data\camo\mrpt_d.paa";
-	};
-
-	class MRPT_WD
-	{
-		label = "MARPAT-WD";
-		description = "Marine Pattern Woodland";
-		image = "z\aceax\compats\RHS\data\camo\mrpt_wd.paa";
-	};
-
-	class OEF_CP
-	{
-		label = "OEF-CP";
-		description = "Operation Enduring Freedom Camoflage Pattern; the US Army designation for MultiCam";
-		image = "z\aceax\addons\gearinfo\data\camo\mc.paa"; // It is just MultiCam after all!
-	};
-
-	class OCP
-	{
-		label = "OCP";
-		description = "Operational Camouflage Pattern";
-		image = "z\aceax\compats\RHS\data\camo\ocp.paa";
-	};
-
-	class UCP
-	{
-		label = "UCP";
-		description = "Universal Camouflage Pattern";
-		image = "z\aceax\compats\RHS\data\camo\ucp.paa";
 	};
 
 	class UCP_D
@@ -415,7 +289,6 @@ class CamoBase
 	class SVD_FLRA
 	{
 		label = "Flora";
-		image="#(rgb,8,8,3)color(0.35,0.28,0.32,1)";
 		image = "z\aceax\compats\RHS\data\camo\svd_flora.paa";
 	};
 };

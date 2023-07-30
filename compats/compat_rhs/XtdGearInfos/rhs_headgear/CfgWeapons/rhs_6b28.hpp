@@ -30,28 +30,28 @@ class rhs_6b28_green_ess_bala {
 // EMR-Summer
 class rhs_6b28 {
   model = "rhs_6b28";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   goggles = "None";
   balaclava = "No";
 };
 
 class rhs_6b28_bala {
   model = "rhs_6b28";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   goggles = "None";
   balaclava = "Yes";
 };
 
 class rhs_6b28_ess {
   model = "rhs_6b28";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   goggles = "ESS";
   balaclava = "No";
 };
 
 class rhs_6b28_ess_bala {
   model = "rhs_6b28";
-  camo = "EMR_S";
+  camo = "EMR_SUM";
   goggles = "ESS";
   balaclava = "Yes";
 };
