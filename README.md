@@ -3,6 +3,8 @@ Find easily your favorite gear within [ACE3 Arsenal](https://ace3mod.com/)
 
 Based on an original idea of Krogar from [Arma Mod France](https://discord.gg/uPY7uE9) and [UnderSiege Productions](https://uspmod.com/)
 
+Need help ? [Contact me on Discord](https://discord.gg/CyHt2T3rYv) on channel #arsenal-extended
+
 ## For users
 
 Install mod from Steam Workshop 
