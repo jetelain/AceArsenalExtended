@@ -1,10 +1,41 @@
 class CamoBase
 {
+	class ATACS_AU
+	{
+		label = "ATACS-AU";
+		image = QPATHTOF(data\camo\atacs_au.paa);
+	};
+	
+	class ATACS_FG
+	{
+		label = "ATACS-FG";
+		image = QPATHTOF(data\camo\atacs_fg.paa);
+	};
+
 	class FDE
 	{
 		label = "FDE";
 		description = "Flat Dark Earth";
 		image = "#(rgb,8,8,3)color(0.56,0.48,0.38,1)";
+	};
+
+	class AFGKA // Also referred to as M88.
+	{
+		label = "Afghanka";
+		image = QPATHTOF(data\camo\afghka.paa);
+	};
+
+	class BGEDIGI
+	{
+		label = "Beige Digi";
+		description = "Beige Digital";
+		image = QPATHTOF(data\camo\bgedigi.paa);
+	};
+
+	class CCE
+	{
+		label = "CCE";
+		image = QPATHTOF(data\camo\cce.paa);
 	};
 
 	class CEU // I think it's Camouflage Central-Europe (CCE) but I can't be sure.
@@ -20,6 +51,13 @@ class CamoBase
 		image = QPATHTOF(data\camo\ddpm.paa);
 	};
 
+	class DESPNK
+	{
+		label = "Des Pink";
+		description = "Desert Pink";
+		image = "#(rgb,8,8,3)color(0.89,0.65,0.53,1)";
+	};
+
 	class CUP_URB // Looks like a Greyscale M81.
 	{
 		label = "Urban";
@@ -30,6 +68,31 @@ class CamoBase
 	{
 		label = "T-Pattern";
 		image = QPATHTOF(data\camo\tpat.paa);
+	};
+
+	class TRPTRN
+	{
+		label = "Tropentarn";
+		image = QPATHTOF(data\camo\trptrn.paa);
+	};
+
+	class TTS
+	{
+		label = "TTS";
+		image = QPATHTOF(data\camo\tts.paa);
+	};
+
+	class VZ85_DES
+	{
+		label = "Vz. 85 Des";
+		description = "Vz. 85 Desert";
+		image = QPATHTOF(data\camo\vz85_des.paa);
+	};
+
+	class VZ95
+	{
+		label = "Vz. 95";
+		image = QPATHTOF(data\camo\vz95.paa);
 	};
 
 	// Weapon Only camo

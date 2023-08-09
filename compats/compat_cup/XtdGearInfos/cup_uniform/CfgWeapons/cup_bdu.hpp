@@ -432,7 +432,7 @@ class CUP_U_B_BDUv2_roll2_gloves_dirty_Desert_US {
 
 class CUP_U_B_BDUv2_DCU {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Full";
 	gloves = "no";
 	dirt = "clean";
@@ -441,7 +441,7 @@ class CUP_U_B_BDUv2_DCU {
 
 class CUP_U_B_BDUv2_dirty_DCU {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Full";
 	gloves = "no";
 	dirt = "dirty";
@@ -450,7 +450,7 @@ class CUP_U_B_BDUv2_dirty_DCU {
 
 class CUP_U_B_BDUv2_roll_DCU {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Quarter";
 	gloves = "no";
 	dirt = "clean";
@@ -459,7 +459,7 @@ class CUP_U_B_BDUv2_roll_DCU {
 
 class CUP_U_B_BDUv2_roll_dirty_DCU {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Quarter";
 	gloves = "no";
 	dirt = "dirty";
@@ -468,7 +468,7 @@ class CUP_U_B_BDUv2_roll_dirty_DCU {
 
 class CUP_U_B_BDUv2_roll2_DCU {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Half";
 	gloves = "no";
 	dirt = "clean";
@@ -477,7 +477,7 @@ class CUP_U_B_BDUv2_roll2_DCU {
 
 class CUP_U_B_BDUv2_roll2_dirty_DCU {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Half";
 	gloves = "no";
 	dirt = "dirty";
@@ -486,7 +486,7 @@ class CUP_U_B_BDUv2_roll2_dirty_DCU {
 
 class CUP_U_B_BDUv2_gloves_DCU {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Full";
 	gloves = "yes";
 	dirt = "clean";
@@ -495,7 +495,7 @@ class CUP_U_B_BDUv2_gloves_DCU {
 
 class CUP_U_B_BDUv2_gloves_dirty_DCU {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Full";
 	gloves = "yes";
 	dirt = "dirty";
@@ -504,7 +504,7 @@ class CUP_U_B_BDUv2_gloves_dirty_DCU {
 
 class CUP_U_B_BDUv2_roll_gloves_DCU {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Quarter";
 	gloves = "yes";
 	dirt = "clean";
@@ -513,7 +513,7 @@ class CUP_U_B_BDUv2_roll_gloves_DCU {
 
 class CUP_U_B_BDUv2_roll_gloves_dirty_DCU {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Quarter";
 	gloves = "yes";
 	dirt = "dirty";
@@ -522,7 +522,7 @@ class CUP_U_B_BDUv2_roll_gloves_dirty_DCU {
 
 class CUP_U_B_BDUv2_roll2_gloves_DCU {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Half";
 	gloves = "yes";
 	dirt = "clean";
@@ -531,7 +531,7 @@ class CUP_U_B_BDUv2_roll2_gloves_DCU {
 
 class CUP_U_B_BDUv2_roll2_gloves_dirty_DCU {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Half";
 	gloves = "yes";
 	dirt = "dirty";
@@ -540,7 +540,7 @@ class CUP_U_B_BDUv2_roll2_gloves_dirty_DCU {
 
 class CUP_U_B_BDUv2_DCU_US {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Full";
 	gloves = "no";
 	dirt = "clean";
@@ -549,7 +549,7 @@ class CUP_U_B_BDUv2_DCU_US {
 
 class CUP_U_B_BDUv2_dirty_DCU_US {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Full";
 	gloves = "no";
 	dirt = "dirty";
@@ -558,7 +558,7 @@ class CUP_U_B_BDUv2_dirty_DCU_US {
 
 class CUP_U_B_BDUv2_roll_DCU_US {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Quarter";
 	gloves = "no";
 	dirt = "clean";
@@ -567,7 +567,7 @@ class CUP_U_B_BDUv2_roll_DCU_US {
 
 class CUP_U_B_BDUv2_roll_dirty_DCU_US {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Quarter";
 	gloves = "no";
 	dirt = "dirty";
@@ -576,7 +576,7 @@ class CUP_U_B_BDUv2_roll_dirty_DCU_US {
 
 class CUP_U_B_BDUv2_roll2_DCU_US {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Half";
 	gloves = "no";
 	dirt = "clean";
@@ -585,7 +585,7 @@ class CUP_U_B_BDUv2_roll2_DCU_US {
 
 class CUP_U_B_BDUv2_roll2_dirty_DCU_US {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Half";
 	gloves = "no";
 	dirt = "dirty";
@@ -594,7 +594,7 @@ class CUP_U_B_BDUv2_roll2_dirty_DCU_US {
 
 class CUP_U_B_BDUv2_gloves_DCU_US {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Full";
 	gloves = "yes";
 	dirt = "clean";
@@ -603,7 +603,7 @@ class CUP_U_B_BDUv2_gloves_DCU_US {
 
 class CUP_U_B_BDUv2_gloves_dirty_DCU_US {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Full";
 	gloves = "yes";
 	dirt = "dirty";
@@ -612,7 +612,7 @@ class CUP_U_B_BDUv2_gloves_dirty_DCU_US {
 
 class CUP_U_B_BDUv2_roll_gloves_DCU_US {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Quarter";
 	gloves = "yes";
 	dirt = "clean";
@@ -621,7 +621,7 @@ class CUP_U_B_BDUv2_roll_gloves_DCU_US {
 
 class CUP_U_B_BDUv2_roll_gloves_dirty_DCU_US {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Quarter";
 	gloves = "yes";
 	dirt = "dirty";
@@ -630,7 +630,7 @@ class CUP_U_B_BDUv2_roll_gloves_dirty_DCU_US {
 
 class CUP_U_B_BDUv2_roll2_gloves_DCU_US {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Half";
 	gloves = "yes";
 	dirt = "clean";
@@ -639,7 +639,7 @@ class CUP_U_B_BDUv2_roll2_gloves_DCU_US {
 
 class CUP_U_B_BDUv2_roll2_gloves_dirty_DCU_US {
 	model = "cup_bdu";
-	camo = "DCU";
+	camo = "DCP";
 	sleeves = "Half";
 	gloves = "yes";
 	dirt = "dirty";

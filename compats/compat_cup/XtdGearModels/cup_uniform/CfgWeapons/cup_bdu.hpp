@@ -5,7 +5,7 @@ class cup_bdu
 	options[] = {"camo", "sleeves", "gloves", "dirt", "flag"};
 	class camo
 	{
-		values[] = {"ALP", "CEU", "DCU", "DDPM", "6CDP", "DPM", "DPM_OD", "ERDL_H", "ERDL_L", "M81", "M81_Winter", "OD", "TPAT", "TSW", "CUP_URB", "Winter", "Winter_M81"};
+		values[] = {"ALP", "CEU", "DCP", "DDPM", "6CDP", "DPM", "DPM_OD", "ERDL_H", "ERDL_L", "M81", "M81_Winter", "OD", "TPAT", "TSW", "CUP_URB", "Winter", "Winter_M81"};
 		class DPM_OD
 		{
 			label = "DPM/OD";
