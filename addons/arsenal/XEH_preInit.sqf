@@ -80,7 +80,7 @@ if ( is3DEN ) then {
 
 ["ace_arsenal_loadoutsDisplayClosed", {
 	INFO("Use filteredVirtualItems");
-	ace_arsenal_virtualItems = GVAR(initialVirtualItems);
+	ace_arsenal_virtualItems = GVAR(filteredVirtualItems);
 	[true] call FUNC(toggleUI);
 }] call CBA_fnc_addEventHandler;
 
