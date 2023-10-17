@@ -2,32 +2,21 @@
 
 GVAR(initialVirtualItems) = ace_arsenal_virtualItems;
 
-GVAR(filteredVirtualItems) = 
-[
-	[[],[],[]], // WEAPONS [PrimaryWeapon, SecondaryWeapon, Handgun]
-	(GVAR(initialVirtualItems) select 1),  // ATTACHMENTS
-	(GVAR(initialVirtualItems) select 2),  // ITEMS_ALL
-	[], // HEADGEAR 
-	[], // UNIFORM
-	[], // VEST
-	[], // BACKPACK
-	[], // GOGGLES
-	[], // NVG
-	[] // BINOCULARS
-];
-
-GVAR(filteredVirtualItems) append (GVAR(initialVirtualItems) select [10, count GVAR(initialVirtualItems) - 10]);
+GVAR(filteredVirtualItems) = createHashMap;
+{
+	GVAR(filteredVirtualItems) set [_x, GVAR(initialVirtualItems) get _x];
+} forEach GVAR(unsupported);
 
 GVAR(itemsPerModel) = +GVAR(itemsPerModelHidden);
 
 {
 	_x params ["", "_virt", "_virtSub", "_cur", "_classRoot", "_label"];
 	
-	private _source = GVAR(initialVirtualItems) select _virt;
-	private _target = GVAR(filteredVirtualItems) select _virt;
+	private _source = GVAR(initialVirtualItems) get _virt;
+	private _target = GVAR(filteredVirtualItems) getOrDefault [_virt, createHashMap, true];
 	if ( _virtSub != -1 ) then {
-		_source = _source select _virtSub;
-		_target = _target select _virtSub;
+		_source = _source get _virtSub;
+		_target = _target getOrDefault [_virtSub, createHashMap, true];
 	};
 	private _currentConfig = ace_arsenal_currentItems select _cur;
 	private _currentModel = [_classRoot, _currentConfig] call EFUNC(gearinfo,getConfigModel);
@@ -43,14 +32,14 @@ GVAR(itemsPerModel) = +GVAR(itemsPerModelHidden);
 			if ( !(_model in _done) ) then {
 				_done set [_model, true];
 				if ( _currentModel == _model ) then {
-					_target pushBack _currentConfig;
+					_target set [_currentConfig, nil];
 				} else {
-					_target pushBack _config;
+					_target set [_config, nil];
 				};
 			};
 			(_itemsPerModel getOrDefault [_model, [], true]) pushBack _config;
 		} else {
-			_target pushBack _config;
+			_target set [_config, nil];
 		};
 
 	} forEach _source;

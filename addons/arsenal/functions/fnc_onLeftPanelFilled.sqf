@@ -23,11 +23,12 @@ for "_i" from 0 to (_size -1) do {
 		if ( _selectedModel == _model && _config != _selectedConfig) then {
 			// Current value must match this list item, but it is out-of-sync
 			// Update the list and the filtered virtual items
-			private _virtItems = GVAR(filteredVirtualItems) select _virt;
+			private _virtItems = GVAR(filteredVirtualItems) get _virt;
 			if ( _virtSub != -1 ) then {
-				_virtItems = _virtItems select _virtSub;
+				_virtItems = _virtItems get _virtSub;
 			};
-			_virtItems set [_virtItems find _config, _selectedConfig];
+			_virtItems deleteAt _config;
+			_virtItems set [_selectedConfig, nil];
 			_ctrlPanel lbSetData [_i, _selectedConfig];
 			_ctrlPanel lbSetText [_i, getText (configFile >> _classRoot >> _selectedConfig >> "displayName")];
 		};

@@ -35,12 +35,12 @@ if ( _i == -1 ) exitWith {
 private _previous = _ctrlPanel lbData _i;
 private _newValue = configName _match;
 (call FUNC(leftPanelConfig)) params ["", "_virt", "_virtSub"];
-private _virtItems = GVAR(filteredVirtualItems) select _virt;
+private _virtItems = GVAR(filteredVirtualItems) get _virt;
 if ( _virtSub != -1 ) then {
-    _virtItems = _virtItems select _virtSub;
+    _virtItems = _virtItems get _virtSub;
 };
-private _prevIndex = _virtItems find _previous;
-_virtItems set [_prevIndex, _newValue];
+_virtItems deleteAt _previous;
+_virtItems set [_newValue, nil];
 
 // Change and propagate selected value
 _ctrlPanel lbSetData [_i, _newValue];
