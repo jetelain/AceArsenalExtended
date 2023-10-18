@@ -41,6 +41,7 @@ class ace_arsenal_display {
             colorSelect2[]={1,1,1,1};
             colorPictureRightSelected[]={1,1,1,1};
             onLBSelChanged = QUOTE(_this call FUNC(onSelChangedLeft));
+            onLBDblClick = QUOTE(_this call ace_arsenal_fnc_onPanelDblClick);
             onSetFocus = QUOTE(ace_arsenal_leftTabFocus = true);
             onKillFocus = QUOTE(ace_arsenal_leftTabFocus = false);
             colorTextRight[] = {0.5,0.5,0.5,1};
@@ -51,7 +52,6 @@ class ace_arsenal_display {
             h = QUOTE(safezoneH - 24.5 * GRID_H);
             sizeEx = QUOTE(7 * GRID_H);
         };
-
 
         class leftTabCustom: RscControlsGroup {
             idc = 9990000;

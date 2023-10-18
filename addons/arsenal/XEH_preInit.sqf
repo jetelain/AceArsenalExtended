@@ -5,18 +5,40 @@ ADDON = true;
 
 #include "defines.hpp"
 
+// _x params ["", "_virt", "_virtSub", "_cur", "_classRoot", "_label"];
+
 GVAR(meta) = [ 
-  [IDC_buttonPrimaryWeapon,   0,  0, 0, "CfgWeapons",  "PrimaryWeapon"],
-  [IDC_buttonSecondaryWeapon, 0,  1, 1, "CfgWeapons",  "SecondaryWeapon"],
-  [IDC_buttonHandgun,         0,  2, 2, "CfgWeapons",  "Handgun"],
-  [IDC_buttonHeadgear,        3, -1, 3, "CfgWeapons",  "Headgear"],
-  [IDC_buttonUniform,         4, -1, 4, "CfgWeapons",  "Uniform"],
-  [IDC_buttonVest,            5, -1, 5, "CfgWeapons",  "Vest"],
-  [IDC_buttonBackpack,        6, -1, 6, "CfgVehicles", "Backpack"],
-  [IDC_buttonGoggles,         7, -1, 7, "CfgGlasses",  "Goggles"],
-  [IDC_buttonNVG,             8, -1, 8, "CfgWeapons",  "Nvg"],
-  [IDC_buttonBinoculars,      9, -1, 9, "CfgWeapons",  "Binoculars"]
+  [IDC_buttonPrimaryWeapon,   IDX_VIRT_WEAPONS,  IDX_VIRT_PRIMARY_WEAPONS,   0, "CfgWeapons",  "PrimaryWeapon"],
+  [IDC_buttonSecondaryWeapon, IDX_VIRT_WEAPONS,  IDX_VIRT_SECONDARY_WEAPONS, 1, "CfgWeapons",  "SecondaryWeapon"],
+  [IDC_buttonHandgun,         IDX_VIRT_WEAPONS,  IDX_VIRT_SECONDARY_WEAPONS, 2, "CfgWeapons",  "Handgun"],
+  [IDC_buttonHeadgear,        IDX_VIRT_HEADGEAR, -1, 3, "CfgWeapons",  "Headgear"],
+  [IDC_buttonUniform,         IDX_VIRT_UNIFORM,  -1, 4, "CfgWeapons",  "Uniform"],
+  [IDC_buttonVest,            IDX_VIRT_VEST,     -1, 5, "CfgWeapons",  "Vest"],
+  [IDC_buttonBackpack,        IDX_VIRT_BACKPACK, -1, 6, "CfgVehicles", "Backpack"],
+  [IDC_buttonGoggles,         IDX_VIRT_GOGGLES,  -1, 7, "CfgGlasses",  "Goggles"],
+  [IDC_buttonNVG,             IDX_VIRT_NVG,      -1, 8, "CfgWeapons",  "Nvg"],
+  [IDC_buttonBinoculars,      IDX_VIRT_BINO,     -1, 9, "CfgWeapons",  "Binoculars"]
 ];
+
+GVAR(unsupported) = [IDX_VIRT_ITEMS_ALL
+,IDX_VIRT_ATTACHMENTS
+,IDX_VIRT_MAP 
+,IDX_VIRT_COMPASS
+,IDX_VIRT_RADIO
+,IDX_VIRT_WATCH
+,IDX_VIRT_COMMS
+,IDX_VIRT_GRENADES
+,IDX_VIRT_EXPLOSIVES
+,IDX_VIRT_MISC_ITEMS
+,IDX_VIRT_UNIQUE_MISC_ITEMS
+,IDX_VIRT_UNIQUE_VIRT_ITEMS_ALL
+,IDX_VIRT_UNIQUE_GRENADES
+,IDX_VIRT_UNIQUE_EXPLOSIVES
+,IDX_VIRT_UNIQUE_ATTACHMENTS
+,IDX_VIRT_UNIQUE_BACKPACKS
+,IDX_VIRT_UNIQUE_GOGGLES
+,IDX_VIRT_UNIQUE_UNKNOWN_ITEMS];
+
 
 GVAR(currentModel) = "";
 GVAR(valuesIdx) = [];
