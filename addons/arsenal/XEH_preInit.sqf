@@ -86,3 +86,4 @@ if ( is3DEN ) then {
 
 ["ace_arsenal_leftPanelFilled", FUNC(onLeftPanelFilled)] call CBA_fnc_addEventHandler;
  
+["ace_arsenal_rightPanelFilled", { [ace_arsenal_center] call EFUNC(gearinfo,applyTextureOptions); }] call CBA_fnc_addEventHandler;
