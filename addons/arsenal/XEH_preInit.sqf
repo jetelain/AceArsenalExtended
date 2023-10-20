@@ -10,7 +10,7 @@ ADDON = true;
 GVAR(meta) = [ 
   [IDC_buttonPrimaryWeapon,   IDX_VIRT_WEAPONS,  IDX_VIRT_PRIMARY_WEAPONS,   0, "CfgWeapons",  "PrimaryWeapon"],
   [IDC_buttonSecondaryWeapon, IDX_VIRT_WEAPONS,  IDX_VIRT_SECONDARY_WEAPONS, 1, "CfgWeapons",  "SecondaryWeapon"],
-  [IDC_buttonHandgun,         IDX_VIRT_WEAPONS,  IDX_VIRT_SECONDARY_WEAPONS, 2, "CfgWeapons",  "Handgun"],
+  [IDC_buttonHandgun,         IDX_VIRT_WEAPONS,  IDX_VIRT_HANDGUN_WEAPONS,   2, "CfgWeapons",  "Handgun"],
   [IDC_buttonHeadgear,        IDX_VIRT_HEADGEAR, -1, 3, "CfgWeapons",  "Headgear"],
   [IDC_buttonUniform,         IDX_VIRT_UNIFORM,  -1, 4, "CfgWeapons",  "Uniform"],
   [IDC_buttonVest,            IDX_VIRT_VEST,     -1, 5, "CfgWeapons",  "Vest"],
