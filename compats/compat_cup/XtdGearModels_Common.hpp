@@ -290,3 +290,109 @@ class cup_grip
 		description = "Vertical Foregrip";
 	};
 };
+
+class cup_loadout
+{
+	label = "Loadout";
+	changeingame = 0;
+	values[] = {};
+
+	class EMPTY
+	{
+		label = "Empty";
+	};
+
+	class STD
+	{
+		label = "Standard";
+	};
+
+	class AR
+	{
+		label = "AR";
+		description = "Automatic Rifleman";
+	};
+
+	class AT
+	{
+		label = "AT";
+		description = "Anti-Tank";
+	};
+
+	class CREW
+	{
+		label = "Crew";
+	};
+
+	class LIGHT
+	{
+		label = "Light";
+	};
+
+	class GL
+	{
+		label = "GL";
+		description = "Grenadier";
+	};
+
+	class MED
+	{
+		label = "Medic";
+	};
+
+	class DMR
+	{
+		label = "DMR";
+		description = "Designated Marksman";
+	};
+
+	class MG
+	{
+		label = "MG";
+		description = "Machine Gunner";
+	};
+
+	class OFC
+	{
+		label = "Officer";
+	};
+
+	class PTRL
+	{
+		label = "Patrol";
+	};
+
+	class RIFL
+	{
+		label = "RIFL";
+		description = "Rifleman";
+	};
+
+	class RADIO // Not to be confused with RTOs. This is just for if the loadout has a standard radio.
+	{
+		label = "Radio";
+	};
+
+	class RTO
+	{
+		label = "RTO";
+		description = "Radio Telephone Operator";
+	};
+
+	class SCT
+	{
+		label = "Scout";
+	};
+
+	class SL
+	{
+		label = "SL";
+		description = "Squad Leader";
+	};
+
+	class TL
+	{
+		label = "TL";
+		description = "Team Leader";
+	};
+};

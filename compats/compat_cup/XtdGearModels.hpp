@@ -7,11 +7,21 @@ class XtdGearModels {
 
     class CfgVehicles {
         //Backpacks
-
+        #include "XtdGearModels\cup_backpack\CfgVehicles\cup_alicepack.hpp"
+        #include "XtdGearModels\cup_backpack\CfgVehicles\cup_czh_para_pack.hpp"
+        #include "XtdGearModels\cup_backpack\CfgVehicles\cup_patrolbag.hpp"
+        #include "XtdGearModels\cup_backpack\CfgVehicles\cup_falconii.hpp"
+        #include "XtdGearModels\cup_backpack\CfgVehicles\cup_kskpack.hpp"
+        #include "XtdGearModels\cup_backpack\CfgVehicles\cup_usmc_mollepack.hpp"
+        #include "XtdGearModels\cup_backpack\CfgVehicles\cup_threedaypack.hpp"
+        #include "XtdGearModels\cup_backpack\CfgVehicles\cup_us_tacpack.hpp"
+        #include "XtdGearModels\cup_backpack\CfgVehicles\cup_us_assault_pack.hpp"
+        #include "XtdGearModels\cup_backpack\CfgVehicles\cup_tactical_pack.hpp"
     };
 
     class CfgWeapons {
         //Headgear
+        #include "XtdGearModels\cup_headgear\CfgWeapons\cup_acr_patrolcap.hpp"
 
         //Uniforms
         #include "XtdGearModels\cup_uniform\CfgWeapons\cup_bdu.hpp"
@@ -52,8 +62,29 @@ class XtdGearModels {
         #include "XtdGearModels\cup_uniform\CfgWeapons\cup_vil_clothes.hpp"
         #include "XtdGearModels\cup_uniform\CfgWeapons\cup_crye_g3.hpp"
         #include "XtdGearModels\cup_uniform\CfgWeapons\cup_crye.hpp"
+        #include "XtdGearModels\cup_uniform\CfgWeapons\cup_chdkz_unif_1.hpp"
+        #include "XtdGearModels\cup_uniform\CfgWeapons\cup_chdkz_unif_2.hpp"
 
         //Vests
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_acr_carvest.hpp"
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_acr_carvest_heavy.hpp"
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_acr_carvest_light.hpp"
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_ger_protvest.hpp"
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_ger_tacvest.hpp"
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_ger_armatus.hpp"
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_ger_carvest.hpp"
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_ger_jpc_vest.hpp"
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_ger_lbt_vest.hpp"
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_ger_miltec_rig.hpp"
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_npp2006.hpp"
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_smersh_vest.hpp"
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_spc.hpp"
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_taki_belt.hpp"
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_taki_jacket.hpp"
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_taki_jacket_heavy.hpp"
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_taki_waistcoat.hpp"
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_taki_waistcoat_light.hpp"
+        #include "XtdGearModels\cup_vest\CfgWeapons\cup_type56.hpp"
 
         //NVG
         #include "XtdGearModels\cup_nvg\CfgWeapons\cup_hmnvs.hpp"
