@@ -8,20 +8,10 @@ class cup_ger_miltec_rig {
 		values[]={ "OD", "FLCK" };
 	};
 
-	class loadout
+	class loadout : cup_loadout
 	{
 		alwaysSelectable = 1;
-		values[] = {"STAND", "RADIO", "HOLST" };
-		class STAND
-		{
-			label = "Standard";
-		};
-
-		class RADIO
-		{
-			label = "Radio";
-		};
-
+		values[] = {"STD", "RADIO", "HOLST" };
 		class HOLST
 		{
 			label = "Holster";

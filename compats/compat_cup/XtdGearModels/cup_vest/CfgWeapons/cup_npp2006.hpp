@@ -8,15 +8,10 @@ class cup_npp2006 {
 		values[]={ "BLK", "CBR", "VZ95" };
 	};
 
-	class loadout
+	class loadout : cup_loadout
 	{
 		alwaysSelectable = 1;
 		values[] = {"STD", "1PAD", "2PAD", "TL", "LIGHT"};
-		class STD
-		{
-			label = "Standard";
-		};
-
 		class 1PAD
 		{
 			label = "1 Kneepad";
@@ -25,17 +20,6 @@ class cup_npp2006 {
 		class 2PAD
 		{
 			label = "2 Kneepad";
-		};
-
-		class TL
-		{
-			label = "TL";
-			description = "Team Leader";
-		};
-
-		class LIGHT
-		{
-			label = "Light";
 		};
 	};
 };

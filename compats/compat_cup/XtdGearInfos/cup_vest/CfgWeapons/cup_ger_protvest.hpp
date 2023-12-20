@@ -51,14 +51,14 @@ class CUP_V_B_GER_PVest_Fleck_OFC {
 class CUP_V_B_GER_PVest_Fleck_RFL {
 	model = "cup_ger_protvest";
 	camo = "FLCK";
-	loadout = "RFL";
+	loadout = "RIFL";
 	backpouch = "yes";
 };
 
 class CUP_V_B_GER_PVest_Fleck_RFL_LT {
 	model = "cup_ger_protvest";
 	camo = "FLCK";
-	loadout = "RFL";
+	loadout = "RIFL";
 	backpouch = "no";
 };
 
@@ -129,14 +129,14 @@ class CUP_V_B_GER_PVest_Trop_OFC {
 class CUP_V_B_GER_PVest_Trop_RFL {
 	model = "cup_ger_protvest";
 	camo = "TRPTRN";
-	loadout = "RFL";
+	loadout = "RIFL";
 	backpouch = "yes";
 };
 
 class CUP_V_B_GER_PVest_Trop_RFL_LT {
 	model = "cup_ger_protvest";
 	camo = "TRPTRN";
-	loadout = "RFL";
+	loadout = "RIFL";
 	backpouch = "no";
 };
 

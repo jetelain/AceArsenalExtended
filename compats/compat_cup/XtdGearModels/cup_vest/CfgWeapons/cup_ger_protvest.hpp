@@ -8,43 +8,10 @@ class cup_ger_protvest {
 		values[]={ "FLCK", "TRPTRN" };
 	};
 
-	class loadout
+	class loadout : cup_loadout
 	{
 		alwaysSelectable = 1;
-		values[] = {"GL", "MG", "MED", "OFC", "RFL", "TL" };
-		class GL
-		{
-			label = "GL";
-			description = "Grenadier";
-		};
-
-		class MG
-		{
-			label = "MG";
-			description = "Machine Gun";
-		};
-
-		class MED
-		{
-			label = "Medic";
-		};
-
-		class OFC
-		{
-			label = "Officer";
-		};
-
-		class RFL
-		{
-			label = "Rifle";
-			description = "Rifleman";
-		};
-
-		class TL
-		{
-			label = "TL";
-			description = "Team Leader";
-		};
+		values[] = {"GL", "MG", "MED", "OFC", "RIFL", "TL" };
 	};
 
 	class backpouch

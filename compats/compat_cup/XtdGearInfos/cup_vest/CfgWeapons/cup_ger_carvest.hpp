@@ -1,6 +1,6 @@
 class CUP_V_B_GER_Vest_1 {
 	model = "cup_ger_carvest";
-	loadout = "STAND";
+	loadout = "STD";
 };
 
 class CUP_V_B_GER_Vest_2 {

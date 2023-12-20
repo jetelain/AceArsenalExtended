@@ -1,6 +1,6 @@
 class CUP_V_O_TK_CrewBelt {
 	model = "cup_taki_belt";
-	loadout = "UTIL";
+	loadout = "CREW";
 };
 
 class CUP_V_O_TK_OfficerBelt2 {

@@ -95,6 +95,12 @@ class CamoBase
 		image = QPATHTOF(data\camo\vz95.paa);
 	};
 
+	class CUP_TRANS // Used for clear eyewear and hidden NVGs. 
+	{
+		label = "Transparency Placeholder (YOU SHOULD NOT SEE THIS)";
+		image = QPATHTOF(data\camo\transparency.paa);
+	};
+
 	// Weapon Only camo
 
 	class CUP_URB_HEX
@@ -228,7 +234,7 @@ class cup_attachsys // This is what kind of attachments a gun can accept, roughl
 
 	class none
 	{
-		label = "None";
+		label = CSTRING(None);
 	};
 
 	class carryhandle // Used only for the G36 and XM8.
@@ -275,7 +281,7 @@ class cup_grip
 
 	class none
 	{
-		label = "None";
+		label = CSTRING(None);
 	};
 
 	class angled
@@ -288,6 +294,129 @@ class cup_grip
 	{
 		label = "Vertical";
 		description = "Vertical Foregrip";
+	};
+};
+
+class cup_goggles
+{
+	label = "Goggles";
+	changeingame = 1;
+	values[] = {};
+
+	class no
+	{
+		label = CSTRING(No);
+		changeingame = -1;
+	};
+
+	class yes
+	{
+		label = CSTRING(Yes);
+		changeingame = -1;
+	};
+
+	class yes_cover
+	{
+		label = "Yes/Cov";
+		description = "Yes (Covered)";
+		changeingame = -1;
+	};
+
+	class yes_cover_back
+	{
+		label = "Yes/CovBck";
+		description = "Yes (Cover on Back)";
+		changeingame = -1;
+	};
+
+	class up
+	{
+		label = "On-Helm";
+		actionLabel = "Put Goggles Up";
+	};
+
+	class up_cover
+	{
+		label = "Up/Cov";
+		description = "Up (Covered)";
+		actionLabel = "Cover Up Goggles"
+	};
+
+	class down
+	{
+		label = "Over-Eye";
+		actionLabel = "Put Goggles Down";
+	};
+};
+
+class cup_beard_color
+{
+	label = "Beard Color";
+	values[] = {};
+
+	class none
+	{
+		label = CSTRING(None);
+	};
+
+	class BLK
+	{
+		label = "Black";
+		image = "#(rgb,8,8,3)color(0.10,0.08,0.07,1)";
+	};
+
+	class BLND
+	{
+		label = "Blonde";
+		image = "#(rgb,8,8,3)color(0.45,0.39,0.34,1)";
+	};
+
+	class BRN
+	{
+		label = "Brown";
+		image = "#(rgb,8,8,3)color(0.26,0.14,0.10,1)";
+	};
+};
+
+class cup_shemagh_color
+{
+	label = "Shemagh Color";
+	values[] = {};
+
+	class none
+	{
+		label = CSTRING(None);
+	};
+
+	class BLK
+	{
+		label = "Black";
+		image = QPATHTOF(data\camo\shemagh\shemagh_blk.paa);
+	};
+
+	class GRN
+	{
+		label = "Green";
+		image = QPATHTOF(data\camo\shemagh\shemagh_od.paa);
+
+	};
+
+	class KHK
+	{
+		label = "Khaki";
+		image = QPATHTOF(data\camo\shemagh\shemagh_tan.paa);
+	};
+
+	class RED
+	{
+		label = "Red";
+		image = QPATHTOF(data\camo\shemagh\shemagh_red.paa);
+	};
+
+	class WHT
+	{
+		label = "White";
+		image = QPATHTOF(data\camo\shemagh\shemagh_wht.paa);
 	};
 };
 
@@ -324,6 +453,11 @@ class cup_loadout
 		label = "Crew";
 	};
 
+	class ENGI
+	{
+		label = "Engineer";
+	};
+
 	class LIGHT
 	{
 		label = "Light";
@@ -350,6 +484,12 @@ class cup_loadout
 	{
 		label = "MG";
 		description = "Machine Gunner";
+	};
+
+	class NCO
+	{
+		label = "NCO";
+		description = "Non-Commissioned Officer";
 	};
 
 	class OFC
