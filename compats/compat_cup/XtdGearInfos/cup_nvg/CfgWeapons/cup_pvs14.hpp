@@ -5,5 +5,5 @@ class CUP_NVG_PVS14 {
 
 class CUP_NVG_PVS14_HIDE {
 	model = "cup_anpvs14";
-	camo = "Hidden";
+	camo = "CUP_TRANS";
 };

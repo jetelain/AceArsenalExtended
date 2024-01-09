@@ -79,6 +79,7 @@ class CamoBase
 	class TTS
 	{
 		label = "TTS";
+		description = "Tanoan Tigerstripe";
 		image = QPATHTOF(data\camo\tts.paa);
 	};
 

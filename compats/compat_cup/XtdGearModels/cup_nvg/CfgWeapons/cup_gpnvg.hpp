@@ -3,12 +3,12 @@ class cup_gpnvg {
     label="GPNVG";
     class camo
     {
-        values[] = { "BLK", "GREEN", "Hidden", "TAN", "WHT" };
+        values[] = { "BLK", "GRN", "CUP_TRANS", "TAN", "WHT" };
         alwaysSelectable=1;
 
-        class GREEN
-        {
-            label = "Green";
-        };
+        class CUP_TRANS
+		{
+			label = "Hidden";
+		};
     };
 };

@@ -5,5 +5,5 @@ class CUP_NVG_HMNVS {
 
 class CUP_NVG_HMNVS_HIDE {
     model = "cup_hmnvs";
-    camo = "Hidden";
+    camo = "CUP_TRANS";
 };

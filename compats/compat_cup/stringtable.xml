@@ -16,5 +16,13 @@
         <Key ID="STR_ACEAX_compat_cup_None">
             <English>None</English>
         </Key>
+		
+		<Key ID="STR_ACEAX_compat_cup_Both">
+            <English>Both</English>
+        </Key>
+		
+		<Key ID="STR_ACEAX_compat_cup_Kneepads">
+            <English>Kneepads</English>
+        </Key>
     </Package>
 </Project>

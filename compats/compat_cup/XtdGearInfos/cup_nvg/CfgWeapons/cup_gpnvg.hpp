@@ -5,12 +5,12 @@ class Cup_NVG_GPNVG_black {
 
 class Cup_NVG_GPNVG_GREEN {
     model = "cup_gpnvg";
-    camo = "GREEN";
+    camo = "GRN";
 };
 
 class Cup_NVG_GPNVG_HIDE {
     model = "cup_gpnvg";
-    camo = "Hidden";
+    camo = "CUP_TRANS";
 };
 
 class Cup_NVG_GPNVG_TAN {

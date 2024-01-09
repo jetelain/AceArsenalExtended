@@ -5,12 +5,12 @@ class CUP_NVG_PVS15_black {
 
 class CUP_NVG_PVS15_green {
 	model = "cup_pvs15";
-	camo = "GREEN";
+	camo = "GRN";
 };
 
 class CUP_NVG_PVS15_Hide {
 	model = "cup_pvs15";
-	camo = "Hidden";
+	camo = "CUP_TRANS";
 };
 
 class CUP_NVG_PVS15_tan {

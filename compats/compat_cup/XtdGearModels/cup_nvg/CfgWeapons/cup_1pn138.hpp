@@ -3,6 +3,11 @@ class cup_1PN138 {
 	label="1PN138";
 	class camo
 	{
-		values[] = { "BLK", "Hidden" };
+		values[] = { "BLK", "CUP_TRANS" };
+
+		class CUP_TRANS
+		{
+			label = "Hidden";
+		};
 	};
 };

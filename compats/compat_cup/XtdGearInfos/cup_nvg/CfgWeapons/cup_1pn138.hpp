@@ -5,5 +5,5 @@ class CUP_NVG_1PN138 {
 
 class CUP_NVG_1PN138_Hide {
 	model = "cup_1PN138";
-	camo = "Hidden";
+	camo = "CUP_TRANS";
 };

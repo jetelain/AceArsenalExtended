@@ -3,12 +3,12 @@ class cup_pvs15 {
 	label="AN/PVS-15";
 	class camo
 	{
-		values[] = { "BLK", "GREEN", "Hidden", "Hidden", "TAN", "WHT" };
+		values[] = { "BLK", "GRN", "CUP_TRANS", "TAN", "WHT" };
 		alwaysSelectable=1;
 
-		class GREEN
+		class CUP_TRANS
 		{
-			label = "Green";
+			label = "Hidden";
 		};
 	};
 };
