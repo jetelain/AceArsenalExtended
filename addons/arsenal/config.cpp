@@ -27,7 +27,7 @@ class RscEdit;
 
 class ace_arsenal_display {
 
-	onUnload = QUOTE([ARR_3('onUnload', _this, QUOTE(QUOTE(ace_arsenal_display)))] call FUNC(onArsenalClose));
+	onUnload = QUOTE([ARR_3('onUnload',_this,QUOTE(QUOTE(ace_arsenal_display)))] call FUNC(onArsenalClose));
 
 	class controls {
 
@@ -64,7 +64,7 @@ class ace_arsenal_display {
             sizeEx = QUOTE(7 * GRID_H);
 
             class controls {
-                
+
                 class Title: RscText {
                     idc = 9990001;
                     sizeEx = QUOTE(7 * GRID_H);
