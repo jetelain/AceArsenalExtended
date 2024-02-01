@@ -5,6 +5,11 @@ template = "cba"
 mainprefix = "z"
 folder_optionals = true
 sig_version = 3
+
+[version]
+path = "addons/main/script_version.hpp"
+git_hash = 0
+
 files = [
     "mod.cpp",
     "logo.paa"
