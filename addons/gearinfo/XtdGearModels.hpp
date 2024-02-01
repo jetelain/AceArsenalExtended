@@ -13,7 +13,7 @@ class XtdGearModels
 			label = CSTRING(White);
 			image = QPATHTOF(data\camo\wht.paa);
 		};
-		
+
 	    class BLK
 		{
 			label = CSTRING(Black);
@@ -358,17 +358,17 @@ class XtdGearModels
 	/**
 	 * Conventional options names that can be used by mods, to avoid dependency to this pbo.
 	 */
-	class Conventional 
+	class Conventional
 	{
 		class camo: CamoBase {};
 		class pantscamo: CamoBase {
 			label = CSTRING(PantsCamo);
 		};
 		class sleeves : SleevesBase {};
-		class faction : Faction {};
+		class Faction : Faction {};
 	};
 
-	class CfgWeapons 
+	class CfgWeapons
 	{
 		class U_C_CBRN_Suit_01
 		{
