@@ -354,7 +354,9 @@ releases/*
 keys/*
 .hemtt/local
 *.pbo
-/hemtt.exe
+hemtt/
+.hemttout/
+hemtt.exe
 
 # APL-ND assets / Will be available later in AMF
 /compats/compat_amf/data/*_gloves*
