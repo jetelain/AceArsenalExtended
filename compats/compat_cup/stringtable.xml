@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACEAX">
+    <Package name="compat_cup">
+        <Key ID="STR_ACEAX_compat_cup_Flag">
+            <English>Flag</English>
+        </Key>
+
+		<Key ID="STR_ACEAX_compat_cup_Yes">
+            <English>Yes</English>
+        </Key>
+
+        <Key ID="STR_ACEAX_compat_cup_No">
+            <English>No</English>
+        </Key>
+
+        <Key ID="STR_ACEAX_compat_cup_None">
+            <English>None</English>
+        </Key>
+		
+		<Key ID="STR_ACEAX_compat_cup_Both">
+            <English>Both</English>
+        </Key>
+		
+		<Key ID="STR_ACEAX_compat_cup_Kneepads">
+            <English>Kneepads</English>
+        </Key>
+    </Package>
+</Project>
