@@ -11,12 +11,12 @@ _configs = [_classRoot, _configs] call FUNC(filterConfigEntries);
 {
 	private _variation = _x;
 	_allConfigs pushBack [_variation, (_optionsNames apply { getText (_variation >> "XtdGearInfo" >> _x) })];
-} foreach _configs;
+} forEach _configs;
 
 _configs = ("getText (_x >> 'model') == '"+_model+"'") configClasses (configFile >> "XtdGearInfos" >> _classRoot);
 {
 	private _infos = _x;
 	_allConfigs pushBack [ configFile >> _classRoot >> (configName _infos) , (_optionsNames apply { getText (_infos >> _x) })];
-} foreach _configs;
+} forEach _configs;
 
 _allConfigs

@@ -5,7 +5,7 @@ params ["_unit", "_unitTextureOptions", ["_useInsignia", true]];
 if ( _unitTextureOptions isEqualType "" ) then {
 	if ( _unitTextureOptions == "" ) then {
 		_unitTextureOptions = [];
-		WARNING_1("Unexpected call to setTextureOptions on %1", _unit);
+		WARNING_1("Unexpected call to setTextureOptions on %1",_unit);
 	} else {
 		_unitTextureOptions = parseSimpleArray _unitTextureOptions;
 	};
@@ -31,10 +31,10 @@ if ( _useInsignia ) then {
 				private _value = _map getOrDefault [_model + "_" + _x, ""];
 				_unit setVariable [_model + "_" + _x, _value, true];
 				[_unit, _classRoot, _target, _config, _model, _x, _value] call FUNC(applyTextureOptionOnItem);
-			} foreach _textureOptions;
+			} forEach _textureOptions;
 		};
 	};
-} foreach [
+} forEach [
 		["CfgWeapons",  _unit,              uniform _unit],
 		["CfgVehicles", unitBackpack _unit, backpack _unit]
 	];

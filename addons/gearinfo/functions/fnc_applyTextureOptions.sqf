@@ -11,11 +11,11 @@ params ["_unit"];
 			private _textureOptions = getArray(configFile >> "XtdGearModels" >> _classRoot >> _model >> "textureoptions");
 			{
 				[_unit, _classRoot, _target, _config, _model, _x, [_unit, _model, _x] call FUNC(getTextureOption)] call FUNC(applyTextureOptionOnItem);
-			} foreach _textureOptions;
+			} forEach _textureOptions;
 		};
 	};
 
-} foreach [
+} forEach [
 		["CfgWeapons",  _unit,              uniform _unit],
 		["CfgVehicles", unitBackpack _unit, backpack _unit]
 	];

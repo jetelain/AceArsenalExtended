@@ -21,7 +21,7 @@ if (isNull _match) then {
 };
 
 if (isNull _match) exitWith {
-    ERROR_2("Nothing found for %1 %2", GVAR(currentModel), _options);
+    ERROR_2("Nothing found for %1 %2",GVAR(currentModel),_options);
 };
 
 private _ctrlPanel = _display displayCtrl IDC_leftTabContent;

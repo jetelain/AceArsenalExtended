@@ -9,7 +9,7 @@ private _configControl = _display displayCtrl 9990000;
 private _listControl = _display displayCtrl IDC_leftTabContent;
 
 // Remove previous controls if any
-{ ctrlDelete (_display displayCtrl _x); } foreach GVAR(valuesIdc);
+{ ctrlDelete (_display displayCtrl _x); } forEach GVAR(valuesIdc);
 GVAR(valuesIdc) = [];
 
 if ( _selectedModel != "" ) then {
@@ -115,16 +115,16 @@ if ( _selectedModel != "" ) then {
 
 	GVAR(adjustedHeight) = 120 min (_posY + 10);
 
-	_listControl ctrlSetPositionH (safezoneH - (GVAR(adjustedHeight) + 28.5) * GRID_H);
-    _configControl ctrlSetPositionY ((safezoneY + 14 * GRID_H) + (safezoneH - (GVAR(adjustedHeight) + 24.5) * GRID_H));
+	_listControl ctrlSetPositionH (safeZoneH - (GVAR(adjustedHeight) + 28.5) * GRID_H);
+    _configControl ctrlSetPositionY ((safeZoneY + 14 * GRID_H) + (safeZoneH - (GVAR(adjustedHeight) + 24.5) * GRID_H));
     _configControl ctrlSetPositionH (GVAR(adjustedHeight) * GRID_H);
     _configControl ctrlShow true; // ensures visibility
     _listControl ctrlCommit 0.2;
     _configControl ctrlCommit 0.2;
 
 } else {
-	_listControl ctrlSetPositionH (safezoneH - 24.5 * GRID_H);
-	_configControl ctrlSetPositionY ((safezoneY + 14 * GRID_H) + (safezoneH - 24.5 * GRID_H));
+	_listControl ctrlSetPositionH (safeZoneH - 24.5 * GRID_H);
+	_configControl ctrlSetPositionY ((safeZoneY + 14 * GRID_H) + (safeZoneH - 24.5 * GRID_H));
 	_configControl ctrlSetPositionH (0);
 	_listControl ctrlCommit 0.2;
 	_configControl ctrlCommit 0.2;
@@ -136,8 +136,8 @@ if ( _selectedModel != "" ) then {
 [{
 	params ["_listControl", "_configControl"];
 	if ( GVAR(currentModel) != "" ) then {
-	    _listControl ctrlSetPositionH (safezoneH - (GVAR(adjustedHeight) + 28.5) * GRID_H);
-        _configControl ctrlSetPositionY ((safezoneY + 14 * GRID_H) + (safezoneH - (GVAR(adjustedHeight) + 24.5) * GRID_H));
+	    _listControl ctrlSetPositionH (safeZoneH - (GVAR(adjustedHeight) + 28.5) * GRID_H);
+        _configControl ctrlSetPositionY ((safeZoneY + 14 * GRID_H) + (safeZoneH - (GVAR(adjustedHeight) + 24.5) * GRID_H));
         _configControl ctrlSetPositionH (GVAR(adjustedHeight) * GRID_H);
 		_listControl ctrlCommit 0;
 		_configControl ctrlCommit 0;

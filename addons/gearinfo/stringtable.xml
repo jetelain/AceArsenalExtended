@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACEAX">
     <Package name="GearInfo">
-        <Key ID="STR_ACEAX_GearInfo_Camo">
-            <English>Camo / Paint</English>
-            <French>Camouflage / Teinte</French>
+        <Key ID="STR_ACEAX_GearInfo_AAFFaction">
+            <English>AAF</English>
         </Key>
-        <Key ID="STR_ACEAX_GearInfo_PantsCamo">
-            <English>Pants Camo</English>
-            <French>Camouflage pantalon</French>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_White">
-            <English>White</English>
-            <French>Blanc</French>
+        <Key ID="STR_ACEAX_GearInfo_AAFFaction_DESC">
+            <English>[AAF] Altis Armed Forces</English>
         </Key>
         <Key ID="STR_ACEAX_GearInfo_Black">
             <English>Black</English>
@@ -20,77 +14,6 @@
         <Key ID="STR_ACEAX_GearInfo_Blue">
             <English>Blue</English>
             <French>Bleu</French>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_Green">
-            <English>Green</English>
-            <French>Vert</French>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_Grey">
-            <English>Grey</English>
-            <French>Gris</French>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_Khaki">
-            <English>Khaki</English>
-            <French>Khaki</French>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_Navy">
-            <English>Navy</English>
-            <French>Marine</French>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_Olive">
-            <English>Olive</English>
-            <French>Olive</French>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_Tan">
-            <English>Tan</English>
-            <French>Tan</French>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_Sleeves">
-            <English>Sleeves</English>
-            <French>Manches</French>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_SleevesFull">
-            <English>Full</English>
-            <French>Complet</French>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_SleevesFullAction">
-            <English>Roll down sleeves</English>
-            <French>Remettre les manches</French>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_SleevesQuarter">
-            <English>3/4</English>
-            <French>3/4</French>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_SleevesQuarterAction">
-            <English>Roll up sleeves to 3/4</English>
-            <French>Retrousser les manches d'un quart</French>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_SleevesHalf">
-            <English>1/2</English>
-            <French>1/2</French>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_SleevesHalfAction">
-            <English>Roll up sleeves</English>
-            <French>Retrousser les manches</French>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_SleevesCut">
-            <English>Cut</English>
-            <French>Coupées</French>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_Faction">
-            <English>Faction</English>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_USAFaction">
-            <English>USA</English>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_USAFaction_DESC">
-            <English>[NATO] The United States Army (USA) is the primary land force branch of the U.S. military</English>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_NATOFaction">
-            <English>NATO</English>
-        </Key>
-        <Key ID="STR_ACEAX_GearInfo_NATOFaction_DESC">
-            <English>[NATO] North Atlantic Treaty Organization</English>
         </Key>
         <Key ID="STR_ACEAX_GearInfo_CSATFaction">
             <English>CSAT</English>
@@ -104,11 +27,30 @@
         <Key ID="STR_ACEAX_GearInfo_CTRGFaction_DESC">
             <English>[NATO] The Combat Technology Research Group (CTRG) is an elite NATO special operations force</English>
         </Key>
-        <Key ID="STR_ACEAX_GearInfo_AAFFaction">
-            <English>AAF</English>
+        <Key ID="STR_ACEAX_GearInfo_Camo">
+            <English>Camo / Paint</English>
+            <French>Camouflage / Teinte</French>
         </Key>
-        <Key ID="STR_ACEAX_GearInfo_AAFFaction_DESC">
-            <English>[AAF] Altis Armed Forces</English>
+        <Key ID="STR_ACEAX_GearInfo_FIAFaction">
+            <English>FIA</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_FIAFaction_DESC">
+            <English>[FIA] Freedom and Independence Army</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_Faction">
+            <English>Faction</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_Green">
+            <English>Green</English>
+            <French>Vert</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_Grey">
+            <English>Grey</English>
+            <French>Gris</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_Khaki">
+            <English>Khaki</English>
+            <French>Khaki</French>
         </Key>
         <Key ID="STR_ACEAX_GearInfo_LDFFaction">
             <English>LDF</English>
@@ -116,11 +58,69 @@
         <Key ID="STR_ACEAX_GearInfo_LDFFaction_DESC">
             <English>[NATO] Livonian Defense Force</English>
         </Key>
-        <Key ID="STR_ACEAX_GearInfo_FIAFaction">
-            <English>FIA</English>
+        <Key ID="STR_ACEAX_GearInfo_NATOFaction">
+            <English>NATO</English>
         </Key>
-        <Key ID="STR_ACEAX_GearInfo_FIAFaction_DESC">
-            <English>[FIA] Freedom and Independence Army</English>
+        <Key ID="STR_ACEAX_GearInfo_NATOFaction_DESC">
+            <English>[NATO] North Atlantic Treaty Organization</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_Navy">
+            <English>Navy</English>
+            <French>Marine</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_Olive">
+            <English>Olive</English>
+            <French>Olive</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_PantsCamo">
+            <English>Pants Camo</English>
+            <French>Camouflage pantalon</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_Sleeves">
+            <English>Sleeves</English>
+            <French>Manches</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_SleevesCut">
+            <English>Cut</English>
+            <French>Coupées</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_SleevesFull">
+            <English>Full</English>
+            <French>Complet</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_SleevesFullAction">
+            <English>Roll down sleeves</English>
+            <French>Remettre les manches</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_SleevesHalf">
+            <English>1/2</English>
+            <French>1/2</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_SleevesHalfAction">
+            <English>Roll up sleeves</English>
+            <French>Retrousser les manches</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_SleevesQuarter">
+            <English>3/4</English>
+            <French>3/4</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_SleevesQuarterAction">
+            <English>Roll up sleeves to 3/4</English>
+            <French>Retrousser les manches d'un quart</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_Tan">
+            <English>Tan</English>
+            <French>Tan</French>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_USAFaction">
+            <English>USA</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_USAFaction_DESC">
+            <English>[NATO] The United States Army (USA) is the primary land force branch of the U.S. military</English>
+        </Key>
+        <Key ID="STR_ACEAX_GearInfo_White">
+            <English>White</English>
+            <French>Blanc</French>
         </Key>
     </Package>
 </Project>

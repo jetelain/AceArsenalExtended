@@ -16,7 +16,7 @@ private _hiddenSelections = getArray (_optionDefintion >> "hiddenselections");
 private _hiddenSelectionsIndexes = _hiddenSelections apply { _classHiddenSelections find _x };
 
 if ( -1 in _hiddenSelectionsIndexes ) exitWith {
-	WARNING_3("Some option hiddenSelections of option was not found in model: Option=%1 Model=%2 Resolved=%3", _hiddenSelections, _classHiddenSelections, _hiddenSelectionsIndexes);
+	WARNING_3("Some option hiddenSelections of option was not found in model: Option=%1 Model=%2 Resolved=%3",_hiddenSelections,_classHiddenSelections,_hiddenSelectionsIndexes);
 };
 
 private _textures = getArray (_optionDefintion >> _value >> "textures");
@@ -27,10 +27,10 @@ if ( isArray (_optionDefintion >> _value >> "materials") ) then {
 };
 
 if ( count _textures != count _hiddenSelectionsIndexes ) exitWith {
-	WARNING_2("Textures count mismatch hidden selections. Textures=%1 HiddenSelections=%2", _textures, _hiddenSelections);
+	WARNING_2("Textures count mismatch hidden selections. Textures=%1 HiddenSelections=%2",_textures,_hiddenSelections);
 };
 if ( count _material != count _hiddenSelectionsIndexes ) exitWith {
-	WARNING_2("Materials count mismatch hidden selections. Materials=%1 HiddenSelections=%2", _materials, _hiddenSelections);
+	WARNING_2("Materials count mismatch hidden selections. Materials=%1 HiddenSelections=%2",_materials,_hiddenSelections);
 };
 
 private _classHiddenSelectionsTextures = [];
