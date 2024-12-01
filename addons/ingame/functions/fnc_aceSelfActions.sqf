@@ -81,7 +81,7 @@ private _loadout = getUnitLoadout _player;
             } forEach _options;
         };
     };
-} foreach GVAR(layout);
+} forEach GVAR(layout);
 
 
 

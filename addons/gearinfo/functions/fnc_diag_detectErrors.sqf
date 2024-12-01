@@ -8,7 +8,7 @@ if ( _classRoot == "" ) exitWith {
 	  (["CfgWeapons"] call FUNC(diag_detectErrors))
 };
 
-INFO_1("Scanning %1 for XtdGearInfo errors", _classRoot);
+INFO_1("Scanning %1 for XtdGearInfo errors",_classRoot);
 
 private _errors = 0;
 
@@ -18,7 +18,7 @@ _configs = [_classRoot, _configs] call FUNC(filterConfigEntries);
 	private _model = getText(_x  >> "XtdGearInfo" >> "model");
 	if(!isClass (configFile >> "XtdGearModels" >> _classRoot >> _model)) then {
 		private _configName = configName _x;
-		ERROR_3("Config '%1/%2' references a non existent model '%3'", _classRoot, _configName, _model);
+		ERROR_3("Config '%1/%2' references a non existent model '%3'",_classRoot,_configName,_model);
 	};
 } foreach _configs;
 
@@ -27,7 +27,7 @@ _configs = "true" configClasses (configFile >> "XtdGearInfos" >> _classRoot);
 	private _model = getText(_x  >> "model");
 	if(!isClass (configFile >> "XtdGearModels" >> _classRoot >> _model)) then {
 		private _configName = configName _x;
-		ERROR_3("Config '%1/%2' references a non existent model '%3'", _classRoot, _configName, _model);
+		ERROR_3("Config '%1/%2' references a non existent model '%3'",_classRoot,_configName,_model);
 	};
 } foreach _configs;
 
@@ -40,19 +40,19 @@ private _models  = "isArray (_x >> 'options')" configClasses (configFile >> "Xtd
 	private _modelValidOptions = _optionNames apply { getArray(_modelDef >> _x >> "values") };
 
 	{
-		_x params ["_config","_optionsValues"],
+		_x params ["_config","_optionsValues"];
 
 		private _configName = configName _config;
 
 		{
 			private _str = _configOptions select _foreachIndex;
 			if ( _str == "" ) then {
-				ERROR_3("Config '%1/%2' has no value for option '%3'", _classRoot, _configName, _x);
+				ERROR_3("Config '%1/%2' has no value for option '%3'",_classRoot,_configName,_x);
 				_errors = _errors + 1;
 			} else {
 				private _valid = _modelValidOptions select _foreachIndex;
 				if ( !(_str in _valid)) then {
-					ERROR_5("Config '%1/%2' has unknown value '%3' for option '%4' (%5 are allowed)", _classRoot, _configName, _str, _x, _valid);
+					ERROR_5("Config '%1/%2' has unknown value '%3' for option '%4' (%5 are allowed)",_classRoot,_configName,_str,_x,_valid);
 					_errors = _errors + 1;
 				};
 			};
@@ -60,20 +60,20 @@ private _models  = "isArray (_x >> 'options')" configClasses (configFile >> "Xtd
 
 		if ( _optionsValues in _configMap ) then {
 			private _dup = _configMap get _optionsValues;
-			ERROR_4("Config '%1/%2' has same options that '%1/%3': %4", _classRoot, _configName, _dup, _optionsValues);
+			ERROR_4("Config '%1/%2' has same options that '%1/%3': %4",_classRoot,_configName,_dup,_optionsValues);
 			_errors = _errors + 1;
 		} else {
 			_configMap set [_optionsValues, _configName];
 		};
 
-	} foreach ([_classRoot, _model] call FUNC(getModelConfigs));
+	} forEach ([_classRoot, _model] call FUNC(getModelConfigs));
 
-} foreach _models;
+} forEach _models;
 
 if ( _errors > 0 ) then {
-	WARNING_2("%1 has %2 error(s)", _classRoot, _errors);
+	WARNING_2("%1 has %2 error(s)",_classRoot,_errors);
 } else {
-	INFO_1("%1 is OK", _classRoot);
+	INFO_1("%1 is OK",_classRoot);
 };
 
 _errors

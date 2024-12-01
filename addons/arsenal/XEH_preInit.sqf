@@ -55,7 +55,7 @@ if ( is3DEN ) then {
   GVAR(edenEntity) = objNull;
 
   ["ace_arsenal_displayOpened", {
-    GVAR(edenEntity) = (uinamespace getvariable ["bis_fnc_3DENEntityMenu_data",[]]) param [1, objnull];
+    GVAR(edenEntity) = (uiNamespace getVariable ["bis_fnc_3DENEntityMenu_data",[]]) param [1, objNull];
     private _optionsAttrValue = GVAR(edenEntity) get3DENAttribute QGVARMAIN(textureOptions);
     if ( _optionsAttrValue isNotEqualTo [] ) then {
       // ace_arsenal_center is going to be replaced just after this event, so we have to do this later (=> leftPanelFilled)

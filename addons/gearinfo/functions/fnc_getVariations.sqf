@@ -9,9 +9,9 @@ if (count _cached > 0) exitWith { _cached };
 private _variations = createHashMap;
 
 {
-    _x params ["_config", "_configOptions"],
+    _x params ["_config", "_configOptions"];
     _variations set [_configOptions, _config];
-} foreach ([_classRoot, _model] call FUNC(getModelConfigs));
+} forEach ([_classRoot, _model] call FUNC(getModelConfigs));
 
 GVAR(variationCache) set [_cacheKey, _variations];
 
