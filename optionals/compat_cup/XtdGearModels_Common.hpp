@@ -340,7 +340,7 @@ class cup_goggles
 	{
 		label = "Up/Cov";
 		description = "Up (Covered)";
-		actionLabel = "Cover Up Goggles"
+		actionLabel = "Cover Up Goggles";
 	};
 
 	class down

@@ -9,8 +9,8 @@ class acebi_casual_clothes
         alwaysSelectable=1;
         class WalRob
         {
-            label = "Walt. Robo."
-            description = "Waltham Robotics"
+            label = "Walt. Robo.";
+            description = "Waltham Robotics";
         };
     };
 };

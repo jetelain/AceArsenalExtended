@@ -19,7 +19,6 @@ class amf_uniform_ubas
         alwaysSelectable = 1;
         values[] = { "Full", "Half" }; // Always computed, do not edit
     };
-    class gloves : GlovesBase { };
     class rank : AMF_RankBaseBV {
         hiddenselection = "grade";
     };

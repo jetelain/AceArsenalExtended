@@ -14,7 +14,7 @@ class rhs_acvch
         alwaysSelectable=1;
         class none
         {
-            label = CSTRING(None);
+            label = "None";
         };
     };
     class weather

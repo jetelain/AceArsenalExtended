@@ -23,11 +23,6 @@ class rhs_belt_holster {
   loadout = "holster";
 };
 
-class rhs_belt_holster {
-  model = "rhs_belt_equip";
-  loadout = "holster";
-};
-
 class rhs_belt_AK {
   model = "rhs_belt_equip";
   loadout = "rifle";

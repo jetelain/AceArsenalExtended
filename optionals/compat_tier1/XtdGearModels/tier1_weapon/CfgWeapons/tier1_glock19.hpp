@@ -33,7 +33,7 @@ class tier1_glock19
         class TB
         {
             label = "Threaded";
-            description = "Threaded Barrel"
+            description = "Threaded Barrel";
         };
     };
 };

@@ -1,46 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACEAX">
     <Package name="compat_amf">
-        <Key ID="STR_ACEAX_compat_amf_None">
-            <English>(none)</English>
-            <French>(sans)</French>
-        </Key>
-        <Key ID="STR_ACEAX_compat_amf_Magazines">
-            <English>Magazines</English>
-            <French>Chargeurs</French>
-        </Key>
-        <Key ID="STR_ACEAX_compat_amf_Loadout">
-            <English>Loadout</English>
-            <French>Configuration</French>
-        </Key>
         <Key ID="STR_ACEAX_compat_amf_Belt">
             <English>Belt</English>
             <French>Ceinture</French>
-        </Key>
-        <Key ID="STR_ACEAX_compat_amf_BeltYes">
-            <English>Yes</English>
-            <French>Avec</French>
         </Key>
         <Key ID="STR_ACEAX_compat_amf_BeltNo">
             <English>No</English>
             <French>Sans</French>
         </Key>
-        <Key ID="STR_ACEAX_compat_amf_Rank">
-            <English>Rank</English>
-            <French>Grade</French>
+        <Key ID="STR_ACEAX_compat_amf_BeltYes">
+            <English>Yes</English>
+            <French>Avec</French>
         </Key>
         <Key ID="STR_ACEAX_compat_amf_BloodType">
             <English>Blood type</English>
             <French>Groupe sanguin</French>
         </Key>
-
+        <Key ID="STR_ACEAX_compat_amf_Butt">
+            <English>Butt</English>
+            <French>Crosse</French>
+        </Key>
+        <Key ID="STR_ACEAX_compat_amf_FaceShield">
+            <English>Visior</English>
+            <French>Visière</French>
+        </Key>
         <Key ID="STR_ACEAX_compat_amf_Gloves">
             <English>Gloves</English>
             <French>Gants</French>
-        </Key>
-        <Key ID="STR_ACEAX_compat_amf_GlovesNoneAction">
-            <English>Remove gloves</English>
-            <French>Enlever les gants</French>
         </Key>
         <Key ID="STR_ACEAX_compat_amf_GlovesMX">
             <English>MX</English>
@@ -50,15 +37,13 @@
             <English>Equip MX gloves</English>
             <French>Mettre les gants MX</French>
         </Key>
-
-
+        <Key ID="STR_ACEAX_compat_amf_GlovesNoneAction">
+            <English>Remove gloves</English>
+            <French>Enlever les gants</French>
+        </Key>
         <Key ID="STR_ACEAX_compat_amf_Goggles">
             <English>Goggles</English>
             <French>Masque</French>
-        </Key>
-        <Key ID="STR_ACEAX_compat_amf_GogglesNoneAction">
-            <English>Remove goggles from helmet</English>
-            <French>Enlever le masque du casque</French>
         </Key>
         <Key ID="STR_ACEAX_compat_amf_GogglesDown">
             <English>Down</English>
@@ -68,22 +53,33 @@
             <English>Equip goggles</English>
             <French>Mettre le masque</French>
         </Key>
-
-        <Key ID="STR_ACEAX_compat_amf_Butt">
-            <English>Butt</English>
-            <French>Crosse</French>
+        <Key ID="STR_ACEAX_compat_amf_GogglesNoneAction">
+            <English>Remove goggles from helmet</English>
+            <French>Enlever le masque du casque</French>
         </Key>
         <Key ID="STR_ACEAX_compat_amf_Handguard">
             <English>Handguard</English>
             <French>Guarde-main</French>
         </Key>
+        <Key ID="STR_ACEAX_compat_amf_Loadout">
+            <English>Loadout</English>
+            <French>Configuration</French>
+        </Key>
+        <Key ID="STR_ACEAX_compat_amf_Magazines">
+            <English>Magazines</English>
+            <French>Chargeurs</French>
+        </Key>
+        <Key ID="STR_ACEAX_compat_amf_None">
+            <English>(none)</English>
+            <French>(sans)</French>
+        </Key>
+        <Key ID="STR_ACEAX_compat_amf_Rank">
+            <English>Rank</English>
+            <French>Grade</French>
+        </Key>
         <Key ID="STR_ACEAX_compat_amf_Size">
             <English>Size</English>
             <French>Taille</French>
-        </Key>
-        <Key ID="STR_ACEAX_compat_amf_FaceShield">
-            <English>Visior</English>
-            <French>Visière</French>
         </Key>
     </Package>
 </Project>

@@ -13,11 +13,6 @@ class CUP_V_B_MTV {
 	loadout = "EMPTY";
 };
 
-class CUP_V_B_MTV_Pouches {
-	model = "cup_mtv";
-	loadout = "BIG_POUCH";
-};
-
 class CUP_V_B_MTV_Mine {
 	model = "cup_mtv";
 	loadout = "EXP";

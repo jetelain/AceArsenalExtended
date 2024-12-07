@@ -207,7 +207,7 @@ class rhsusf_ach_helmet_DCU_early_rhino {
   camo = "DCP_ERL";
   goggles = "None";
   headset = "No";
-  nvgmount = "RhinoB"
+  nvgmount = "RhinoB";
 	netting = "No";
 };
 

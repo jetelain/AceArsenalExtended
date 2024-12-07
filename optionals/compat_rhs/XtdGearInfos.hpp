@@ -118,7 +118,6 @@ class XtdGearInfos {
         #include "XtdGearInfos\rhs_weapon\CfgWeapons\rhs_ak103_gp25.hpp"
         #include "XtdGearInfos\rhs_weapon\CfgWeapons\rhs_ak104.hpp"
         #include "XtdGearInfos\rhs_weapon\CfgWeapons\rhs_ak105.hpp"
-        #include "XtdGearInfos\rhs_weapon\CfgWeapons\rhs_ak105.hpp"
         #include "XtdGearInfos\rhs_weapon\CfgWeapons\rhs_ak74.hpp"
         #include "XtdGearInfos\rhs_weapon\CfgWeapons\rhs_ak74m.hpp"
         #include "XtdGearInfos\rhs_weapon\CfgWeapons\rhs_ak74m_gp25.hpp"

@@ -22,7 +22,7 @@ class tier1_p320
         class TB
         {
             label = "Threaded";
-            description = "Threaded Barrel"
+            description = "Threaded Barrel";
         };
     };
 };

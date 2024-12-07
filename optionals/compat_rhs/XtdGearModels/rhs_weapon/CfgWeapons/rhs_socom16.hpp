@@ -10,6 +10,6 @@ class rhs_socom16
         {
             label = "Pica. & Side";
             description = "Picatinny Rail and Side Mount (e.g. flashlights and lasers)";
-        }
+        };
     };
 };

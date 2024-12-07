@@ -20,7 +20,7 @@ class rhs_asval
         class yes
         {
             label = "Yes";
-            description = "Allows you to mount a flashlight or laser point as well as a grip"
+            description = "Allows you to mount a flashlight or laser point as well as a grip";
         };
     };
 };

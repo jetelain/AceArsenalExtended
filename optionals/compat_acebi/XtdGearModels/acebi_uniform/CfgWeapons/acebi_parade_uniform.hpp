@@ -12,5 +12,5 @@ class acebi_parade_uniform
         label = "Decorated";
         values[] = { "No", "Yes" };
         alwaysSelectable=1;
-    }
+    };
 };

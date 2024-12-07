@@ -34,7 +34,7 @@ class tier1_glock22
         class TB
         {
             label = "Threaded";
-            description = "Threaded Barrel"
+            description = "Threaded Barrel";
         };
     };
 };
