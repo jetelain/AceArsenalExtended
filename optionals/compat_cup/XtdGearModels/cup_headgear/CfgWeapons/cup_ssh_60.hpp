@@ -10,7 +10,7 @@ class cup_ssh_60 {
 		class NET
 		{
 			label = "Netting";
-			image = QPATHTOF(data\camo\taki\ssh_60_netting.paa)
+			image = QPATHTOF(data\camo\taki\ssh_60_netting.paa);
 		};
 
 		class DES

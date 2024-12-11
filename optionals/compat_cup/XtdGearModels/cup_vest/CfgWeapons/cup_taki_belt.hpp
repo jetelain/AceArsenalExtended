@@ -9,7 +9,7 @@ class cup_taki_belt {
 		class OFC_BINO
 		{
 			label = "Officer/Binos";
-			description = "Officer/Binoculars"
+			description = "Officer/Binoculars";
 		};
 	};
 };
