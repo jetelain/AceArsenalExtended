@@ -277,18 +277,6 @@ class XtdGearModels
 			image = QPATHTOF(data\camo\ucp.paa);
 		};
 
-		class AAF // BI's AAF Digital Green
-		{
-			label = "AAF";
-			image = QPATHTOF(data\camo\aaf.paa);
-		};
-
-		class EAF // BI's LDF Fractal
-		{
-			label = "EAF";
-			image = QPATHTOF(data\camo\eaf.paa);
-		};
-
 		class TSD
 		{
 			label = "TSD";
@@ -307,6 +295,60 @@ class XtdGearModels
 		{
 			label = "VSR";
 			image = QPATHTOF(data\camo\vsr.paa);
+		};
+
+		// Vanilla Faction Camos. These are here since they tend to be used in a variety of mods even those that aren't specifically for vanilla factions.
+
+		// INDFOR camos.
+		class AAF // BI's AAF Digital Green
+		{
+			label = "AAF";
+			image = QPATHTOF(data\camo\aaf.paa);
+		};
+
+		class EAF // BI's LDF Fractal
+		{
+			label = "EAF";
+			image = QPATHTOF(data\camo\eaf.paa);
+		};
+
+		// CTRG camos.
+		class CTRG_ARID
+		{
+			label = "Arid Daz.";
+			description = "CTRG Arid Dazzle";
+			image = QPATHTOF(data\camo\ctrg_arid.paa);
+		};
+		class CTRG_URB
+		{
+			label = "Urb. Daz.";
+			description = "CTRG Urban Dazzle";
+			image = QPATHTOF(data\camo\ctrg_urb.paa);
+		};
+		class CTRG_TROP
+		{
+			label = "Trop. Daz.";
+			description = "CTRG Tropic Dazzle";
+			image = QPATHTOF(data\camo\ctrg_trop.paa);
+		};
+
+		// CSAT camos.
+		class HEX // CSAT standard hex camo.
+		{
+			label = "Hex";
+			image = QPATHTOF(data\camo\csat.paa);
+		};
+		class GHEX // CSAT tropical hex camo.
+		{
+			label = "Grn. Hex";
+			description = "Green Hex";
+			image = QPATHTOF(data\camo\csat_tna.paa);
+		};
+		class UHEX // CSAT urban hex camo.
+		{
+			label = "Urb. Hex";
+			description = "Urban Hex";
+			image = QPATHTOF(data\camo\csat_ou.paa);
 		};
 	};
 
