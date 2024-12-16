@@ -1,423 +1,297 @@
-// EMR-Summer
-	class CUP_Vest_RUS_6B45_Sh117 {
-		model = "cup_6b45";
-		camo = "EMR_SUM";
-		loadout = "STD";
-		protection = "NP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_Del {
-		model = "cup_6b45";
-		camo = "EMR_SUM";
-		loadout = "STD";
-		protection = "SP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_Nut {
-		model = "cup_6b45";
-		camo = "EMR_SUM";
-		loadout = "STD";
-		protection = "CP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_Del_Nut {
-		model = "cup_6b45";
-		camo = "EMR_SUM";
-		loadout = "STD";
-		protection = "SCP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_Full {
-		model = "cup_6b45";
-		camo = "EMR_SUM";
-		loadout = "STD";
-		protection = "SCTP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_PKP {
-		model = "cup_6b45";
-		camo = "EMR_SUM";
-		loadout = "MG";
-		protection = "NP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_PKP_Del {
-		model = "cup_6b45";
-		camo = "EMR_SUM";
-		loadout = "MG";
-		protection = "SP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_PKP_Nut {
-		model = "cup_6b45";
-		camo = "EMR_SUM";
-		loadout = "MG";
-		protection = "CP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_PKP_Del_Nut {
-		model = "cup_6b45";
-		camo = "EMR_SUM";
-		loadout = "MG";
-		protection = "SCP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_PKP_Full {
-		model = "cup_6b45";
-		camo = "EMR_SUM";
-		loadout = "MG";
-		protection = "SCTP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_VOG {
-		model = "cup_6b45";
-		camo = "EMR_SUM";
-		loadout = "GL";
-		protection = "NP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_VOG_Del {
-		model = "cup_6b45";
-		camo = "EMR_SUM";
-		loadout = "GL";
-		protection = "SP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_VOG_Nut {
-		model = "cup_6b45";
-		camo = "EMR_SUM";
-		loadout = "GL";
-		protection = "CP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_VOG_Del_Nut {
-		model = "cup_6b45";
-		camo = "EMR_SUM";
-		loadout = "GL";
-		protection = "SCP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_VOG_Full {
-		model = "cup_6b45";
-		camo = "EMR_SUM";
-		loadout = "GL";
-		protection = "SCTP";
-	};
-
-// Beige Desert
-	class CUP_Vest_RUS_6B45_Sh117_BeigeDigital {
+// Beige Digital (Standard)
+	class CUP_V_O_RUS_6B45_SVD_Desert {
 		model = "cup_6b45";
 		camo = "BGEDIGI";
-		loadout = "STD";
-		protection = "NP";
+		loadout = "DMR";
+		spp = "no";
 	};
 
-	class CUP_Vest_RUS_6B45_Sh117_Del_BeigeDigital {
+	class CUP_V_O_RUS_6B45_Light_Desert {
 		model = "cup_6b45";
 		camo = "BGEDIGI";
-		loadout = "STD";
-		protection = "SP";
+		loadout = "EMPTY";
+		spp = "no";
 	};
-
-	class CUP_Vest_RUS_6B45_Sh117_Nut_BeigeDigital {
-		model = "cup_6b45";
-		camo = "BGEDIGI";
-		loadout = "STD";
-		protection = "CP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_Del_Nut_BeigeDigital {
-		model = "cup_6b45";
-		camo = "BGEDIGI";
-		loadout = "STD";
-		protection = "SCP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_Full_BeigeDigital {
-		model = "cup_6b45";
-		camo = "BGEDIGI";
-		loadout = "STD";
-		protection = "SCTP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_PKP_BeigeDigital {
-		model = "cup_6b45";
-		camo = "BGEDIGI";
-		loadout = "MG";
-		protection = "NP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_PKP_Del_BeigeDigital {
-		model = "cup_6b45";
-		camo = "BGEDIGI";
-		loadout = "MG";
-		protection = "SP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_PKP_Nut_BeigeDigital {
-		model = "cup_6b45";
-		camo = "BGEDIGI";
-		loadout = "MG";
-		protection = "CP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_PKP_Del_Nut_BeigeDigital {
-		model = "cup_6b45";
-		camo = "BGEDIGI";
-		loadout = "MG";
-		protection = "SCP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_PKP_Full_BeigeDigital {
-		model = "cup_6b45";
-		camo = "BGEDIGI";
-		loadout = "MG";
-		protection = "SCTP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_VOG_BeigeDigital {
+	
+	class CUP_V_O_RUS_6B45_VOG_Desert {
 		model = "cup_6b45";
 		camo = "BGEDIGI";
 		loadout = "GL";
-		protection = "NP";
+		spp = "no";
 	};
 
-	class CUP_Vest_RUS_6B45_Sh117_VOG_Del_BeigeDigital {
+	class CUP_V_O_RUS_6B45_VOG_Radio_Desert {
+		model = "cup_6b45";
+		camo = "BGEDIGI";
+		loadout = "GL_RADIO";
+		spp = "no";
+	};
+
+	class CUP_V_O_RUS_6B45_AK_Light_Desert {
+		model = "cup_6b45";
+		camo = "BGEDIGI";
+		loadout = "LIGHT";
+		spp = "no";
+	};
+
+	class CUP_V_O_RUS_6B45_AK_Desert {
+		model = "cup_6b45";
+		camo = "BGEDIGI";
+		loadout = "RIFL";
+		spp = "no";
+	};
+	
+	class CUP_V_O_RUS_6B45_AK_Radio_Desert {
+		model = "cup_6b45";
+		camo = "BGEDIGI";
+		loadout = "RIFL_RADIO";
+		spp = "no";
+	};
+	
+	class CUP_V_O_RUS_6B45_AK_Med_Desert {
+		model = "cup_6b45";
+		camo = "BGEDIGI";
+		loadout = "MED";
+		spp = "no";
+	};
+
+	class CUP_V_O_RUS_6B45_AK_Med_Light_Desert {
+		model = "cup_6b45";
+		camo = "BGEDIGI";
+		loadout = "MED_LIGHT";
+		spp = "no";
+	};
+
+	class CUP_V_O_RUS_6B45_AK_Med_Radio_Desert {
+		model = "cup_6b45";
+		camo = "BGEDIGI";
+		loadout = "MED_RADIO";
+		spp = "no";
+	};
+	
+	class CUP_V_O_RUS_6B45_PKP_Desert {
+		model = "cup_6b45";
+		camo = "BGEDIGI";
+		loadout = "MG";
+		spp = "no";
+	};
+
+// Beige Digital (SPP)
+	class CUP_V_O_RUS_6B45_SPP_SVD_Desert {
+		model = "cup_6b45";
+		camo = "BGEDIGI";
+		loadout = "DMR";
+		spp = "yes";
+	};
+	
+	class CUP_V_O_RUS_6B45_SPP_VOG_Desert {
 		model = "cup_6b45";
 		camo = "BGEDIGI";
 		loadout = "GL";
-		protection = "SP";
+		spp = "yes";
 	};
 
-	class CUP_Vest_RUS_6B45_Sh117_VOG_Nut_BeigeDigital {
+	class CUP_V_O_RUS_6B45_SPP_VOG_Radio_Desert {
 		model = "cup_6b45";
 		camo = "BGEDIGI";
-		loadout = "GL";
-		protection = "CP";
+		loadout = "GL_RADIO";
+		spp = "yes";
 	};
 
-	class CUP_Vest_RUS_6B45_Sh117_VOG_Del_Nut_BeigeDigital {
+	class CUP_V_O_RUS_6B45_SPP_AK_Light_Desert {
 		model = "cup_6b45";
 		camo = "BGEDIGI";
-		loadout = "GL";
-		protection = "SCP";
+		loadout = "LIGHT";
+		spp = "yes";
 	};
 
-	class CUP_Vest_RUS_6B45_Sh117_VOG_Full_BeigeDigital {
+	class CUP_V_O_RUS_6B45_SPP_AK_Desert {
 		model = "cup_6b45";
 		camo = "BGEDIGI";
-		loadout = "GL";
-		protection = "SCTP";
+		loadout = "RIFL";
+		spp = "yes";
+	};
+	
+	class CUP_V_O_RUS_6B45_SPP_AK_Radio_Desert {
+		model = "cup_6b45";
+		camo = "BGEDIGI";
+		loadout = "RIFL_RADIO";
+		spp = "yes";
+	};
+	
+	class CUP_V_O_RUS_6B45_SPP_AK_Med_Desert {
+		model = "cup_6b45";
+		camo = "BGEDIGI";
+		loadout = "MED";
+		spp = "yes";
 	};
 
-// Green
-	class CUP_Vest_RUS_6B45_Sh117_Green {
+	class CUP_V_O_RUS_6B45_SPP_AK_Med_Light_Desert {
 		model = "cup_6b45";
-		camo = "GRN";
-		loadout = "STD";
-		protection = "NP";
+		camo = "BGEDIGI";
+		loadout = "MED_LIGHT";
+		spp = "yes";
 	};
 
-	class CUP_Vest_RUS_6B45_Sh117_Del_Green {
+	class CUP_V_O_RUS_6B45_SPP_AK_Med_Radio_Desert {
 		model = "cup_6b45";
-		camo = "GRN";
-		loadout = "STD";
-		protection = "SP";
+		camo = "BGEDIGI";
+		loadout = "MED_RADIO";
+		spp = "yes";
 	};
-
-	class CUP_Vest_RUS_6B45_Sh117_Nut_Green {
+	
+	class CUP_V_O_RUS_6B45_SPP_PKP_Desert {
 		model = "cup_6b45";
-		camo = "GRN";
-		loadout = "STD";
-		protection = "CP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_Del_Nut_Green {
-		model = "cup_6b45";
-		camo = "GRN";
-		loadout = "STD";
-		protection = "SCP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_Full_Green {
-		model = "cup_6b45";
-		camo = "GRN";
-		loadout = "STD";
-		protection = "SCTP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_PKP_Green {
-		model = "cup_6b45";
-		camo = "GRN";
+		camo = "BGEDIGI";
 		loadout = "MG";
-		protection = "NP";
+		spp = "yes";
 	};
 
-	class CUP_Vest_RUS_6B45_Sh117_PKP_Del_Green {
+// EMR-Summer (Standard)
+	class CUP_V_O_RUS_6B45_SVD_Summer {
 		model = "cup_6b45";
-		camo = "GRN";
+		camo = "EMR_SUM";
+		loadout = "DMR";
+		spp = "no";
+	};
+
+	class CUP_V_O_RUS_6B45_Light_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
+		loadout = "EMPTY";
+		spp = "no";
+	};
+	
+	class CUP_V_O_RUS_6B45_VOG_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
+		loadout = "GL";
+		spp = "no";
+	};
+
+	class CUP_V_O_RUS_6B45_VOG_Radio_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
+		loadout = "GL_RADIO";
+		spp = "no";
+	};
+
+	class CUP_V_O_RUS_6B45_AK_Light_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
+		loadout = "LIGHT";
+		spp = "no";
+	};
+
+	class CUP_V_O_RUS_6B45_AK_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
+		loadout = "RIFL";
+		spp = "no";
+	};
+	
+	class CUP_V_O_RUS_6B45_AK_Radio_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
+		loadout = "RIFL_RADIO";
+		spp = "no";
+	};
+	
+	class CUP_V_O_RUS_6B45_AK_Med_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
+		loadout = "MED";
+		spp = "no";
+	};
+
+	class CUP_V_O_RUS_6B45_AK_Med_Light_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
+		loadout = "MED_LIGHT";
+		spp = "no";
+	};
+
+	class CUP_V_O_RUS_6B45_AK_Med_Radio_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
+		loadout = "MED_RADIO";
+		spp = "no";
+	};
+	
+	class CUP_V_O_RUS_6B45_PKP_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
 		loadout = "MG";
-		protection = "SP";
+		spp = "no";
 	};
 
-	class CUP_Vest_RUS_6B45_Sh117_PKP_Nut_Green {
+// EMR-Summer (SPP)
+	class CUP_V_O_RUS_6B45_SPP_SVD_Summer {
 		model = "cup_6b45";
-		camo = "GRN";
+		camo = "EMR_SUM";
+		loadout = "DMR";
+		spp = "yes";
+	};
+	
+	class CUP_V_O_RUS_6B45_SPP_VOG_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
+		loadout = "GL";
+		spp = "yes";
+	};
+
+	class CUP_V_O_RUS_6B45_SPP_VOG_Radio_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
+		loadout = "GL_RADIO";
+		spp = "yes";
+	};
+
+	class CUP_V_O_RUS_6B45_SPP_AK_Light_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
+		loadout = "LIGHT";
+		spp = "yes";
+	};
+
+	class CUP_V_O_RUS_6B45_SPP_AK_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
+		loadout = "RIFL";
+		spp = "yes";
+	};
+	
+	class CUP_V_O_RUS_6B45_SPP_AK_Radio_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
+		loadout = "RIFL_RADIO";
+		spp = "yes";
+	};
+	
+	class CUP_V_O_RUS_6B45_SPP_AK_Med_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
+		loadout = "MED";
+		spp = "yes";
+	};
+
+	class CUP_V_O_RUS_6B45_SPP_AK_Med_Light_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
+		loadout = "MED_LIGHT";
+		spp = "yes";
+	};
+
+	class CUP_V_O_RUS_6B45_SPP_AK_Med_Radio_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
+		loadout = "MED_RADIO";
+		spp = "yes";
+	};
+	
+	class CUP_V_O_RUS_6B45_SPP_PKP_Summer {
+		model = "cup_6b45";
+		camo = "EMR_SUM";
 		loadout = "MG";
-		protection = "CP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_PKP_Del_Nut_Green {
-		model = "cup_6b45";
-		camo = "GRN";
-		loadout = "MG";
-		protection = "SCP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_PKP_Full_Green {
-		model = "cup_6b45";
-		camo = "GRN";
-		loadout = "MG";
-		protection = "SCTP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_VOG_Green {
-		model = "cup_6b45";
-		camo = "GRN";
-		loadout = "GL";
-		protection = "NP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_VOG_Del_Green {
-		model = "cup_6b45";
-		camo = "GRN";
-		loadout = "GL";
-		protection = "SP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_VOG_Nut_Green {
-		model = "cup_6b45";
-		camo = "GRN";
-		loadout = "GL";
-		protection = "CP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_VOG_Del_Nut_Green {
-		model = "cup_6b45";
-		camo = "GRN";
-		loadout = "GL";
-		protection = "SCP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_VOG_Full_Green {
-		model = "cup_6b45";
-		camo = "GRN";
-		loadout = "GL";
-		protection = "SCTP";
-	};
-
-// Desert Pink
-	class CUP_Vest_RUS_6B45_Sh117_Desert {
-		model = "cup_6b45";
-		camo = "DESPNK";
-		loadout = "STD";
-		protection = "NP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_Del_Desert {
-		model = "cup_6b45";
-		camo = "DESPNK";
-		loadout = "STD";
-		protection = "SP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_Nut_Desert {
-		model = "cup_6b45";
-		camo = "DESPNK";
-		loadout = "STD";
-		protection = "CP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_Del_Nut_Desert {
-		model = "cup_6b45";
-		camo = "DESPNK";
-		loadout = "STD";
-		protection = "SCP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_Full_Desert {
-		model = "cup_6b45";
-		camo = "DESPNK";
-		loadout = "STD";
-		protection = "SCTP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_PKP_Desert {
-		model = "cup_6b45";
-		camo = "DESPNK";
-		loadout = "MG";
-		protection = "NP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_PKP_Del_Desert {
-		model = "cup_6b45";
-		camo = "DESPNK";
-		loadout = "MG";
-		protection = "SP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_PKP_Nut_Desert {
-		model = "cup_6b45";
-		camo = "DESPNK";
-		loadout = "MG";
-		protection = "CP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_PKP_Del_Nut_Desert {
-		model = "cup_6b45";
-		camo = "DESPNK";
-		loadout = "MG";
-		protection = "SCP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_PKP_Full_Desert {
-		model = "cup_6b45";
-		camo = "DESPNK";
-		loadout = "MG";
-		protection = "SCTP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_VOG_Desert {
-		model = "cup_6b45";
-		camo = "DESPNK";
-		loadout = "GL";
-		protection = "NP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_VOG_Del_Desert {
-		model = "cup_6b45";
-		camo = "DESPNK";
-		loadout = "GL";
-		protection = "SP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_VOG_Nut_Desert {
-		model = "cup_6b45";
-		camo = "DESPNK";
-		loadout = "GL";
-		protection = "CP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_VOG_Del_Nut_Desert {
-		model = "cup_6b45";
-		camo = "DESPNK";
-		loadout = "GL";
-		protection = "SCP";
-	};
-
-	class CUP_Vest_RUS_6B45_Sh117_VOG_Full_Desert {
-		model = "cup_6b45";
-		camo = "DESPNK";
-		loadout = "GL";
-		protection = "SCTP";
+		spp = "yes";
 	};

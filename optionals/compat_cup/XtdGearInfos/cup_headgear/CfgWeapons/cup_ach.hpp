@@ -41,6 +41,49 @@
 		headset = "yes";
 	};
 
+// MM-14
+	class CUP_H_AFU_HelmetACH_MM_14 {
+		model = "cup_ach";
+		camo = "MM14";
+		goggles = "no";
+		headset = "no";
+	};
+
+	class CUP_H_AFU_HelmetACH_GCOVERED_MM_14 {
+		model = "cup_ach";
+		camo = "MM14";
+		goggles = "yes_cover";
+		headset = "no";
+	};
+
+	class CUP_H_AFU_HelmetACH_GCOVERED_Headset_MM_14 {
+		model = "cup_ach";
+		camo = "MM14";
+		goggles = "yes_cover";
+		headset = "yes";
+	};
+
+	class CUP_H_AFU_HelmetACH_ESS_MM_14 {
+		model = "cup_ach";
+		camo = "MM14";
+		goggles = "yes";
+		headset = "no";
+	};
+
+	class CUP_H_AFU_HelmetACH_ESS_Headset_MM_14 {
+		model = "cup_ach";
+		camo = "MM14";
+		goggles = "yes";
+		headset = "yes";
+	};
+
+	class CUP_H_AFU_HelmetACH_Headset_MM_14 {
+		model = "cup_ach";
+		camo = "MM14";
+		goggles = "no";
+		headset = "yes";
+	};
+
 // OCP
 	class CUP_H_USArmy_HelmetACH_OCP {
 		model = "cup_ach";

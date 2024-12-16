@@ -5,7 +5,7 @@ class cup_opscore_fast {
 
 	class camo
 	{
-		values[] = {"AAF", "BLK", "FLCK", "TRPTRN", "GRN", "GRY", "MTP", "MC_US", "MC", "SPRAY_US", "SPRAY", "TAN", "TSW", "UCP" };
+		values[] = {"AAF", "BLK", "FLCK", "TRPTRN", "GRN", "GRY", "MTP", "MC_US", "MC", "MM14", "SPRAY_US", "SPRAY", "TAN", "TSW", "UCP" };
 
 		class MC_US
 		{

@@ -15,7 +15,7 @@ class cup_iotv_us {
 		values[] = {"EMPTY", "GL", "MG", "MED", "RIFL", "RIFL_DEL", "AR", "SL", "TL" };
 		class RIFL_DEL
 		{
-			label = "Rifle/Del";
+			label = "RIFL/Del";
 			description = "Rifleman/Deltoid Protector";
 		};
 

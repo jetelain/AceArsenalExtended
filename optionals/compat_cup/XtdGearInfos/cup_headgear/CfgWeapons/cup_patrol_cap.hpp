@@ -28,6 +28,11 @@ class CUP_H_US_patrol_cap_WDL {
 	camo = "M81";
 };
 
+class CUP_H_AFU_patrol_cap_MM14 {
+	model = "cup_patrol_cap";
+	camo = "MM14";
+};
+
 class CUP_H_US_patrol_cap_OCP {
 	model = "cup_patrol_cap";
 	camo = "OCP";
@@ -41,6 +46,11 @@ class CUP_H_US_patrol_cap_OEFCP {
 class CUP_H_US_patrol_cap_OD {
 	model = "cup_patrol_cap";
 	camo = "OD";
+};
+
+class CUP_H_US_patrol_cap_Rhodesian {
+	model = "cup_patrol_cap";
+	camo = "RHD";	
 };
 
 class CUP_H_US_patrol_cap_Tpattern {
