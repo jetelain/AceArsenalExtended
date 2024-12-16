@@ -6,7 +6,7 @@ class cup_boonie {
 	class camo
 	{
 		alwaysSelectable = 1;
-		values[] = {"CCE", "OCP", "OEF_CP", "TTS", "UCP" };
+		values[] = {"CCE", "MM14", "OCP", "OEF_CP", "RHD", "TTS", "UCP" };
 	};
 
 	class headset

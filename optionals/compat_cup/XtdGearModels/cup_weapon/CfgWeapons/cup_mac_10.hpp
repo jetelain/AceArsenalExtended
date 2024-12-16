@@ -7,5 +7,5 @@ class cup_mac_10
     {
         label = "Optic";
         values[] = { "none", "picatinny" };
-    }
+    };
 };

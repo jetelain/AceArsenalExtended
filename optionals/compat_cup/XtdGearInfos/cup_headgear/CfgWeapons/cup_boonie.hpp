@@ -5,6 +5,13 @@
 		headset = "no";
 	};
 
+// MM14
+	class CUP_H_Booniehat_mm14 {
+		model = "cup_boonie";
+		camo = "MM14";
+		headset = "no";
+	};
+
 // OCP
 	class CUP_H_USArmy_Boonie_OCP {
 		model = "cup_boonie";
@@ -29,6 +36,13 @@
 		model = "cup_boonie";
 		camo = "OEF_CP";
 		headset = "yes";
+	};
+
+// Rhodesian Brushstroke
+	class CUP_H_Booniehat_Rhodesian {
+		model = "cup_boonie";
+		camo = "RHD";
+		headset = "no";
 	};
 
 // UCP

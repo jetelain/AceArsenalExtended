@@ -6,5 +6,5 @@ class cup_mg3
     class attachsys : cup_attachsys
     {
         values[] = { "none", "ris" };
-    }
+    };
 };

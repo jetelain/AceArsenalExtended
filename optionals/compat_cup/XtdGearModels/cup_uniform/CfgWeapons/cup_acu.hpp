@@ -5,7 +5,7 @@ class cup_acu {
 	class camo
 	{
 		alwaysSelectable = 1;
-		values[]={ "CCE", "TTS", "OCP", "OEF_CP", "UCP" };
+		values[]={ "CCE", "MM14", "OCP", "OEF_CP", "TTS", "UCP" };
 	};
 	class sleeves
 	{

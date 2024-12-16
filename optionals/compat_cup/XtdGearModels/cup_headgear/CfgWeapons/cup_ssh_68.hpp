@@ -11,14 +11,14 @@ class cup_ssh_68 {
 		{
 			label = "SPTZDA";
 			description = "Spetsodezhda; also known as Berezka";
-			image = QPATHTOF(data\camo\spetsodezhda.paa)
+			image = QPATHTOF(data\camo\spetsodezhda.paa);
 		};
 
 		class DUBOK
 		{
 			label = "Dubok";
 			description = "VSR-84 Dubok; also known as Butan";
-			image = QPATHTOF(data\camo\dubok.paa)
+			image = QPATHTOF(data\camo\dubok.paa);
 		};
 	};
 };

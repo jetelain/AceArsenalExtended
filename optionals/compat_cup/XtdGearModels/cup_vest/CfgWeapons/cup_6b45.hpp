@@ -1,60 +1,56 @@
 class cup_6b45 {
 	label="6B45";
 	author="Community Upgrade Project";
-	options[]= { "camo", "loadout", "protection" };
+	options[]= { "camo", "loadout", "spp" };
 
 	class camo
 	{
 		alwaysSelectable = 1;
-		values[] = {"EMR_SUM", "BGEDIGI", "DESPNK", "GRN" };
+		values[] = {"BGEDIGI", "EMR_SUM" };
 
-		class GRN
-		{
-			image = "#(rgb,8,8,3)color(0.43,0.39,0.24,1)";
-		};
 	};
-
 
 	class loadout : cup_loadout
 	{
 		alwaysSelectable = 1;
-		values[] = {"STD", "MG", "GL" };
+		values[] = {"DMR", "EMPTY", "GL", "GL_RADIO", "LIGHT", "MED", "MED_GL", "MED_LIGHT", "MED_RADIO", "MG", "RIFL", "RIFL_RADIO" };
+
+		class GL_RADIO
+		{
+			label = "GL/Radio";
+			description = "Grenadier/Radio";
+		};
+
+		class RIFL_RADIO
+		{
+			label = "RIFL/Radio";
+			description = "Rifleman/Radio";
+		};
+
+		class MED_LIGHT
+		{
+			label = "Medic/Light";
+		};
+
+		class MED_RADIO
+		{
+			label = "Medic/Radio";
+		};
 	};
 
-	class protection
+	class spp
 	{
 		alwaysSelectable = 1;
-		label = "Protection";
-		values[] = {"NP", "SP", "CP", "SCP", "SCTP" };
-
-		class NP
+		label = "SPP Bag";
+		values[] = {"no", "yes" };
+		class no
 		{
-			label = "Minimal";
-			description = "No Pads";
+			label = CSTRING(No);
 		};
 
-		class SP
+		class yes
 		{
-			label = "Shoulder";
-			description = "Shoulder Pad";
-		};
-
-		class CP
-		{
-			label = "Crotch";
-			description = "Crotch Pad";
-		};
-
-		class SCP
-		{
-			label = "Should/Crotch";
-			description = "Shoulder and Crotch Pads";
-		};
-
-		class SCTP
-		{
-			label = "Full";
-			description = "Shoulder, Crotch, and Thigh Pads";
+			label = CSTRING(Yes);
 		};
 	};
 };

@@ -26,5 +26,5 @@ class cup_m60e4
     class attachsys : cup_attachsys
     {
         values[] = { "none", "ris" };
-    }
+    };
 };

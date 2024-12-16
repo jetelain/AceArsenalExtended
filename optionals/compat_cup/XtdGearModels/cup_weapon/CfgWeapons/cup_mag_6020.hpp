@@ -22,5 +22,5 @@ class cup_mag_6020
     {
         label = "Optic";
         values[] = { "none", "picatinny" };
-    }
+    };
 };

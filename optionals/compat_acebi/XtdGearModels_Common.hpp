@@ -18,25 +18,6 @@ class CamoBase
 		image="#(rgb,8,8,3)color(0.6,0.64,0.5,1)";
 	};
 
-	//CSAT camos.
-	class HEX // CSAT standard hex camo.
-	{
-		label = "Hex";
-		image = "z\aceax\addons\gearinfo\data\camo\csat.paa";
-	};
-	class GHEX // CSAT tropical hex camo.
-	{
-		label = "Grn. Hex";
-		description = "Green Hex";
-		image = "z\aceax\addons\gearinfo\data\camo\csat_tna.paa";
-	};
-	class UHEX // CSAT urban hex camo.
-	{
-		label = "Urb. Hex";
-		description = "Urban Hex";
-		image = "z\aceax\addons\gearinfo\data\camo\csat_ou.paa";
-	};
-
 	// NATO helmet camos.
 	class BIHELM_STD // There is no better way to describe it really
 	{
@@ -57,26 +38,6 @@ class CamoBase
 	{
 		label = "Snakeskin";
 		image = "z\aceax\compats\ACEandBI\data\camo\bihelm_snk.paa";
-	};
-
-	// CTRG camos.
-	class CTRG_ARID
-	{
-		label = "Arid Daz.";
-		description = "CTRG Arid Dazzle";
-		image = "z\aceax\compats\ACEandBI\data\camo\ctrg_arid.paa";
-	};
-	class CTRG_URB
-	{
-		label = "Urb. Daz.";
-		description = "CTRG Urban Dazzle";
-		image = "z\aceax\compats\ACEandBI\data\camo\ctrg_urb.paa";
-	};
-	class CTRG_TROP
-	{
-		label = "Trop. Daz.";
-		description = "CTRG Tropic Dazzle";
-		image = "z\aceax\compats\ACEandBI\data\camo\ctrg_trop.paa";
 	};
 
 	// Spetsnaz camos.
