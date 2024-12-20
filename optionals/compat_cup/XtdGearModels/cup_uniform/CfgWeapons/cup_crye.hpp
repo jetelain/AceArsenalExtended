@@ -18,21 +18,21 @@ class cup_crye
 		{
 			label = "MC 1";
 			description = "MultiCam 1";
-			image = QPATHTOF(data\camo\crye\mc_1.paa)
+			image = QPATHTOF(data\camo\crye\mc_1.paa);
 		};
 
 		class MC_2
 		{
 			label = "MC 2";
 			description = "MultiCam 2";
-			image = QPATHTOF(data\camo\crye\mc_2.paa)
+			image = QPATHTOF(data\camo\crye\mc_2.paa);
 		};
 
 		class MC_3
 		{
 			label = "MC 3";
 			description = "MultiCam 3";
-			image = QPATHTOF(data\camo\crye\mc_2.paa) // Uses same uniform texture, but has different gloves and boots.
+			image = QPATHTOF(data\camo\crye\mc_2.paa); // Uses same uniform texture, but has different gloves and boots.
 		};
 	};
 

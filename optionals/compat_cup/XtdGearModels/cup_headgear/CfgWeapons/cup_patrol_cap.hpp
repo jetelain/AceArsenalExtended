@@ -5,7 +5,7 @@ class cup_patrol_cap {
 
 	class camo
 	{
-		values[] = {"ALP", "DCP", "6CDP", "ERDL_H", "ERDL_L", "M81", "OCP", "OEF_CP", "OD", "TPAT", "TSW", "UCP", "CUP_URB", "WNTR"};
+		values[] = {"ALP", "DCP", "6CDP", "ERDL_H", "ERDL_L", "M81", "MM14", "OCP", "OEF_CP", "OD", "RHD", "TPAT", "TSW", "UCP", "CUP_URB", "WNTR"};
 		class WNTR
 		{
 			label = "Winter";

@@ -1,14 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACEAX">
     <Package name="compat_cup">
+        <Key ID="STR_ACEAX_compat_cup_ATACSAU_Description">
+            <English>A-TACS Arid Urban</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_ATACSAU_Label">
+            <English>A-TACS AU</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_ATACSFG_Alt_Description">
+            <English>A-TACS Foliage Green [Alternate]</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_ATACSFG_Alt_Label">
+            <English>A-TACS FG [B]</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_ATACSFG_Description">
+            <English>A-TACS Foliage Green</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_ATACSFG_Label">
+            <English>A-TACS FG</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Accessory">
+            <English>Accessory</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_BalaclavaNoseCover">
+            <English>Nose Coverage</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_BalaclavaOffNose_Action">
+            <English>Pull Balaclava Under Nose</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_BalaclavaOffNose_Label">
+            <English>Off-Nose</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_BalaclavaOnNose_Action">
+            <English>Pull Balaclava Over Nose</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_BalaclavaOnNose_Label">
+            <English>On-Nose</English>
+        </Key>
         <Key ID="STR_ACEAX_compat_cup_Both">
             <English>Both</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Carryhandle">
+            <English>Carryhandle</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Clothing">
+            <English>Clothing</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_DarkGreen_Description">
+            <English>Dark Green</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_DarkGreen_Label">
+            <English>Dark Green</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_DesertTan_Description">
+            <English>Desert Tan</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_DesertTan_Label">
+            <English>Des Tan</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Eyeholes">
+            <English>Eyeholes</English>
         </Key>
         <Key ID="STR_ACEAX_compat_cup_Flag">
             <English>Flag</English>
         </Key>
+        <Key ID="STR_ACEAX_compat_cup_Gloves6B51">
+            <English>Gloves/6B51</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_GlovesSSO">
+            <English>Gloves/SSO</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_GlovesSSOKh_Description">
+            <English>Gloves/SSO Kh</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_GlovesSSOKh_Label">
+            <English>Glv/SSO Kh</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Goggles">
+            <English>Goggles</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Headphones">
+            <English>Headphones</English>
+        </Key>
         <Key ID="STR_ACEAX_compat_cup_Kneepads">
             <English>Kneepads</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Microphone">
+            <English>Microphone</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_NVGMount">
+            <English>NVG Mount</English>
         </Key>
         <Key ID="STR_ACEAX_compat_cup_No">
             <English>No</English>
@@ -16,8 +97,92 @@
         <Key ID="STR_ACEAX_compat_cup_None">
             <English>None</English>
         </Key>
+        <Key ID="STR_ACEAX_compat_cup_One">
+            <English>One</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Optic">
+            <English>Optic</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Picatinny_Description">
+            <English>Picatinny Rail</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Picatinny_Label">
+            <English>Picatinny</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_RIS_Label">
+            <English>RIS</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Rug">
+            <English>Rug</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Sage_Description">
+            <English>Sage Green</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Sage_Label">
+            <English>Sage</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Shovel">
+            <English>Shovel</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Standard_Description">
+            <English>Standard</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Standard_Label">
+            <English>Standard</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Swamp">
+            <English>Swamp</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Two">
+            <English>Two</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_WarsawRail_Description">
+            <English>Warsaw Pact Rail</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_WarsawRail_Label">
+            <English>Warsaw</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Weathered_Description">
+            <English>Weathered</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Weathered_Label">
+            <English>WTHR</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_WinterGreen_Description">
+            <English>Wntr Grn</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_WinterGreen_Label">
+            <English>Wntr Grn</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_WinterJacketPants_Description">
+            <English>Winter Jacket/Pants</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_WinterJacketPants_Label">
+            <English>Jckt/Pants</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_WinterJacket_Description">
+            <English>Winter Jacket</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_WinterJacket_Label">
+            <English>Jacket</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Winter_Description">
+            <English>Winter</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Winter_Description">
+            <English>Winter Green</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Winter_Label">
+            <English>Winter</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_Yellow">
+            <English>Yellow</English>
+        </Key>
         <Key ID="STR_ACEAX_compat_cup_Yes">
             <English>Yes</English>
+        </Key>
+        <Key ID="STR_ACEAX_compat_cup_YesMic">
+            <English>Yes/Mic</English>
         </Key>
     </Package>
 </Project>

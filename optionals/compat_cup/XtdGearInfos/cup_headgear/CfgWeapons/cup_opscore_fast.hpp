@@ -163,6 +163,25 @@
 		accessory = "headset_sf";
 	};
 
+// MM-14
+	class CUP_H_OpsCore_Covered_MM14 {
+		model = "cup_opscore_fast";
+		camo = "MM14";
+		accessory = "headset";
+	};
+
+	class CUP_H_OpsCore_Covered_MM14_NoHS {
+		model = "cup_opscore_fast";
+		camo = "MM14";
+		accessory = "none";
+	};
+
+	class CUP_H_OpsCore_Covered_MM14_SF {
+		model = "cup_opscore_fast";
+		camo = "MM14";
+		accessory = "headset_sf";
+	};
+
 // Spray US
 	class CUP_H_OpsCore_Spray_US {
 		model = "cup_opscore_fast";
