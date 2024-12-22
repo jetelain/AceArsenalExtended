@@ -14,6 +14,9 @@ jobs:
 
     - uses: arma-actions/hemtt@v1
       name: Setup HEMTT
-
+      
+    - name: DEBUG
+      run: ls -la optionals/compat_rhs/XtdGearInfos/rhs_weapon/CfgWeapons/
+      
     - name: Build Mod
       run: hemtt build
