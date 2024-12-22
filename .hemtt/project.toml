@@ -10,7 +10,8 @@ sig_version = 3
 path = "addons/main/script_version.hpp"
 git_hash = 0
 
-files = [
+[files]
+include = [
     "mod.cpp",
     "logo.paa"
 ]

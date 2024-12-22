@@ -1,0 +1,26 @@
+[default]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+	"463939057"  # ACE3's Workshop ID
+]
+
+[arsenal]
+extends = "default"
+parameters = [
+    # Launch directly to ACE Arsenal
+    "-init=playMission['','\\z\\ace\\addons\\arsenal\\missions\\Arsenal.VR']"
+]
+
+[amf]
+extends = "default"
+workshop = [
+    "1781990846"
+]
+optionals = [ "compat_amf" ]
+
+[usp]
+extends = "default"
+workshop = [
+    "1795825073"
+]
+optionals = [ "compat_usp" ]
