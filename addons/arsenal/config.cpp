@@ -24,6 +24,7 @@ class RscPicture;
 class RscButton;
 class RscPictureKeepAspect;
 class RscEdit;
+class RscCombo;
 
 class ace_arsenal_display {
 
@@ -87,6 +88,15 @@ class ace_arsenal_display {
                     h = QUOTE(4 * GRID_H);
                 };
             };
+        };
+        class sortLeftTab: RscCombo {  // Config forked from ACE3 Arsenal to intercept calls to sortPanel
+            idc = IDC_sortLeftTab;
+            x = QUOTE(safeZoneX + 13 * GRID_W);
+            y = QUOTE(safeZoneY + 8 * GRID_H);
+            w = QUOTE(40 * GRID_W);
+            h = QUOTE(6 * GRID_H);
+            onLBSelChanged = QUOTE(_this call FUNC(sortPanel));
+            sizeEx = QUOTE(5 * GRID_H);
         };
 	};
 };

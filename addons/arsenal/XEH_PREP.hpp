@@ -9,3 +9,4 @@ PREP(filterVirtualItems);
 PREP(toggleUI);
 PREP(onArsenalClose);
 PREP(onTextChange);
+PREP(sortPanel);
