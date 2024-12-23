@@ -165,4 +165,9 @@ class GVAR(valueButton): RscButton {
     colorBackgroundActive[] = {ACTIVE_BG_COLOR};
     colorDisabled[] = {DISABLED_TEXT_COLOR};
     colorBackgroundDisabled[] = {INVISIBLE_COLOR};
+
+    // Simulate focus on items list
+    // to ensure ctrl+c will copy the class name and not the loadout
+    onSetFocus = QUOTE(ace_arsenal_leftTabFocus = true);
+    onKillFocus = QUOTE(ace_arsenal_leftTabFocus = false);
 };
