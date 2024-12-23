@@ -18,8 +18,6 @@ for "_i" from 0 to (_size -1) do {
     private _config = _ctrlPanel lbData _i;
 	private _model = [_classRoot, _config] call EFUNC(gearinfo,getConfigModel);
 	if ( _model != "" ) then {
-		_ctrlPanel lbSetTextRight [_i, getText(configFile >> "XtdGearModels" >> _classRoot >> _model >> "label")];
-
 		if ( _selectedModel == _model && _config != _selectedConfig) then {
 			// Current value must match this list item, but it is out-of-sync
 			// Update the list and the filtered virtual items
@@ -36,6 +34,5 @@ for "_i" from 0 to (_size -1) do {
 			_ctrlPanel lbSetTooltip [_i, format ["%1\n%2", _displayName, _selectedConfig]];
 			_ctrlPanel lbSetPicture [_i, getText (_match >> "picture")];
 		};
-
 	};
  };
