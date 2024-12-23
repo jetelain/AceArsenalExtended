@@ -43,6 +43,10 @@ _virtItems deleteAt _previous;
 _virtItems set [_newValue, nil];
 
 // Change and propagate selected value
+private _displayName = getText (_match >> "displayName");
 _ctrlPanel lbSetData [_i, _newValue];
-_ctrlPanel lbSetText [_i, getText (_match >> "displayName")];
+_ctrlPanel lbSetText [_i, _displayName];
+_ctrlPanel lbSetTooltip [_i, format ["%1\n%2", _displayName, _newValue]];
+_ctrlPanel lbSetPicture [_i, getText (_match >> "picture")];
+
 [_ctrlPanel, _i] call FUNC(onSelChangedLeft);

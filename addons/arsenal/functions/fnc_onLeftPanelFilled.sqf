@@ -27,10 +27,14 @@ for "_i" from 0 to (_size -1) do {
 			if ( _virtSub != -1 ) then {
 				_virtItems = _virtItems get _virtSub;
 			};
+			private _match = configFile >> _classRoot >> _selectedConfig;
+			private _displayName = getText (_match >> "displayName");
 			_virtItems deleteAt _config;
 			_virtItems set [_selectedConfig, nil];
 			_ctrlPanel lbSetData [_i, _selectedConfig];
-			_ctrlPanel lbSetText [_i, getText (configFile >> _classRoot >> _selectedConfig >> "displayName")];
+			_ctrlPanel lbSetText [_i, _displayName];
+			_ctrlPanel lbSetTooltip [_i, format ["%1\n%2", _displayName, _selectedConfig]];
+			_ctrlPanel lbSetPicture [_i, getText (_match >> "picture")];
 		};
 
 	};
