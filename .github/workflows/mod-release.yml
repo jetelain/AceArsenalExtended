@@ -1,10 +1,6 @@
-name: Mod
+name: Mod Release
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
   release:
     types: [ "published" ]
 
@@ -19,12 +15,6 @@ jobs:
 
     - name: Build Mod
       run: hemtt release
-
-    - name: Upload Release
-      uses: actions/upload-artifact@v4
-      with:
-        name: aceax.zip
-        path: releases/aceax-latest.zip
 
     - uses: Shopify/upload-to-release@master
       with:
