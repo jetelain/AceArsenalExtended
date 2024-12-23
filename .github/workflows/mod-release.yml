@@ -1,0 +1,24 @@
+name: Mod Release
+
+on:
+  release:
+    types: [ "published" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - uses: arma-actions/hemtt@v1
+      name: Setup HEMTT
+
+    - name: Build Mod
+      run: hemtt release
+
+    - uses: Shopify/upload-to-release@master
+      with:
+        name: aceax.zip
+        path: releases/aceax-latest.zip
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        content-type: application/zip
