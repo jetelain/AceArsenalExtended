@@ -47,7 +47,7 @@ private _loadout = getUnitLoadout _player;
                                 _previewOptions set [_optionIndex, _valueName];
                                 private _previewConfig = [_classRoot, _model, _previewOptions] call EFUNC(gearinfo,findConfigName);
                                 if ( _previewConfig != "") then {
-                                    _optionActions pushBack [_valueAction, _valueIcon, _previewConfig, _itemInGame, _valueDelay];
+                                    _optionActions pushBack [_valueAction, _valueIcon, _previewConfig, _itemInGame, _valueDelay, [_model, _optionName, _valueName]];
                                 };
                             } else {
                                 _itemBack = _itemInGame;
