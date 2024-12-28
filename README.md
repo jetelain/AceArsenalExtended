@@ -254,11 +254,27 @@ You can also build a compat addon that overrides entries in `CfgWeapons`/`CfgGla
 
 You can also add data to the ACEAX mod in `XtdGearInfos` to extends a mod without creating a direct dependency on it (Pull-Request are welcome !).
 
+### Scripting events
+
+#### In-Game option change
+
+Local event `aceax_ingame_optionChanged` will be raised after a player changed his equiment with the ACE self-interaction menu.
+
+```
+["aceax_ingame_optionChanged", {
+     _this params ["_player", "_optionInfos"];
+     _optionInfos params ["_model", "_option", "_value"];
+     // ...
+}] call CBA_fnc_addEventHandler;
+```
+
 ## How to build ?
 
-Download the incredible [HEMTT](https://github.com/BrettMayson/HEMTT) tool by  [BrettMayson](https://github.com/BrettMayson).
+Download the incredible [HEMTT](https://github.com/BrettMayson/HEMTT) tool by [BrettMayson](https://github.com/BrettMayson).
 
 Place hemtt.exe at the project root, and launch `.\hemtt.exe build`
+
+For a quick start, run `.\hemtt.exe launch arsenal`. Arma will start directly in the ACE Arsenal. See `.hemtt\launch.toml` for additional targets.
 
 ## License
 
