@@ -6,7 +6,7 @@ _params params ["_player", "_layout", "_actionLabel", "_config", "", "", ["_dela
 
 private _callback = {
 	params ["_args"];
-	_args params ["_player", "_layout", "", "_config", "_giveBack", "_consume"];
+	_args params ["_player", "_layout", "", "_config", "_giveBack", "_consume", "", ["_optionInfos",[]]];
 
 	private _insignia = [_player] call BIS_fnc_getUnitInsignia;
 	// setUnitLoadout will clear insignia, but BIS_fnc_setUnitInsignia does
@@ -95,6 +95,7 @@ private _callback = {
 		_player action ["nvGoggles", _player];
 	};
 
+	[QGVAR(optionChanged),[_player,_optionInfos]] call CBA_fnc_localEvent;
 };
 
 if ( _delay == 0 ) then {
