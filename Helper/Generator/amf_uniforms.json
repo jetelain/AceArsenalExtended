@@ -1,0 +1,216 @@
+{
+	"paths": {
+		"[tex]": "amf_uniforms\\data\\Textures",
+		"[ui]": "\\amf_uniforms\\data\\ui"
+	},
+	"uniforms" :
+[
+	{
+		"model": "amf_uniforms\\amf_uniform_01.p3d",
+		"label": "Treillis F3/Ubas ({camo}, {shoes}, Gants)",
+		"vehicle": "amf_french_soldier_01_{camo}_{shoes}",
+		"weapon": "amf_uniform_01_{camo}_{shoes}",
+		"set": {"camo4": "[tex]\\usp_gloves_CO.paa"},
+		"extra": ["grade", "sang", "drapeau", "insignia", "clan"],
+		"author": "GRONOOB & AMF",
+		"itemModel": "A3\\Characters_F\\Common\\Suitpacks\\suitpack_universal_F.p3d",
+		"picture":"[ui]\\amf_uniform_01_{camo}.paa",
+		"variations": [
+			{ 
+				"id": "camo",
+				"values" : [
+					{"id": "CE", "label":"CE",        "set":{"camo1": "[tex]\\AMF_UBAS_CO.paa",        "camo2": "[tex]\\AMF_PANT_CO.paa"},        "itemSet": { "camo": "[tex]\\amf_Folded_CE_CO.paa" }},
+					{"id": "OD", "label":"CE/OD",     "set":{"camo1": "[tex]\\AMF_UBAS_OD_CO.paa",     "camo2": "[tex]\\AMF_PANT_CO.paa"},        "itemSet": { "camo": "[tex]\\amf_Folded_CE_CO.paa" }},
+					{"id": "DA", "label":"DA",        "set":{"camo1": "[tex]\\AMF_UBAS_DA_CO.paa",     "camo2": "[tex]\\AMF_PANT_DA_CO.paa"},     "itemSet": { "camo": "[tex]\\amf_Folded_DA_CO.paa" }},
+					{"id": "SE", "label":"SERVAL",    "set":{"camo1": "[tex]\\AMF_UBAS_CO.paa",        "camo2": "[tex]\\AMF_PANT_DA_CO.paa"},     "itemSet": { "camo": "[tex]\\amf_Folded_SE_CO.paa" }},
+					{"id": "BM", "label":"BME",       "set":{"camo1": "[tex]\\AMF_UBAS_BME_CO.paa",    "camo2": "[tex]\\AMF_PANT_BME_CO.paa"},    "itemSet": { "camo": "[tex]\\amf_Folded_BM_CO.paa" }},
+					{"id": "TU", "label":"TUNDRA",    "set":{"camo1": "[tex]\\AMF_UBAS_TUNDRA_CO.paa", "camo2": "[tex]\\AMF_PANT_TUNDRA_CO.paa"}, "itemSet": { "camo": "[tex]\\amf_Folded_TU_CO.paa" }},
+					{"id": "TC", "label":"TUNDRA/CE", "set":{"camo1": "[tex]\\AMF_UBAS_CO.paa",        "camo2": "[tex]\\AMF_PANT_TUNDRA_CO.paa"}, "itemSet": { "camo": "[tex]\\amf_Folded_TC_CO.paa" }}
+				]
+			},
+			{ 
+				"id": "shoes",
+				"values" : [
+					{"id":"MD", "label":"Meindl",      "set":{"camo5": "[tex]\\AMF_MEINDL_CO.paa"}},
+					{"id":"HX", "label":"Haix",        "set":{"camo3": "[tex]\\AMF_HAIX_CO.paa"}},
+					{"id":"HS", "label":"Haix Sable",  "set":{"camo3": "[tex]\\AMF_SABLE_CO.paa"}}
+				]
+			}
+		],
+		"xtdModel" : "amf_uniform_01",
+		"xtdSet": { "gloves": "MX", "sleeves": "Full" }
+	},
+	{
+		"model": "amf_uniforms\\amf_uniform_01_NG.p3d",
+		"label": "Treillis F3/Ubas ({camo}, {shoes})",
+		"vehicle": "amf_french_soldier_01_NG_{camo}_{shoes}",
+		"weapon": "amf_uniform_01_NG_{camo}_{shoes}",
+		"set": {},
+		"sameAs": "amf_uniforms\\amf_uniform_01.p3d",
+		"xtdSet": { "gloves": "none", "sleeves": "Full" },
+		"picture":"[ui]\\amf_uniform_01_NG_{camo}.paa"
+	},
+	{
+		"model": "amf_uniforms\\amf_uniform_01_RE.p3d",
+		"label": "Treillis F3/Ubas ({camo}, {shoes}, Gants, Retroussé)",
+		"vehicle": "amf_french_soldier_01_RE_{camo}_{shoes}",
+		"weapon": "amf_uniform_01_RE_{camo}_{shoes}",
+		"set": {"camo4": "[tex]\\usp_gloves_CO.paa"},
+		"sameAs": "amf_uniforms\\amf_uniform_01.p3d",
+		"xtdSet": { "gloves": "MX", "sleeves": "Half" },
+		"picture":"[ui]\\amf_uniform_01_RE_{camo}.paa"
+	},
+	{
+		"model": "amf_uniforms\\amf_uniform_01_RENG.p3d",
+		"label": "Treillis F3/Ubas ({camo}, {shoes}, Retroussé)",
+		"vehicle": "amf_french_soldier_01_RE_NG_{camo}_{shoes}",
+		"weapon": "amf_uniform_01_RE_NG_{camo}_{shoes}",
+		"set": {},
+		"sameAs": "amf_uniforms\\amf_uniform_01.p3d",
+		"xtdSet": { "gloves": "none", "sleeves": "Half" },
+		"picture":"[ui]\\amf_uniform_01_RE_NG_{camo}.paa"
+	},
+	
+
+
+	{
+		"model": "amf_uniforms\\amf_uniform_02.p3d",
+		"label": "Treillis F3/Veste ({camo}, {shoes}, Gants)",
+		"vehicle": "amf_french_soldier_02_{camo}_{shoes}",
+		"weapon": "amf_uniform_02_{camo}_{shoes}",
+		"set": {"camo4": "[tex]\\usp_gloves_CO.paa"},
+		"extra": ["grade", "sang", "drapeau", "name", "insignia", "clan"],
+		"author": "GRONOOB & AMF",
+		"itemModel": "A3\\Characters_F\\Common\\Suitpacks\\suitpack_universal_F.p3d",
+		"picture":"[ui]\\amf_uniform_02_{camo}.paa",
+		"variations": [
+			{ 
+				"id": "camo",
+				"values" : [
+					{"id": "CE", "label":"CE",        "set":{"camo1": "[tex]\\AMF_VEST_CO.paa",        "camo2": "[tex]\\AMF_PANT_CO.paa"},        "itemSet": { "camo": "[tex]\\amf_Folded_CE_CO.paa" }},
+					{"id": "DA", "label":"DA",        "set":{"camo1": "[tex]\\AMF_VEST_DA_CO.paa",     "camo2": "[tex]\\AMF_PANT_DA_CO.paa"},     "itemSet": { "camo": "[tex]\\amf_Folded_DA_CO.paa" }},
+					{"id": "SE", "label":"SERVAL",    "set":{"camo1": "[tex]\\AMF_VEST_CO.paa",        "camo2": "[tex]\\AMF_PANT_DA_CO.paa"},     "itemSet": { "camo": "[tex]\\amf_Folded_SE_CO.paa" }},
+					{"id": "BM", "label":"BME",       "set":{"camo1": "[tex]\\AMF_VEST_BME_CO.paa",    "camo2": "[tex]\\AMF_PANT_BME_CO.paa"},    "itemSet": { "camo": "[tex]\\amf_Folded_BM_CO.paa" }},
+					{"id": "TU", "label":"TUNDRA",    "set":{"camo1": "[tex]\\AMF_VEST_TUNDRA_CO.paa", "camo2": "[tex]\\AMF_PANT_TUNDRA_CO.paa"}, "itemSet": { "camo": "[tex]\\amf_Folded_TU_CO.paa" }},
+					{"id": "TC", "label":"TUNDRA/CE", "set":{"camo1": "[tex]\\AMF_VEST_CO.paa",        "camo2": "[tex]\\AMF_PANT_TUNDRA_CO.paa"}, "itemSet": { "camo": "[tex]\\amf_Folded_TC_CO.paa" }}
+				]
+			},
+			{ 
+				"id": "shoes",
+				"values" : [
+					{"id":"MD", "label":"Meindl",      "set":{"camo5": "[tex]\\AMF_MEINDL_CO.paa"}},
+					{"id":"HX", "label":"Haix",        "set":{"camo3": "[tex]\\AMF_HAIX_CO.paa"}},
+					{"id":"HS", "label":"Haix Sable",  "set":{"camo3": "[tex]\\AMF_SABLE_CO.paa"}}
+				]
+			}
+		],
+		"xtdModel" : "amf_uniform_02",
+		"xtdSet": { "gloves": "MX" }
+	},
+	{
+		"model": "amf_uniforms\\amf_uniform_02_NG.p3d",
+		"label": "Treillis F3/Veste ({camo}, {shoes})",
+		"vehicle": "amf_french_soldier_02_NG_{camo}_{shoes}",
+		"weapon": "amf_uniform_02_NG_{camo}_{shoes}",
+		"set": {},
+		"sameAs": "amf_uniforms\\amf_uniform_02.p3d",
+		"xtdSet": { "gloves": "none" },
+		"picture": "[ui]\\amf_uniform_02_NG_{camo}.paa"
+	},
+	
+
+
+	{
+		"model": "amf_uniforms\\amf_uniform_03.p3d",
+		"label": "Treillis Felin ({camo}, {shoes}, Gants)",
+		"vehicle": "amf_french_soldier_03_{camo}_{shoes}",
+		"weapon": "amf_uniform_03_{camo}_{shoes}",
+		"set": {"camo4": "[tex]\\usp_gloves_CO.paa"},
+		"extra": ["grade", "sang", "drapeau", "insignia", "clan"],
+		"author": "JUAN/LYY AMAO/KROGAR & AMF",
+		"itemModel": "A3\\Characters_F\\Common\\Suitpacks\\suitpack_universal_F.p3d",
+		"picture":"[ui]\\amf_uniform_03_{camo}.paa",
+		"variations": [
+			{ 
+				"id": "camo",
+				"values" : [
+					{"id": "CE", "label":"CE",        "set":{"camo1": "[tex]\\amf_vest_felin_CO.paa",    "camo2": "[tex]\\AMF_PANT_CO.paa"},    "itemSet": { "camo": "[tex]\\amf_Folded_CE_CO.paa" }},
+					{"id": "DA", "label":"DA",        "set":{"camo1": "[tex]\\amf_vest_felin_DA_CO.paa", "camo2": "[tex]\\AMF_PANT_DA_CO.paa"}, "itemSet": { "camo": "[tex]\\amf_Folded_DA_CO.paa" }},
+					{"id": "SE", "label":"SERVAL",    "set":{"camo1": "[tex]\\amf_vest_felin_CO.paa",    "camo2": "[tex]\\AMF_PANT_DA_CO.paa"}, "itemSet": { "camo": "[tex]\\amf_Folded_SE_CO.paa" }}
+				]
+			},
+			{ 
+				"id": "shoes",
+				"values" : [
+					{"id":"MD", "label":"Meindl",      "set":{"camo5": "[tex]\\AMF_MEINDL_CO.paa"}},
+					{"id":"HX", "label":"Haix",        "set":{"camo3": "[tex]\\AMF_HAIX_CO.paa"}},
+					{"id":"HS", "label":"Haix Sable",  "set":{"camo3": "[tex]\\AMF_SABLE_CO.paa"}}
+				]
+			}
+		],
+		"xtdModel" : "amf_uniform_03",
+		"xtdSet": { "gloves": "MX" }
+	},
+	{
+		"model": "amf_uniforms\\amf_uniform_03_NG.p3d",
+		"label": "Treillis Felin ({camo}, {shoes})",
+		"vehicle": "amf_french_soldier_03_NG_{camo}_{shoes}",
+		"weapon": "amf_uniform_03_NG_{camo}_{shoes}",
+		"set": {},
+		"sameAs": "amf_uniforms\\amf_uniform_03.p3d",
+		"xtdSet": { "gloves": "none" },
+		"picture": "[ui]\\amf_uniform_03_NG_{camo}.paa"
+	}
+],
+
+"legacy":{
+	
+	"amf_uniform_01_bme":      "amf_uniform_01_BM_MD",
+	"amf_uniform_01_bme_2":    "amf_uniform_01_NG_BM_MD",
+	"amf_uniform_01_CE":       "amf_uniform_01_CE_MD",
+	"amf_uniform_01_CE_2":     "amf_uniform_01_NG_CE_MD",
+	"amf_uniform_01_CE_OD":    "amf_uniform_01_OD_MD",
+	"amf_uniform_01_CE_OD_2":  "amf_uniform_01_NG_OD_MD",
+	"amf_uniform_01_DA":       "amf_uniform_01_DA_MD",
+	"amf_uniform_01_DA_2":     "amf_uniform_01_NG_DA_MD",
+	"amf_uniform_01_S":        "amf_uniform_01_SE_MD",
+	"amf_uniform_01_S_2":      "amf_uniform_01_NG_SE_MD",
+	"amf_uniform_01_TUNDRA":   "amf_uniform_01_TC_MD",
+	"amf_uniform_01_TUNDRA_2": "amf_uniform_01_NG_TC_MD",
+	
+	"amf_uniform_02_bme":      "amf_uniform_01_RE_BM_MD",
+	"amf_uniform_02_bme_2":    "amf_uniform_01_RE_NG_BM_MD",
+	"amf_uniform_02_CE":       "amf_uniform_01_RE_CE_MD",
+	"amf_uniform_02_CE_2":     "amf_uniform_01_RE_NG_CE_MD",
+	"amf_uniform_02_CE_OD":    "amf_uniform_01_RE_OD_MD",
+	"amf_uniform_02_CE_OD_2":  "amf_uniform_01_RE_NG_OD_MD",
+	"amf_uniform_02_DA":       "amf_uniform_01_RE_DA_MD",
+	"amf_uniform_02_DA_2":     "amf_uniform_01_RE_NG_DA_MD",
+	"amf_uniform_02_S":        "amf_uniform_01_RE_SE_MD",
+	"amf_uniform_02_S_2":      "amf_uniform_01_RE_NG_SE_MD",
+	"amf_uniform_02_TUNDRA":   "amf_uniform_01_RE_TC_MD",
+	"amf_uniform_02_TUNDRA_2": "amf_uniform_01_RE_NG_TC_MD",
+	
+	"amf_uniform_03_BME":      "amf_uniform_02_BM_MD",
+	"amf_uniform_03_BME_2":    "amf_uniform_02_NG_BM_MD",
+	"amf_uniform_03_CE":       "amf_uniform_02_CE_MD",
+	"amf_uniform_03_CE_2":     "amf_uniform_02_NG_CE_MD",
+	"amf_uniform_03_DA":       "amf_uniform_02_DA_MD",
+	"amf_uniform_03_DA_2":     "amf_uniform_02_NG_DA_MD",
+	"amf_uniform_03_MTP":      "amf_uniform_02_BM_MD",
+	"amf_uniform_03_MTP_2":    "amf_uniform_02_NG_BM_MD",
+	"amf_uniform_03_S":        "amf_uniform_02_SE_MD",
+	"amf_uniform_03_S_2":      "amf_uniform_02_NG_SE_MD",
+	"amf_uniform_03_TUNDRA":   "amf_uniform_02_TC_MD",
+	"amf_uniform_03_TUNDRA_2": "amf_uniform_02_NG_TC_MD",
+	
+	"amf_uniform_04_ce":       "amf_uniform_03_CE_MD",
+	"amf_uniform_04_ce_2":     "amf_uniform_03_NG_CE_MD",
+	"amf_uniform_04_da":       "amf_uniform_03_DA_MD",
+	"amf_uniform_04_da_2":     "amf_uniform_03_NG_DA_MD",
+	"amf_uniform_04_S":        "amf_uniform_03_SE_MD",
+	"amf_uniform_04_S_2":      "amf_uniform_03_NG_SE_MD"
+}
+
+
+}
